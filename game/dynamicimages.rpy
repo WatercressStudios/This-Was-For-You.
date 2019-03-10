@@ -15,7 +15,7 @@ init:
             1.5
         # This randomizes the time between blinking.
         eyes2
-        .25
+        .15
         repeat
 
     transform flapmouth(mouth1, mouth2):
