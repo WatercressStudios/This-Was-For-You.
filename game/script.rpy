@@ -1,9 +1,28 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# callback=speaker is needed for mouth flaps
+define che = Character("CH35H1R3", callback=speaker("che"))
 
-define e = Character("Eileen")
+init python:
+    # define the BGs
+    DefineImages('cgs')
+    DefineImages('bgs', prepend='bg')
+    DefineImages('mainmenu', prepend='mm')
+
+    # define the sprites with manual layer ordering
+    #layerorder = None
+    layerorder = ['base','mouth','eyes','brow','blush','shadows','glasses']
+    DefineImages("sprites", composite=True, overrideLayerOrder=layerorder)
+
+    # manually create shortcuts to more complex expressions
+
+    #Cheshire looking forward
+    MapEmote('che f happy',  'che base md_default ed_default brow_default glasses_default')
+    MapEmote('che f sad',  'che base md_sad ed_sad brow_sad glasses_default')
+    MapEmote('che f scanning',  'che armsscanning md_thinline e_none brow_grumpy shadows glasses_gendo')
+
+# override some default mouth flap behaviours
+image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
 
 
 # The game starts here.
@@ -21,27 +40,27 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show che f sad
 
     # These display lines of dialogue.
 
-    e "Hover your mouse over MENU to test."
+    che "Hover your mouse over MENU to test."
 
     show screen in_game_entervr
 
-    e "Hover your mouse over ENTER VR and press to test."
+    che "Hover your mouse over ENTER VR and press to test."
 
     hide screen in_game_entervr
     hide screen in_game_entervr_showing
 
     show screen in_game_exitvr
 
-    e "Hover your mouse over EXIT VR and press to test."
+    che "Hover your mouse over EXIT VR and press to test."
 
     hide screen in_game_exitvr
     hide screen in_game_exitvr_showing
 
-    e "Demo ends after this line."
+    che "Demo ends after this line."
 
     hide screen in_game_entervr
 
