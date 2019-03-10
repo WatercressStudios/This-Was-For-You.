@@ -18,11 +18,17 @@ init python:
 
     #Cheshire looking forward
     MapEmote('che f happy',  'che base md_default ed_default brow_default glasses_default')
+    MapEmote('che f relaxed',  'che base md_default ed_relaxed brow_relaxed glasses_default')
     MapEmote('che f sad',  'che base md_sad ed_sad brow_sad glasses_default')
     MapEmote('che f scanning',  'che armsscanning md_thinline e_none brow_grumpy shadows glasses_gendo')
 
 # override some default mouth flap behaviours
 image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
+
+# override some default blinking behaviours
+
+image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
+image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
 
 # The game starts here.
@@ -45,6 +51,8 @@ label start:
     # These display lines of dialogue.
 
     che "Hover your mouse over MENU to test."
+
+    show che f happy
 
     show screen in_game_entervr
 
