@@ -20,7 +20,7 @@ init python:
     MapEmote('che f happy',  'che base md_default ed_default brow_default glasses_default')
     MapEmote('che f relaxed',  'che base md_default ed_relaxed brow_relaxed glasses_default')
     MapEmote('che f sad',  'che base md_sad ed_sad brow_sad glasses_default')
-    MapEmote('che f scanning',  'che armsscanning md_thinline e_none brow_grumpy shadows glasses_gendo')
+    MapEmote('che f scanning',  'che armsscanning md_thinline ec_default brow_grumpy shadows glasses_gendo')
 
 # override some default mouth flap behaviours
 image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
