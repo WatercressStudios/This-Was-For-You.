@@ -15,6 +15,9 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
+    scene ceiling empty
+    show ceilingfan
+
     show eileen happy
 
     # These display lines of dialogue.
