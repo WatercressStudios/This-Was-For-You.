@@ -11,12 +11,6 @@ define e = Character("Eileen")
 label start:
     show screen in_game_menu
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -41,10 +35,15 @@ label start:
     hide screen in_game_exitvr
     hide screen in_game_exitvr_showing
 
-    e "Demo ends after this line."
+    e "Will test the Hub selection now."
 
     hide screen in_game_entervr
 
+    show hub
+
     # This ends the game.
+    call screen hubselect
+
+    e "Demo ends after this line."
 
     return
