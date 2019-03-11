@@ -33,10 +33,13 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 # The game starts here.
 
 label start:
+    jump part3_label
 
     show screen in_game_menu
     scene ceiling empty
     show ceilingfan
+
+    che "Click to show me."
 
     show che f sad
 
