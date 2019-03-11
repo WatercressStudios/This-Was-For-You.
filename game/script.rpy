@@ -35,32 +35,18 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
 label start:
     show screen in_game_menu
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
     show che f sad
-
-    # These display lines of dialogue.
 
     che "Hover your mouse over MENU to test."
 
     show che f happy
-
     show screen in_game_entervr
 
     che "Hover your mouse over ENTER VR and press to test."
 
     hide screen in_game_entervr
     hide screen in_game_entervr_showing
-
     show screen in_game_exitvr
 
     che "Hover your mouse over EXIT VR and press to test."

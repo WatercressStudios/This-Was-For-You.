@@ -75,10 +75,17 @@ screen in_game_menu():
         add "megan_ui/gui-email.png"
     mousearea:
         area (110, 0, 520, 90)
-        hovered [Show("in_game_email_content"), Show("in_game_email_button")]
+        hovered [
+            Show("in_game_email_content"),
+            Show("in_game_email_button")
+        ]
     mousearea:
         area (110, 0, 520, 790)
-        unhovered [Hide("in_game_email_content"), Hide("in_game_email"), Hide("in_game_email_button")]
+        unhovered [
+            Hide("in_game_email_content"),
+            Hide("in_game_email"),
+            Hide("in_game_email_button")
+        ]
 
     fixed xpos 1470 ypos -420:
         add "megan_ui/gui-menu-background.png"
@@ -86,10 +93,16 @@ screen in_game_menu():
         add "megan_ui/gui-menu-closed.png"
     mousearea:
         area (1470, 0, 340, 90)
-        hovered [Show("in_game_menu_content"), Show("in_game_menu_button")]
+        hovered [
+            Show("in_game_menu_content"),
+            Show("in_game_menu_button")
+        ]
     mousearea:
         area (1470, 0, 340, 470)
-        unhovered [Hide("in_game_menu_content"), Hide("in_game_menu_button")]
+        unhovered [
+            Hide("in_game_menu_content"),
+            Hide("in_game_menu_button")
+        ]
 
 screen in_game_email_content():
     fixed xpos 110 ypos 0 at in_game_email_bg_showhide:
@@ -204,7 +217,10 @@ screen in_game_entervr():
     zorder 10
     button xpos 1810:
         add "vr_buttons"
-        action [Hide("in_game_entervr"), Show("in_game_entervr_showing")]
+        action [
+            Hide("in_game_entervr"),
+            Show("in_game_entervr_showing")
+        ]
         at in_game_entervrbutton_showhide
 
 screen in_game_entervr_showing():
@@ -217,7 +233,10 @@ screen in_game_exitvr():
     zorder 10
     button xpos -1920:
         add "realworld_buttons"
-        action [Hide("in_game_exitvr"), Show("in_game_exitvr_showing")]
+        action [
+            Hide("in_game_exitvr"),
+            Show("in_game_exitvr_showing")
+        ]
         at in_game_exitvrbutton_showhide
 
 screen in_game_exitvr_showing():
