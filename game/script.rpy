@@ -30,12 +30,14 @@ image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
 image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
-
 # The game starts here.
 
 label start:
+
     show screen in_game_menu
-    scene bg room
+    scene ceiling empty
+    show ceilingfan
+
     show che f sad
 
     che "Hover your mouse over MENU to test."
