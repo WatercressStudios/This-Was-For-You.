@@ -1,76 +1,69 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# callback=speaker is needed for mouth flaps
+define che = Character("CH35H1R3", callback=speaker("che"))
 
-define e = Character("Eileen")
+init python:
+    # define the BGs
+    DefineImages('cgs')
+    DefineImages('bgs', prepend='bg')
+    DefineImages('mainmenu', prepend='mm')
+
+    # define the sprites with manual layer ordering
+    #layerorder = None
+    layerorder = ['base','mouth','eyes','brow','blush','shadows','glasses']
+    DefineImages("sprites", composite=True, overrideLayerOrder=layerorder)
+
+    # manually create shortcuts to more complex expressions
+
+    #Cheshire looking forward
+    MapEmote('che f happy',  'che base md_default ed_default brow_default glasses_default')
+    MapEmote('che f relaxed',  'che base md_default ed_relaxed brow_relaxed glasses_default')
+    MapEmote('che f sad',  'che base md_sad ed_sad brow_sad glasses_default')
+    MapEmote('che f scanning',  'che armsscanning md_thinline ec_default brow_grumpy shadows glasses_gendo')
+
+# override some default mouth flap behaviours
+image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
+
+# override some default blinking behaviours
+
+image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
+image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
 
 # The game starts here.
 
 label start:
     show screen in_game_menu
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
+    show splashscreen
     scene bg room
+    show che f sad
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-    
-    show vrhelmet:
-        xalign 0.5 yalign 1.3 alpha 1.0 zoom 0.8
-        linear 1.0 xalign 0.5 yalign 1.0 alpha 1.0 zoom 0.8
-        linear 2.0 xalign 0.5 yalign 0.09 alpha 1.0 zoom 0.8
-        linear 1.0 xalign 0.5 yalign 0.09 alpha 1.0 zoom 0.99
-        linear 1.0 xalign 0.5 yalign 0.09 alpha 0.5 zoom 0.99
-    
+    che "Hover your mouse over MENU to test."
 
-    show eileen happy with Dissolve(2.0)
-    
-
-
-    # These display lines of dialogue.
-
-    e "Hover your mouse over MENU to test."
-
+    show che f happy
     show screen in_game_entervr
 
-    e "Hover your mouse over ENTER VR and press to test."
-    
+    che "Hover your mouse over ENTER VR and press to test."
 
     hide screen in_game_entervr
     hide screen in_game_entervr_showing
-
     show screen in_game_exitvr
 
-    e "Hover your mouse over EXIT VR and press to test."
+    che "Hover your mouse over EXIT VR and press to test."
 
     hide screen in_game_exitvr
     hide screen in_game_exitvr_showing
 
-    e "Demo ends after this line."
+    che "Testing hub items chooser now."
 
     hide screen in_game_entervr
 
+    show hub with dissolve
+
     # This ends the game.
+    call screen hubselect
+
+    che "Demo ends after this line."
 
     return
-    
-# Enjoy Anagrams broken code
-
-init:
-    image vrhelmet = Animation("vfx/vrheadset01.png",0.01,
-                                "vfx/vrheadset02.png",0.01,
-                                "vfx/vrheadset03.png",0.01,
-                                "vfx/vrheadset04.png",0.01,
-                                "vfx/vrheadset05.png",0.01,
-                                "vfx/vrheadset06.png",0.01,
-                                "vfx/vrheadset07.png",0.01,
-                                "vfx/vrheadset08.png",0.01,
-                                "vfx/vrheadset09.png",0.01,
-                                "vfx/vrheadset10.png",0.01,)
-    
