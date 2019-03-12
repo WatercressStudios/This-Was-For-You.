@@ -17,10 +17,13 @@ init python:
     # manually create shortcuts to more complex expressions
 
     #Cheshire looking forward
-    MapEmote('che f happy',  'che base md_default ed_default brow_default glasses_default')
-    MapEmote('che f relaxed',  'che base md_default ed_relaxed brow_relaxed glasses_default')
-    MapEmote('che f sad',  'che base md_sad ed_sad brow_sad glasses_default')
-    MapEmote('che f scanning',  'che armsscanning md_thinline ec_default brow_grumpy shadows glasses_gendo')
+    MapEmote('che f happy',  'che pose1 base md_default ed_default brow_default glasses_default')
+    MapEmote('che f relaxed',  'che pose1 base md_default ed_relaxed brow_relaxed glasses_default')
+    MapEmote('che f sad',  'che pose1 base md_sad ed_sad brow_sad glasses_default')
+    MapEmote('che f scanning',  'che pose1 armsscanning md_thinline ec_default brow_grumpy shadows glasses_gendo')
+
+    #Cheshire looking off to the side
+    MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
 # override some default mouth flap behaviours
 image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
@@ -36,7 +39,7 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 label start:
     show screen in_game_menu
     scene bg room
-    show che f sad
+    show che s nya
 
     che "Hover your mouse over MENU to test."
 
