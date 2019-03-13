@@ -33,13 +33,20 @@ init python:
     MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
 # override some default mouth flap behaviours
+#Pose 1
+
 image che_pose1_md_catmouthsmall = FlapMouth("che_pose1_mc_catmouthsmall", "che_pose1_m_openmore")
 image che_pose1_md_catmouth = FlapMouth("che_pose1_mc_catmouth", "che_pose1_m_openevenmore")
 image che_pose1_md_meh = FlapMouth("che_pose1_mc_meh", "che_pose1_m_shocked")
 image che_pose1_md_sad = FlapMouth("che_pose1_mc_sad", "che_pose1_m_shocked")
 image che_pose1_md_thinline = FlapMouth("che_pose1_mc_thinline", "che_pose1_m_default")
 
+#Pose 2
+
+image che_pose2_md_default = FlapMouth("che_pose2_mc_default", "che_pose2_m_openmore")
+
 # override some default blinking behaviours
+#Pose 2
 
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
 image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
@@ -50,29 +57,34 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 label start:
     show screen in_game_menu
     scene bg room
-    show che f happy
 
-    che "Default flap mouth."
+    show che s default
+
+    che "Pose2 default flap mouth."
+
+    show che f default
+
+    che "Pose1 default flap mouth."
 
     show che f catmouthsmall
 
-    che "Catmouthsmall flap mouth."
+    che "Pose1 catmouthsmall flap mouth."
 
     show che f catmouth
 
-    che "Catmouth flap mouth."
+    che "Pose1 catmouth flap mouth."
 
     show che f meh
 
-    che "Meh flap mouth."
+    che "Pose1 meh flap mouth."
 
     show che f sad
 
-    che "Sad flap mouth."
+    che "Pose1 sad flap mouth."
 
     show che f scanning
 
-    che "Thinline flap mouth."
+    che "Pose1 thinline flap mouth."
 
     show che f happy
 
