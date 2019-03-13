@@ -3,8 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-
 
 # The game starts here.
 
@@ -18,35 +16,24 @@ label start:
     scene ceiling empty
     show ceilingfan
 
-    show eileen happy
+    "Ceiling fan animation."
 
-    # These display lines of dialogue.
+    scene bedroom open dark
 
-    e "Hover your mouse over MENU to test."
+    "Bedroom with open curtains during the blackout."
 
-    show screen in_game_entervr
+    show bedroomlightning dark
 
-    e "Hover your mouse over ENTER VR and press to test."
+    "Bedroom with lightning during the blackout."
 
-    hide screen in_game_entervr
-    hide screen in_game_entervr_showing
+    scene bedroom open
 
-    show screen in_game_exitvr
+    "Bedroom with open curtains."
 
-    e "Hover your mouse over EXIT VR and press to test."
+    show bedroomlightning
 
-    hide screen in_game_exitvr
-    hide screen in_game_exitvr_showing
+    "Bedroom with lightning."
 
-    e "Will test the Hub selection now."
-
-    hide screen in_game_entervr
-
-    show hub
-
-    # This ends the game.
-    call screen hubselect
-
-    e "Demo ends after this line."
+    "Demo ends after this line."
 
     return
