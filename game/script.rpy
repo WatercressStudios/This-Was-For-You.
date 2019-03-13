@@ -19,14 +19,25 @@ init python:
     #Cheshire looking forward
     MapEmote('che f happy',  'che pose1 base md_default ed_default brow_default glasses_default')
     MapEmote('che f relaxed',  'che pose1 base md_default ed_relaxed brow_relaxed glasses_default')
+
+    MapEmote('che f catmouthsmall',  'che pose1 base md_catmouthsmall')
+    MapEmote('che f catmouth',  'che pose1 base md_catmouth')
+    MapEmote('che f grin',  'che pose1 base md_grin')
+    MapEmote('che f meh',  'che pose1 base md_meh')
     MapEmote('che f sad',  'che pose1 base md_sad ed_sad brow_sad glasses_default')
-    MapEmote('che f scanning',  'che pose1 armsscanning md_thinline ec_default brow_grumpy shadows glasses_gendo')
+    MapEmote('che f thinline',  'che pose1 base md_thinline')
+
+    MapEmote('che f scanning',  'che pose1 armsscanning md_thinline ec_default brow_grumpy glasses_gendo')
 
     #Cheshire looking off to the side
     MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
 # override some default mouth flap behaviours
-image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
+image che_pose1_md_catmouthsmall = FlapMouth("che_pose1_mc_catmouthsmall", "che_pose1_m_openmore")
+image che_pose1_md_catmouth = FlapMouth("che_pose1_mc_catmouth", "che_pose1_m_openevenmore")
+image che_pose1_md_meh = FlapMouth("che_pose1_mc_meh", "che_pose1_m_shocked")
+image che_pose1_md_sad = FlapMouth("che_pose1_mc_sad", "che_pose1_m_shocked")
+image che_pose1_md_thinline = FlapMouth("che_pose1_mc_thinline", "che_pose1_m_default")
 
 # override some default blinking behaviours
 
@@ -39,32 +50,31 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 label start:
     show screen in_game_menu
     scene bg room
-    show che s nya
+    show che f happy
 
-    che "Hover your mouse over MENU to test."
+    che "Default flap mouth."
+
+    show che f catmouthsmall
+
+    che "Catmouthsmall flap mouth."
+
+    show che f catmouth
+
+    che "Catmouth flap mouth."
+
+    show che f meh
+
+    che "Meh flap mouth."
+
+    show che f sad
+
+    che "Sad flap mouth."
+
+    show che f scanning
+
+    che "Thinline flap mouth."
 
     show che f happy
-    show screen in_game_entervr
-
-    che "Hover your mouse over ENTER VR and press to test."
-
-    hide screen in_game_entervr
-    hide screen in_game_entervr_showing
-    show screen in_game_exitvr
-
-    che "Hover your mouse over EXIT VR and press to test."
-
-    hide screen in_game_exitvr
-    hide screen in_game_exitvr_showing
-
-    che "Testing hub items chooser now."
-
-    hide screen in_game_entervr
-
-    show hub with dissolve
-
-    # This ends the game.
-    call screen hubselect
 
     che "Demo ends after this line."
 
