@@ -65,3 +65,45 @@ label vreffect:
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.5 zoom 1.02
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.1 zoom 1.02
         
+## VR POWER OUTAGE ######################################################################
+
+## A Visual Effect made for the wonderful Sagi; the VR headset experiences a
+## a poweroutage, leaving the MC in the dark, playing the animation just once.
+
+image vrpoweroutageeffect:
+    "vfx/vrpowerout_01.png"
+    0.02
+    "vfx/vrpowerout_02.png"                           ## A simple animation~!
+    0.02
+    "vfx/vrpowerout_03.png"
+    0.02
+    "vfx/vrpowerout_04.png"
+    0.02
+    "vfx/vrpowerout_05.png"
+    0.02
+    "vfx/vrpowerout_06.png"
+    0.02
+    "vfx/vrpowerout_07.png"
+    0.02
+    "vfx/vrpowerout_08.png"
+    0.02
+    "vfx/vrpowerout_09.png"
+    0.02
+    "vfx/vrpowerout_10.png"
+    0.02
+    "vfx/vrpowerout_11.png"
+    0.02
+    "vfx/vrpowerout_12.png"
+    0.02
+    "vfx/vrpowerout_13.png"
+    0.02
+    "vfx/vrpowerout_14.png"
+    0.02
+    "vfx/vrpowerout_15.png"
+    0.02
+    "vfx/vrpowerout_16.png"                           ## Fun fact, I accidentally made it into an animation cycle at first... it was disorienting!
+    0.02
+
+
+
+        

@@ -36,11 +36,13 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 label start:
     show screen in_game_menu
     show splashscreen
+    show vrpoweroutageeffect
+    pause
     scene bg room
     show che f sad
 
     che "Hover your mouse over MENU to test."
-
+    show vrpoweroutageeffect
     show che f happy
     show screen in_game_entervr
 
