@@ -104,6 +104,19 @@ image vrpoweroutageeffect:
     "vfx/vrpowerout_16.png"                           ## Fun fact, I accidentally made it into an animation cycle at first... it was disorienting!
     0.02
 
+## VR GRID ANIMATION######################################################################
 
+## A Visual Effect created to simulate an endless grid of pink,
+## which is what the world used to look like until the 90s hit.
+
+init:
+    image vrgrid = Animation("vfx/vrgrid_01.png",0.02,
+                                "vfx/vrgrid_02.png",0.02,
+                                "vfx/vrgrid_03.png",0.02,
+                                "vfx/vrgrid_04.png",0.02,
+                                "vfx/vrgrid_05.png",0.02,
+                                "vfx/vrgrid_06.png",0.02,
+                                "vfx/vrgrid_07.png",0.02,
+                                "vfx/vrgrid_08.png",0.02,)
 
         
