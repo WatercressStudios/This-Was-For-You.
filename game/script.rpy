@@ -51,17 +51,30 @@ label start:
 
     che "Hover your mouse over EXIT VR and press to test."
 
-    hide screen in_game_exitvr
-    hide screen in_game_exitvr_showing
+    scene ceiling empty
+    show ceilingfan
+
+    "Ceiling fan animation."
+
+    scene bedroom open dark
+
+    "Bedroom with open curtains during the blackout."
+
+    show bedroomlightning dark
+
+    "Bedroom with lightning during the blackout."
+
+    scene bedroom open
+
+    "Bedroom with open curtains."
+
+    show bedroomlightning
+
+    "Bedroom with lightning."
 
     che "Testing hub items chooser now."
 
-    hide screen in_game_entervr
-
     show hub with dissolve
-
-    # This ends the game.
-    call screen hubselect
 
     che "Demo ends after this line."
 
