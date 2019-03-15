@@ -35,33 +35,16 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
 label start:
     show screen in_game_menu
-    scene bg room
-    show che f sad
+    scene hub
+    show che
 
-    che "Hover your mouse over MENU to test."
+    che "Testing transition between sprite to CG."
 
-    show che f happy
-    show screen in_game_entervr
+    show cheshire
 
-    che "Hover your mouse over ENTER VR and press to test."
+    che "Testing CG."
 
-    hide screen in_game_entervr
-    hide screen in_game_entervr_showing
-    show screen in_game_exitvr
-
-    che "Hover your mouse over EXIT VR and press to test."
-
-    hide screen in_game_exitvr
-    hide screen in_game_exitvr_showing
-
-    che "Testing hub items chooser now."
-
-    hide screen in_game_entervr
-
-    show hub with dissolve
-
-    # This ends the game.
-    call screen hubselect
+    show cheshire sad hurt shocked tears ticket
 
     che "Demo ends after this line."
 
