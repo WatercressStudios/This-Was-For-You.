@@ -122,43 +122,28 @@ init:
 ## VR FOREST TRAIL ######################################################################
 
 ## The Foreground stays still as the abstract landscape flickers abstractly.
+## Wolf wanted abstract, we gonna get abstract up in this VN.
 
-image woodtrailstars = "vfx/bg_woodtrail_base.png"
-image woodtrailbg = "vfx/bg_woodtrail_base2.png"
-image woodtrailforeground = "vfx/bg_woodtrail_foreground.png"
-
-image woodtrailtest:
-    "vfx/bg_woodtrail_base.png"
-    zoom .75
-    "vfx/bg_woodtrail_base2.png"
-    alpha 1.0 xalign 0.5 yalign 0.5 zoom .75
-    linear 10.0 alpha 0.1
-    linear 1.0 alpha 0.1
-    linear 10.0 alpha 1.0
-    linear 1.0 alpha 1.0
-    repeat
-    "vfx/bg_woodtrail_foreground.png"
-    xalign 0.5 yalign 0.5 zoom .75
-
-##DRAZ WAS HERE######################################################################
-
-image woodtrailstarsdraz:
+image woodtrailstarsdraz:                             ##DRAZ WAS HERE######################################################################
     "vfx/bg_woodtrail_base.png"
     zoom .75
 
-image woodtrailbgdraz:
+image woodtrailbgdraz:                                ## Thanks to Draz, Anagram is now able to code a bunch a stuff~! Draz is the best Space Future Aunt ever~!
     "vfx/bg_woodtrail_base2.png"
     alpha 1.0 xalign 0.5 yalign 0.5 zoom .75
-    linear 10.0 alpha 0.1
-    linear 1.0 alpha 0.1
+    linear 10.0 alpha 0.0
+    linear 10.0 alpha 0.0
     linear 10.0 alpha 1.0
-    linear 1.0 alpha 1.0
+    linear 10.0 alpha 1.0
+    linear 30.0 alpha 0.0
+    linear 30.0 alpha 0.0
+    linear 30.0 alpha 1.0
+    linear 30.0 alpha 1.0
     repeat
 
 image woodtrailforegrounddraz:
     "vfx/bg_woodtrail_foreground.png"
     xalign 0.5 yalign 0.5 zoom .75
-
 
 layeredimage woodtrail:
     always:
@@ -169,3 +154,23 @@ layeredimage woodtrail:
 
     always:
         "woodtrailforegrounddraz"
+        
+## VR GLITTER ######################################################################
+
+## Alright, something easy to make! Let's make some falling glitter!
+## In a game with a cutesy cat girl in a VR setting, anything is possible!
+
+##We make a large .PNG, define that it is a single strip x 250 frames along that strip, and that each strip is a 5x5 px.
+image vfxglitterFilmstrip = anim.Filmstrip("vfx/twfy_glittervfx.png", (5,5), (1,250), 0.01) 
+
+## Then give it the SnowBlossom treatment, a count of a 100 on screen at a time, a border of 10px until it can vanish and rest, and then we define the x axis speed and the y axis speed~!
+image vfxglitter = SnowBlossom("vfxglitterFilmstrip", count=100, border=10, xspeed=(-25, 25), yspeed=(50, 100), start=10, fast=False, horizontal=False) 
+
+
+## VR Fireflies ######################################################################
+
+## You would not believe your eyes, you would not believe your eyes, you would not believeeeeeee
+## Okay, so its the same idea as the glitter, but values tweaked to get a different result
+
+image vfxfireembersFilmstrip = anim.Filmstrip("vfx/twfy_fireembersvfx.png", (5,5), (1,250), 0.01) 
+image vfxfireflies = SnowBlossom("vfxfireembersFilmstrip", count=50, border=10, xspeed=(150, -150), yspeed=(150, -150), start=10, fast=False, horizontal=False)

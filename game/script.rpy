@@ -39,9 +39,13 @@ label start:
     show vrpoweroutageeffect
     pause
     scene woodtrail
+    show vfxfireflies
     che "Testing Animated BG"
     pause
+    
     show vrgrid
+    show vfxglitter
+    
     pause
     show che f sad
     che "Hover your mouse over MENU to test."
