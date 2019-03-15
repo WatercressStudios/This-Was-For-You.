@@ -17,15 +17,36 @@ init python:
     # manually create shortcuts to more complex expressions
 
     #Cheshire looking forward
-    MapEmote('che f happy',  'che base md_default ed_default brow_default glasses_default')
-    MapEmote('che f relaxed',  'che base md_default ed_relaxed brow_relaxed glasses_default')
-    MapEmote('che f sad',  'che base md_sad ed_sad brow_sad glasses_default')
-    MapEmote('che f scanning',  'che armsscanning md_thinline ec_default brow_grumpy shadows glasses_gendo')
+    MapEmote('che f happy',  'che pose1 base md_default ed_default brow_default glasses_default')
+    MapEmote('che f relaxed',  'che pose1 base md_default ed_relaxed brow_relaxed glasses_default')
+
+    MapEmote('che f catmouthsmall',  'che pose1 base md_catmouthsmall')
+    MapEmote('che f catmouth',  'che pose1 base md_catmouth')
+    MapEmote('che f grin',  'che pose1 base md_grin')
+    MapEmote('che f meh',  'che pose1 base md_meh')
+    MapEmote('che f sad',  'che pose1 base md_sad ed_sad brow_sad glasses_default')
+    MapEmote('che f thinline',  'che pose1 base md_thinline')
+
+    MapEmote('che f scanning',  'che pose1 armsscanning md_thinline ec_default brow_grumpy glasses_gendo')
+
+    #Cheshire looking off to the side
+    MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
 # override some default mouth flap behaviours
-image che_md_sad = FlapMouth("che_mc_sad", "che_m_shocked")
+#Pose 1
+
+image che_pose1_md_catmouthsmall = FlapMouth("che_pose1_mc_catmouthsmall", "che_pose1_m_openmore")
+image che_pose1_md_catmouth = FlapMouth("che_pose1_mc_catmouth", "che_pose1_m_openevenmore")
+image che_pose1_md_meh = FlapMouth("che_pose1_mc_meh", "che_pose1_m_shocked")
+image che_pose1_md_sad = FlapMouth("che_pose1_mc_sad", "che_pose1_m_shocked")
+image che_pose1_md_thinline = FlapMouth("che_pose1_mc_thinline", "che_pose1_m_default")
+
+#Pose 2
+
+image che_pose2_md_default = FlapMouth("che_pose2_mc_default", "che_pose2_m_openmore")
 
 # override some default blinking behaviours
+#Pose 2
 
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
 image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
@@ -47,18 +68,49 @@ label start:
     show vfxglitter
 
     pause
-    show che f sad
-    che "Hover your mouse over MENU to test."
-    show che f happy
+    show che f default
+
+    che "Pose1 default flap mouth."
+
+    che "Hover your mouse over MENU or email."
     show screen in_game_entervr
 
-    che "Hover your mouse over ENTER VR and press to test."
+    che "Click on VR."
 
     hide screen in_game_entervr
-    hide screen in_game_entervr_showing
     show screen in_game_exitvr
 
-    che "Hover your mouse over EXIT VR and press to test."
+    che "Click on RW."
+
+    hide screen in_game_exitvr
+
+    show che s default
+
+    che "Pose2 default flap mouth."
+
+    show che f catmouthsmall
+
+    che "Pose1 catmouthsmall flap mouth."
+
+    show che f catmouth
+
+    che "Pose1 catmouth flap mouth."
+
+    show che f meh
+
+    che "Pose1 meh flap mouth."
+
+    show che f sad
+
+    che "Pose1 sad flap mouth."
+
+    show che f scanning
+
+    che "Pose1 thinline flap mouth."
+
+    show che f happy
+
+    che "Pose1 happy flap mouth."
 
     scene ceiling empty
     show ceilingfan
@@ -81,13 +133,10 @@ label start:
 
     "Bedroom with lightning."
 
-    che "Testing hub items chooser now."
-
     show hub with dissolve
 
-    # This ends the game.
-    call screen hubselect
+    "Hub world"
 
-    che "Demo ends after this line."
+    call screen hubselect
 
     return
