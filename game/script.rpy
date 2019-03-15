@@ -38,7 +38,7 @@ label start:
     show splashscreen
     show vrpoweroutageeffect
     pause
-    scene woodtrailtest
+    scene woodtrail
     che "Testing Animated BG"
     pause
     show vrgrid

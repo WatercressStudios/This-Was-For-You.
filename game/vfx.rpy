@@ -13,7 +13,7 @@
 label splashscreen:
     scene black
     with Pause(1)
-    
+
     if persistent.ending  == "Complete":                ## For Completionists.
         show watercresssplash 4 with dissolve
         with Pause(2)
@@ -42,8 +42,8 @@ image watercresssplash 1 = "vfx/watercresssplash1.png"
 image watercresssplash 2 = "vfx/watercresssplash2.png"
 image watercresssplash 3 = "vfx/watercresssplash3.png"
 image watercresssplash 4 = "vfx/watercresssplash4.png"
-        
-## VR Headset Frames of Animation used in Splash Screen    
+
+## VR Headset Frames of Animation used in Splash Screen
 init:
     image vrhelmet = Animation("vfx/vrheadset01.png",0.01,
                                 "vfx/vrheadset02.png",0.01,
@@ -64,7 +64,7 @@ label vreffect:
         linear 1.0 xalign 0.5 yalign 0.09 alpha 1.0 zoom 0.99
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.5 zoom 1.02
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.1 zoom 1.02
-        
+
 ## VR POWER OUTAGE ######################################################################
 
 ## A Visual Effect made for the wonderful Sagi; the VR headset experiences a
@@ -118,7 +118,7 @@ init:
                                 "vfx/vrgrid_06.png",0.02,
                                 "vfx/vrgrid_07.png",0.02,
                                 "vfx/vrgrid_08.png",0.02,)
-    
+
 ## VR FOREST TRAIL ######################################################################
 
 ## The Foreground stays still as the abstract landscape flickers abstractly.
@@ -140,4 +140,32 @@ image woodtrailtest:
     "vfx/bg_woodtrail_foreground.png"
     xalign 0.5 yalign 0.5 zoom .75
 
-        
+##DRAZ WAS HERE######################################################################
+
+image woodtrailstarsdraz:
+    "vfx/bg_woodtrail_base.png"
+    zoom .75
+
+image woodtrailbgdraz:
+    "vfx/bg_woodtrail_base2.png"
+    alpha 1.0 xalign 0.5 yalign 0.5 zoom .75
+    linear 10.0 alpha 0.1
+    linear 1.0 alpha 0.1
+    linear 10.0 alpha 1.0
+    linear 1.0 alpha 1.0
+    repeat
+
+image woodtrailforegrounddraz:
+    "vfx/bg_woodtrail_foreground.png"
+    xalign 0.5 yalign 0.5 zoom .75
+
+
+layeredimage woodtrail:
+    always:
+        "woodtrailstarsdraz"
+
+    always:
+        "woodtrailbgdraz"
+
+    always:
+        "woodtrailforegrounddraz"
