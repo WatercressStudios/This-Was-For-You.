@@ -104,7 +104,7 @@ image vrpoweroutageeffect:
     "vfx/vrpowerout_16.png"                           ## Fun fact, I accidentally made it into an animation cycle at first... it was disorienting!
     0.02
 
-## VR GRID ANIMATION######################################################################
+## VR GRID ANIMATION ######################################################################
 
 ## A Visual Effect created to simulate an endless grid of pink,
 ## which is what the world used to look like until the 90s hit.
@@ -118,5 +118,26 @@ init:
                                 "vfx/vrgrid_06.png",0.02,
                                 "vfx/vrgrid_07.png",0.02,
                                 "vfx/vrgrid_08.png",0.02,)
+    
+## VR FOREST TRAIL ######################################################################
+
+## The Foreground stays still as the abstract landscape flickers abstractly.
+
+image woodtrailstars = "vfx/bg_woodtrail_base.png"
+image woodtrailbg = "vfx/bg_woodtrail_base2.png"
+image woodtrailforeground = "vfx/bg_woodtrail_foreground.png"
+
+image woodtrailtest:
+    "vfx/bg_woodtrail_base.png"
+    zoom .75
+    "vfx/bg_woodtrail_base2.png"
+    alpha 1.0 xalign 0.5 yalign 0.5 zoom .75
+    linear 10.0 alpha 0.1
+    linear 1.0 alpha 0.1
+    linear 10.0 alpha 1.0
+    linear 1.0 alpha 1.0
+    repeat
+    "vfx/bg_woodtrail_foreground.png"
+    xalign 0.5 yalign 0.5 zoom .75
 
         

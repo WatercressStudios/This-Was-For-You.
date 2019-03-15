@@ -38,10 +38,12 @@ label start:
     show splashscreen
     show vrpoweroutageeffect
     pause
-    scene bg room
+    scene woodtrailtest
+    che "Testing Animated BG"
+    pause
     show vrgrid
+    pause
     show che f sad
-    
     che "Hover your mouse over MENU to test."
     show che f happy
     show screen in_game_entervr
