@@ -135,7 +135,16 @@ label start:
 
     show hub with dissolve
 
-    "Hub world"
+    show che f default
+
+    che "Testing transition between sprite to CG."
+
+    show cheshire sad hurt shocked tears ticket with dissolve
+
+    che "Oh no poor ches."
+
+    hide cheshire with dissolve
+    hide che with dissolve
 
     call screen hubselect
 
