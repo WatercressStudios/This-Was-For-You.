@@ -35,11 +35,20 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
 label start:
     show screen in_game_menu
-    scene bg room
+    show splashscreen
+    show vrpoweroutageeffect
+    pause
+    scene woodtrail
+    show vfxfireflies
+    che "Testing Animated BG"
+    pause
+
+    show vrgrid
+    show vfxglitter
+
+    pause
     show che f sad
-
     che "Hover your mouse over MENU to test."
-
     show che f happy
     show screen in_game_entervr
 
@@ -54,7 +63,7 @@ label start:
     scene ceiling empty
     show ceilingfan
 
-    "Ceiling fan animation."
+    che "Ceiling fan animation."
 
     scene bedroom open dark
 
@@ -75,6 +84,9 @@ label start:
     che "Testing hub items chooser now."
 
     show hub with dissolve
+
+    # This ends the game.
+    call screen hubselect
 
     che "Demo ends after this line."
 
