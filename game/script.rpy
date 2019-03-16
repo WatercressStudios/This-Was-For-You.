@@ -51,7 +51,6 @@ image che_pose2_md_default = FlapMouth("che_pose2_mc_default", "che_pose2_m_open
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
 image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 
-
 # The game starts here.
 
 label start:
@@ -59,8 +58,27 @@ label start:
     show splashscreen
     show vrpoweroutageeffect
     pause
-    scene woodtrail
-    show vfxfireflies
+    scene bg room
+    show fsky:
+        xalign 0.5 yalign 0.3 rotate 0 zoom 1.1
+        linear 40 rotate 180
+        linear 40 rotate 360
+        repeat
+    scene  bg room
+    call blinkonce
+    with dissolve
+    che "Test blinkonce"
+    show Cheshiredance
+    che "Test Dance/Proof of concept"
+    
+    scene  bg room
+    call blinktwice
+    with dissolve
+    che "Test blinktwice"
+    scene  bg room
+    show vrfield:
+        alpha 0.5 zoom 0.75
+
     che "Testing Animated BG"
     pause
 

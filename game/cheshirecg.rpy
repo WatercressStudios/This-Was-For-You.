@@ -7,6 +7,7 @@ layeredimage cheshire:
     group body:
         attribute armsforward default:
             "cgs/cheshire/armsforward.png"
+            
 
     group eyes:
         attribute closed default:

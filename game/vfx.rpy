@@ -174,3 +174,94 @@ image vfxglitter = SnowBlossom("vfxglitterFilmstrip", count=100, border=10, xspe
 
 image vfxfireembersFilmstrip = anim.Filmstrip("vfx/twfy_fireembersvfx.png", (5,5), (1,250), 0.01) 
 image vfxfireflies = SnowBlossom("vfxfireembersFilmstrip", count=50, border=10, xspeed=(150, -150), yspeed=(150, -150), start=10, fast=False, horizontal=False)
+
+
+## VR Field ######################################################################
+
+image fsky = "vfx/fsky.png"
+
+init:
+    image vrfield = Animation("vfx/f1.png",0.59,
+                                "vfx/f2.png",0.59,
+                                "vfx/f3.png",0.59,
+                                "vfx/f4.png",0.59,
+                                "vfx/f5.png",0.59,
+                                "vfx/f6.png",0.59,
+                                "vfx/f7.png",0.59,
+                                "vfx/f8.png",0.59,)
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+## VFX BLINKING ######################################################################
+
+## A blinking animation from a First Person Perspective/ Point of View,a simply PNG
+## is duplicated twice and flipped upsidedown, both entering offscreen to emulate blinking~!
+
+image eyelidtop = Image("vfx/blink1.png",)
+image eyelidbottom = im.Flip("vfx/blink1.png", vertical=True,) #Let's define the eyelids here, this one is mirrored so we can reuse it.
+
+image blinkonce1:
+    "eyelidtop"
+    xpos 0.5 ypos 0.0                   #Comes from top of screen,
+    linear 0.6 xpos 0.5 ypos 0.0        #stays for a moment offscreen,
+    linear 0.6 xpos 0.5 ypos 1.0        #moves onto screen fully, and if in unison with the other eyelid, forms a blink
+    linear 0.1 xpos 0.5 ypos 1.0        #Pauses, to emulate a slow blink
+    linear 0.6 xpos 0.5 ypos 0.0               #and then goes back off screen.
+    linear 0.1 xpos 0.5 ypos 0.0
+
+image blinkonce2:
+    "eyelidbottom"
+    xpos 0.5 ypos 2.0
+    linear 0.6 xpos 0.5 ypos 2.0
+    linear 0.6 xpos 0.5 ypos 1.0
+    linear 0.1 xpos 0.5 ypos 1.0
+    linear 0.6 xpos 0.5 ypos 2.0
+    linear 0.1 xpos 0.5 ypos 2.0
+
+label blinkonce:        #Call it in, don't show. Why? I don't know.
+    show blinkonce1
+    show blinkonce2
+    with dissolve
+    return              #without this return placed here, it will continue spewing out the following code beneath it~!
+
+image blinktwice1:
+    "eyelidtop"
+    xpos 0.5 ypos 0.0 alpha 1.0
+    linear 0.3 xpos 0.5 ypos 0.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 0.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 0.0
+
+image blinktwice2:
+    "eyelidbottom"
+    xpos 0.5 ypos 2.0 alpha 1.0
+    linear 0.3 xpos 0.5 ypos 2.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 2.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 2.0
+
+label blinktwice:        
+    show blinktwice1
+    show blinktwice2
+    with dissolve
+    return
+
+## Ches Dance ######################################################################
+
+## If this works itd be so cool!
+
+init:
+    image Cheshiredance = Animation("sprites/che/pose1/base.png",0.59,
+                            "sprites/che/pose1/base2.png",0.59,)
+    
+    
