@@ -133,6 +133,29 @@ label start:
 
     "Bedroom with lightning."
 
+    #Zoom in and fall
+
+    show bedroom open:
+        zoom 1.5
+        xalign 0.9 yalign 0.2
+
+    "Testing bedroom zoom in."
+
+    show black behind bedroom:
+        zoom 1.2
+
+    show bedroom open:
+        linear 0.2 yalign 0.8
+
+    pause 0.1
+
+    show bedroom open with vpunch:
+        linear 0.1 alpha 0
+
+    "Testing falling effect."
+
+    #End zoom in and fall
+
     show hub with dissolve
 
     show che f default
