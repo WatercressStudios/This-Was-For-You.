@@ -1,6 +1,7 @@
 ﻿# The script of the game goes in this file.
 
 # callback=speaker is needed for mouth flaps
+define mc = DynamicCharacter("mc_name", callback=speaker("mc"))
 define che = Character("CH35H1R3", callback=speaker("che"))
 
 init python:
@@ -55,13 +56,19 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 # The game starts here.
 
 label start:
+    $ persistent.subtitle = False
     show screen in_game_menu
-    show splashscreen
+    call screen startgame_login
+
+label start2:
+    mc "Subtitles is [persistent.subtitle], and my name is [mc_name]"
+
     show vrpoweroutageeffect
     pause
+
     scene woodtrail
     show vfxfireflies
-    che "Testing Animated BG"
+    mc "Testing Animated BG"
     pause
 
     show vrgrid
@@ -70,9 +77,9 @@ label start:
     pause
     show che f default
 
-    che "Pose1 default flap mouth."
+    mc "Pose1 default flap mouth."
 
-    che "Hover your mouse over MENU or email."
+    mc "Hover your mouse over MENU or email."
     show screen in_game_entervr
 
     che "Click on VR."

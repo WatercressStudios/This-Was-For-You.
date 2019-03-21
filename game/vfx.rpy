@@ -25,7 +25,7 @@ label splashscreen:
     else:
         show watercresssplash 1 with dissolve           ## By Default
         with Pause(0.1)
-        call vreffect
+        call vreffect from _call_vreffect
         with Pause(1.5)
         show watercresssplash 2 with Dissolve(0.2)
         show watercresssplash 3 with Dissolve(1.0)

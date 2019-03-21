@@ -277,3 +277,134 @@ transform pulse:
     zoom 1
     linear 0.05 zoom 1.1
     linear 0.25 zoom 1.0
+
+transform fade_inout:
+    on show:
+        alpha 0
+        linear 0.5 alpha 1
+    on hide:
+        linear 0.5 alpha 0
+
+init python:
+    import time
+
+    mc_name = ""
+
+    def ChangedNameInput(name):
+        global mc_name
+
+        mc_name = name.strip()
+        if (mc_name != ""):
+            if renpy.get_screen("thumbprint_active") == None:
+                renpy.show_screen("thumbprint_active")
+                renpy.restart_interaction()
+        else:
+            if renpy.get_screen("thumbprint_active") != None:
+                renpy.hide_screen("thumbprint_active")
+                renpy.restart_interaction()
+
+    def ClickedLogin():
+        global mc_name
+
+        if mc_name != "":
+            renpy.hide_screen("startgame_login")
+            renpy.show_screen("thumbprint_scanning")
+            renpy.show_screen("thumbprint_line")
+            ui.timer(2.0, LoginToLoading)
+
+    def LoginToLoading():
+        renpy.hide_screen("thumbprint_scanning")
+        renpy.hide_screen("thumbprint_line")
+        renpy.show_screen("startgame_logging_in")
+        renpy.restart_interaction()
+        ui.timer(3.0, LoadingToHide)
+
+    def LoadingToHide():
+        renpy.hide_screen("startgame_logging_in")
+        renpy.restart_interaction()
+        ui.timer(0.5, HideToStart)
+
+    def HideToStart():
+        renpy.jump("start2")
+
+image authenticate_loading_bg:
+    "megan_ui/authenticate-loadscreen1.jpg" with Dissolve(1.0)
+    1.0
+    "megan_ui/authenticate-loadscreen2.jpg" with Dissolve(1.0)
+    1.0
+    repeat
+
+image thumbprint_glowing:
+    "megan_ui/thumbprint-glow.png" with Dissolve(1.0)
+    1.0
+    "megan_ui/thumbprint-default.png" with Dissolve(1.0)
+    1.0
+    repeat
+
+image authenticate_glowing:
+    "megan_ui/authenticate-glow.png" with Dissolve(1.0)
+    1.0
+    "megan_ui/authenticate-default.png" with Dissolve(1.0)
+    1.0
+    repeat
+
+image line_glowing:
+    "megan_ui/line-scan.png" with Dissolve(0.4)
+    0.4
+    "megan_ui/line-default.png" with Dissolve(0.4)
+    0.4
+    repeat
+
+transform line_scanning:
+    pos (760, 740)
+    linear 1.0 pos (760, 520)
+    linear 1.0 pos (760, 740)
+    repeat
+
+screen startgame_login():
+    tag login
+    fixed at fade_inout:
+        add "megan_ui/authenticate-background.jpg"
+
+        fixed pos (540, 200):
+            add "megan_ui/authenticate-voice-mail-subs-background.png"
+            imagebutton:
+                idle "megan_ui/authenticate-voice-mail-subs-off.png"
+                hover "megan_ui/authenticate-voice-mail-subs-off.png"
+                selected_idle "megan_ui/authenticate-voice-mail-subs-on.png"
+                selected_hover "megan_ui/authenticate-voice-mail-subs-on.png"
+                action ToggleVariable("persistent.subtitle")
+
+        fixed pos (540, 400):
+            add "megan_ui/authenticate-name-background.png"
+            input pos (172, 245):
+                default ""
+                length 15
+                font "BebasNeue-Regular.otf"
+                color "#ceebf5"
+                size 50
+                changed ChangedNameInput
+
+        fixed pos (760, 740):
+            add "megan_ui/thumbprint-default.png"
+
+screen startgame_logging_in():
+    tag login
+    fixed at fade_inout:
+        add "authenticate_loading_bg"
+
+screen thumbprint_active():
+    tag thumbprint
+    button pos (760, 740) at fade_inout:
+        add "thumbprint_glowing"
+        add "authenticate_glowing"
+        action Function(ClickedLogin)
+
+screen thumbprint_scanning():
+    tag thumbprint
+    fixed pos (760, 740) at fade_inout:
+        add "megan_ui/thumbprint-scan.png"
+
+screen thumbprint_line():
+    fixed at line_scanning:
+        add "line_glowing"
