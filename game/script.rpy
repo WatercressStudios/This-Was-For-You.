@@ -56,31 +56,47 @@ image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
 label start:
     show screen in_game_menu
     show splashscreen
+    scene black
+    che "Ready?"
     show vrpoweroutageeffect
-    pause
-    scene bg room
-    show fsky:
-        xalign 0.5 yalign 0.3 rotate 0 zoom 1.1
-        linear 40 rotate 180
-        linear 40 rotate 360
-        repeat
-    scene  bg room
+    che "vrpoweroutageeffect"
+    scene sunsettitle
+    che "sunsettitle"
     call blinkonce
+    che "call blinkonce"
+    call blinktwice
+    che "call blinktwice"
+    show crtvfx
+    che "crtvfx"
+    scene woodtrail1
+    show che f default
     with dissolve
-    che "Test blinkonce"
+    che "Bg woodtrail"
+    
+    scene woodtrail2
+    show che f default
+    with dissolve
+    che "Bg woodtrail2"
+    
+    scene kerosene
+    with dissolve
+    che "Bg Kerosene"
+
+    scene vrgrid
     show Cheshiredance
+    with dissolve
     che "Test Dance/Proof of concept"
     
-    scene  bg room
-    call blinktwice
-    with dissolve
-    che "Test blinktwice"
-    scene  bg room
+    scene catfieldbg
+    show fsky:
+        xalign 0.5 yalign 0.3 rotate 0 zoom 1.1 alpha 0.5
+        linear 60 rotate 180
+        linear 60 rotate 360
+        repeat
     show vrfield:
         alpha 0.5 zoom 0.75
+    che "Test Bg Field"
 
-    che "Testing Animated BG"
-    pause
 
     show vrgrid
     show vfxglitter
