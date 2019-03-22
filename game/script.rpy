@@ -117,40 +117,42 @@ label start:
 
     che "Ceiling fan animation."
 
-    scene bedroom open dark
+    show bedroombg
 
-    "Bedroom with open curtains during the blackout."
+    "Standard bedroom bg."
 
-    show bedroomlightning dark
+    show bedroombg nocurtains
 
-    "Bedroom with lightning during the blackout."
+    "Lets see the skyline."
 
-    scene bedroom open
+    show bedroombg lightning
+    show bedroomstorm nocurtains
 
-    "Bedroom with open curtains."
+    "Now for some lightning."
 
-    show bedroomlightning
+    hide bedroomstorm
+    show bedroombg rain -lightning
 
-    "Bedroom with lightning."
+    "And now some rain."
 
     #Zoom in and fall
 
-    show bedroom open:
+    show bedroombg open -rain:
         zoom 1.5
         xalign 0.9 yalign 0.2
 
     "Testing bedroom zoom in."
 
-    show black behind bedroom:
-        zoom 1.2
-
-    show bedroom open:
+    show bedroombg open:
         linear 0.2 yalign 0.8
 
     pause 0.1
 
-    show bedroom open with vpunch:
-        linear 0.1 alpha 0
+    show black with vpunch:
+        alpha 0
+        linear 0.1 alpha 1
+
+    show bedroombg open with vpunch
 
     "Testing falling effect."
 
