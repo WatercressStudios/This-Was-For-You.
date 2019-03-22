@@ -56,18 +56,18 @@ image history_buttons:
 screen in_game_menu():
     zorder 1
 
-    button xpos 1030 ypos 0:
+    button xpos 990 ypos 0:
         add "rewind_buttons"
-        action Null
-    button xpos 1140 ypos 0:
+        action Rollback()
+    button xpos 1100 ypos 0:
         add "autoplay_buttons"
-        action Null
-    button xpos 1250 ypos 0:
+        action Preference("auto-forward", "toggle")
+    button xpos 1210 ypos 0:
         add "skip_buttons"
-        action Null
-    button xpos 1360 ypos 0:
+        action Skip() alternate Skip(fast=True, confirm=True)
+    button xpos 1320 ypos 0:
         add "history_buttons"
-        action Null
+        action ShowMenu('history')
 
     fixed xpos 110 ypos -1010:
         add "megan_ui/gui-email-list-background.png"
