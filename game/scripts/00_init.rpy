@@ -11,6 +11,20 @@ define caf = Character("Cafe Owner", callback=speaker("caf"))
 define vm = Character("Friend", callback=speaker("vm"))
 
 init python:
+    # define VA info and parsing
+    voices = {}
+    voices['che'] = '#Cheshire (shiena)'
+    voices['min'] = '#Ji-min ()'
+    voices['bos'] = '#Boss ()'
+    voices['mom'] = '#Mom ()'
+    voices['dad'] = '#Dad ()'
+    voices['caf'] = '#Cafe Owner ()'
+    voices['vm'] =  '#Friend ()'
+    # To do VA parsing after filling the above:
+    # 1. Run the game in Ren'Py
+    # 2. Call the console with 'shift+o'
+    # 3. Type 'ParseVoices()' and hit enter
+
     # define the BGs
     DefineImages('cgs')
     DefineImages('bgs', prepend='bg')

@@ -4,12 +4,19 @@
 
 label intro:
     #Voicemail
+    voice "01-intro-1.mp3" #Ji-min ()
     min "Heyyy. It's meee."
+    voice "01-intro-2.mp3" #Ji-min ()
     min "I know I should be sleeping but I'm too excited, you know?"
+    voice "01-intro-3.mp3" #Ji-min ()
     min "Hope I didn't wake you up!"
+    voice "01-intro-4.mp3" #Ji-min ()
     min "Er, what time is it over there again?"
+    voice "01-intro-5.mp3" #Ji-min ()
     min "Whatever you're doing, I hope it's going well!"
+    voice "01-intro-6.mp3" #Ji-min ()
     min "I think I've talked for long enough, hehe."
+    voice "01-intro-7.mp3" #Ji-min ()
     min "See you tomorrow!"
 
     #Ceiling Bg
