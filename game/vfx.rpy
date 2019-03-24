@@ -63,7 +63,7 @@ label vreffect:
         linear 1.0 xalign 0.5 yalign 0.09 alpha 1.0 zoom 0.99
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.5 zoom 1.02
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.1 zoom 1.02
-       
+
 
 ## VR POWER OUTAGE ######################################################################
 
@@ -120,17 +120,17 @@ init:
                                 "vfx/vrgrid_08.png",0.02,)
 
 
-        
+
 ## VR GLITTER ######################################################################
 
 ## Alright, something easy to make! Let's make some falling glitter!
 ## In a game with a cutesy cat girl in a VR setting, anything is possible!
 
 ##We make a large .PNG, define that it is a single strip x 250 frames along that strip, and that each strip is a 5x5 px.
-image vfxglitterFilmstrip = anim.Filmstrip("vfx/twfy_glittervfx.png", (5,5), (1,250), 0.01) 
+image vfxglitterFilmstrip = anim.Filmstrip("vfx/twfy_glittervfx.png", (5,5), (1,250), 0.01)
 
 ## Then give it the SnowBlossom treatment, a count of a 100 on screen at a time, a border of 10px until it can vanish and rest, and then we define the x axis speed and the y axis speed~!
-image vfxglitter = SnowBlossom("vfxglitterFilmstrip", count=100, border=10, xspeed=(-25, 25), yspeed=(50, 100), start=10, fast=False, horizontal=False) 
+image vfxglitter = SnowBlossom("vfxglitterFilmstrip", count=100, border=10, xspeed=(-25, 25), yspeed=(50, 100), start=10, fast=False, horizontal=False)
 
 
 ## VR Fireflies ######################################################################
@@ -138,7 +138,7 @@ image vfxglitter = SnowBlossom("vfxglitterFilmstrip", count=100, border=10, xspe
 ## You would not believe your eyes, you would not believe your eyes, you would not believeeeeeee
 ## Okay, so its the same idea as the glitter, but values tweaked to get a different result
 
-image vfxfireembersFilmstrip = anim.Filmstrip("vfx/twfy_fireembersvfx.png", (5,5), (1,250), 0.01) 
+image vfxfireembersFilmstrip = anim.Filmstrip("vfx/twfy_fireembersvfx.png", (5,5), (1,250), 0.01)
 image vfxfireflies = SnowBlossom("vfxfireembersFilmstrip", count=50, border=10, xspeed=(150, -150), yspeed=(150, -150), start=10, fast=False, horizontal=False)
 
 
@@ -158,7 +158,7 @@ init:
                                 "vfx/f7.png",0.59,
                                 "vfx/f8.png",0.59,)
 
-    
+
 ## VFX BLINKING ######################################################################
 
 ## A blinking animation from a First Person Perspective/ Point of View,a simply PNG
@@ -211,7 +211,7 @@ label blinkonce:        #Call it in, don't show. Why? I don't know.
     with dissolve
     return              #without this return placed here, it will continue spewing out the following code beneath it~!
 
-label blinktwice:        
+label blinktwice:
     show blinktwice1
     show blinktwice2
     with dissolve
@@ -222,23 +222,18 @@ label blinktwice:
 ## If this works itd be so cool!
 
 init:
-    image Cheshiredance = Animation("sprites/che/pose1/base.png",0.59,
-                            "sprites/che/pose1/base2.png",0.59,)
-    
-image crtlines7 = im.Flip("vfx/crtlines1.png", vertical=True)
-image crtlines8 = im.Flip("vfx/crtlines2.png", vertical=True)
-image crtlines9 = im.Flip("vfx/crtlines3.png", vertical=True)
-image crtlines10 = im.Flip("vfx/crtlines4.png", vertical=True)
-image crtlines11 = im.Flip("vfx/crtlines5.png", vertical=True)
-image crtlines12 = im.Flip("vfx/crtlines6.png", vertical=True)
-image crtlines13 = im.Flip("vfx/crtlines1.png", horizontal=True)
-image crtlines14 = im.Flip("vfx/crtlines2.png", horizontal=True)
-image crtlines15 = im.Flip("vfx/crtlines3.png", horizontal=True)
-image crtlines16 = im.Flip("vfx/crtlines4.png", horizontal=True)
-image crtlines17 = im.Flip("vfx/crtlines5.png", horizontal=True)
-image crtlines18 = im.Flip("vfx/crtlines6.png", vertical=True)
-
-init:
+    image crtlines7 = im.Flip("vfx/crtlines1.png", vertical=True)
+    image crtlines8 = im.Flip("vfx/crtlines2.png", vertical=True)
+    image crtlines9 = im.Flip("vfx/crtlines3.png", vertical=True)
+    image crtlines10 = im.Flip("vfx/crtlines4.png", vertical=True)
+    image crtlines11 = im.Flip("vfx/crtlines5.png", vertical=True)
+    image crtlines12 = im.Flip("vfx/crtlines6.png", vertical=True)
+    image crtlines13 = im.Flip("vfx/crtlines1.png", horizontal=True)
+    image crtlines14 = im.Flip("vfx/crtlines2.png", horizontal=True)
+    image crtlines15 = im.Flip("vfx/crtlines3.png", horizontal=True)
+    image crtlines16 = im.Flip("vfx/crtlines4.png", horizontal=True)
+    image crtlines17 = im.Flip("vfx/crtlines5.png", horizontal=True)
+    image crtlines18 = im.Flip("vfx/crtlines6.png", vertical=True)
     image crtvfx = Animation("vfx/crtlines1.png",0.1,
                              "vfx/crtlines2.png",0.1,
                              "vfx/crtlines3.png",0.1,
@@ -258,11 +253,11 @@ init:
                              "crtlines16",0.1,
                              "crtlines17",0.1,
                              "crtlines18",0.1,)
-    
+
 ## VFX Fire ######################################################################
 
 ## An animated fire for a Campfire
-    
+
 init:
     image firevfx = Animation("vfx/campfire_1.png",0.1,
                              "vfx/campfire_2.png",0.1,
@@ -287,4 +282,3 @@ init:
                              "vfx/twfysunset_6.png",0.2,
                              "vfx/twfysunset_7.png",0.2,
                              "vfx/twfysunset_8.png",0.2,)
-                             

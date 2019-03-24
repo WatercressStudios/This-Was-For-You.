@@ -393,12 +393,26 @@ screen startgame_logging_in():
     fixed at fade_inout:
         add "authenticate_loading_bg"
 
+layeredimage thumbprint_authenticate:
+    group thumbprint:
+        attribute glowing default:
+            "thumbprint_glowing"
+        attribute onhover:
+            "megan_ui/thumbprint-glow.png"
+
+    group authenticate:
+        attribute glowing default:
+            "authenticate_glowing"
+        attribute onhover:
+            "megan_ui/authenticate-glow.png"
+
 screen thumbprint_active():
     tag thumbprint
-    button pos (760, 740) at fade_inout:
-        add "thumbprint_glowing"
-        add "authenticate_glowing"
+    imagebutton pos (760, 740) at fade_inout:
+        idle "thumbprint_authenticate"
+        hover "thumbprint_authenticate onhover"
         action Function(ClickedLogin)
+    key "K_RETURN" action Function(ClickedLogin)
 
 screen thumbprint_scanning():
     tag thumbprint
