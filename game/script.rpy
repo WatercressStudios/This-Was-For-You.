@@ -31,6 +31,13 @@ init python:
     MapEmote('che f scanning',  'che pose1 armsscanning md_thinline ec_default brow_grumpy glasses_gendo')
 
     #Cheshire looking off to the side
+    MapEmote('che s catmouth',  'che pose2 base md_catmouth')
+    MapEmote('che s meh',  'che pose2 base md_meh')
+    MapEmote('che s pout1',  'che pose2 base md_poutlvl1')
+    MapEmote('che s pout2',  'che pose2 base md_poutlvl2')
+    MapEmote('che s thinline',  'che pose2 base md_line')
+    MapEmote('che s sad',  'che pose2 base md_sad')
+
     MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
 # override some default mouth flap behaviours
@@ -45,6 +52,13 @@ image che_pose1_md_thinline = FlapMouth("che_pose1_mc_thinline", "che_pose1_m_de
 #Pose 2
 
 image che_pose2_md_default = FlapMouth("che_pose2_mc_default", "che_pose2_m_openmore")
+image che_pose2_md_catmouth = FlapMouth("che_pose2_mc_catmouth", "che_pose2_m_openmore")
+image che_pose2_md_meh = FlapMouth("che_pose2_mc_meh", "che_pose2_m_eck")
+image che_pose2_md_poutlvl1 = FlapMouth("che_pose2_mc_poutlv1", "che_pose2_m_awoo")
+image che_pose2_md_poutlvl2 = FlapMouth("che_pose2_mc_poutlv2", "che_pose2_m_awoo")
+image che_pose2_md_line = FlapMouth("che_pose2_mc_line", "che_pose2_m_eck")
+image che_pose2_md_sad = FlapMouth("che_pose2_mc_sad", "che_pose2_m_awoo")
+
 
 # override some default blinking behaviours
 #Pose 2
@@ -118,6 +132,30 @@ label start2:
     show che f happy
 
     che "Pose1 happy flap mouth."
+
+    show che s catmouth
+
+    che "Pose2 catmouth flap mouth."
+
+    show che s meh
+
+    che "Pose2 meh flap mouth."
+
+    show che s pout1
+
+    che "Pose2 pout1 flap mouth."
+
+    show che s pout2
+
+    che "Pose2 pout2 flap mouth."
+
+    show che s thinline
+
+    che "Pose2 thinline flap mouth."
+
+    show che s sad
+
+    che "Pose2 sad flap mouth."
 
     scene ceiling empty
     show ceilingfan
