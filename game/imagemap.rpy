@@ -20,40 +20,35 @@ screen hubselect:
 
         if not visited8track:
             hotspot (1479, 493, 359, 223) at glowpulse:
-                action Jump("eighttrack")
+                action Jump("eighttrack_internal")
 
         if not visitedplushie:
             hotspot (725, 472, 652, 480) at glowpulse:
-                action Jump("plushie")
+                action Jump("plushie_internal")
 
         if not visitedmug:
             hotspot (259, 671, 249, 239) at glowpulse:
-                action Jump("mug")
+                action Jump("mug_internal")
 
-label eighttrack:
-
-    "Never Gonna Give You Up."
+label eighttrack_internal:
     $ visited8track = True
+    $ visited += 1
+    jump eighttrack
 
-    jump itemmerge
-
-label plushie:
-
-    "Nya."
+label plushie_internal:
     $ visitedplushie = True
+    $ visited += 1
+    jump plushie
 
-    jump itemmerge
-
-label mug:
-
-    "Awoo."
+label mug_internal:
     $ visitedmug = True
-
-    jump itemmerge
+    $ visited += 1
+    jump mug
 
 label itemmerge:
-
-    if visited8track and visitedplushie and visitedmug:
-        return
+    if visited == 1:
+        jump rw2
+    elif visited == 2:
+        jump rw3
     else:
-        call screen hubselect
+        jump rw4

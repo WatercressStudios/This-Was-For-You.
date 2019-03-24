@@ -3,6 +3,12 @@
 # callback=speaker is needed for mouth flaps
 define mc = DynamicCharacter("mc_name", callback=speaker("mc"))
 define che = Character("CH35H1R3", callback=speaker("che"))
+define min = Character("Ji-min", callback=speaker("min"))
+define bos = Character("Boss", callback=speaker("bos"))
+define mom = Character("Mom", callback=speaker("mom"))
+define dad = Character("Dad", callback=speaker("dad"))
+define caf = Character("Cafe Owner", callback=speaker("caf"))
+define vm = Character("Friend", callback=speaker("vm"))
 
 init python:
     # define the BGs
@@ -70,11 +76,22 @@ image che_pose1_dance = Animation("sprites/che/pose1/base.png",0.59,
 # The game starts here.
 
 label start:
-    $ persistent.subtitle = False
-    show screen in_game_menu
-    call screen startgame_login
+    menu:
+        "Start game":
+            $ persistent.subtitle = False
+            $ visited8track = False
+            $ visitedplushie = False
+            $ visitedmug = False
+            $ visited = 0
+            show screen in_game_menu
+            call screen startgame_login
+        "Test":
+            jump test
 
 label start2:
+    jump intro
+
+label test:
     mc "Subtitles is [persistent.subtitle], and my name is [mc_name]"
 
     show vrpoweroutageeffect
