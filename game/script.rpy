@@ -18,25 +18,25 @@ init python:
     # manually create shortcuts to more complex expressions
 
     #Cheshire looking forward
-    MapEmote('che f happy',  'che pose1 base md_default ed_default brow_default glasses_default')
-    MapEmote('che f relaxed',  'che pose1 base md_default ed_relaxed brow_relaxed glasses_default')
+    MapEmote('che f happy',  'che pose1 md_default ed_default brow_default glasses_default')
+    MapEmote('che f relaxed',  'che pose1 md_default ed_relaxed brow_relaxed glasses_default')
 
-    MapEmote('che f catmouthsmall',  'che pose1 base md_catmouthsmall')
-    MapEmote('che f catmouth',  'che pose1 base md_catmouth')
-    MapEmote('che f grin',  'che pose1 base md_grin')
-    MapEmote('che f meh',  'che pose1 base md_meh')
-    MapEmote('che f sad',  'che pose1 base md_sad ed_sad brow_sad glasses_default')
-    MapEmote('che f thinline',  'che pose1 base md_thinline')
+    MapEmote('che f catmouthsmall',  'che pose1 md_catmouthsmall')
+    MapEmote('che f catmouth',  'che pose1 md_catmouth')
+    MapEmote('che f grin',  'che pose1 md_grin')
+    MapEmote('che f meh',  'che pose1 md_meh')
+    MapEmote('che f sad',  'che pose1 md_sad ed_sad brow_sad glasses_default')
+    MapEmote('che f thinline',  'che pose1 md_thinline')
 
     MapEmote('che f scanning',  'che pose1 armsscanning md_thinline ec_default brow_grumpy glasses_gendo')
 
     #Cheshire looking off to the side
-    MapEmote('che s catmouth',  'che pose2 base md_catmouth')
-    MapEmote('che s meh',  'che pose2 base md_meh')
-    MapEmote('che s pout1',  'che pose2 base md_poutlvl1')
-    MapEmote('che s pout2',  'che pose2 base md_poutlvl2')
-    MapEmote('che s thinline',  'che pose2 base md_line')
-    MapEmote('che s sad',  'che pose2 base md_sad')
+    MapEmote('che s catmouth',  'che pose2 md_catmouth')
+    MapEmote('che s meh',  'che pose2 md_meh')
+    MapEmote('che s pout1',  'che pose2 md_poutlvl1')
+    MapEmote('che s pout2',  'che pose2 md_poutlvl2')
+    MapEmote('che s thinline',  'che pose2 md_line')
+    MapEmote('che s sad',  'che pose2 md_sad')
 
     MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
@@ -60,12 +60,12 @@ image che_pose2_md_line = FlapMouth("che_pose2_mc_line", "che_pose2_m_eck")
 image che_pose2_md_sad = FlapMouth("che_pose2_mc_sad", "che_pose2_m_awoo")
 
 
-# override some default blinking behaviours
-#Pose 2
+# override some default behaviours
 
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
 image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
-
+image che_pose1_dance = Animation("sprites/che/pose1/base.png",0.59,
+                        "sprites/che/pose1/dance.png",0.59,)
 
 # The game starts here.
 
@@ -80,10 +80,46 @@ label start2:
     show vrpoweroutageeffect
     pause
 
-    scene woodtrail
-    show vfxfireflies
-    mc "Testing Animated BG"
-    pause
+    scene black
+    che "Ready?"
+    show vrpoweroutageeffect
+    che "vrpoweroutageeffect"
+    scene sunsettitle
+    che "sunsettitle"
+    call blinkonce
+    che "call blinkonce"
+    call blinktwice
+    che "call blinktwice"
+    show crtvfx
+    che "crtvfx"
+    scene woodtrail1
+    show che f default
+    with dissolve
+    che "Bg woodtrail"
+
+    scene woodtrail2
+    show che f default
+    with dissolve
+    che "Bg woodtrail2"
+
+    scene kerosene
+    with dissolve
+    che "Bg Kerosene"
+
+    scene vrgrid
+    show che f dance happy
+    with dissolve
+    che "Test Dance/Proof of concept"
+
+    scene catfieldbg
+    show fsky:
+        xalign 0.5 yalign 0.3 rotate 0 zoom 1.1 alpha 0.5
+        linear 60 rotate 180
+        linear 60 rotate 360
+        repeat
+    show vrfield:
+        alpha 0.5 zoom 0.75
+    che "Test Bg Field"
 
     show vrgrid
     show vfxglitter

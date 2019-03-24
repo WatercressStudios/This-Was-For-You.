@@ -17,10 +17,8 @@ label splashscreen:
     if persistent.ending  == "Complete":                ## For Completionists.
         show watercresssplash 4 with dissolve
         with Pause(2)
-
         scene watercress with dissolve
         with Pause(1)
-
         return
     else:
         show watercresssplash 1 with dissolve           ## By Default
@@ -34,6 +32,7 @@ label splashscreen:
         scene white with Dissolve(0.5)
         with Pause(1)
         return
+    return
 
 ## Images used in Splash Screen
 image black              = "#000"
@@ -64,6 +63,7 @@ label vreffect:
         linear 1.0 xalign 0.5 yalign 0.09 alpha 1.0 zoom 0.99
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.5 zoom 1.02
         linear 1.0 xalign 0.5 yalign 0.09 alpha 0.1 zoom 1.02
+       
 
 ## VR POWER OUTAGE ######################################################################
 
@@ -119,41 +119,7 @@ init:
                                 "vfx/vrgrid_07.png",0.02,
                                 "vfx/vrgrid_08.png",0.02,)
 
-## VR FOREST TRAIL ######################################################################
 
-## The Foreground stays still as the abstract landscape flickers abstractly.
-## Wolf wanted abstract, we gonna get abstract up in this VN.
-
-image woodtrailstarsdraz:                             ##DRAZ WAS HERE######################################################################
-    "vfx/bg_woodtrail_base.png"
-    zoom .75
-
-image woodtrailbgdraz:                                ## Thanks to Draz, Anagram is now able to code a bunch a stuff~! Draz is the best Space Future Aunt ever~!
-    "vfx/bg_woodtrail_base2.png"
-    alpha 1.0 xalign 0.5 yalign 0.5 zoom .75
-    linear 10.0 alpha 0.0
-    linear 10.0 alpha 0.0
-    linear 10.0 alpha 1.0
-    linear 10.0 alpha 1.0
-    linear 30.0 alpha 0.0
-    linear 30.0 alpha 0.0
-    linear 30.0 alpha 1.0
-    linear 30.0 alpha 1.0
-    repeat
-
-image woodtrailforegrounddraz:
-    "vfx/bg_woodtrail_foreground.png"
-    xalign 0.5 yalign 0.5 zoom .75
-
-layeredimage woodtrail:
-    always:
-        "woodtrailstarsdraz"
-
-    always:
-        "woodtrailbgdraz"
-
-    always:
-        "woodtrailforegrounddraz"
         
 ## VR GLITTER ######################################################################
 
@@ -174,3 +140,151 @@ image vfxglitter = SnowBlossom("vfxglitterFilmstrip", count=100, border=10, xspe
 
 image vfxfireembersFilmstrip = anim.Filmstrip("vfx/twfy_fireembersvfx.png", (5,5), (1,250), 0.01) 
 image vfxfireflies = SnowBlossom("vfxfireembersFilmstrip", count=50, border=10, xspeed=(150, -150), yspeed=(150, -150), start=10, fast=False, horizontal=False)
+
+
+## VR Field ######################################################################
+
+image fsky = "vfx/fsky.png"
+
+image catfieldbg = "vfx/catlandfieldbg.png"
+
+init:
+    image vrfield = Animation("vfx/f1.png",0.59,
+                                "vfx/f2.png",0.59,
+                                "vfx/f3.png",0.59,
+                                "vfx/f4.png",0.59,
+                                "vfx/f5.png",0.59,
+                                "vfx/f6.png",0.59,
+                                "vfx/f7.png",0.59,
+                                "vfx/f8.png",0.59,)
+
+    
+## VFX BLINKING ######################################################################
+
+## A blinking animation from a First Person Perspective/ Point of View,a simply PNG
+## is duplicated twice and flipped upsidedown, both entering offscreen to emulate blinking~!
+
+image eyelidtop = Image("vfx/blink1.png",)
+image eyelidbottom = im.Flip("vfx/blink1.png", vertical=True,) #Let's define the eyelids here, this one is mirrored so we can reuse it.
+
+image blinkonce1:
+    "eyelidtop"
+    xpos 0.5 ypos 0.0                   #Comes from top of screen,
+    linear 0.6 xpos 0.5 ypos 0.0        #stays for a moment offscreen,
+    linear 0.6 xpos 0.5 ypos 1.0        #moves onto screen fully, and if in unison with the other eyelid, forms a blink
+    linear 0.1 xpos 0.5 ypos 1.0        #Pauses, to emulate a slow blink
+    linear 0.6 xpos 0.5 ypos 0.0               #and then goes back off screen.
+    linear 0.1 xpos 0.5 ypos 0.0
+
+image blinkonce2:
+    "eyelidbottom"
+    xpos 0.5 ypos 2.0
+    linear 0.6 xpos 0.5 ypos 2.0
+    linear 0.6 xpos 0.5 ypos 1.0
+    linear 0.1 xpos 0.5 ypos 1.0
+    linear 0.6 xpos 0.5 ypos 2.0
+    linear 0.1 xpos 0.5 ypos 2.0
+
+
+
+image blinktwice1:
+    "eyelidtop"
+    xpos 0.5 ypos 0.0 alpha 1.0
+    linear 0.3 xpos 0.5 ypos 0.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 0.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 0.0
+
+image blinktwice2:
+    "eyelidbottom"
+    xpos 0.5 ypos 2.0 alpha 1.0
+    linear 0.3 xpos 0.5 ypos 2.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 2.0
+    linear 0.3 xpos 0.5 ypos 1.0
+    linear 0.3 xpos 0.5 ypos 2.0
+
+label blinkonce:        #Call it in, don't show. Why? I don't know.
+    show blinkonce1
+    show blinkonce2
+    with dissolve
+    return              #without this return placed here, it will continue spewing out the following code beneath it~!
+
+label blinktwice:        
+    show blinktwice1
+    show blinktwice2
+    with dissolve
+    return
+
+## Ches Dance ######################################################################
+
+## If this works itd be so cool!
+
+init:
+    image Cheshiredance = Animation("sprites/che/pose1/base.png",0.59,
+                            "sprites/che/pose1/base2.png",0.59,)
+    
+image crtlines7 = im.Flip("vfx/crtlines1.png", vertical=True)
+image crtlines8 = im.Flip("vfx/crtlines2.png", vertical=True)
+image crtlines9 = im.Flip("vfx/crtlines3.png", vertical=True)
+image crtlines10 = im.Flip("vfx/crtlines4.png", vertical=True)
+image crtlines11 = im.Flip("vfx/crtlines5.png", vertical=True)
+image crtlines12 = im.Flip("vfx/crtlines6.png", vertical=True)
+image crtlines13 = im.Flip("vfx/crtlines1.png", horizontal=True)
+image crtlines14 = im.Flip("vfx/crtlines2.png", horizontal=True)
+image crtlines15 = im.Flip("vfx/crtlines3.png", horizontal=True)
+image crtlines16 = im.Flip("vfx/crtlines4.png", horizontal=True)
+image crtlines17 = im.Flip("vfx/crtlines5.png", horizontal=True)
+image crtlines18 = im.Flip("vfx/crtlines6.png", vertical=True)
+
+init:
+    image crtvfx = Animation("vfx/crtlines1.png",0.1,
+                             "vfx/crtlines2.png",0.1,
+                             "vfx/crtlines3.png",0.1,
+                             "vfx/crtlines4.png",0.1,
+                             "vfx/crtlines5.png",0.1,
+                             "vfx/crtlines6.png",0.1,
+                             "vfx/crtlines1.png",0.1,
+                             "crtlines7",0.1,
+                             "crtlines8",0.1,
+                             "crtlines9",0.1,
+                             "crtlines10",0.1,
+                             "crtlines11",0.1,
+                             "crtlines12",0.1,
+                             "crtlines13",0.1,
+                             "crtlines14",0.1,
+                             "crtlines15",0.1,
+                             "crtlines16",0.1,
+                             "crtlines17",0.1,
+                             "crtlines18",0.1,)
+    
+## VFX Fire ######################################################################
+
+## An animated fire for a Campfire
+    
+init:
+    image firevfx = Animation("vfx/campfire_1.png",0.1,
+                             "vfx/campfire_2.png",0.1,
+                             "vfx/campfire_3.png",0.1,
+                             "vfx/campfire_4.png",0.1,
+                             "vfx/campfire_5.png",0.1,
+                             "vfx/campfire_6.png",0.1,
+                             "vfx/campfire_7.png",0.1,
+                             "vfx/campfire_8.png",0.1,)
+
+## VR GRID ANIMATION ######################################################################
+
+## A Visual Effect created to simulate an endless grid of pink,
+## which is what the world used to look like until the 90s hit.
+
+init:
+    image sunset = Animation("vfx/twfysunset_1.png",0.2,
+                             "vfx/twfysunset_2.png",0.2,
+                             "vfx/twfysunset_3.png",0.2,
+                             "vfx/twfysunset_4.png",0.2,
+                             "vfx/twfysunset_5.png",0.2,
+                             "vfx/twfysunset_6.png",0.2,
+                             "vfx/twfysunset_7.png",0.2,
+                             "vfx/twfysunset_8.png",0.2,)
+                             
