@@ -31,12 +31,14 @@ label hub1:
 
     #Cheshire slides onto screen with a happy expression
 
+    voice "02-hub1-1.mp3" #Cheshire (shiena)
     che "Nya!"
 
     mc "Ahh!"
 
     "My surprise quickly makes way for irritation."
 
+    voice "02-hub1-2.mp3" #Cheshire (shiena)
     che "Welcome home, master!"
 
     "Ugh. This thing again."
@@ -57,6 +59,7 @@ label hub1:
     #Cheshire's expression turns sad
 
 
+    voice "02-hub1-3.mp3" #Cheshire (shiena)
     che "Is meowster ignoring me?"
 
     "I'm trying to at least."
@@ -73,6 +76,7 @@ label hub1:
 
     #Cheshire moves back center screen like she's catching up with a sad expression.
 
+    voice "02-hub1-4.mp3" #Cheshire (shiena)
     che "Meowster, pwease wait for me!"
 
     "Pwease!?"
@@ -81,10 +85,12 @@ label hub1:
 
     mc "What do you want?"
 
+    voice "02-hub1-5.mp3" #Cheshire (shiena)
     che "To spend time with {b}you,{/b} meowster!"
 
     mc "Why?"
 
+    voice "02-hub1-6.mp3" #Cheshire (shiena)
     che "So master won't be lonely."
 
     mc "Look. I don't need your company. I came here to be alone with my thoughts. The last thing I need is-"
@@ -101,6 +107,7 @@ label hub1:
 
     mc "Just, don't you have any other tasks to do? Some newbie to bother?"
 
+    voice "02-hub1-7.mp3" #Cheshire (shiena)
     che "Newbie?"
 
     "How did they manage to create a bot that doesn't know what ‘newbie’ means?"
@@ -115,6 +122,7 @@ label hub1:
 
     #Cheshire moves back center screen like she's catching up with a surprised expression.
 
+    voice "02-hub1-8.mp3" #Cheshire (shiena)
     che "Nya! You dropped something!"
 
     mc "What?"
@@ -130,6 +138,7 @@ label hub1:
 
     "Huh. I haven't seen {b}this{/b} in a while."
 
+    voice "02-hub1-9.mp3" #Cheshire (shiena)
     che "Meowster should take it!"
 
     #Hide CG
@@ -145,6 +154,7 @@ label hub1:
     #Heart eyes motherfucker
 
 
+    voice "02-hub1-10.mp3" #Cheshire (shiena)
     che "Master thanked me? Wow!"
 
     mc "Don't think about it too hard."
@@ -157,24 +167,29 @@ label hub1:
 
     "Why am I even asking it so nicely?"
 
+    voice "02-hub1-11.mp3" #Cheshire (shiena)
     che "What does master want CH35H1R3 to do?"
 
     mc "Could you leave me alone for about… 30 minutes?"
 
+    voice "02-hub1-12.mp3" #Cheshire (shiena)
     che "Master was mean to me earlier so, only if you say pwetty pwease!"
 
     mc "{b}Sigh.{/b}"
 
     mc "Pretty please."
 
+    voice "02-hub1-13.mp3" #Cheshire (shiena)
     che "..."
 
     mc "..."
 
+    voice "02-hub1-14.mp3" #Cheshire (shiena)
     che "..."
 
     mc "...pwetty pwease."
 
+    voice "02-hub1-15.mp3" #Cheshire (shiena)
     che "Okays!"
 
     #Cheshire slides off screen

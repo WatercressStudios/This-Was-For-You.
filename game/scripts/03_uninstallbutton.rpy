@@ -55,6 +55,7 @@ label uninstallbutton:
 
     # show ches' face ZOOMED IN right in the MC's face
     # play comical sfx of someone turning up unexpectedly
+    voice "03-uninstallbutton-1.mp3" #Cheshire (shiena)
     che "Maybe the buttons is broken, nya~!"
 
     mc "Ack!"
@@ -65,6 +66,7 @@ label uninstallbutton:
 
     "Why is this {b}thing{/b} back?"
 
+    voice "03-uninstallbutton-2.mp3" #Cheshire (shiena)
     che "Nyahaha! Maybe Master is the ones broken~"
 
     "Stop."
@@ -73,11 +75,13 @@ label uninstallbutton:
 
     "It's just a computer program."
 
+    voice "03-uninstallbutton-3.mp3" #Cheshire (shiena)
     che "Meowster? Has your code crashed?"
 
     # screenshake and whip sfx, indicating MC has snapped
     mc "Weren't you supposed to be gone for 30 minutes!?"
 
+    voice "03-uninstallbutton-4.mp3" #Cheshire (shiena)
     che "But Master is having trouble, so CH35H1R3 came to help, meow!"
 
     #sfx "vr_uninstall_click" "click!"
@@ -88,17 +92,21 @@ label uninstallbutton:
     #sfx "vr_uninstall_click" "click!"
     #sfx "vr_uninstall_click" "click!"
 
+    voice "03-uninstallbutton-5.mp3" #Cheshire (shiena)
     che "Meow-be Master needs to connect the button to a function~"
 
+    voice "03-uninstallbutton-6.mp3" #Cheshire (shiena)
     che "Master can make it do all sorts of useful things, nya!"
 
     mc "Can it delete you?"
 
+    voice "03-uninstallbutton-7.mp3" #Cheshire (shiena)
     che "Oh, CH35H1R3 has a great idea: it can {b}summon{/b} me!"
 
     "Oh hell no. Anything but that."
 
     # ches looks confused
+    voice "03-uninstallbutton-8.mp3" #Cheshire (shiena)
     che "Nya? Is Master trying to delete the button? Want some help?"
 
     "I cradle the button against my chest instinctively, as if the bot will snatch it out of my hands."

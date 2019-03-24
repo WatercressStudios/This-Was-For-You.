@@ -59,15 +59,18 @@ label eighttrack:
     "I need you here."
 
     # ches is singing to the song…. ish. It's not actually in tune or even follows the beat or the song.
+    voice "08-eighttrack-1.mp3" #Cheshire (shiena)
     che "Nya~ nya~ nya~! Nya~ nya~ nya~!"
 
     mc "...what are you doing?"
 
     # ches fades in as opposed to sliding in as usual
+    voice "08-eighttrack-2.mp3" #Cheshire (shiena)
     che "CH3SH1R3 was singing!"
 
     mc "No, you really weren't."
 
+    voice "08-eighttrack-3.mp3" #Cheshire (shiena)
     che "Why don't Meowster joins me? Nya~ nya~ nya~!"
 
     # hpunch
@@ -77,6 +80,7 @@ label eighttrack:
     mc "The song's not yours to sing..."
 
     # confused look
+    voice "08-eighttrack-4.mp3" #Cheshire (shiena)
     che "Then whose is it?"
 
     "It was supposed to be Ji-min's and my duet."

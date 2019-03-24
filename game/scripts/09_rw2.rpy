@@ -3,18 +3,27 @@
 #
 
 label rw2:
+    voice "09-rw2-1.mp3" #Dad ()
     dad "Hey kiddo, it's your parents..."
+    voice "09-rw2-2.mp3" #Mom ()
     mom "How are you feeling? Have you been eating well?"
+    voice "09-rw2-3.mp3" #Dad ()
     dad "You should pick up the phone sometimes. Your mom is worried about you."
     # mom is addressing dad here, not MC, so stern voice?
+    voice "09-rw2-4.mp3" #Mom ()
     mom "Honey, you promised not to lecture."
+    voice "09-rw2-5.mp3" #Dad ()
     dad "Sorry."
     # gentle voice again, addressing MC
+    voice "09-rw2-6.mp3" #Mom ()
     mom "We're thinking about you, sweetie. Make sure you hydrate yourself properly, okay?"
+    voice "09-rw2-7.mp3" #Dad ()
     dad "And call us any time, kiddo. You don't have to bottle it up. It's terrible what happened to your internet friend…"
     # Silence for a few seconds as as both parents aren't sure what to say next
     # Said with some hesitation and worry
+    voice "09-rw2-8.mp3" #Mom ()
     mom "We love you, sweetie. Take care of yourself, you hear me?"
+    voice "09-rw2-9.mp3" #Dad ()
     dad "We'll be here when you're ready. Call us."
 
     ################ end voicemail

@@ -23,11 +23,13 @@ label planeticket:
 
     "Finding it where I last left it, I-" #Interrupt
 
+    voice "13-planeticket-1.mp3" #Cheshire (shiena)
     che "There yous are! CH35H1R3's been waitings for yous!"
 
     mc "Dear God no please, PLEASE, I just want some goddamn peace and quiet!"
 
 
+    voice "13-planeticket-2.mp3" #Cheshire (shiena)
     che "But quiets is lonely!"
 
     mc "Make it stop!"
@@ -36,19 +38,23 @@ label planeticket:
 
     mc "Please, I can't take any more of this. Fucking end me, do anything!"
 
+    voice "13-planeticket-3.mp3" #Cheshire (shiena)
     che "No, no! CH35H1R3 doesn't wants that!"
 
     mc "I don't care."
 
 
+    voice "13-planeticket-4.mp3" #Cheshire (shiena)
     che "Momma wouldn't wants that either!"
 
     mc "Momma?"
 
+    voice "13-planeticket-5.mp3" #Cheshire (shiena)
     che "Yes! Momma would miss yous!"
 
     mc "...Who's this 'Mom' of yours?"
 
+    voice "13-planeticket-6.mp3" #Cheshire (shiena)
     che "Ji, silly!"
 
     #all music/sfx/everything stops here.
@@ -57,6 +63,7 @@ label planeticket:
 
     mc "...Ji?"
 
+    voice "13-planeticket-7.mp3" #Cheshire (shiena)
     che "Yeppers!"
 
 
@@ -66,10 +73,12 @@ label planeticket:
 
     mc "...why?"
 
+    voice "13-planeticket-8.mp3" #Cheshire (shiena)
     che "Whys?"
 
     mc "She's your creator?"
 
+    voice "13-planeticket-9.mp3" #Cheshire (shiena)
     che "Yeppers!"
 
     mc "Why?"
@@ -78,6 +87,7 @@ label planeticket:
 
     "Why would she create something like this?"
 
+    voice "13-planeticket-10.mp3" #Cheshire (shiena)
     che "She saids that you'd enjoy my company, nya!"
 
     mc "Like hell I woul - oh."
@@ -112,10 +122,12 @@ label planeticket:
 
     mc "I'm sorry."
 
+    voice "13-planeticket-11.mp3" #Cheshire (shiena)
     che "Sorrys, CH35H1R3 doesn't knows how to responds to that!"
 
     mc "I'm saying that I'm sorry for the way I've treated you."
 
+    voice "13-planeticket-12.mp3" #Cheshire (shiena)
     che "Sorrys, CH35H1R3 doesn't knows how to responds to that!"
 
     "Hah, CH35H1R3 doesn't have a programmed response to that. Ji never expected me to say sorry to it, did she?"

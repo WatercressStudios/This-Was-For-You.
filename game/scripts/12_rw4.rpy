@@ -45,13 +45,21 @@ label rw4:
 
     # fade to black screen for voicemail
 
+    voice "12-rw4-1.mp3" #Friend ()
     vm "Heya! So uh, where do I start…"
+    voice "12-rw4-2.mp3" #Friend ()
     vm "Right! I don't wanna call you out or anything, but you kinda missed our last four hangouts."
+    voice "12-rw4-3.mp3" #Friend ()
     vm "Wait that counts as calling you out, isn't it? Sorry. *laughs*"
+    voice "12-rw4-4.mp3" #Friend ()
     vm "So umm… your friends wanna see your stupid face."
+    voice "12-rw4-5.mp3" #Friend ()
     vm "I'm sure you'll forgive us for tomorrow, cuz you're a good person."
+    voice "12-rw4-6.mp3" #Friend ()
     vm "Also, you owe us one."
+    voice "12-rw4-7.mp3" #Friend ()
     vm "Oh right, I forgot to mention… we're coming over tomorrow."
+    voice "12-rw4-8.mp3" #Friend ()
     vm "Just the three of us, don't worry. Take care!"
     # abruptly hangs up, as if the caller was afraid the MC would say "no" even though it's a freaking voicemail
 

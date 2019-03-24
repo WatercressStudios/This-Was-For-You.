@@ -25,24 +25,30 @@ label mug:
 
     "You were my best friend."
 
+    voice "06-mug-1.mp3" #Cheshire (shiena)
     che "Meowster! Wots dat?"
 
     "My grip tightens on the mug, and I let out a breathy sigh."
 
     mc "It's a memento."
 
+    voice "06-mug-2.mp3" #Cheshire (shiena)
     che "Meowster, you should get your eyes checked. It's a mugs, nyat a mementos. Silly Meowster!"
 
+    voice "06-mug-3.mp3" #Cheshire (shiena)
     che "Oooh! There's writing! What's it say??"
 
     "Cheshire leans into me, looking at the words on the mug."
 
+    voice "06-mug-4.mp3" #Cheshire (shiena)
     che "Oh! Cheshire loves this! Awoooooooooo!"
 
+    voice "06-mug-5.mp3" #Cheshire (shiena)
     che "Can I haves? Can I haves?"
 
     mc "No. This isn't yours, and it won't ever be yours. Go away. Please."
 
+    voice "06-mug-6.mp3" #Cheshire (shiena)
     che "Oh, okay…"
 
     "With a hurt look on its face, it sinks away, leaving me alone."

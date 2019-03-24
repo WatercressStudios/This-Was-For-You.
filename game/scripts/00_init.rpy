@@ -98,34 +98,44 @@ label test:
     pause
 
     scene black
+    voice "00-test-1.mp3" #Cheshire (shiena)
     che "Ready?"
     show vrpoweroutageeffect
+    voice "00-test-2.mp3" #Cheshire (shiena)
     che "vrpoweroutageeffect"
     scene sunsettitle
+    voice "00-test-3.mp3" #Cheshire (shiena)
     che "sunsettitle"
     call blinkonce
+    voice "00-test-4.mp3" #Cheshire (shiena)
     che "call blinkonce"
     call blinktwice
+    voice "00-test-5.mp3" #Cheshire (shiena)
     che "call blinktwice"
     show crtvfx
+    voice "00-test-6.mp3" #Cheshire (shiena)
     che "crtvfx"
     scene woodtrail1
     show che f default
     with dissolve
+    voice "00-test-7.mp3" #Cheshire (shiena)
     che "Bg woodtrail"
 
     scene woodtrail2
     show che f default
     with dissolve
+    voice "00-test-8.mp3" #Cheshire (shiena)
     che "Bg woodtrail2"
 
     scene kerosene
     with dissolve
+    voice "00-test-9.mp3" #Cheshire (shiena)
     che "Bg Kerosene"
 
     scene vrgrid
     show che f dance happy
     with dissolve
+    voice "00-test-10.mp3" #Cheshire (shiena)
     che "Test Dance/Proof of concept"
 
     scene catfieldbg
@@ -136,6 +146,7 @@ label test:
         repeat
     show vrfield:
         alpha 0.5 zoom 0.75
+    voice "00-test-11.mp3" #Cheshire (shiena)
     che "Test Bg Field"
 
     show vrgrid
@@ -149,70 +160,86 @@ label test:
     mc "Hover your mouse over MENU or email."
     show screen in_game_entervr
 
+    voice "00-test-12.mp3" #Cheshire (shiena)
     che "Click on VR."
 
     hide screen in_game_entervr
     show screen in_game_exitvr
 
+    voice "00-test-13.mp3" #Cheshire (shiena)
     che "Click on RW."
 
     hide screen in_game_exitvr
 
     show che s default
 
+    voice "00-test-14.mp3" #Cheshire (shiena)
     che "Pose2 default flap mouth."
 
     show che f catmouthsmall
 
+    voice "00-test-15.mp3" #Cheshire (shiena)
     che "Pose1 catmouthsmall flap mouth."
 
     show che f catmouth
 
+    voice "00-test-16.mp3" #Cheshire (shiena)
     che "Pose1 catmouth flap mouth."
 
     show che f meh
 
+    voice "00-test-17.mp3" #Cheshire (shiena)
     che "Pose1 meh flap mouth."
 
     show che f sad
 
+    voice "00-test-18.mp3" #Cheshire (shiena)
     che "Pose1 sad flap mouth."
 
     show che f scanning
 
+    voice "00-test-19.mp3" #Cheshire (shiena)
     che "Pose1 thinline flap mouth."
 
     show che f happy
 
+    voice "00-test-20.mp3" #Cheshire (shiena)
     che "Pose1 happy flap mouth."
 
     show che s catmouth
 
+    voice "00-test-21.mp3" #Cheshire (shiena)
     che "Pose2 catmouth flap mouth."
 
     show che s meh
 
+    voice "00-test-22.mp3" #Cheshire (shiena)
     che "Pose2 meh flap mouth."
 
     show che s pout1
 
+    voice "00-test-23.mp3" #Cheshire (shiena)
     che "Pose2 pout1 flap mouth."
 
     show che s pout2
 
+    voice "00-test-24.mp3" #Cheshire (shiena)
     che "Pose2 pout2 flap mouth."
 
     show che s thinline
 
+    voice "00-test-25.mp3" #Cheshire (shiena)
     che "Pose2 thinline flap mouth."
 
     show che s sad
 
+    voice "00-test-26.mp3" #Cheshire (shiena)
     che "Pose2 sad flap mouth."
 
     scene ceiling empty
     show ceilingfan
 
+    voice "00-test-27.mp3" #Cheshire (shiena)
     che "Ceiling fan animation."
 
     show bedroombg
@@ -260,10 +287,12 @@ label test:
 
     show che f default
 
+    voice "00-test-28.mp3" #Cheshire (shiena)
     che "Testing transition between sprite to CG."
 
     show cheshire sad hurt shocked tears ticket with dissolve
 
+    voice "00-test-29.mp3" #Cheshire (shiena)
     che "Oh no poor ches."
 
     hide cheshire with dissolve

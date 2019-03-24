@@ -21,6 +21,7 @@ label hub3:
     "I wish I asked you that."
 
 
+    voice "10-hub3-1.mp3" #Cheshire (shiena)
     che "Meowsterrrrr!!! I missed you!"
 
     "It leaps out from behind the dresser, pawing at my chest."
@@ -29,6 +30,7 @@ label hub3:
 
     "Why can’t I delete it...?"
 
+    voice "10-hub3-2.mp3" #Cheshire (shiena)
     che "Pweeeeeeease don't ignore mew!"
 
     "Mew? That doesn't even work! I shove it off, feeling only a little sorry."
@@ -37,6 +39,7 @@ label hub3:
 
     mc "Don't touch me."
 
+    voice "10-hub3-3.mp3" #Cheshire (shiena)
     che "But Meeeowster--"#interrupt
 
     mc "No."
@@ -45,6 +48,7 @@ label hub3:
 
     mc "Please stop pretending to care."
 
+    voice "10-hub3-4.mp3" #Cheshire (shiena)
     che "But I dos!"
 
     "It takes a nervous step forward, eyes widening into that puppy-dog look."

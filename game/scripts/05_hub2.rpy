@@ -29,6 +29,7 @@ label hub2:
 
     "Keeping your memory preserved."
 
+    voice "05-hub2-1.mp3" #Cheshire (shiena)
     che "Meowster, you're back!"
 
     #Show cheshire
@@ -37,14 +38,17 @@ label hub2:
 
     "Thanks for patching the game, VirtueTech. Not."
 
+    voice "05-hub2-2.mp3" #Cheshire (shiena)
     che "CH35H1R3 has a qwestion for you."
 
     mc "{b}Sigh.{/b}"
 
     mc "What is it?"
 
+    voice "05-hub2-3.mp3" #Cheshire (shiena)
     che "Everytime you come in here, you stand and stare for a bit, before  logging off again."
 
+    voice "05-hub2-4.mp3" #Cheshire (shiena)
     che "Why do you do that?"
 
     mc "..."
@@ -53,6 +57,7 @@ label hub2:
 
     #Sad cheshire
 
+    voice "05-hub2-5.mp3" #Cheshire (shiena)
     che "But CH35H1R3 is cuwious!"
 
     mc "Well you know what they say."
@@ -61,16 +66,19 @@ label hub2:
 
     mc "...Nevermind."
 
+    voice "05-hub2-6.mp3" #Cheshire (shiena)
     che "What do they say, meowster?"
 
     mc "Ugh, forget it."
 
     #Happy
 
+    voice "05-hub2-7.mp3" #Cheshire (shiena)
     che "Okays."
 
     mc "Could you leave me alone, while we're at it?"
 
+    voice "05-hub2-8.mp3" #Cheshire (shiena)
     che "Okays. But CH35H1R3 will be back!"
 
     #Cheshire leaves

@@ -76,6 +76,7 @@ label plushie:
 
     "I wish that were the case now."
 
+    voice "07-plushie-1.mp3" #Cheshire (shiena)
     che "Ooh. What's this?"
 
     #Cheshire sprite slides in from the side
@@ -84,14 +85,17 @@ label plushie:
 
     mc "It's a-"
 
+    voice "07-plushie-2.mp3" #Cheshire (shiena)
     che "It's like me, nya!"
 
     mc "Don't be silly. It's a plushie, not a bot like you."
 
+    voice "07-plushie-3.mp3" #Cheshire (shiena)
     che "But it's got a tail!"
 
     #catmouth
 
+    voice "07-plushie-4.mp3" #Cheshire (shiena)
     che "And we have the same mouth!"
 
     "God, why did this tutorial bot have to be a catgirl of all things?"
@@ -101,20 +105,25 @@ label plushie:
     #sadface
 
 
+    voice "07-plushie-5.mp3" #Cheshire (shiena)
     che "Meowster's so mwean!"
 
     mc "Yeah, yeah."
 
     #happy
 
+    voice "07-plushie-6.mp3" #Cheshire (shiena)
     che "But maybe master secretly cares about me!"
 
     mc "What gives you that impression!?"
 
+    voice "07-plushie-7.mp3" #Cheshire (shiena)
     che "The plushie of course!"
 
+    voice "07-plushie-8.mp3" #Cheshire (shiena)
     che "If you have something like that, you must like cats."
 
+    voice "07-plushie-9.mp3" #Cheshire (shiena)
     che "And I'm a cat!"
 
     mc "That's not how it works!"
@@ -123,6 +132,7 @@ label plushie:
 
     mc "It's… ah forget about it."
 
+    voice "07-plushie-10.mp3" #Cheshire (shiena)
     che "Master, I wants to know!"
 
     "\"Master\"… you know, that kind of reminds me of the time you asked me if I've ever been to a cat cafe."

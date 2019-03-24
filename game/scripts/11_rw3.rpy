@@ -5,10 +5,15 @@
 label rw3:
     ##"Good People Always Die First."
     ##Voicemail
+    voice "11-rw3-1.mp3" #Cafe Owner ()
     caf "Hey, it’s been a while since I’ve seen ya at the cafe; just thought I’d check in."
+    voice "11-rw3-2.mp3" #Cafe Owner ()
     caf "I know things are rough right now - lord, that’s the understatement of the century, isn’t it? When my brother died…"
+    voice "11-rw3-3.mp3" #Cafe Owner ()
     caf "Well, they say it gets better - but it doesn’t. You just kinda… learn to deal with it, I guess?"
+    voice "11-rw3-4.mp3" #Cafe Owner ()
     caf "Well, we’re here for ya; you’re more than just a regular: you’re family!"
+    voice "11-rw3-5.mp3" #Cafe Owner ()
     caf "If ya need anything, just give me a call, a text - whatever floats your boat. Drinks are on me for however long you need, okay?"
 
     "I can almost feel it, you know?"
