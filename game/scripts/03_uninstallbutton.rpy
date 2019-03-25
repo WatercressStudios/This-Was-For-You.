@@ -23,8 +23,8 @@ label uninstallbutton:
 
     "Still nothing."
 
-    show sunsettitle behind items with dissolve
-    hide hub
+    show sunsettitle behind items with dissolve:
+        alpha 0.8
 
     "I crafted this button partly because it was amusing, partly in protest of this world; it’s a pale imitation of the real thing, after all."
 
@@ -46,8 +46,7 @@ label uninstallbutton:
 
     "And then..."
 
-    show hub behind items with dissolve
-    hide sunsettitle
+    hide sunsettitle with dissolve
 
     "..."
 
@@ -58,7 +57,11 @@ label uninstallbutton:
 
     “Still nothing."
 
-    # show ches' face ZOOMED IN right in the MC's face
+    show che f happy:
+        zoom 2 xpos 0.1
+
+    hide items
+
     # play comical sfx of someone turning up unexpectedly
     voice "03-uninstallbutton-1.mp3" #Cheshire (shiena)
     che "Maybe the buttons is broken, nya~!"
@@ -67,9 +70,15 @@ label uninstallbutton:
 
     # ches zooms back out to normal distance
 
+    show che f happy:
+        linear 0.2 zoom 1 xpos 0.3
+
     mc "What are you-- Why are you…"
 
     "Why is this {b}thing{/b} back?"
+
+    show che s armsnyan:
+        linear 0.2 xpos 0.35
 
     voice "03-uninstallbutton-2.mp3" #Cheshire (shiena)
     che "Nyahaha! Maybe Master is the ones broken~"
@@ -80,11 +89,26 @@ label uninstallbutton:
 
     "It's just a computer program."
 
+    show che s sad
+
     voice "03-uninstallbutton-3.mp3" #Cheshire (shiena)
     che "Meowster? Has your code crashed?"
 
     # screenshake and whip sfx, indicating MC has snapped
+
+    show bg hub hub:
+        linear 0.1 zoom 1.02
+    show che s sad:
+        linear 0.1 zoom 1.02
+    with hpunch
+
     mc "Weren't you supposed to be gone for 30 minutes!?"
+
+    show bg hub hub:
+        linear 0.1 zoom 1
+
+    show che s default base:
+        linear 0.1 zoom 1
 
     voice "03-uninstallbutton-4.mp3" #Cheshire (shiena)
     che "But Master is having trouble, so CH35H1R3 came to help, meow!"
@@ -100,15 +124,24 @@ label uninstallbutton:
     voice "03-uninstallbutton-5.mp3" #Cheshire (shiena)
     che "Meow-be Master needs to connect the button to a function~"
 
+    show che s catmouthclosed armsnyan
+
     voice "03-uninstallbutton-6.mp3" #Cheshire (shiena)
     che "Master can make it do all sorts of useful things, nya!"
 
     mc "Can it delete you?"
 
+    show che f happy:
+        linear 0.2 xpos 0.3
+
     voice "03-uninstallbutton-7.mp3" #Cheshire (shiena)
     che "Oh, CH35H1R3 has a great idea: it can {b}summon{/b} me!"
 
     "Oh hell no. Anything but that."
+
+    show che s armsnyan:
+        xzoom -1
+        linear 0.2 xpos 0.25
 
     # ches looks confused
     voice "03-uninstallbutton-8.mp3" #Cheshire (shiena)
@@ -118,6 +151,8 @@ label uninstallbutton:
 
     mc "No."
 
+    show che s sad
+
     "The program stares at me, confused; its algorithms are clearly having trouble parsing my behaviour."
 
     "{b}I'm{/b} having trouble parsing my behaviour."
@@ -125,6 +160,9 @@ label uninstallbutton:
     "Why am I still so protective of this? Is it because it’s the first thing we made together?"
 
     "...Because it’s the thing that started our friendship?"
+
+    show sunsettitle with dissolve:
+        alpha 0.8
 
     "You were {b}aghast{/b} when I finally explained what my Uninstall Button was for - as if you had never met anyone so cynical in your life."
 

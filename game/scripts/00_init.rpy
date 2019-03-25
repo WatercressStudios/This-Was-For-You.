@@ -41,6 +41,7 @@ init python:
     MapEmote('che f happy',  'che pose1 md_default ed_default brow_default glasses_default')
     MapEmote('che f relaxed',  'che pose1 md_default ed_relaxed brow_relaxed glasses_default')
 
+    MapEmote('che f happyclosed',  'che pose1 ec_default')
     MapEmote('che f catmouthsmall',  'che pose1 md_catmouthsmall')
     MapEmote('che f catmouth',  'che pose1 md_catmouth')
     MapEmote('che f catmouthclosed',  'che pose1 md_catmouth ec_default')
@@ -57,6 +58,7 @@ init python:
 
     #Cheshire looking off to the side
     MapEmote('che s catmouth',  'che pose2 md_catmouth')
+    MapEmote('che s catmouthclosed',  'che pose2 md_catmouth ec_default')
     MapEmote('che s meh',  'che pose2 md_meh')
     MapEmote('che s mehsad',  'che pose2 md_meh brow_sad')
     MapEmote('che s pout1',  'che pose2 md_poutlvl1')
