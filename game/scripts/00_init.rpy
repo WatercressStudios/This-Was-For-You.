@@ -107,6 +107,10 @@ label start2:
 
 label test:
     mc "Subtitles is [persistent.subtitle], and my name is [mc_name]"
+    sfx "sfx/curtains.wav"
+    che "SFX without any subtitles"
+    sfx "sfx/curtains.wav" "*Click!*"
+    che "SFX with subtitles"
 
     show vrpoweroutageeffect
     pause
