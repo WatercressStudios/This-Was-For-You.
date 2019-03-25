@@ -3,7 +3,9 @@
 #
 
 label hub1:
-    "The familiar scent of an ocean breeze hits my nosefirst."
+    scene hub
+
+    "The familiar scent of an ocean breeze hits my nose first."
 
     "The warm rays of sunshine envelops my body soon after."
 
@@ -29,6 +31,8 @@ label hub1:
 
     "Staring at-"
 
+    show che s catmouth armsnyan with easeinright
+
     #Cheshire slides onto screen with a happy expression
 
     voice "02-hub1-1.mp3" #Cheshire (shiena)
@@ -37,6 +41,8 @@ label hub1:
     mc "Ahh!"
 
     "My surprise quickly makes way for irritation."
+
+    show che f catmouthclosed armsforward
 
     voice "02-hub1-2.mp3" #Cheshire (shiena)
     che "Welcome home, master!"
@@ -47,17 +53,19 @@ label hub1:
 
     "At least that's the only explanation I have, anyway."
 
-    "I haven't exactly been looking at the patch notes, and I can’t say that I remember the program updating"
+    show che f meh base
+
+    "I haven't exactly been looking at the patch notes, and I can’t say that I remember the program updating."
 
     "Even so, I distinctly remember that this bot appeared about a month ago."
 
-    "How could I forget?"
+    show che f mehsad
 
+    "How could I forget?"
 
     "After all, it was the first time I logged in after {b}that.{/b}"
 
-    #Cheshire's expression turns sad
-
+    show che f sad
 
     voice "02-hub1-3.mp3" #Cheshire (shiena)
     che "Is meowster ignoring me?"
@@ -66,15 +74,18 @@ label hub1:
 
     "W-Wait, meowster?"
 
-    #Cheshire's expression turns happy
+    show che f happy
 
     "Ugh, I just gave it the attention it wants, didn't I?"
 
-    #Cheshire slides off screen like the MC is moving away.
+    show che s meh:
+        xzoom -1
+        linear 0.6 xpos 0.2
 
     "Scowling, I walk away in the opposite direction."
 
-    #Cheshire moves back center screen like she's catching up with a sad expression.
+    show che f sad:
+        linear 0.6 xpos 0.5
 
     voice "02-hub1-4.mp3" #Cheshire (shiena)
     che "Meowster, pwease wait for me!"
@@ -107,6 +118,8 @@ label hub1:
 
     mc "Just, don't you have any other tasks to do? Some newbie to bother?"
 
+    show che f meh
+
     voice "02-hub1-7.mp3" #Cheshire (shiena)
     che "Newbie?"
 
@@ -114,25 +127,26 @@ label hub1:
 
     "I really am wasting my time speaking with this thing, huh?"
 
-    #Cheshire slides off screen like the MC is moving away.
+    show che s mehsad:
+        xzoom 1
+        linear 0.6 xpos 0.8
 
     "At this stage I'm resigned to the fact that it'll follow me around, but not having to see that bright neon face for a few moments works wonders."
 
     "I idly kick aside some sand. Sand and, was that a seashell?"
 
-    #Cheshire moves back center screen like she's catching up with a surprised expression.
+    show che f meh:
+        linear 0.6 xpos 0.5
 
     voice "02-hub1-8.mp3" #Cheshire (shiena)
     che "Nya! You dropped something!"
 
     mc "What?"
 
-
-
-
     "Before I can even turn around, something is shoved towards me."
 
-    #Cheshire CG - Button Variant
+    show che f happy
+    show cheshire with dissolve
 
     "A round, bright-red button with a trash can icon right in the middle."
 
@@ -141,7 +155,7 @@ label hub1:
     voice "02-hub1-9.mp3" #Cheshire (shiena)
     che "Meowster should take it!"
 
-    #Hide CG
+    hide cheshire with dissolve
 
     "I grab it. I'm not too sure why."
 
@@ -149,13 +163,14 @@ label hub1:
 
     mc "Thanks."
 
+    show che f hearteyesmf
+
     "I realise my mistake too late."
-
-    #Heart eyes motherfucker
-
 
     voice "02-hub1-10.mp3" #Cheshire (shiena)
     che "Master thanked me? Wow!"
+
+    show che f catmouth
 
     mc "Don't think about it too hard."
 
@@ -166,6 +181,8 @@ label hub1:
     mc "Hey. Since you're so happy with me and everything, could you do me a favour?"
 
     "Why am I even asking it so nicely?"
+
+    show che f armsforward
 
     voice "02-hub1-11.mp3" #Cheshire (shiena)
     che "What does master want CH35H1R3 to do?"
@@ -189,10 +206,13 @@ label hub1:
 
     mc "...pwetty pwease."
 
+    show che s armshappy:
+        linear 0.2 xpos 0.55
+
     voice "02-hub1-15.mp3" #Cheshire (shiena)
     che "Okays!"
 
-    #Cheshire slides off screen
+    hide che with easeoutleft
 
     "That's what it takes to get it to leave?"
 

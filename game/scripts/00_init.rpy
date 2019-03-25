@@ -43,8 +43,13 @@ init python:
 
     MapEmote('che f catmouthsmall',  'che pose1 md_catmouthsmall')
     MapEmote('che f catmouth',  'che pose1 md_catmouth')
+    MapEmote('che f catmouthclosed',  'che pose1 md_catmouth ec_default')
+    MapEmote('che f hearteyesmf',  'che pose1 md_catmouth ed_hearteyesmf')
+    MapEmote('che f cheerful',  'che pose1 m_cheerful')
+    MapEmote('che f cheerfulclosed',  'che pose1 m_cheerful ec_default')
     MapEmote('che f grin',  'che pose1 md_grin')
     MapEmote('che f meh',  'che pose1 md_meh')
+    MapEmote('che f mehsad',  'che pose1 md_meh brow_sad')
     MapEmote('che f sad',  'che pose1 md_sad ed_sad brow_sad glasses_default')
     MapEmote('che f thinline',  'che pose1 md_thinline')
 
@@ -53,6 +58,7 @@ init python:
     #Cheshire looking off to the side
     MapEmote('che s catmouth',  'che pose2 md_catmouth')
     MapEmote('che s meh',  'che pose2 md_meh')
+    MapEmote('che s mehsad',  'che pose2 md_meh brow_sad')
     MapEmote('che s pout1',  'che pose2 md_poutlvl1')
     MapEmote('che s pout2',  'che pose2 md_poutlvl2')
     MapEmote('che s thinline',  'che pose2 md_line')
@@ -84,6 +90,7 @@ image che_pose2_md_sad = FlapMouth("che_pose2_mc_sad", "che_pose2_m_awoo")
 
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
 image che_ed_sad = blinkeyes("che_e_sad", "che_ec_relaxed")
+
 image che_pose1_dance = Animation("sprites/che/pose1/base.png",0.59,
                         "sprites/che/pose1/dance.png",0.59,)
 

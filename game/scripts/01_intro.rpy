@@ -172,5 +172,8 @@ label intro:
 
     "That's all I need."
 
+    #call screen in_game_entervr
+    #Sagi remember to do a timed hide
+
     jump hub1
     #Enter VR
