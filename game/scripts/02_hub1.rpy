@@ -85,6 +85,7 @@ label hub1:
     "Scowling, I walk away in the opposite direction."
 
     show che f sad:
+        xzoom 1
         linear 0.6 xpos 0.5
 
     voice "02-hub1-4.mp3" #Cheshire (shiena)
@@ -128,7 +129,6 @@ label hub1:
     "I really am wasting my time speaking with this thing, huh?"
 
     show che s mehsad:
-        xzoom 1
         linear 0.6 xpos 0.8
 
     "At this stage I'm resigned to the fact that it'll follow me around, but not having to see that bright neon face for a few moments works wonders."
