@@ -3,6 +3,9 @@
 #
 
 label intro:
+
+    scene black
+
     #Voicemail
     voice "01-intro-1.mp3" #Ji-min ()
     min "Heyyy. It's meee."
@@ -19,7 +22,11 @@ label intro:
     voice "01-intro-7.mp3" #Ji-min ()
     min "See you tomorrow!"
 
-    #Ceiling Bg
+    pause 0.5
+
+    scene ceiling empty
+    show ceilingfan
+    with dissolve
     #Fan whirl ambience
 
     "Even now, I’m still replaying your voicemail."
@@ -58,17 +65,19 @@ label intro:
 
     "Ugh."
 
-    #Black screen
+    call closeeyes
+    scene black with dissolve
 
-    "I keep my eyes shut tightly"
+    "I keep my eyes shut tightly."
 
     "Still, the sleep I desperately crave doesn't come."
 
     "Even listening to the hum of the ceiling fan can’t distract me."
 
-    "My thoughts are pervasive, waves of emotion constantly crashing into my subconscious"
+    "My thoughts are pervasive, waves of emotion constantly crashing into my subconscious."
 
-    #Bedroom cg
+    scene bedroombg
+    call openeyes
 
     "Pushing my thin blanket aside, I prop myself up to a sitting position."
 
@@ -76,7 +85,13 @@ label intro:
 
     "That will help, right?"
 
-    #hpunch
+    show bedroombg:
+        linear 0.2 zoom 1.1 yalign 0.1
+
+    pause 0.5
+
+    show bedroombg with hpunch:
+        linear 0.2 zoom 1.05 yalign 0.8
 
     "Augh!"
 
@@ -86,13 +101,17 @@ label intro:
 
     "I wonder if that's begun to happen to me."
 
+    show bedroombg:
+        linear 0.2 zoom 1.1 yalign 0.1
+
     "Catching my breath, I attempt to stand again."
 
     "My legs are shaky, but I keep my balance."
 
     "Okay. One step at a time now."
 
-    #Ceiling bg
+    scene ceiling empty
+    show ceilingfan
 
     "Carefully..."
 
@@ -100,7 +119,7 @@ label intro:
 
     "With glass in hand, I carefully make my way back to the bed."
 
-    #Bedroom bg
+    scene bedroombg
 
     "My throat welcomes the cool liquid."
 
@@ -120,7 +139,8 @@ label intro:
 
     "But well, I'm nothing like that."
 
-    #Ceiling bg
+    scene ceiling empty
+    show ceilingfan
 
     "I wrap myself in my blanket again."
 
@@ -130,7 +150,7 @@ label intro:
 
     "I should, but with the lights on I-"
 
-    #Bedroom bg
+    scene bedroombg
 
     "I stare at the VR equipment sitting on my nightstand."
 

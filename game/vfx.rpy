@@ -217,6 +217,50 @@ label blinktwice:
     with dissolve
     return
 
+#Draz Here#
+
+image closeeyes1:
+    "eyelidtop"
+    xpos 0.5 ypos 0.0                   #Comes from top of screen,
+    linear 0.6 xpos 0.5 ypos 0.0        #stays for a moment offscreen,
+    linear 0.6 xpos 0.5 ypos 1.0        #moves onto screen fully, and if in unison with the other eyelid, forms a blink
+    linear 0.1 xpos 0.5 ypos 1.0        #Pauses, to emulate a slow blink
+
+image closeeyes2:
+    "eyelidbottom"
+    xpos 0.5 ypos 2.0
+    linear 0.6 xpos 0.5 ypos 2.0
+    linear 0.6 xpos 0.5 ypos 1.0
+    linear 0.1 xpos 0.5 ypos 1.0
+
+image openeyes1:
+    "eyelidtop"
+    xpos 0.5 ypos 1.0                   #Comes from top of screen,
+    linear 0.6 xpos 0.5 ypos 1.0        #stays for a moment offscreen,
+    linear 0.6 xpos 0.5 ypos 0.0        #moves onto screen fully, and if in unison with the other eyelid, forms a blink
+    linear 0.1 xpos 0.5 ypos 0.0        #Pauses, to emulate a slow blink
+
+image openeyes2:
+    "eyelidbottom"
+    xpos 0.5 ypos 1.0
+    linear 0.6 xpos 0.5 ypos 1.0
+    linear 0.6 xpos 0.5 ypos 2.0
+    linear 0.1 xpos 0.5 ypos 2.0
+
+label closeeyes:
+    show closeeyes1
+    show closeeyes2
+    with dissolve
+    return
+
+label openeyes:
+    show openeyes1
+    show openeyes2
+    with dissolve
+    return
+
+#End of Draz's part#
+
 ## Ches Dance ######################################################################
 
 ## If this works itd be so cool!
