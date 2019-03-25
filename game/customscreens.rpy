@@ -377,9 +377,9 @@ screen startgame_login():
 
         fixed pos (540, 400):
             add "megan_ui/authenticate-name-background.png"
-            input pos (172, 245):
+            input pos (172, 240):
                 default ""
-                length 15
+                length 12
                 font "BebasNeue-Regular.otf"
                 color "#ceebf5"
                 size 50
