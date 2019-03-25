@@ -57,6 +57,7 @@ define gui.interface_text_color = '#ffffff'
 ## The font used for in-game text.
 define gui.text_font = "Arial.ttf"
 define gui.text_outlines = [ (absolute(6), "#000", absolute(0), absolute(0)) ]
+define gui.text_line_spacing = 8
 
 ## The font used for character names.
 define gui.name_text_font = "BebasNeue-Regular.otf"
