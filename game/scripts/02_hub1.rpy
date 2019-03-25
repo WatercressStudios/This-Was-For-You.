@@ -3,7 +3,7 @@
 #
 
 label hub1:
-    scene hub
+    scene bg hub hub
 
     "The familiar scent of an ocean breeze hits my nose first."
 

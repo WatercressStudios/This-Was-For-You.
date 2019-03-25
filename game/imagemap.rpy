@@ -14,9 +14,9 @@ transform glowpulse:
 screen hubselect:
     tag hubselect
     imagemap:
-        ground "hub"
-        idle "hubmap_hover"
-        hover "hubmap_hover"
+        ground "bgs/hub/hub.png"
+        idle "bgs/hub/hubmap_hover.png"
+        hover "bgs/hub/hubmap_hover.png"
 
         if not visited8track:
             hotspot (1479, 493, 359, 223) at glowpulse:

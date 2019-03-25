@@ -257,39 +257,40 @@ label test:
     voice "00-test-26.mp3" #Cheshire (shiena)
     che "Pose2 sad flap mouth."
 
-    scene ceiling empty
+    scene bg ceiling ceiling empty
     show ceilingfan
 
     voice "00-test-27.mp3" #Cheshire (shiena)
     che "Ceiling fan animation."
 
-    show bedroombg
+    hide ceilingfan
+    show bg bedroombg
 
     "Standard bedroom bg."
 
-    show bedroombg nocurtains
+    show bg bedroombg nocurtains
 
     "Lets see the skyline."
 
-    show bedroombg lightning
+    show bg bedroombg lightning
     show bedroomstorm nocurtains
 
     "Now for some lightning."
 
     hide bedroomstorm
-    show bedroombg rain -lightning
+    show bg bedroombg rain -lightning
 
     "And now some rain."
 
     #Zoom in and fall
 
-    show bedroombg open -rain:
+    show bg bedroombg open -rain:
         zoom 1.5
         xalign 0.9 yalign 0.2
 
     "Testing bedroom zoom in."
 
-    show bedroombg open:
+    show bg bedroombg open:
         linear 0.2 yalign 0.8
 
     pause 0.1
@@ -298,13 +299,15 @@ label test:
         alpha 0
         linear 0.1 alpha 1
 
-    show bedroombg open with vpunch
+    show bg bedroombg open with vpunch
+    hide black
 
     "Testing falling effect."
 
     #End zoom in and fall
 
-    show hub with dissolve
+    show bg hub hub with dissolve:
+        zoom 1
 
     show che f default
 
