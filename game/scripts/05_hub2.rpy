@@ -34,7 +34,7 @@ label hub2:
     voice "05-hub2-1.mp3" #Cheshire (shiena)
     che "Meowster, you're back!"
 
-    show che s catmouth base with easeinleft:
+    show che s catmouth base at centerleft, height with easeinleft:
         xzoom -1
 
     "...Though I guess this place is already tainted by this sorry excuse for a tutorial bot."
@@ -43,7 +43,7 @@ label hub2:
 
     show che f meh:
         xzoom 1
-        linear 0.6 xpos 0.3
+        linear 0.6 xpos 0.5
 
     voice "05-hub2-2.mp3" #Cheshire (shiena)
     che "CH35H1R3 has a qwestion for you."
@@ -86,7 +86,7 @@ label hub2:
     mc "Could you leave me alone, while we're at it?"
 
     show che s catmouth:
-        linear 0.2 xpos 0.35
+        linear 0.2 xpos 0.55
 
     voice "05-hub2-8.mp3" #Cheshire (shiena)
     che "Okays. But CH35H1R3 will be back!"

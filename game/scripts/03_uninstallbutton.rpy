@@ -51,9 +51,9 @@ label uninstallbutton:
     #sfx "vr_uninstall_click" "click!"
     "I push the button again."
 
-    "Yeah.”
+    "Yeah."
 
-    “Still nothing."
+    "Still nothing."
 
     show che f happy:
         zoom 2 xpos 0.1
@@ -69,7 +69,7 @@ label uninstallbutton:
     # ches zooms back out to normal distance
 
     show che f happy:
-        linear 0.2 zoom 1 xpos 0.3
+        linear 0.2 zoom 1 xpos 0.3 ypos 0.05
 
     mc "What are you-- Why are you…"
 

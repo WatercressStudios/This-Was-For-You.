@@ -31,7 +31,7 @@ label hub1:
 
     "Staring at-"
 
-    show che s catmouth armsnyan with easeinright
+    show che s catmouth armsnyan at center, height with easeinright
 
     #Cheshire slides onto screen with a happy expression
 
@@ -183,7 +183,7 @@ label hub1:
     "Glad for the momentary distraction, I look down at the button in my palm."
 
     hide items uninstallbutton
-    show che f catmouth
+    show che f catmouth at center, height
     with dissolve
 
     mc "Hey. Since you're so happy with me and everything, could you do me a favour?"
