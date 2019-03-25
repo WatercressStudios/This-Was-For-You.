@@ -23,6 +23,9 @@ label uninstallbutton:
 
     "Still nothing."
 
+    show sunsettitle behind items with dissolve
+    hide hub
+
     "I crafted this button partly because it was amusing, partly in protest of this world; it’s a pale imitation of the real thing, after all."
 
     "Yes, I was also aware of the irony of creating VR content, in VR, to protest VR..."
@@ -31,7 +34,6 @@ label uninstallbutton:
 
     "Too bad my plan was foiled by you, right, Ji-min? You and your judge-y eagle-eyes."
 
-    # note: replace "room" with whatever is more appropriate for the BG
     "Somehow, even from the other end of the beach, you managed to spot all the mistakes in my creation."
 
     "I didn't even have time to defend my artistic vision before you ran over and snatched it right out my hands, fixing it in the process."
@@ -43,6 +45,9 @@ label uninstallbutton:
     "It was like a scene out of a movie: we were strangers, Ji - yet you ran over and fixed my art like we were friends."
 
     "And then..."
+
+    show hub behind items with dissolve
+    hide sunsettitle
 
     "..."
 

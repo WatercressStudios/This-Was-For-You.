@@ -176,7 +176,15 @@ label hub1:
 
     "Of course, not that it could think to begin with."
 
+    hide che
+    show items uninstallbutton
+    with dissolve
+
     "Glad for the momentary distraction, I look down at the button in my palm."
+
+    hide items uninstallbutton
+    show che f catmouth
+    with dissolve
 
     mc "Hey. Since you're so happy with me and everything, could you do me a favour?"
 
@@ -222,5 +230,6 @@ label hub1:
 
     "Might as well make the most of this peace."
 
-    #Item CG - Uninstall Button
+    show items uninstallbutton with dissolve
+
     jump uninstallbutton

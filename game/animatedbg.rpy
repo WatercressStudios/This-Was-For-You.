@@ -115,7 +115,7 @@ image darklightning:
     "bgs/bedroom_layeredimage/foreground_dark_lightning.png"
     linear 0.2 alpha 0
 
-layeredimage bedroombg:
+layeredimage bg bedroombg:
 
     group skyline:
         attribute normal default:

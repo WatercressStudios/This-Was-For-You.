@@ -24,7 +24,7 @@ label intro:
 
     pause 0.5
 
-    scene ceiling empty
+    scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve
     #Fan whirl ambience
@@ -76,7 +76,7 @@ label intro:
 
     "My thoughts are pervasive, waves of emotion constantly crashing into my subconscious."
 
-    scene bedroombg
+    scene bg bedroombg
     call openeyes
 
     "Pushing my thin blanket aside, I prop myself up to a sitting position."
@@ -85,12 +85,12 @@ label intro:
 
     "That will help, right?"
 
-    show bedroombg:
+    show bg bedroombg:
         linear 0.2 zoom 1.1 yalign 0.1
 
     pause 0.5
 
-    show bedroombg with hpunch:
+    show bg bedroombg with hpunch:
         linear 0.2 zoom 1.05 yalign 0.8
 
     "Augh!"
@@ -101,7 +101,7 @@ label intro:
 
     "I wonder if that's begun to happen to me."
 
-    show bedroombg:
+    show bg bedroombg:
         linear 0.2 zoom 1.1 yalign 0.1
 
     "Catching my breath, I attempt to stand again."
@@ -110,16 +110,19 @@ label intro:
 
     "Okay. One step at a time now."
 
-    scene ceiling empty
-    show ceilingfan
-
     "Carefully..."
+
+    show bg ceiling ceiling empty
+    show ceilingfan
+    with dissolve
 
     "I stumble my way to the other side of my apartment, and get myself a cup of water."
 
     "With glass in hand, I carefully make my way back to the bed."
 
-    scene bedroombg
+    hide ceilingfan
+    show bg bedroombg
+    with dissolve
 
     "My throat welcomes the cool liquid."
 
@@ -139,8 +142,9 @@ label intro:
 
     "But well, I'm nothing like that."
 
-    scene ceiling empty
+    show bg ceiling ceiling empty
     show ceilingfan
+    with dissolve
 
     "I wrap myself in my blanket again."
 
@@ -150,7 +154,9 @@ label intro:
 
     "I should, but with the lights on I-"
 
-    scene bedroombg
+    hide ceilingfan
+    show bg bedroombg
+    with dissolve
 
     "I stare at the VR equipment sitting on my nightstand."
 
