@@ -7,6 +7,8 @@ image ceilingfan:
     linear 6 rotate 360
     repeat
 
+image ceilingfanstatic = "bgs/ceiling/ceilingfan.png"
+
 #Bedroom
 
 image citylights:

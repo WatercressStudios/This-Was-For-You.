@@ -3,7 +3,6 @@
 #
 
 label intro:
-
     scene black
 
     #Voicemail

@@ -3,6 +3,8 @@
 #
 
 label rw1:
+    scene black
+
     #Voicemail
     voice "04-rw1-1.mp3" #Boss ()
     bos "Hey, it's your boss. How’ve you been lately?"
@@ -15,8 +17,13 @@ label rw1:
     voice "04-rw1-5.mp3" #Boss ()
     bos "See you soon."
 
-    #Ceiling bg static
+    pause 0.5
 
+    scene bg ceiling ceiling empty
+    show ceilingfanstatic:
+        rotate 17
+        xalign 0.5 yalign 0.5
+    with dissolve
 
     "How long has it been since I’ve been to work?"
 
@@ -44,7 +51,8 @@ label rw1:
 
     "And I know that if I don't go back soon, I won't have one anymore."
 
-    #Black
+    call closeeyes
+    scene black with dissolve
 
     "I know I should care, but..."
 
@@ -61,13 +69,18 @@ label rw1:
     #Thunder sfx
     #Rain sfx
 
-    #Bedroom bg with open curtains and rain
+    scene bg bedroombg open rain
+    call openeyes
 
     "Heh. Even the sky is crying more than me."
 
-    #Zoom into the window.
+    show bg bedroombg:
+        zoom 1.5
+        xalign 0.9 yalign 0.2
 
     "You liked the rain."
+
+    show bg bedroombg nocurtains with dissolve
 
     "You always found it relaxing."
 
@@ -79,14 +92,17 @@ label rw1:
 
     "It's just another way everyone else is moving on."
 
-    #Bedroom bg with curtains closed
+    show bg bedroombg closed with dissolve
 
     "Ugh. I'm done with rain."
 
-    #Ceiling bg static
+    show bg ceiling ceiling empty
+    show ceilingfanstatic:
+        rotate 17
+        xalign 0.5 yalign 0.5
+    with dissolve
 
     "I don't want to be here anymore, not when the world is so determined to forget her."
-
 
     "No. I'm going back home."
 

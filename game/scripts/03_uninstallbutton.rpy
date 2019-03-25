@@ -3,8 +3,6 @@
 #
 
 label uninstallbutton:
-    # follows from Julia's scene, where it ends with a prompt for players to click the button
-
     # sfx of plastic button pressed *click*!
     #sfx "vr_uninstall_click" "click!"
 
