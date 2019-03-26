@@ -3,6 +3,9 @@
 #
 
 label rw2:
+    scene black
+
+    #Voicemail
     voice "09-rw2-1.mp3" #Dad ()
     dad "Hey kiddo, it's your parents..."
     voice "09-rw2-2.mp3" #Mom ()

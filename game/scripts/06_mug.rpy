@@ -33,7 +33,10 @@ label mug:
     voice "06-mug-1.mp3" #Cheshire (shiena)
     che "Meowster! Wots dat?"
 
-    show che s at centerright, height with easeinright
+    show che s at centerright, height
+    show items awoomug:
+        linear 0.2 xpos 0.3
+    with easeinright
 
     "My grip tightens on the mug, and I let out a breathy sigh."
 
@@ -46,7 +49,7 @@ label mug:
     che "Oooh! There's writing! What's it say??"
 
     show che s:
-        linear 0.2 zoom 1.2 ypos 1.2
+        linear 0.2 zoom 1.2 ypos 1.2 xpos 0.7
 
     "Cheshire leans into me, looking at the words on the mug."
 
@@ -70,7 +73,10 @@ label mug:
     voice "06-mug-7.mp3" #Cheshire (shiena)
     che "Oh, okay…"
 
-    hide che with easeoutright
+    hide che
+    show items awoomug:
+        linear 0.2 xpos 0.5
+    with easeoutright
 
     "With a hurt look on its face, it sinks away, leaving me alone."
 
@@ -95,6 +101,9 @@ label mug:
     "I should've been better. I could have been better."
 
     "I know this."
+
+    show kerosene with dissolve:
+        alpha 0.7
 
     "All of those late night chats."
 
