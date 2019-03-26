@@ -31,7 +31,10 @@ label rw2:
 
     ################ end voicemail
 
-    # bg fan whirling
+    scene bg ceiling ceiling empty
+    show ceilingfan
+    with dissolve
+
     "How long has it been since I moved from this bed?"
 
     "My body feels heavy. Like I'm being pulled down by an anchor."
@@ -55,7 +58,10 @@ label rw2:
 
     "My stomach's been growling for awhile now."
 
-    # bg window, zoomed in a bit
+    hide ceilingfan
+    show bg bedroombg open:
+        zoom 1.1
+    with dissolve
 
     "I roll to the side in an attempt to quell my hunger."
 
@@ -65,6 +71,16 @@ label rw2:
     "Fine, you win."
 
     # sfx bedsheet rustling
+
+    show bg bedroombg open:
+        linear 0.2 yalign 0.1
+
+    pause 0.5
+
+    show bg ceiling ceiling empty
+    show ceilingfan
+    with dissolve
+
     # camera pans up a bit, indicating MC is standing up
     # bg back to the fan, but sfx of MC walking to the kitchen and opening the fridge
 
@@ -73,6 +89,16 @@ label rw2:
     "Nothing left but a slice of two-day-old pizza."
 
     "Without bothering to heat it up, I start chewing on the cold, damp crust while walking to the window."
+
+    hide ceilingfan
+    show bg bedroombg open:
+        zoom 1.5
+        xalign 0.9 yalign 0.2
+    with dissolve
+
+    pause 0.5
+
+    show bg bedroombg nocurtains with dissolve
 
     # bg to the zoomed in window without the curtains
     # sfx of more city sounds than fan sounds
@@ -108,11 +134,20 @@ label rw2:
 
     # close curtains and zoom out. sfx of MC getting on bed
     # fan bg, and pause for a second
+
+    show bg bedroombg closed with dissolve
+
+    show bg ceiling ceiling empty
+    show ceilingfan
+    with dissolve
+
     "I hate this."
 
     "I hate feeling like this."
 
-    # eye close bg anim
+    call closeeyes
+    scene black with dissolve
+
     "Shutting my eyes, I try to sleep."
 
     "But all I can do is think about what the newscaster said a few hours ago."
@@ -125,7 +160,10 @@ label rw2:
 
     "...No."
 
-    # bg open eyes back to fan
+    scene bg ceiling ceiling empty
+    show ceilingfan
+    call openeyes
+
     "I can't do this. Not today."
 
     # Show into VR button

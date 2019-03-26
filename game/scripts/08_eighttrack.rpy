@@ -83,7 +83,7 @@ label eighttrack:
     mc "...what are you doing?"
 
     show che s catmouth base:
-        linear 0.6 xpos 0.5
+        linear 0.2 xpos 0.5
 
     # ches fades in as opposed to sliding in as usual
     voice "08-eighttrack-2.mp3" #Cheshire (shiena)

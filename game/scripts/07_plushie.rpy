@@ -115,7 +115,7 @@ label plushie:
 
     show che f sad:
         xzoom 1
-        linear 0.6 xpos 0.3
+        linear 0.2 xpos 0.3
 
     voice "07-plushie-5.mp3" #Cheshire (shiena)
     che "Meowster's so mwean!"
@@ -139,7 +139,7 @@ label plushie:
 
     show che s armsnyan:
         xzoom -1
-        linear 0.6 xpos 0.35
+        linear 0.2 xpos 0.35
 
     voice "07-plushie-9.mp3" #Cheshire (shiena)
     che "And I'm a cat!"
