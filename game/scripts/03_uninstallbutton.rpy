@@ -94,18 +94,18 @@ label uninstallbutton:
     # screenshake and whip sfx, indicating MC has snapped
 
     show bg hub hub:
-        linear 0.1 zoom 1.02
+        linear 0.2 zoom 1.05
     show che s sad:
-        linear 0.1 zoom 1.02
+        linear 0.2 zoom 1.05
     with hpunch
 
     mc "Weren't you supposed to be gone for 30 minutes!?"
 
     show bg hub hub:
-        linear 0.1 zoom 1
+        linear 0.2 zoom 1
 
     show che s default base:
-        linear 0.1 zoom 1
+        linear 0.2 zoom 1
 
     voice "03-uninstallbutton-4.mp3" #Cheshire (shiena)
     che "But Master is having trouble, so CH35H1R3 came to help, meow!"

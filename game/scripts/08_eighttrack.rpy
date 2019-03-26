@@ -3,10 +3,15 @@
 #
 
 label eighttrack:
+    scene bg hub hub
+    show woodtrail1 with dissolve
+    show items 8track
     #MC selects the eight track
 
     # fade the bg music out
     "..."
+
+    hide items 8track with dissolve
 
     # sound of cassette tape being inserted in cassette player
     "I slide the cassette into the player and push it close with a satisfying 'click'."
@@ -58,11 +63,27 @@ label eighttrack:
 
     "I need you here."
 
+    show che s catmouthclosed armshappy at center, height behind woodtrail1:
+        xpos 0.5
+        linear 0.6 xpos 0.45
+        linear 0.6 xpos 0.4
+        linear 0.6 xpos 0.45
+        linear 0.6 xpos 0.5
+        linear 0.6 xpos 0.55
+        linear 0.6 xpos 0.6
+        linear 0.6 xpos 0.55
+        linear 0.6 xpos 0.5
+        repeat
+    hide woodtrail1 with dissolve
+
     # ches is singing to the song…. ish. It's not actually in tune or even follows the beat or the song.
     voice "08-eighttrack-1.mp3" #Cheshire (shiena)
     che "Nya~ nya~ nya~! Nya~ nya~ nya~!"
 
     mc "...what are you doing?"
+
+    show che s catmouth base:
+        linear 0.6 xpos 0.5
 
     # ches fades in as opposed to sliding in as usual
     voice "08-eighttrack-2.mp3" #Cheshire (shiena)
@@ -70,18 +91,37 @@ label eighttrack:
 
     mc "No, you really weren't."
 
+    show che s catmouthclosed armshappy
+
     voice "08-eighttrack-3.mp3" #Cheshire (shiena)
     che "Why don't Meowster joins me? Nya~ nya~ nya~!"
 
-    # hpunch
-    # che sprite looks sad or surprised
+    show che s catmouthclosed armshappy:
+        zoom 1.05
+
+    show bg hub hub with hpunch:
+        zoom 1.05
+
+    show che s sad
+
     mc "Shut up!"
 
+    show bg hub hub:
+        linear 0.2 zoom 1
+
+    show che s sad:
+        linear 0.2 zoom 1
+
     mc "The song's not yours to sing..."
+
+    show che s meh base
 
     # confused look
     voice "08-eighttrack-4.mp3" #Cheshire (shiena)
     che "Then whose is it?"
+
+    show woodtrail1 with dissolve:
+        alpha 0.8
 
     "It was supposed to be Ji-min's and my duet."
 
