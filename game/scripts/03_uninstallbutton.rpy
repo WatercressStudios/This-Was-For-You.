@@ -21,8 +21,7 @@ label uninstallbutton:
 
     "Still nothing."
 
-    show sunsettitle behind items with dissolve:
-        alpha 0.8
+    show sunsettitle behind items with dissolve
 
     "I crafted this button partly because it was amusing, partly in protest of this world; it’s a pale imitation of the real thing, after all."
 

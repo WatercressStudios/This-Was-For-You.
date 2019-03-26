@@ -64,7 +64,8 @@ init python:
     MapEmote('che s pout1',  'che pose2 md_poutlvl1')
     MapEmote('che s pout2',  'che pose2 md_poutlvl2')
     MapEmote('che s thinline',  'che pose2 md_line')
-    MapEmote('che s sad',  'che pose2 md_sad')
+    MapEmote('che s sad',  'che pose2 md_sad brow_sad')
+    MapEmote('che s awoo',  'che pose2 m_awoo ec_wolfmeme')
 
     MapEmote('che s nya',  'che pose2 armsnyan md_default ed_default brow_default glasses_default')
 
