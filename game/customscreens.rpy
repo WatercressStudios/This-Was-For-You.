@@ -422,3 +422,184 @@ screen thumbprint_scanning():
 screen thumbprint_line():
     fixed at line_scanning:
         add "line_glowing"
+
+
+
+
+label main_menu:
+    call screen custom_title_center with fade
+
+screen custom_mainmenu_buttons_center():
+    fixed:
+        add "megan_ui/gui-mainmenu-background.png"
+
+        imagebutton pos (20, 30): # Play
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Start()
+
+        imagebutton pos (20, 120): # Load
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_center2left"), Show("custom_title_main_load") ]
+
+        imagebutton pos (20, 210): # Settings
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_center2left"), Show("custom_title_main_settings") ]
+
+        imagebutton pos (20, 300): # Extras
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_center2right") ]
+
+        imagebutton pos (20, 390): # Quit
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            action Quit()
+
+        add "megan_ui/gui-mainmenu-text.png"
+
+screen custom_mainmenu_buttons_left():
+    fixed:
+        add "megan_ui/gui-mainmenu-background.png"
+
+        imagebutton pos (20, 30): # Play
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Start()
+
+        imagebutton pos (20, 120): # Load
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_main_load")
+
+        imagebutton pos (20, 210): # Settings
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_main_settings")
+
+        imagebutton pos (20, 300): # Extras
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_left2right"), Hide("custom_title_main") ]
+
+        imagebutton pos (20, 390): # Quit
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            action Quit()
+
+        add "megan_ui/gui-mainmenu-text.png"
+
+screen custom_mainmenu_buttons_right():
+    fixed:
+        add "megan_ui/gui-extrasmenu-background.png"
+
+        imagebutton pos (20, 30): # Gallery
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_extras_gallery")
+
+        imagebutton pos (20, 120): # Music box
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_extras_musicbox")
+
+        imagebutton pos (20, 210): # Credits
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_extras_credits")
+
+        imagebutton pos (20, 300): # Back
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-extrasmenu-mainmenu-select.png"
+            action [ Show("custom_title_right2center"), Hide("custom_title_extras") ]
+
+        add "megan_ui/gui-extrasmenu-text.png"
+
+screen custom_title_center():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_center:
+            use custom_mainmenu_buttons_center
+
+screen custom_title_center2left():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_center2left:
+            use custom_mainmenu_buttons_left
+
+screen custom_title_center2right():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 600):
+        fixed at main_menu_center2right:
+            use custom_mainmenu_buttons_right
+
+screen custom_title_right2center():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_right2center:
+            use custom_mainmenu_buttons_center
+
+screen custom_title_left2right():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 600):
+        fixed at main_menu_left2right:
+            use custom_mainmenu_buttons_right
+
+transform main_menu_center:
+    easein 0.2 alpha 1 xpos 0
+
+transform main_menu_center2left:
+    easein 0.2 alpha 1 xpos -710
+
+transform main_menu_center2right:
+    easein 0.2 alpha 1 xpos 710
+
+transform main_menu_right2center:
+    xpos 710
+    easein 0.2 alpha 1 xpos 0
+
+transform main_menu_left2right:
+    xpos -710
+    easein 0.2 alpha 1 xpos 710
+
+screen custom_title_main_load():
+    tag custom_title_main
+    fixed:
+        text "Loading Screen"
+
+screen custom_title_main_settings():
+    tag custom_title_main
+    fixed:
+        text "Settings Screen"
+
+screen custom_title_extras_gallery():
+    tag custom_title_extras
+    fixed:
+        text "Gallery Screen"
+
+screen custom_title_extras_musicbox():
+    tag custom_title_extras
+    fixed:
+        text "Music box Screen"
+
+screen custom_title_extras_credits():
+    tag custom_title_extras
+    fixed:
+        text "Credits Screen"
