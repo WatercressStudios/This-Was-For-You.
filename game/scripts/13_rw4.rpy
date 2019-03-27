@@ -202,6 +202,8 @@ label rw4:
 
     "..."
 
+    show bg bedroombg closed with dissolve
+
     "I can do it tomorrow."
 
     "Just… one more time."

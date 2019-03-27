@@ -4,7 +4,7 @@
 
 label planeticket:
     scene bg hub hub
-    
+
     "Well, here I am again."
 
     "With one final item, I need to find a quiet place as quickly as possible."
@@ -23,13 +23,17 @@ label planeticket:
 
     "No, no. Just one."
 
-    "Finding it where I last left it, I-" #Interrupt
+    "Finding it where I last left it, I-{nw}" #Interrupt
+
+    show che s at centerright, height with easeinright
 
     voice "14-planeticket-1.mp3" #Cheshire (shiena)
     che "There yous are! CH35H1R3's been waitings for yous!"
 
     mc "Dear God no please, PLEASE, I just want some goddamn peace and quiet!"
 
+    show che f sad:
+        linear 0.2 xpos 0.5
 
     voice "14-planeticket-2.mp3" #Cheshire (shiena)
     che "But quiets is lonely!"
@@ -40,24 +44,33 @@ label planeticket:
 
     mc "Please, I can't take any more of this. Fucking end me, do anything!"
 
+    show che f mehsad
+
     voice "14-planeticket-3.mp3" #Cheshire (shiena)
     che "No, no! CH35H1R3 doesn't wants that!"
 
     mc "I don't care."
 
+    show che f sadclosed
 
     voice "14-planeticket-4.mp3" #Cheshire (shiena)
     che "Momma wouldn't wants that either!"
 
     mc "Momma?"
 
+    show che f mehsad
+
     voice "14-planeticket-5.mp3" #Cheshire (shiena)
     che "Yes! Momma would miss yous!"
 
     mc "...Who's this 'Mom' of yours?"
 
+    show che f happyclosed
+
     voice "14-planeticket-6.mp3" #Cheshire (shiena)
     che "Ji, silly!"
+
+    pause 0.5
 
     #all music/sfx/everything stops here.
 
@@ -65,9 +78,10 @@ label planeticket:
 
     mc "...Ji?"
 
+    show che f happy
+
     voice "14-planeticket-7.mp3" #Cheshire (shiena)
     che "Yeppers!"
-
 
     "I… I don't understand."
 
@@ -75,15 +89,27 @@ label planeticket:
 
     mc "...why?"
 
+    show che f meh
+
     voice "14-planeticket-8.mp3" #Cheshire (shiena)
     che "Whys?"
 
     mc "She's your creator?"
 
+    show che f happy
+
     voice "14-planeticket-9.mp3" #Cheshire (shiena)
     che "Yeppers!"
 
+    show che f mehsad:
+        zoom 1.05
+
+    show bg hub hub with hpunch:
+        zoom 1.05
+
     mc "Why?"
+
+    show bg hub hub with hpunch
 
     mc "Why did she create you?"
 
@@ -122,7 +148,15 @@ label planeticket:
 
     "You're all that's left of her."
 
+    show bg hub hub:
+        linear 0.2 zoom 1
+
+    show che f:
+        linear 0.2 zoom 1
+
     mc "I'm sorry."
+
+    show che f thinline
 
     voice "14-planeticket-11.mp3" #Cheshire (shiena)
     che "Sorrys, CH35H1R3 doesn't knows how to responds to that!"
@@ -140,11 +174,20 @@ label planeticket:
 
     "She didn't expect to die, no one did."
 
+    hide che
+    show items planeticket
+    with dissolve
+
     "I pull the item out from my inventory, where it's been since that day."
 
     "The plane ticket."
 
     "Your plane ticket."
+
+    show bg bedroom bedroom as bg2 with hpunch:
+        zoom 1.05
+        alpha 0.1
+        linear 0.6 alpha 0.95
 
     "I step back, collapsing against my bed behind me, the VR headset angrily alerting me that I'm out of bounds."
 
@@ -237,5 +280,7 @@ label planeticket:
     "But none of that will ever happen."
 
     "You're dead."
+
+    show black
 
     jump ending
