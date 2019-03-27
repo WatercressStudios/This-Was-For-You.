@@ -3,6 +3,8 @@
 #
 
 label planeticket:
+    scene bg hub hub
+    
     "Well, here I am again."
 
     "With one final item, I need to find a quiet place as quickly as possible."
