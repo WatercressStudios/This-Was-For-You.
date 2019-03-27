@@ -173,7 +173,7 @@ layeredimage bedroomstorm:
         attribute blue default:
             "blue"
 
-        attribute darkdark:
+        attribute darkblue:
             "darkblue"
 
     group curtains:

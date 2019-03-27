@@ -3,6 +3,14 @@
 #
 
 label ending:
+    scene black
+
+    pause 1
+
+    scene bg ceiling ceiling empty
+    show ceilingfan
+    with dissolve
+
     "I've been through all of this before."
 
     "Over and over and over, I think the same stupid things."
@@ -37,9 +45,14 @@ label ending:
 
     "Someone, please tell me…"
 
-    "How do I let go?"
+    menu:
+        "How do I let go?"
 
-    #Choice:
-    #Delete Ji-min’s voicemail (voicemail doesn't play after credits)
-    #Keep Ji-min’s voicemail (voicemail plays after credits)
+        "Delete Ji-min's voicemail":
+            $ jivoicemail = True
+
+        "Keep Ji-min's voicemail":
+            $ jivoicemail = False
+
+    #roll credits
     #end game

@@ -3,6 +3,9 @@
 #
 
 label mug:
+    scene bg hub hub
+    show kerosene with dissolve
+    show items awoomug
     #This scene won't totally be emotionally charged cause Instant drew the original mug no
 
     "Grabbing the mug, I'm brought back to the night we first gathered around the fire."
@@ -25,8 +28,15 @@ label mug:
 
     "You were my best friend."
 
+    hide kerosene with dissolve
+
     voice "06-mug-1.mp3" #Cheshire (shiena)
     che "Meowster! Wots dat?"
+
+    show che s at centerright, height
+    show items awoomug:
+        linear 0.2 xpos 0.3
+    with easeinright
 
     "My grip tightens on the mug, and I let out a breathy sigh."
 
@@ -38,18 +48,35 @@ label mug:
     voice "06-mug-3.mp3" #Cheshire (shiena)
     che "Oooh! There's writing! What's it say??"
 
+    show che s:
+        linear 0.2 zoom 1.2 ypos 1.2 xpos 0.7
+
     "Cheshire leans into me, looking at the words on the mug."
 
     voice "06-mug-4.mp3" #Cheshire (shiena)
-    che "Oh! Cheshire loves this! Awoooooooooo!"
+    che "Oh! Cheshire loves this!"
+
+    show che s awoo armshappy
 
     voice "06-mug-5.mp3" #Cheshire (shiena)
+    che "Awoooooooooo!"
+
+    show che s default base
+
+    voice "06-mug-6.mp3" #Cheshire (shiena)
     che "Can I haves? Can I haves?"
+
+    show che s sad
 
     mc "No. This isn't yours, and it won't ever be yours. Go away. Please."
 
-    voice "06-mug-6.mp3" #Cheshire (shiena)
+    voice "06-mug-7.mp3" #Cheshire (shiena)
     che "Oh, okay…"
+
+    hide che
+    show items awoomug:
+        linear 0.2 xpos 0.5
+    with easeoutright
 
     "With a hurt look on its face, it sinks away, leaving me alone."
 
@@ -61,6 +88,10 @@ label mug:
 
     "She would have, too."
 
+    hide items with dissolve
+    show bg hub hub with hpunch:
+        zoom 1.02 ypos 1.0
+
     "Collapsing to the ground, I hug the mug close to my chest."
 
     "Was I ever that mean to you, Ji?"
@@ -70,6 +101,9 @@ label mug:
     "I should've been better. I could have been better."
 
     "I know this."
+
+    show kerosene with dissolve:
+        alpha 0.7
 
     "All of those late night chats."
 

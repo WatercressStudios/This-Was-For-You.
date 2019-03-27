@@ -3,8 +3,9 @@
 #
 
 label plushie:
-    #Cat Plushie bg
-    #Cat Plushie cg
+    scene bg hub hub
+    show catfieldbg
+    show items catplushie
 
     "I made this for you."
 
@@ -76,24 +77,34 @@ label plushie:
 
     "I wish that were the case now."
 
+    hide catfieldbg with dissolve
+
     voice "07-plushie-1.mp3" #Cheshire (shiena)
     che "Ooh. What's this?"
 
-    #Cheshire sprite slides in from the side
+    show che s at centerleft, height:
+        xzoom -1
+    show items catplushie:
+        linear 0.2 xpos 0.7
+    with easeinleft
 
     "Here we go again."
 
     mc "It's a-"
+
+    show che s catmouthclosed armsnyan
 
     voice "07-plushie-2.mp3" #Cheshire (shiena)
     che "It's like me, nya!"
 
     mc "Don't be silly. It's a plushie, not a bot like you."
 
+    show che s default base
+
     voice "07-plushie-3.mp3" #Cheshire (shiena)
     che "But it's got a tail!"
 
-    #catmouth
+    show che s catmouth
 
     voice "07-plushie-4.mp3" #Cheshire (shiena)
     che "And we have the same mouth!"
@@ -102,15 +113,16 @@ label plushie:
 
     mc "You're both cat-like, but that's where the similarities end."
 
-    #sadface
-
+    show che f sad:
+        xzoom 1
+        linear 0.2 xpos 0.3
 
     voice "07-plushie-5.mp3" #Cheshire (shiena)
     che "Meowster's so mwean!"
 
     mc "Yeah, yeah."
 
-    #happy
+    show che f happy
 
     voice "07-plushie-6.mp3" #Cheshire (shiena)
     che "But maybe master secretly cares about me!"
@@ -120,8 +132,14 @@ label plushie:
     voice "07-plushie-7.mp3" #Cheshire (shiena)
     che "The plushie of course!"
 
+    show che f armsscanning
+
     voice "07-plushie-8.mp3" #Cheshire (shiena)
     che "If you have something like that, you must like cats."
+
+    show che s armsnyan:
+        xzoom -1
+        linear 0.2 xpos 0.35
 
     voice "07-plushie-9.mp3" #Cheshire (shiena)
     che "And I'm a cat!"
@@ -130,20 +148,29 @@ label plushie:
 
     mc "And this isn't mine!"
 
+    show che s meh
+
     mc "It's… ah forget about it."
+
+    show che s base
 
     voice "07-plushie-10.mp3" #Cheshire (shiena)
     che "Master, I wants to know!"
+
+    show catfieldbg with dissolve:
+        alpha 0.8
 
     "\"Master\"… you know, that kind of reminds me of the time you asked me if I've ever been to a cat cafe."
 
     "I just, looked at you with a horrified expression and told you I'd never go to somewhere like that."
 
+    show che s pout1
+
     "Turns out I had gotten cat cafes and maid cafes all mixed up."
 
     "You teased me about it for ages."
 
-    #Cheshire pouts and slides off
+    hide che with easeoutright
 
     "Going to a cat cafe was on your bucket list."
 

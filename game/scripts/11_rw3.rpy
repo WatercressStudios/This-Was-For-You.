@@ -3,6 +3,8 @@
 #
 
 label rw3:
+    scene black
+
     ##"Good People Always Die First."
     ##Voicemail
     voice "11-rw3-1.mp3" #Cafe Owner ()
@@ -16,6 +18,12 @@ label rw3:
     voice "11-rw3-5.mp3" #Cafe Owner ()
     caf "If ya need anything, just give me a call, a text - whatever floats your boat. Drinks are on me for however long you need, okay?"
 
+    pause 0.5
+
+    scene bg ceiling ceiling empty
+    show ceilingfan
+    with dissolve
+
     "I can almost feel it, you know?"
 
     "The bitter aroma of coffee, the clinking of mugs, the gentle murmur of polite guests, the soothing lights warming up the place - all of it."
@@ -27,6 +35,9 @@ label rw3:
     "I wasn't expecting a business owner to care; I came to learn that you treat it all as a hobby, for fun, as a community, rather than a business."
 
     "The culture of it all, that’s how you succeeded. It was a place to belong, not a place to buy merchandise; it's a place that cares."
+
+    call closeeyes
+    scene black with dissolve
 
     "Drinks on you…"
 
@@ -50,6 +61,10 @@ label rw3:
 
     "But I loved it all the same."
 
+    scene bg ceiling ceiling empty
+    show ceilingfan
+    call openeyes
+
     "Now I can't even tell what day of the week it is. Everything's the same shade of grey, the days growing into an amorphous blob of incongruity."
 
     "Is it 5 AM or 5 PM? Dawn or dusk? Day or night? I can't tell."
@@ -69,6 +84,10 @@ label rw3:
     "And I'm sorry that I won't be telling you how much I care right now. Maybe I'll take the trip later…"
 
     "I guess I’ll get around to it eventually if nothing else."
+
+    hide ceilingfan
+    show bg bedroombg open
+    with dissolve
 
     "I'm taken back to my room, suddenly feeling very cold and {b}very{/b} alone in the darkness."
 

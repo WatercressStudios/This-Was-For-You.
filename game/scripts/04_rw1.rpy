@@ -78,9 +78,11 @@ label rw1:
         zoom 1.5
         xalign 0.9 yalign 0.2
 
-    "You liked the rain."
+    pause 0.5
 
     show bg bedroombg nocurtains with dissolve
+
+    "You liked the rain."
 
     "You always found it relaxing."
 

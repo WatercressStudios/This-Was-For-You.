@@ -315,16 +315,6 @@ init python:
     def LoginToLoading():
         renpy.hide_screen("thumbprint_scanning")
         renpy.hide_screen("thumbprint_line")
-        renpy.show_screen("startgame_logging_in")
-        renpy.restart_interaction()
-        ui.timer(3.0, LoadingToHide)
-
-    def LoadingToHide():
-        renpy.hide_screen("startgame_logging_in")
-        renpy.restart_interaction()
-        ui.timer(0.5, HideToStart)
-
-    def HideToStart():
         renpy.jump("start2")
 
 image authenticate_loading_bg:

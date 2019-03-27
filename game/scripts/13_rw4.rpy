@@ -3,23 +3,43 @@
 #
 
 label rw4:
+
     # MC did not receive a notification of "New voicemail!" for this voicemail (just vary up how they leave VR a little)
 
-    # POWER BLACKOUT! Whatever BG they where on, it suddenly turns black.
+    show vrpoweroutageeffect
+
     # play SFX of a VR headset being powered down (it'll be cool if we can have a TV blinking off visual effect to go with it)
     # also hide the menu buttons (temporarily, for a few seconds)
-    # show BG of the bedroom…. but it's almost complete black, from darkness
+
+    hide screen in_game_menu
+
+    pause 0.5
+
+    scene bg bedroombg rain darker dim opendark dark
+    show black
+    hide vrpoweroutageeffect
+    hide black with dissolve
 
     "What? What happened?"
 
     # sfx of a thunder, followed by a BG change to the window and sfx of MC sitting up on bed. it's also super dark out there.
 
+    show bg bedroombg lightning
+    show bedroomstorm darkblue darkflash darklightning
+
     # flash the lightning outside the window! a second of two later, play sfx of another thunder.
 
+    pause 1
+
     # sfx of the VR headset powering on, and the room goes to normal brightness again
-    # the UI menu fades back into view, indicating the power is back on
+
+    hide bedroomstorm
+    show screen in_game_menu
+    show bg bedroombg normal lit open bright -lightning
+    with dissolve
 
     "...a blackout?"
+
     "Haven't had that in awhile."
 
     # ding! new voicemail
@@ -43,7 +63,7 @@ label rw4:
 
     # show the thumbprint scanner from the start of the game again, and animate it in the same way, to re-authenticate
 
-    # fade to black screen for voicemail
+    scene black
 
     voice "13-rw4-1.mp3" #Friend ()
     vm "Heya! So uh, where do I start…"
@@ -63,7 +83,23 @@ label rw4:
     vm "Just the three of us, don't worry. Take care!"
     # abruptly hangs up, as if the caller was afraid the MC would say "no" even though it's a freaking voicemail
 
-    # abruptly hangs up, as if the caller was afraid the MC would say "no" even though it's a freaking voicemail
+    pause 0.5
+
+    scene bg bedroombg nocurtains rain:
+        zoom 1.5
+        xalign 0.9 yalign 0.2
+    with dissolve
+
+    pause 0.5
+
+    show bg bedroombg lightning
+    show bedroomstorm nocurtains:
+        zoom 1.5
+        xalign 0.9 yalign 0.2
+
+    pause 1
+
+    hide bedroomstorm
 
     # fade back into the window scene, zoomed into the outside view. a lightning flashed and thundered again
 
@@ -74,6 +110,15 @@ label rw4:
     "If I knew this was going to happen, I'd have replied to their emails."
 
     "...maybe."
+
+    show bg bedroombg lightning
+    show bedroomstorm nocurtains:
+        zoom 1.5
+        xalign 0.9 yalign 0.2
+
+    pause 1
+
+    hide bedroomstorm
 
     # lightning flash and sfx again
     # pause a second or two
@@ -102,15 +147,33 @@ label rw4:
 
     "I start to head back, but--"
 
+    show bg bedroombg:
+        linear 0.2 yalign 0.8
+
+    pause 0.1
+
+    show black with vpunch:
+        alpha 0
+        linear 0.1 alpha 1
+
+    show bg bedroombg with vpunch
+
     # sfx of someone tripping over something and falling flat, like a pizza box or something
     # slide the BG up into a black screen to indicate a fall
     # fade in the room again, window view
+
+    pause 0.1
+
+    scene black
 
     "I rub my elbow, trying to soothe the part of it that had an unfortunate meeting with the ground."
 
     "What did I trip over?"
 
     "...a pizza box?"
+
+    show bg bedroombg open rain
+    call openeyes
 
     "I look around my apartment and, for the first time, notice the state it’s in."
 
@@ -131,10 +194,15 @@ label rw4:
     # sfx new email! This time it's from work, with subject line "URGENT reply immediately"
     # player has option to read or ignore the email. the basic gist of it is that the MC has missed too many days of work, and the boss will have no choice but reluctantly hire someone new if this goes on.
 
+    show bg bedroombg lightning
+    show bedroomstorm
+
     # lightning flash and sfx again
     # pause a second or two
 
     "..."
+
+    show bg bedroombg closed with dissolve
 
     "I can do it tomorrow."
 
