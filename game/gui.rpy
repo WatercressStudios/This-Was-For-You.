@@ -254,7 +254,10 @@ define gui.file_slot_rows = 2
 define gui.navigation_xpos = 60
 
 ## The vertical position of the skip indicator.
-define gui.skip_ypos = 15
+define gui.skip_ypos = 0
+
+## The horizontal position of the skip indicator.
+define gui.skip_xpos = 0
 
 ## The vertical position of the notify screen.
 define gui.notify_ypos = 68
@@ -293,7 +296,7 @@ define gui.frame_borders = Borders(6, 6, 6, 6)
 define gui.confirm_frame_borders = Borders(60, 30, 60, 30)
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(24, 8, 75, 8)
+define gui.skip_frame_borders = Borders(0, 0, 0, 0)
 
 ## The frame that is used as part of the notify screen.
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)

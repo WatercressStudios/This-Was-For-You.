@@ -1210,11 +1210,10 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Skipping")
+            xalign 0.5
+            yalign 0.5
 
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+            add "megan_ui/gui-skipping.png"
 
 
 ## This transform is used to blink the arrows one after another.
@@ -1236,8 +1235,11 @@ style skip_text is gui_text
 style skip_triangle is skip_text
 
 style skip_frame:
+    xfill True
+    yfill True
     ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
+    xpos gui.skip_xpos
+    background "gui/skip.png"
     padding gui.skip_frame_borders.padding
 
 style skip_text:
