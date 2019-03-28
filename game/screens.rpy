@@ -242,7 +242,7 @@ style choice_button_text is default:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
-screen quick_menu():
+screen _quick_menu():
 
     ## Ensure this appears on top of other screens.
     zorder 100
@@ -882,7 +882,7 @@ style slider_vbox:
 ##
 ## https://www.renpy.org/doc/html/history.html
 
-screen history():
+screen _history():
 
     tag menu
 

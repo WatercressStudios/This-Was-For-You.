@@ -689,3 +689,48 @@ screen custom_title_extras_credits():
     tag custom_title_extras
     fixed:
         text "Credits Screen"
+
+
+
+
+
+screen history():
+    tag custom_title_main
+
+    ## Avoid predicting this screen, as it can be very large.
+    predict False
+
+    add "megan_ui/gui-skipping-background.png"
+    frame:
+        background None
+        padding (200, 120, 200, 140)
+        vpgrid:
+            cols 1
+            mousewheel True
+            draggable True
+            scrollbars "vertical"
+            side_xalign 0.5
+            for h in _history_list:
+                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                if h.who:
+                    $ what = "[" + h.who+ "] " + what
+
+                label what:
+                    xfill True
+                    if h.who and "color" in h.who_args:
+                        text_color h.who_args["color"]
+                    substitute False
+
+            if not _history_list:
+                label _("The dialogue history is empty.")
+    fixed pos (1560, 960):
+        imagebutton offset (-185, -5):
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            action Return()
+        add "megan_ui/gui-history-back.png"
+        # text "Back":
+        #     font "BebasNeue-Regular.otf"
+        #     size 60
+        #     color "#36428A"
+        #     outlines []
