@@ -3,6 +3,7 @@
 #
 
 label hub1:
+    $ save_name = "Imitation"
     scene bg hub hub
 
     "The familiar scent of an ocean breeze hits my nose first."

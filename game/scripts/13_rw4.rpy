@@ -43,6 +43,7 @@ label rw4:
 
     # show the thumbprint scanner from the start of the game again, and animate it in the same way, to re-authenticate
 
+    $ save_name = "Friendships"
     # fade to black screen for voicemail
 
     voice "13-rw4-1.mp3" #Friend ()

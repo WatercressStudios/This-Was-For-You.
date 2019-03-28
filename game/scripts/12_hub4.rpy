@@ -3,6 +3,8 @@
 #
 
 label hub4:
+    $ save_name = "The Gift"
+
     "Here we are again."
 
     "The waves lapping against the shore calm me, as they alwa--" #interrupt function I forget how

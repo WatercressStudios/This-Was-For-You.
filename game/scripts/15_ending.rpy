@@ -3,6 +3,7 @@
 #
 
 label ending:
+    $ save_name = "I Miss You."
     "I've been through all of this before."
 
     "Over and over and over, I think the same stupid things."

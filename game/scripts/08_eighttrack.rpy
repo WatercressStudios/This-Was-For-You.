@@ -3,6 +3,7 @@
 #
 
 label eighttrack:
+    $ save_name = "Our Song"
     #MC selects the eight track
 
     # fade the bg music out

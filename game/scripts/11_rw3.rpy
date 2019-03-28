@@ -3,6 +3,7 @@
 #
 
 label rw3:
+    $ save_name = "Only The Good Die Young."
     ##"Good People Always Die First."
     ##Voicemail
     voice "11-rw3-1.mp3" #Cafe Owner ()

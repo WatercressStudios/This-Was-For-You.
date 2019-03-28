@@ -3,6 +3,7 @@
 #
 
 label planeticket:
+    $ save_name = "What Could Have Been."
     "Well, here I am again."
 
     "With one final item, I need to find a quiet place as quickly as possible."

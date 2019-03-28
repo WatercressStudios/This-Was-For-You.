@@ -3,6 +3,7 @@
 #
 
 label plushie:
+    $ save_name = "Apologies"
     #Cat Plushie bg
     #Cat Plushie cg
 

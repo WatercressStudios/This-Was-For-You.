@@ -3,6 +3,7 @@
 #
 
 label rw1:
+    $ save_name = "The World Keeps Turning"
     scene black
 
     #Voicemail

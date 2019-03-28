@@ -3,6 +3,7 @@
 #
 
 label mug:
+    $ save_name = "You Were so Strong."
     #This scene won't totally be emotionally charged cause Instant drew the original mug no
 
     "Grabbing the mug, I'm brought back to the night we first gathered around the fire."
