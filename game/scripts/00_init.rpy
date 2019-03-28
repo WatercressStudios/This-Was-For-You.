@@ -110,6 +110,7 @@ label start:
             $ visitedplushie = False
             $ visitedmug = False
             $ visited = 0
+            $ relogin = False
             show screen in_game_menu
             call screen startgame_login
         "Test":
@@ -137,10 +138,10 @@ label test:
     scene sunsettitle
     voice "00-test-3.mp3" #Cheshire (shiena)
     che "sunsettitle"
-    call blinkonce from _call_blinkonce
+    call blinkonce
     voice "00-test-4.mp3" #Cheshire (shiena)
     che "call blinkonce"
-    call blinktwice from _call_blinktwice
+    call blinktwice
     voice "00-test-5.mp3" #Cheshire (shiena)
     che "call blinktwice"
     show crtvfx

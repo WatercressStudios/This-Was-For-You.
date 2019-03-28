@@ -61,6 +61,10 @@ label rw4:
 
     "...guess I should listen to this voicemail after all."
 
+    $ relogin = True
+    call screen thumbprint_active with Dissolve(0.5)
+
+label rw4_continue:
     # show the thumbprint scanner from the start of the game again, and animate it in the same way, to re-authenticate
 
     $ save_name = "Friendships"

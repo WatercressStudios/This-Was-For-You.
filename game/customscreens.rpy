@@ -316,7 +316,10 @@ init python:
     def LoginToLoading():
         renpy.hide_screen("thumbprint_scanning")
         renpy.hide_screen("thumbprint_line")
-        renpy.jump("start2")
+        if relogin:
+            renpy.jump("rw4_continue")
+        else:
+            renpy.jump("start2")
 
 image authenticate_loading_bg:
     "megan_ui/authenticate-loadscreen1.jpg" with Dissolve(1.0)
@@ -368,13 +371,19 @@ screen startgame_login():
 
         fixed pos (540, 400):
             add "megan_ui/authenticate-name-background.png"
-            input pos (172, 240):
-                default ""
-                length 12
-                font "BebasNeue-Regular.otf"
-                color "#ceebf5"
-                size 50
-                changed ChangedNameInput
+            if relogin:
+                text mc_name pos (172, 240):
+                    font "BebasNeue-Regular.otf"
+                    color "#ceebf5"
+                    size 50
+            else:
+                input pos (172, 240):
+                    default ""
+                    length 12
+                    font "BebasNeue-Regular.otf"
+                    color "#ceebf5"
+                    size 50
+                    changed ChangedNameInput
 
         fixed pos (760, 740):
             add "megan_ui/thumbprint-default.png"
@@ -399,6 +408,8 @@ layeredimage thumbprint_authenticate:
 
 screen thumbprint_active():
     tag thumbprint
+    if relogin:
+        add "megan_ui/authenticate-background.jpg"
     imagebutton pos (760, 740) at fade_inout:
         idle "thumbprint_authenticate"
         hover "thumbprint_authenticate onhover"
@@ -407,6 +418,8 @@ screen thumbprint_active():
 
 screen thumbprint_scanning():
     tag thumbprint
+    if relogin:
+        add "megan_ui/authenticate-background.jpg"
     fixed pos (760, 740) at fade_inout:
         add "megan_ui/thumbprint-scan.png"
 
