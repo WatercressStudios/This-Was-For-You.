@@ -718,6 +718,8 @@ screen history():
                     label what:
                         xfill True
                         ysize 120
+                        text_text_align 0.5
+                        text_xalign 0.5
                         if h.who and "color" in h.what_args:
                             text_color h.what_args["color"]
                         substitute False

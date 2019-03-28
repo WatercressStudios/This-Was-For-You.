@@ -138,10 +138,10 @@ label test:
     scene sunsettitle
     voice "00-test-3.mp3" #Cheshire (shiena)
     che "sunsettitle"
-    call blinkonce
+    call blinkonce from _call_blinkonce
     voice "00-test-4.mp3" #Cheshire (shiena)
     che "call blinkonce"
-    call blinktwice
+    call blinktwice from _call_blinktwice
     voice "00-test-5.mp3" #Cheshire (shiena)
     che "call blinktwice"
     show crtvfx

@@ -108,7 +108,9 @@ screen say(who, what):
         #     #     style "namebox"
         #     #     text who id "who"
 
-        text what id "what"
+        text what id "what":
+            text_align 0.5
+            xalign 0.5
 
 
     ## If there's a side image, display it above the text. Do not display on the
