@@ -713,11 +713,14 @@ screen history():
             for h in _history_list:
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
 
-                label what:
-                    xfill True
-                    if h.who and "color" in h.what_args:
-                        text_color h.what_args["color"]
-                    substitute False
+                fixed:
+                    yfit True
+                    label what:
+                        xfill True
+                        ysize 120
+                        if h.who and "color" in h.what_args:
+                            text_color h.what_args["color"]
+                        substitute False
 
             if not _history_list:
                 label _("The dialogue history is empty.")
@@ -727,8 +730,3 @@ screen history():
             hover "megan_ui/gui-gamemenu-mainmenu-select.png"
             action Return()
         add "megan_ui/gui-history-back.png"
-        # text "Back":
-        #     font "BebasNeue-Regular.otf"
-        #     size 60
-        #     color "#36428A"
-        #     outlines []
