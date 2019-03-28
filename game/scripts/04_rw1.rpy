@@ -52,7 +52,7 @@ label rw1:
 
     "And I know that if I don't go back soon, I won't have one anymore."
 
-    call closeeyes
+    call closeeyes from _call_closeeyes_2
     scene black with dissolve
 
     "I know I should care, but..."
@@ -71,7 +71,7 @@ label rw1:
     #Rain sfx
 
     scene bg bedroombg open rain
-    call openeyes
+    call openeyes from _call_openeyes_3
 
     "Heh. Even the sky is crying more than me."
 

@@ -77,7 +77,8 @@ screen in_game_menu():
         area (110, 0, 520, 90)
         hovered [
             Show("in_game_email_content"),
-            Show("in_game_email_button")
+            Show("in_game_email_button"),
+            Hide("notify")
         ]
     mousearea:
         area (110, 0, 520, 790)

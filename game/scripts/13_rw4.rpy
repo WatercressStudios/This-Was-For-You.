@@ -174,7 +174,7 @@ label rw4:
     "...a pizza box?"
 
     show bg bedroombg open rain
-    call openeyes
+    call openeyes from _call_openeyes_1
 
     "I look around my apartment and, for the first time, notice the state it’s in."
 

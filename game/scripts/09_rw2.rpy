@@ -146,7 +146,7 @@ label rw2:
 
     "I hate feeling like this."
 
-    call closeeyes
+    call closeeyes from _call_closeeyes
     scene black with dissolve
 
     "Shutting my eyes, I try to sleep."
@@ -163,7 +163,7 @@ label rw2:
 
     scene bg ceiling ceiling empty
     show ceilingfan
-    call openeyes
+    call openeyes from _call_openeyes
 
     "I can't do this. Not today."
 

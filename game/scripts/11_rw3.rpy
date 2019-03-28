@@ -37,7 +37,7 @@ label rw3:
 
     "The culture of it all, that’s how you succeeded. It was a place to belong, not a place to buy merchandise; it's a place that cares."
 
-    call closeeyes
+    call closeeyes from _call_closeeyes_1
     scene black with dissolve
 
     "Drinks on you…"
@@ -64,7 +64,7 @@ label rw3:
 
     scene bg ceiling ceiling empty
     show ceilingfan
-    call openeyes
+    call openeyes from _call_openeyes_2
 
     "Now I can't even tell what day of the week it is. Everything's the same shade of grey, the days growing into an amorphous blob of incongruity."
 

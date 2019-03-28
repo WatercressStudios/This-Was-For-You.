@@ -1266,18 +1266,26 @@ screen notify(message):
     zorder 100
     style_prefix "notify"
 
-    frame at notify_appear:
-        text "[message!tq]"
+    frame ypos 100 at notify_appear:
+        background None
+        hbox:
+            add "megan_ui/gui-email-notice.png"
+            text "[message!tq]" ypos 10:
+                size 50
 
     timer 3.25 action Hide('notify')
 
 
 transform notify_appear:
     on show:
-        alpha 0
-        linear .25 alpha 1.0
+        alpha 0 xoffset -200
+        parallel:
+            linear .25 alpha 1.0
+        parallel:
+            linear 0.2 xoffset 20
+            linear 0.1 xoffset 0
     on hide:
-        linear .5 alpha 0.0
+        easeout .5 alpha 0.0 xoffset -200
 
 
 style notify_frame is empty

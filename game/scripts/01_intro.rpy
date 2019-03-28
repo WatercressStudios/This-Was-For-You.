@@ -23,6 +23,8 @@ label intro:
 
     pause 0.5
 
+    show screen notify("You have unread emails.")
+
     scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve
@@ -64,7 +66,7 @@ label intro:
 
     "Ugh."
 
-    call closeeyes
+    call closeeyes from _call_closeeyes_3
     scene black with dissolve
 
     "I keep my eyes shut tightly."
@@ -76,7 +78,7 @@ label intro:
     "My thoughts are pervasive, waves of emotion constantly crashing into my subconscious."
 
     scene bg bedroombg
-    call openeyes
+    call openeyes from _call_openeyes_4
 
     "Pushing my thin blanket aside, I prop myself up to a sitting position."
 
