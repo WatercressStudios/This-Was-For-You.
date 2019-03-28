@@ -1161,7 +1161,7 @@ screen confirm(message, yes_action, no_action):
 
             hbox:
                 xalign 0.5
-                spacing 150
+                spacing 50
 
                 textbutton _("Yes") action yes_action
                 textbutton _("No") action no_action
@@ -1189,6 +1189,9 @@ style confirm_prompt_text:
 style confirm_button:
     properties gui.button_properties("confirm_button")
 
+    #background Frame(["megan_ui/gui-textbox-select.png"],gui.confirm_button_frame_borders)
+    padding gui.confirm_button_frame_borders.padding
+
 style confirm_button_text:
     properties gui.button_text_properties("confirm_button")
 
@@ -1210,11 +1213,10 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Skipping")
+            xalign 0.5
+            yalign 0.5
 
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+            add "megan_ui/gui-skipping.png"
 
 
 ## This transform is used to blink the arrows one after another.
@@ -1236,8 +1238,11 @@ style skip_text is gui_text
 style skip_triangle is skip_text
 
 style skip_frame:
+    xfill True
+    yfill True
     ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
+    xpos gui.skip_xpos
+    background "gui/skip.png"
     padding gui.skip_frame_borders.padding
 
 style skip_text:

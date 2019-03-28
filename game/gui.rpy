@@ -186,6 +186,15 @@ define gui.check_button_borders = Borders(27, 6, 6, 6)
 
 define gui.confirm_button_text_xalign = 0.5
 
+define gui.prompt_text_color = '#374388'
+define gui.prompt_text_outlines = [(0, "000", 0, 0)]
+define gui.prompt_text_size = 60
+
+define gui.confirm_button_text_idle_color = "#374388"
+define gui.confirm_button_text_hover_color = "#354aad"
+define gui.confirm_button_text_outlines = [(0, "000", 0, 0)]
+define gui.confirm_button_text_size = 60
+
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
@@ -251,7 +260,10 @@ define gui.file_slot_rows = 2
 define gui.navigation_xpos = 60
 
 ## The vertical position of the skip indicator.
-define gui.skip_ypos = 15
+define gui.skip_ypos = 0
+
+## The horizontal position of the skip indicator.
+define gui.skip_xpos = 0
 
 ## The vertical position of the notify screen.
 define gui.notify_ypos = 68
@@ -287,10 +299,13 @@ define gui.main_menu_text_xalign = 1.0
 define gui.frame_borders = Borders(6, 6, 6, 6)
 
 ## The frame that is used as part of the confirm screen.
-define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
+define gui.confirm_frame_borders = Borders(60, 30, 60, 30)
+
+## The frame that is used as part of the confirm screen.
+define gui.confirm_button_frame_borders = Borders(100, 20, 100, 5)
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(24, 8, 75, 8)
+define gui.skip_frame_borders = Borders(0, 0, 0, 0)
 
 ## The frame that is used as part of the notify screen.
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)
@@ -310,7 +325,7 @@ define gui.frame_tile = False
 ## bars, scrollbars, and sliders.
 define gui.bar_size = 38
 define gui.scrollbar_size = 20
-define gui.slider_size = 38
+define gui.slider_size = 60
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
