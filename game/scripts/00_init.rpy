@@ -103,6 +103,7 @@ image che_pose1_dance = Animation("sprites/che/pose1/base.png",0.59,
 label start:
     $ in_main_menu = False
     $ save_name = "Memories of You"
+    $ _game_menu_screen = None
     menu:
         "Start game":
             $ persistent.subtitle = False
@@ -138,10 +139,10 @@ label test:
     scene sunsettitle
     voice "00-test-3.mp3" #Cheshire (shiena)
     che "sunsettitle"
-    call blinkonce from _call_blinkonce
+    call blinkonce
     voice "00-test-4.mp3" #Cheshire (shiena)
     che "call blinkonce"
-    call blinktwice from _call_blinktwice
+    call blinktwice
     voice "00-test-5.mp3" #Cheshire (shiena)
     che "call blinktwice"
     show crtvfx
