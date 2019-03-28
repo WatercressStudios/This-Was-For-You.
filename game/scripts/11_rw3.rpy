@@ -3,6 +3,7 @@
 #
 
 label rw3:
+    $ save_name = "Only The Good Die Young."
     scene black
 
     ##"Good People Always Die First."

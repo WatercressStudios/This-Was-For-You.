@@ -3,6 +3,7 @@
 #
 
 label uninstallbutton:
+    $ save_name = "Uninstall Button"
     # sfx of plastic button pressed *click*!
     #sfx "vr_uninstall_click" "click!"
 

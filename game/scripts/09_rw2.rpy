@@ -3,6 +3,7 @@
 #
 
 label rw2:
+    $ save_name = "Sustenance"
     scene black
 
     #Voicemail

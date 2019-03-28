@@ -309,7 +309,7 @@ define gui.frame_tile = False
 ## The height of horizontal bars, scrollbars, and sliders. The width of vertical
 ## bars, scrollbars, and sliders.
 define gui.bar_size = 38
-define gui.scrollbar_size = 18
+define gui.scrollbar_size = 20
 define gui.slider_size = 38
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
@@ -319,12 +319,12 @@ define gui.slider_tile = False
 
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
-define gui.scrollbar_borders = Borders(6, 6, 6, 6)
+define gui.scrollbar_borders = Borders(0, 0, 0, 0)
 define gui.slider_borders = Borders(6, 6, 6, 6)
 
 ## Vertical borders.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
-define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
+define gui.vscrollbar_borders = Borders(0, 0, 0, 0)
 define gui.vslider_borders = Borders(6, 6, 6, 6)
 
 ## What to do with unscrollable scrollbars in the gui. "hide" hides them, while

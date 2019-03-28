@@ -3,6 +3,7 @@
 #
 
 label hub4:
+    $ save_name = "The Gift"
     scene bg hub hub
 
     "Here we are again."

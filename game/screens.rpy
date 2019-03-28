@@ -586,14 +586,14 @@ style about_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#save https://
 ## www.renpy.org/doc/html/screen_special.html#load
 
-screen save():
+screen _save():
 
     tag menu
 
     use file_slots(_("Save"))
 
 
-screen load():
+screen _load():
 
     tag menu
 

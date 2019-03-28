@@ -3,6 +3,7 @@
 #
 
 label mug:
+    $ save_name = "You Were so Strong."
     scene bg hub hub
     show kerosene with dissolve
     show items awoomug

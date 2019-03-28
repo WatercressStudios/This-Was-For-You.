@@ -3,6 +3,7 @@
 #
 
 label eighttrack:
+    $ save_name = "Our Song"
     scene bg hub hub
     show woodtrail1 with dissolve
     show items 8track

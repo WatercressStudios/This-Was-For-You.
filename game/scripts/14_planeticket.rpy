@@ -3,6 +3,7 @@
 #
 
 label planeticket:
+    $ save_name = "What Could Have Been."
     scene bg hub hub
 
     "Well, here I am again."

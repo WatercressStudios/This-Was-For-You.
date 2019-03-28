@@ -175,16 +175,16 @@ screen in_game_menu_content():
         add "megan_ui/gui-menu-background.png"
         imagebutton ypos 130:
             idle "megan_ui/gui-gamemenu-save.png"
-            action Null
+            action ShowMenu("save")
         imagebutton ypos 220:
             idle "megan_ui/gui-gamemenu-load.png"
-            action Null
+            action ShowMenu("load")
         imagebutton ypos 310:
             idle "megan_ui/gui-gamemenu-settings.png"
             action Null
         imagebutton ypos 400:
             idle "megan_ui/gui-gamemenu-mainmenu.png"
-            action Null
+            action MainMenu()
 
 screen in_game_menu_button():
     zorder 2
@@ -278,12 +278,12 @@ transform pulse:
     linear 0.05 zoom 1.1
     linear 0.25 zoom 1.0
 
-transform fade_inout:
+transform fade_inout(duration=0.5):
     on show:
         alpha 0
-        linear 0.5 alpha 1
+        linear duration alpha 1
     on hide:
-        linear 0.5 alpha 0
+        linear duration alpha 0
 
 init python:
     import time
@@ -412,3 +412,266 @@ screen thumbprint_scanning():
 screen thumbprint_line():
     fixed at line_scanning:
         add "line_glowing"
+
+
+
+
+label main_menu:
+    $ in_main_menu = True
+    call screen custom_title_center with fade
+
+screen custom_mainmenu_buttons_center():
+    fixed:
+        add "megan_ui/gui-mainmenu-background.png"
+
+        imagebutton pos (20, 30): # Play
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Start()
+
+        imagebutton pos (20, 120): # Load
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_center2left"), Show("load") ]
+
+        imagebutton pos (20, 210): # Settings
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_center2left"), Show("custom_title_main_settings") ]
+
+        imagebutton pos (20, 300): # Extras
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_center2right") ]
+
+        imagebutton pos (20, 390): # Quit
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            action Quit()
+
+        add "megan_ui/gui-mainmenu-text.png"
+
+screen custom_mainmenu_buttons_left():
+    fixed:
+        add "megan_ui/gui-mainmenu-background.png"
+
+        imagebutton pos (20, 30): # Play
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Start()
+
+        imagebutton pos (20, 120): # Load
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("load")
+
+        imagebutton pos (20, 210): # Settings
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_main_settings")
+
+        imagebutton pos (20, 300): # Extras
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action [ Show("custom_title_left2right"), Hide("custom_title_main") ]
+
+        imagebutton pos (20, 390): # Quit
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            action Quit()
+
+        add "megan_ui/gui-mainmenu-text.png"
+
+screen custom_mainmenu_buttons_right():
+    fixed:
+        add "megan_ui/gui-extrasmenu-background.png"
+
+        imagebutton pos (20, 30): # Gallery
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_extras_gallery")
+
+        imagebutton pos (20, 120): # Music box
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_extras_musicbox")
+
+        imagebutton pos (20, 210): # Credits
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-select.png"
+            action Show("custom_title_extras_credits")
+
+        imagebutton pos (20, 300): # Back
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-extrasmenu-mainmenu-select.png"
+            action [ Show("custom_title_right2center"), Hide("custom_title_extras") ]
+
+        add "megan_ui/gui-extrasmenu-text.png"
+
+screen custom_title_center():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_center:
+            use custom_mainmenu_buttons_center
+
+screen custom_title_center2left():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_center2left:
+            use custom_mainmenu_buttons_left
+
+screen custom_title_center2right():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 600):
+        fixed at main_menu_center2right:
+            use custom_mainmenu_buttons_right
+
+screen custom_title_right2center():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_right2center:
+            use custom_mainmenu_buttons_center
+
+screen custom_title_left2center():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 510):
+        fixed at main_menu_left2center:
+            use custom_mainmenu_buttons_center
+
+screen custom_title_left2right():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (770, 600):
+        fixed at main_menu_left2right:
+            use custom_mainmenu_buttons_right
+
+transform main_menu_center:
+    easein 0.2 alpha 1 xpos 0
+
+transform main_menu_center2left:
+    easein 0.2 alpha 1 xpos -710
+
+transform main_menu_center2right:
+    easein 0.2 alpha 1 xpos 710
+
+transform main_menu_right2center:
+    xpos 710
+    easein 0.2 alpha 1 xpos 0
+
+transform main_menu_left2center:
+    xpos -710
+    easein 0.2 alpha 1 xpos 0
+
+transform main_menu_left2right:
+    xpos -710
+    easein 0.2 alpha 1 xpos 710
+
+screen save():
+    tag custom_title_main
+    use custom_title_main_saveload("Save")
+
+screen load():
+    tag custom_title_main
+    use custom_title_main_saveload("Load")
+
+screen custom_title_main_saveload(title):
+    frame align (0.5, 0.5) at fade_inout(0.2):
+        background "megan_ui/gui-save-background.png"
+        xsize 920
+        ysize 1000
+        fixed pos (30, 10):
+            text title:
+                font "BebasNeue-Regular.otf"
+                size 60
+                color "#36428A"
+                outlines []
+                #outlines [ (absolute(6), "#CEEBF5", absolute(0), absolute(0)) ]
+        frame ypos 90:
+            background None
+            padding (0, 0, 0, 0)
+            xsize 920
+            ysize 800
+            vpgrid xoffset -50:
+                cols 1
+                spacing 10
+                mousewheel True
+                draggable True
+                scrollbars "vertical"
+                side_xalign 0.5
+                for slot in range(1, 10):
+                    frame:
+                        background None
+                        padding (10,0,10,0)
+                        xsize 790
+                        ysize 140
+                        imagebutton:
+                            idle Frame("megan_ui/save_slot_frame.png", Borders(30, 30, 30, 30))
+                            hover Frame("megan_ui/save_slot_frame_hover.png", Borders(30, 30, 30, 30))
+                            action FileAction(slot)
+                        frame:
+                            background None
+                            xsize 790
+                            ysize 140
+                            padding (20, 10, 20, 10)
+                            right_margin 10
+                            add FileScreenshot(slot) xalign 1.0 zoom 0.55 crop (90, 0, 220, 220)
+                            text "[slot]. " + FileSaveName(slot):
+                                font "BebasNeue-Regular.otf"
+                                size 50
+                                color "#36428A"
+                                outlines []
+                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")) ypos 60:
+                                font "BebasNeue-Regular.otf"
+                                size 50
+                                color "#36428A"
+                                outlines []
+        fixed pos (650, 910):
+            imagebutton offset (-185, -5):
+                idle "megan_ui/gui-gamemenu-idle.png"
+                hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+                if in_main_menu:
+                    action [ Show("custom_title_left2center"), Hide("custom_title_main") ]
+                else:
+                    action Return()
+            text "Back":
+                font "BebasNeue-Regular.otf"
+                size 60
+                color "#36428A"
+                outlines []
+
+screen custom_title_main_settings():
+    tag custom_title_main
+    fixed:
+        text "Settings Screen"
+
+screen custom_title_extras_gallery():
+    tag custom_title_extras
+    fixed:
+        text "Gallery Screen"
+
+screen custom_title_extras_musicbox():
+    tag custom_title_extras
+    fixed:
+        text "Music box Screen"
+
+screen custom_title_extras_credits():
+    tag custom_title_extras
+    fixed:
+        text "Credits Screen"

@@ -101,6 +101,8 @@ image che_pose1_dance = Animation("sprites/che/pose1/base.png",0.59,
 # The game starts here.
 
 label start:
+    $ in_main_menu = False
+    $ save_name = "Memories of You"
     menu:
         "Start game":
             $ persistent.subtitle = False

@@ -3,6 +3,7 @@
 #
 
 label ending:
+    $ save_name = "I Miss You."
     scene black
 
     pause 1

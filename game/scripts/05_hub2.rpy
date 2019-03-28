@@ -3,6 +3,7 @@
 #
 
 label hub2:
+    $ save_name = "Preservation"
     scene bg hub hub
 
     "Ah, this is more like it."

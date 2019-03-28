@@ -3,6 +3,7 @@
 #
 
 label hub3:
+    $ save_name = "Forget."
     scene bg hub hub
 
     # sfx of beach louder than usual, to provide contrast with the previous droning sound
