@@ -1161,7 +1161,7 @@ screen confirm(message, yes_action, no_action):
 
             hbox:
                 xalign 0.5
-                spacing 150
+                spacing 50
 
                 textbutton _("Yes") action yes_action
                 textbutton _("No") action no_action
@@ -1188,6 +1188,9 @@ style confirm_prompt_text:
 
 style confirm_button:
     properties gui.button_properties("confirm_button")
+
+    #background Frame(["megan_ui/gui-textbox-select.png"],gui.confirm_button_frame_borders)
+    padding gui.confirm_button_frame_borders.padding
 
 style confirm_button_text:
     properties gui.button_text_properties("confirm_button")

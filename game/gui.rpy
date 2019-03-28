@@ -186,7 +186,13 @@ define gui.check_button_borders = Borders(27, 6, 6, 6)
 
 define gui.confirm_button_text_xalign = 0.5
 
-define gui.prompt_text_size = 50
+define gui.prompt_text_color = '#374388'
+define gui.prompt_text_outlines = [(0, "000", 0, 0)]
+define gui.prompt_text_size = 60
+
+define gui.confirm_button_text_idle_color = "#374388"
+define gui.confirm_button_text_hover_color = "#354aad"
+define gui.confirm_button_text_outlines = [(0, "000", 0, 0)]
 define gui.confirm_button_text_size = 60
 
 define gui.page_button_borders = Borders(15, 6, 15, 6)
@@ -294,6 +300,9 @@ define gui.frame_borders = Borders(6, 6, 6, 6)
 
 ## The frame that is used as part of the confirm screen.
 define gui.confirm_frame_borders = Borders(60, 30, 60, 30)
+
+## The frame that is used as part of the confirm screen.
+define gui.confirm_button_frame_borders = Borders(100, 20, 100, 5)
 
 ## The frame that is used as part of the skip screen.
 define gui.skip_frame_borders = Borders(0, 0, 0, 0)
