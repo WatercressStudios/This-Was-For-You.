@@ -712,13 +712,11 @@ screen history():
             side_xalign 0.5
             for h in _history_list:
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                if h.who:
-                    $ what = "[" + h.who+ "] " + what
 
                 label what:
                     xfill True
-                    if h.who and "color" in h.who_args:
-                        text_color h.who_args["color"]
+                    if h.who and "color" in h.what_args:
+                        text_color h.what_args["color"]
                     substitute False
 
             if not _history_list:

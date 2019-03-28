@@ -1,14 +1,14 @@
 ﻿# The script of the game goes in this file.
 
 # callback=speaker is needed for mouth flaps
-define mc = DynamicCharacter("mc_name", callback=speaker("mc"))
-define che = Character("CH35H1R3", callback=speaker("che"))
-define min = Character("Ji-min", callback=speaker("min"))
-define bos = Character("Boss", callback=speaker("bos"))
-define mom = Character("Mom", callback=speaker("mom"))
-define dad = Character("Dad", callback=speaker("dad"))
-define caf = Character("Cafe Owner", callback=speaker("caf"))
-define vm = Character("Friend", callback=speaker("vm"))
+define mc = DynamicCharacter("mc_name", callback=speaker("mc"), what_prefix="[[[mc_name]] ", what_color="#f4d6a7")
+define che = Character("CH35H1R3", callback=speaker("che"), what_prefix="[[CH35H1R3] ", what_color="#A4FBFE")
+define min = Character("Ji-min", callback=speaker("min"), what_prefix="[[Ji-min] ", what_color="#e1e1e1")
+define bos = Character("Boss", callback=speaker("bos"), what_prefix="[[Boss] ", what_color="#e1e1e1")
+define mom = Character("Mom", callback=speaker("mom"), what_prefix="[[Mom] ", what_color="#e1e1e1")
+define dad = Character("Dad", callback=speaker("dad"), what_prefix="[[Dad] ", what_color="#e1e1e1")
+define caf = Character("Cafe Owner", callback=speaker("caf"), what_prefix="[[Cafe Owner] ", what_color="#e1e1e1")
+define vm = Character("Friend", callback=speaker("vm"), what_prefix="[[Friend] ", what_color="#e1e1e1")
 
 init python:
     # define VA info and parsing
