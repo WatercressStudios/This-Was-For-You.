@@ -6,6 +6,8 @@ label rw1:
     $ save_name = "The World Keeps Turning"
     scene black
 
+    pause 1
+
     #Voicemail
     voice "04-rw1-1.mp3" #Boss ()
     bos "Hey, it's your boss. How’ve you been lately?"
@@ -109,5 +111,6 @@ label rw1:
 
     "No. I'm going back home."
 
-    #Enter VR
+    call screen in_game_entervr
+    
     jump hub2

@@ -136,4 +136,7 @@ label eighttrack:
 
     # back to VR world
 
+    if visited < 3:
+        call screen in_game_exitvr
+
     jump itemmerge

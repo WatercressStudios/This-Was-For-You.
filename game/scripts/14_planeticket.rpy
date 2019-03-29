@@ -6,6 +6,8 @@ label planeticket:
     $ save_name = "What Could Have Been."
     scene bg hub hub
 
+    pause 1
+
     "Well, here I am again."
 
     "With one final item, I need to find a quiet place as quickly as possible."

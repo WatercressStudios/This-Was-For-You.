@@ -174,4 +174,7 @@ label uninstallbutton:
     "..."
 
     # Ding! Voicemail from work arrived. MC logs out into the real world
+
+    call screen in_game_exitvr
+    
     jump rw1

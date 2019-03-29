@@ -6,6 +6,8 @@ label hub2:
     $ save_name = "Preservation"
     scene bg hub hub
 
+    pause 1
+
     "Ah, this is more like it."
 
     "Here, it never rains."

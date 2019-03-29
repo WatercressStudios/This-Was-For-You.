@@ -6,6 +6,8 @@ label rw3:
     $ save_name = "Only The Good Die Young."
     scene black
 
+    pause 1
+
     ##"Good People Always Die First."
     ##Voicemail
     voice "11-rw3-1.mp3" #Cafe Owner ()
@@ -116,8 +118,6 @@ label rw3:
 
     "To the universe, that’s the same as crushing an ant."
 
-    #enter VR?
-    #yes
-    #end scene
+    call screen in_game_entervr
 
     jump hub4

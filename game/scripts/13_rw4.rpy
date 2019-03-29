@@ -215,4 +215,6 @@ label rw4_continue:
 
     # MC goes back to bed and opens VR scene. Have MC walk around in VR silently a few times first, revisiting all the BGs, before going into Julia's scene.
 
+    call screen in_game_entervr
+
     jump planeticket

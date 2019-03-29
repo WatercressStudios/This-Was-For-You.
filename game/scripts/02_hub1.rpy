@@ -6,6 +6,8 @@ label hub1:
     $ save_name = "Imitation"
     scene bg hub hub
 
+    pause 1
+
     "The familiar scent of an ocean breeze hits my nose first."
 
     "The warm rays of sunshine envelops my body soon after."
@@ -16,7 +18,7 @@ label hub1:
 
     "It's where I was able to see you, talk with you."
 
-    "Where neither time zones ,nor borders stood in the way of our friendship."
+    "Where neither time zones, nor borders stood in the way of our friendship."
 
     "This wasn't just where we built some virtual house together."
 

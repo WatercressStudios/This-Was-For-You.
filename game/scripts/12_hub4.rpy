@@ -6,6 +6,8 @@ label hub4:
     $ save_name = "The Gift"
     scene bg hub hub
 
+    pause 1
+
     "Here we are again."
 
     show che f at center:
