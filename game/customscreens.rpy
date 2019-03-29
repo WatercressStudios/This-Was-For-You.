@@ -672,63 +672,84 @@ screen custom_title_main_saveload(title):
 
 screen custom_title_main_settings():
     tag custom_title_main
-    fixed:
-        text "Settings Screen"
 
-screen custom_title_extras_gallery():
-    tag custom_title_extras
-    fixed:
-        text "Gallery Screen"
+    frame align (0.5, 0.5) at fade_inout(0.2):
+        background "megan_ui/gui-settings-background.png"
+        xsize 920
+        ysize 1000
+    
+        fixed pos (30, 10):
+            text "Settings":
+                font "BebasNeue-Regular.otf"
+                size 60
+                color "#36428A"
+                outlines []
 
-screen custom_title_extras_musicbox():
-    tag custom_title_extras
-    fixed:
-        text "Music box Screen"
+        hbox:
+            ypos 90
+            xpos 60
+            box_wrap True
 
-screen custom_title_extras_credits():
-    tag custom_title_extras
-    fixed:
-        text "Credits Screen"
+            hbox:
+                style_prefix "slider"
+                box_wrap True
+
+                vbox:
+
+                    label _("Text Speed")
+
+                    bar value Preference("text speed")
+
+                    label _("Auto-Forward Time")
+
+                    bar value Preference("auto-forward time")
+
+                vbox:
+
+                    if config.has_music:
+                        label _("Music Volume")
+
+                        hbox:
+                            bar value Preference("music volume")
+
+                    if config.has_sound:
+
+                        label _("Sound Volume")
+
+                        hbox:
+                            bar value Preference("sound volume")
+
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
 
 
+                    if config.has_voice:
+                        label _("Voice Volume")
 
+                        hbox:
+                            bar value Preference("voice volume")
 
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
 
-screen history():
-    tag custom_title_main
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
 
-    ## Avoid predicting this screen, as it can be very large.
-    predict False
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 
-    add "megan_ui/gui-skipping-background.png"
-    frame:
-        background None
-        padding (200, 120, 200, 140)
-        vpgrid:
-            cols 1
-            mousewheel True
-            draggable True
-            scrollbars "vertical"
-            side_xalign 0.5
-            for h in _history_list:
-                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+            if renpy.variant("pc"):
 
-                fixed:
-                    yfit True
-                    label what:
-                        xfill True
-                        ysize 120
-                        text_text_align 0.5
-                        text_xalign 0.5
-                        if h.who and "color" in h.what_args:
-                            text_color h.what_args["color"]
-                        substitute False
+                vbox:
+                    style_prefix "check"
+                    label _("Display")
+                    textbutton _("Window") action Preference("display", "window")
+                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-            if not _history_list:
-                label _("The dialogue history is empty.")
-    fixed pos (1560, 960):
-        imagebutton offset (-185, -5):
-            idle "megan_ui/gui-gamemenu-idle.png"
-            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
-            action Return()
-        add "megan_ui/gui-history-back.png"
+            vbox:
+                style_prefix "check"
+                label _("Skip")
+                textbutton _("Unseen Text") action Preference("skip", "toggle")
+                textbutton _("After Choices") action Preference("after choices", "toggle")
+                textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
