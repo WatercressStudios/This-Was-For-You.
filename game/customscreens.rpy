@@ -372,15 +372,15 @@ screen startgame_login():
         fixed pos (540, 400):
             add "megan_ui/authenticate-name-background.png"
             if relogin:
-                text mc_name pos (172, 240):
-                    font "BebasNeue-Regular.otf"
+                text mc_name pos (172, 238):
+                    font "Arial Bold.ttf"
                     color "#ceebf5"
                     size 50
             else:
-                input pos (172, 240):
+                input pos (172, 238):
                     default ""
                     length 12
-                    font "BebasNeue-Regular.otf"
+                    font "Arial Bold.ttf"
                     color "#ceebf5"
                     size 50
                     changed ChangedNameInput
