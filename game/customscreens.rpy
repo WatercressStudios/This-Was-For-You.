@@ -790,3 +790,57 @@ screen custom_title_main_settings():
                 textbutton _("Unseen Text") action Preference("skip", "toggle")
                 textbutton _("After Choices") action Preference("after choices", "toggle")
                 textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                
+screen custom_title_extras_gallery():
+    tag custom_title_extras
+    fixed:
+        text "Gallery Screen"
+
+screen custom_title_extras_musicbox():
+    tag custom_title_extras
+    fixed:
+        text "Music box Screen"
+
+screen custom_title_extras_credits():
+    tag custom_title_extras
+    fixed:
+        text "Credits Screen"
+
+screen history():
+    tag custom_title_main
+
+    ## Avoid predicting this screen, as it can be very large.
+    predict False
+
+    add "megan_ui/gui-skipping-background.png"
+    frame:
+        background None
+        padding (200, 120, 200, 140)
+        vpgrid:
+            cols 1
+            mousewheel True
+            draggable True
+            scrollbars "vertical"
+            side_xalign 0.5
+            for h in _history_list:
+                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+
+                fixed:
+                    yfit True
+                    label what:
+                        xfill True
+                        ysize 120
+                        text_text_align 0.5
+                        text_xalign 0.5
+                        if h.who and "color" in h.what_args:
+                            text_color h.what_args["color"]
+                        substitute False
+
+            if not _history_list:
+                label _("The dialogue history is empty.")
+    fixed pos (1560, 960):
+        imagebutton offset (-185, -5):
+            idle "megan_ui/gui-gamemenu-idle.png"
+            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            action Return()
+        add "megan_ui/gui-history-back.png"
