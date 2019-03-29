@@ -364,7 +364,7 @@ screen startgame_login():
             add "megan_ui/authenticate-voice-mail-subs-background.png"
             imagebutton:
                 idle "megan_ui/authenticate-voice-mail-subs-off.png"
-                hover "megan_ui/authenticate-voice-mail-subs-off.png"
+                hover "megan_ui/authenticate-voice-mail-subs-on.png"
                 selected_idle "megan_ui/authenticate-voice-mail-subs-on.png"
                 selected_hover "megan_ui/authenticate-voice-mail-subs-on.png"
                 action ToggleVariable("persistent.subtitle")
