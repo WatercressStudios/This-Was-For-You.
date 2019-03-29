@@ -677,7 +677,7 @@ screen custom_title_main_settings():
         background "megan_ui/gui-settings-background.png"
         xsize 920
         ysize 1000
-    
+
         fixed pos (30, 10):
             text "Settings":
                 font "BebasNeue-Regular.otf"
@@ -685,9 +685,17 @@ screen custom_title_main_settings():
                 color "#36428A"
                 outlines []
 
+            if config.has_music or config.has_sound or config.has_voice:
+                null height gui.pref_spacing
+
+                textbutton _("Mute All"):
+                    action Preference("all mute", "toggle")
+                    style "mute_all_button"
+                    xalign 0.3
+
         hbox:
-            ypos 90
-            xpos 60
+            ypos 120
+            xpos 30
             box_wrap True
 
             hbox:
@@ -696,60 +704,89 @@ screen custom_title_main_settings():
 
                 vbox:
 
-                    label _("Text Speed")
+                    text "Text Speed":
+                        font "BebasNeue-Regular.otf"
+                        size 40
+                        color "#36428A"
+                        outlines []
 
-                    bar value Preference("text speed")
+                    bar value Preference("text speed"):
+                        xalign 1.5 yoffset -65
 
-                    label _("Auto-Forward Time")
+                    text "Autoplay Speed":
+                        font "BebasNeue-Regular.otf"
+                        size 40
+                        color "#36428A"
+                        outlines []
 
-                    bar value Preference("auto-forward time")
+                    bar value Preference("auto-forward time"):
+                        xalign 1.5 yoffset -65
 
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
 
-                        hbox:
-                            bar value Preference("music volume")
+                        text "Music Volume":
+                            font "BebasNeue-Regular.otf"
+                            size 40
+                            color "#36428A"
+                            outlines []
+
+                        bar value Preference("music volume"):
+                            xalign 1.5 yoffset -65
 
                     if config.has_sound:
+                        text "Sound Volume":
+                            font "BebasNeue-Regular.otf"
+                            size 40
+                            color "#36428A"
+                            outlines []
 
-                        label _("Sound Volume")
+                        bar value Preference("sound volume"):
+                            xalign 1.5 yoffset -65
 
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                        if config.sample_sound:
+                            textbutton _("Test") action Play("sound", config.sample_sound)
 
 
                     if config.has_voice:
-                        label _("Voice Volume")
+                        text "Voice Volume":
+                            font "BebasNeue-Regular.otf"
+                            size 40
+                            color "#36428A"
+                            outlines []
 
-                        hbox:
-                            bar value Preference("voice volume")
+                        bar value Preference("voice volume"):
+                            xalign 1.5 yoffset -65
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                        if config.sample_voice:
+                            textbutton _("Test") action Play("voice", config.sample_voice)
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+        hbox:
+            ypos 670
+            xpos 30
+            box_wrap True
 
             if renpy.variant("pc"):
 
                 vbox:
                     style_prefix "check"
-                    label _("Display")
+                    text "Display":
+                        font "BebasNeue-Regular.otf"
+                        size 50
+                        color "#36428A"
+                        outlines []
                     textbutton _("Window") action Preference("display", "window")
+
                     textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
             vbox:
                 style_prefix "check"
-                label _("Skip")
+                text "Skip":
+                    font "BebasNeue-Regular.otf"
+                    size 50
+                    color "#36428A"
+                    outlines []
                 textbutton _("Unseen Text") action Preference("skip", "toggle")
                 textbutton _("After Choices") action Preference("after choices", "toggle")
                 textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
