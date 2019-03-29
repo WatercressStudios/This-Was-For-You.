@@ -790,7 +790,7 @@ screen custom_title_main_settings():
                 textbutton _("Unseen Text") action Preference("skip", "toggle")
                 textbutton _("After Choices") action Preference("after choices", "toggle")
                 textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-                
+
 screen custom_title_extras_gallery():
     tag custom_title_extras
     fixed:
@@ -822,6 +822,7 @@ screen history():
             draggable True
             scrollbars "vertical"
             side_xalign 0.5
+            yinitial 1.0
             for h in _history_list:
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
 
