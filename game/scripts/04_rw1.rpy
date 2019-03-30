@@ -5,6 +5,7 @@
 label rw1:
     $ save_name = "The World Keeps Turning"
     scene black
+    show screen chapter_announce
 
     pause 1
 
@@ -112,5 +113,5 @@ label rw1:
     "No. I'm going back home."
 
     call screen in_game_entervr
-    
+
     jump hub2

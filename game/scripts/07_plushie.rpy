@@ -5,6 +5,7 @@
 label plushie:
     $ save_name = "Apologies"
     scene bg hub hub
+    show screen chapter_announce
     show catfieldbg
     show items catplushie
 

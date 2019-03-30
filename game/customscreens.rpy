@@ -852,3 +852,21 @@ screen history():
             hover "megan_ui/gui-back-select.png"
             action Return()
         add "megan_ui/gui-history-back.png"
+
+transform chapter_inout:
+    on show:
+        alpha 0
+        linear 3 alpha 1
+    on hide:
+        linear 3 alpha 0
+
+screen chapter_announce():
+    frame align (0.5, 0.4) at chapter_inout:
+        background None
+        padding (100,100,100,100)
+        text save_name:
+            align (0.5, 0.5)
+            text_align 0.5
+            font "BebasNeue-Regular.otf"
+            size 100
+    timer 5.0 action Hide("chapter_announce")

@@ -5,6 +5,7 @@
 label eighttrack:
     $ save_name = "Our Song"
     scene bg hub hub
+    show screen chapter_announce
     show woodtrail1 with dissolve
     show items 8track
     #MC selects the eight track

@@ -7,6 +7,7 @@ label ending:
     scene black
 
     pause 1
+    show screen chapter_announce
 
     scene bg ceiling ceiling empty
     show ceilingfan

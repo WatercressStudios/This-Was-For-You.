@@ -69,6 +69,7 @@ label rw4_continue:
 
     $ save_name = "Friendships"
     scene black
+    show screen chapter_announce
 
     voice "13-rw4-1.mp3" #Friend ()
     vm "Heya! So uh, where do I start…"

@@ -7,6 +7,7 @@ label hub4:
     scene bg hub hub
 
     pause 1
+    show screen chapter_announce
 
     "Here we are again."
 

@@ -5,6 +5,7 @@
 label mug:
     $ save_name = "You Were so Strong."
     scene bg hub hub
+    show screen chapter_announce
     show kerosene with dissolve
     show items awoomug
     #This scene won't totally be emotionally charged cause Instant drew the original mug no

@@ -7,6 +7,7 @@ label planeticket:
     scene bg hub hub
 
     pause 1
+    show screen chapter_announce
 
     "Well, here I am again."
 

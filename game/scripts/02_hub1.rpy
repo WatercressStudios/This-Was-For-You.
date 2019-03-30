@@ -5,6 +5,7 @@
 label hub1:
     $ save_name = "Imitation"
     scene bg hub hub
+    show screen chapter_announce
 
     pause 1
 

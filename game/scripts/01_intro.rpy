@@ -4,7 +4,7 @@
 
 label intro:
     scene black
-
+    show screen chapter_announce
     #Voicemail
     voice "01-intro-1.mp3" #Ji-min ()
     min "Heyyy. It's meee."

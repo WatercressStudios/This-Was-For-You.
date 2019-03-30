@@ -7,6 +7,7 @@ label rw2:
     scene black
 
     pause 1
+    show screen chapter_announce
 
     #Voicemail
     voice "09-rw2-1.mp3" #Dad ()

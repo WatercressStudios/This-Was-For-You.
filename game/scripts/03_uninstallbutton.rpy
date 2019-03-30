@@ -4,6 +4,7 @@
 
 label uninstallbutton:
     $ save_name = "Uninstall Button"
+    show screen chapter_announce
     # sfx of plastic button pressed *click*!
     #sfx "vr_uninstall_click" "click!"
 
@@ -176,5 +177,5 @@ label uninstallbutton:
     # Ding! Voicemail from work arrived. MC logs out into the real world
 
     call screen in_game_exitvr
-    
+
     jump rw1

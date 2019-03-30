@@ -7,6 +7,7 @@ label hub3:
     scene bg hub hub
 
     pause 1
+    show screen chapter_announce
 
     # sfx of beach louder than usual, to provide contrast with the previous droning sound
     "..."

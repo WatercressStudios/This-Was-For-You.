@@ -5,6 +5,7 @@
 label hub2:
     $ save_name = "Preservation"
     scene bg hub hub
+    show screen chapter_announce
 
     pause 1
 

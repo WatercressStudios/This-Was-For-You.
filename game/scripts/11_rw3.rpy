@@ -7,6 +7,7 @@ label rw3:
     scene black
 
     pause 1
+    show screen chapter_announce
 
     ##"Good People Always Die First."
     ##Voicemail
