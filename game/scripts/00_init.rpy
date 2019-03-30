@@ -93,7 +93,7 @@ image che_pose2_md_sad = FlapMouth("che_pose2_mc_sad", "che_pose2_m_awoo")
 
 init python:
     renpy.music.register_channel("ambient", "sound", True)
-    
+
 
 # override some default behaviours
 
@@ -128,6 +128,9 @@ label start2:
     jump intro
 
 label test:
+    show screen in_game_entervr
+    show screen in_game_exitvr
+
     mc "Subtitles is [persistent.subtitle], and my name is [mc_name]"
     sfx "sfx/curtains.wav"
     voice "00-test-1.ogg" #Cheshire (shiena)

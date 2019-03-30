@@ -291,7 +291,7 @@ transform in_game_menu_bg_showhide:
 
 screen in_game_entervr():
     zorder 10
-    button xpos 1810:
+    button xpos 1790:
         add "vr_buttons"
         action [
             Hide("in_game_entervr"),
@@ -301,7 +301,7 @@ screen in_game_entervr():
 
 screen in_game_entervr_showing():
     zorder 10
-    fixed xpos 1810:
+    fixed xpos 1790:
         add "megan_ui/gui-vr-closed.png"
         at in_game_entervr_showhide
 
@@ -310,7 +310,7 @@ screen in_game_entervr_showing():
 
 screen in_game_exitvr():
     zorder 10
-    button xpos -1920:
+    button xpos -1930:
         add "realworld_buttons"
         action [
             Hide("in_game_exitvr"),
@@ -320,7 +320,7 @@ screen in_game_exitvr():
 
 screen in_game_exitvr_showing():
     zorder 10
-    fixed xpos -1920:
+    fixed xpos -1930:
         add "megan_ui/gui-realworld-closed.png"
         at in_game_exitvr_showhide
 
@@ -330,17 +330,17 @@ screen in_game_exitvr_showing():
 transform in_game_entervrbutton_showhide:
     on show:
         alpha 1 xpos 1920
-        linear 0.5 xpos 1810
+        linear 0.5 xpos 1790
 
 transform in_game_exitvrbutton_showhide:
     on show:
         alpha 1 xpos -2050
-        linear 0.5 xpos -1920
+        linear 0.5 xpos -1930
 
 transform in_game_entervr_showhide:
     on show:
-        alpha 1 xpos 1810
-        linear 0.25 xpos 1850
+        alpha 1 xpos 1790
+        linear 0.25 xpos 1830
         ease 1.0 xpos -130
     on hide:
         alpha 1
@@ -348,8 +348,8 @@ transform in_game_entervr_showhide:
 
 transform in_game_exitvr_showhide:
     on show:
-        alpha 1 xpos -1920
-        linear 0.25 xpos -1960
+        alpha 1 xpos -1930
+        linear 0.25 xpos -1970
         ease 1.0 xpos 0
     on hide:
         alpha 1
