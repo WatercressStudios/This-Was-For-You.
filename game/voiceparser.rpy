@@ -55,7 +55,7 @@ init python:
                             if trimmedLine.startswith(cha + ' '):
                                 found = True
                                 leadingWhitespace = line.split(cha)[0]
-                                outstr += leadingWhitespace + 'voice "' + fileTag + '-' + labelTag + '-' + str(lineCount) + '.mp3" ' + voices[cha] + '\n'
+                                outstr += leadingWhitespace + 'voice "' + fileTag + '-' + labelTag + '-' + str(lineCount) + '.ogg" ' + voices[cha] + '\n'
                                 lineCount += 1
                     outstr += line
 

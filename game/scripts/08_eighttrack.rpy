@@ -79,7 +79,7 @@ label eighttrack:
     hide woodtrail1 with dissolve
 
     # ches is singing to the song…. ish. It's not actually in tune or even follows the beat or the song.
-    voice "08-eighttrack-1.mp3" #Cheshire (shiena)
+    voice "08-eighttrack-1.ogg" #Cheshire (shiena)
     che "Nya~ nya~ nya~! Nya~ nya~ nya~!"
 
     mc "...what are you doing?"
@@ -88,14 +88,14 @@ label eighttrack:
         linear 0.2 xpos 0.5
 
     # ches fades in as opposed to sliding in as usual
-    voice "08-eighttrack-2.mp3" #Cheshire (shiena)
+    voice "08-eighttrack-2.ogg" #Cheshire (shiena)
     che "CH3SH1R3 was singing!"
 
     mc "No, you really weren't."
 
     show che s catmouthclosed armshappy
 
-    voice "08-eighttrack-3.mp3" #Cheshire (shiena)
+    voice "08-eighttrack-3.ogg" #Cheshire (shiena)
     che "Why don't Meowster joins me? Nya~ nya~ nya~!"
 
     show che s catmouthclosed armshappy:
@@ -119,7 +119,7 @@ label eighttrack:
     show che s meh base
 
     # confused look
-    voice "08-eighttrack-4.mp3" #Cheshire (shiena)
+    voice "08-eighttrack-4.ogg" #Cheshire (shiena)
     che "Then whose is it?"
 
     show woodtrail1 with dissolve:

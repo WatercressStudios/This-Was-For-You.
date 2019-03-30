@@ -71,21 +71,21 @@ label rw4_continue:
     scene black
     show screen chapter_announce
 
-    voice "13-rw4-1.mp3" #Friend ()
+    voice "13-rw4_continue-1.ogg" #Friend ()
     vm "Heya! So uh, where do I start…"
-    voice "13-rw4-2.mp3" #Friend ()
+    voice "13-rw4_continue-2.ogg" #Friend ()
     vm "Right! I don't wanna call you out or anything, but you kinda missed our last four hangouts."
-    voice "13-rw4-3.mp3" #Friend ()
+    voice "13-rw4_continue-3.ogg" #Friend ()
     vm "Wait that counts as calling you out, isn't it? Sorry. *laughs*"
-    voice "13-rw4-4.mp3" #Friend ()
+    voice "13-rw4_continue-4.ogg" #Friend ()
     vm "So umm… your friends wanna see your stupid face."
-    voice "13-rw4-5.mp3" #Friend ()
+    voice "13-rw4_continue-5.ogg" #Friend ()
     vm "I'm sure you'll forgive us for tomorrow, cuz you're a good person."
-    voice "13-rw4-6.mp3" #Friend ()
+    voice "13-rw4_continue-6.ogg" #Friend ()
     vm "Also, you owe us one."
-    voice "13-rw4-7.mp3" #Friend ()
+    voice "13-rw4_continue-7.ogg" #Friend ()
     vm "Oh right, I forgot to mention… we're coming over tomorrow."
-    voice "13-rw4-8.mp3" #Friend ()
+    voice "13-rw4_continue-8.ogg" #Friend ()
     vm "Just the three of us, don't worry. Take care!"
     # abruptly hangs up, as if the caller was afraid the MC would say "no" even though it's a freaking voicemail
 

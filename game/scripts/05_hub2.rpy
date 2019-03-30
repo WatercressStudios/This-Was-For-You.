@@ -35,7 +35,7 @@ label hub2:
 
     "Keeping your memory preserved."
 
-    voice "05-hub2-1.mp3" #Cheshire (shiena)
+    voice "05-hub2-1.ogg" #Cheshire (shiena)
     che "Meowster, you're back!"
 
     show che s catmouth base at centerleft, height with easeinleft:
@@ -49,17 +49,17 @@ label hub2:
         xzoom 1
         linear 0.6 xpos 0.5
 
-    voice "05-hub2-2.mp3" #Cheshire (shiena)
+    voice "05-hub2-2.ogg" #Cheshire (shiena)
     che "CH35H1R3 has a qwestion for you."
 
     mc "{b}Sigh.{/b}"
 
     mc "What is it?"
 
-    voice "05-hub2-3.mp3" #Cheshire (shiena)
+    voice "05-hub2-3.ogg" #Cheshire (shiena)
     che "Everytime you come in here, you stand and stare for a bit, before  logging off again."
 
-    voice "05-hub2-4.mp3" #Cheshire (shiena)
+    voice "05-hub2-4.ogg" #Cheshire (shiena)
     che "Why do you do that?"
 
     mc "..."
@@ -68,7 +68,7 @@ label hub2:
 
     show che f sad
 
-    voice "05-hub2-5.mp3" #Cheshire (shiena)
+    voice "05-hub2-5.ogg" #Cheshire (shiena)
     che "But CH35H1R3 is cuwious!"
 
     mc "Well you know what they say."
@@ -77,14 +77,14 @@ label hub2:
 
     mc "...Nevermind."
 
-    voice "05-hub2-6.mp3" #Cheshire (shiena)
+    voice "05-hub2-6.ogg" #Cheshire (shiena)
     che "What do they say, meowster?"
 
     mc "Ugh, forget it."
 
     show che f happy
 
-    voice "05-hub2-7.mp3" #Cheshire (shiena)
+    voice "05-hub2-7.ogg" #Cheshire (shiena)
     che "Okays."
 
     mc "Could you leave me alone, while we're at it?"
@@ -92,7 +92,7 @@ label hub2:
     show che s catmouth:
         linear 0.2 xpos 0.55
 
-    voice "05-hub2-8.mp3" #Cheshire (shiena)
+    voice "05-hub2-8.ogg" #Cheshire (shiena)
     che "Okays. But CH35H1R3 will be back!"
 
     hide che with easeoutleft

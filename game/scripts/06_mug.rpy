@@ -32,7 +32,7 @@ label mug:
 
     hide kerosene with dissolve
 
-    voice "06-mug-1.mp3" #Cheshire (shiena)
+    voice "06-mug-1.ogg" #Cheshire (shiena)
     che "Meowster! Wots dat?"
 
     show che s at centerright, height
@@ -44,10 +44,10 @@ label mug:
 
     mc "It's a memento."
 
-    voice "06-mug-2.mp3" #Cheshire (shiena)
+    voice "06-mug-2.ogg" #Cheshire (shiena)
     che "Meowster, you should get your eyes checked. It's a mugs, nyat a mementos. Silly Meowster!"
 
-    voice "06-mug-3.mp3" #Cheshire (shiena)
+    voice "06-mug-3.ogg" #Cheshire (shiena)
     che "Oooh! There's writing! What's it say??"
 
     show che s:
@@ -55,24 +55,24 @@ label mug:
 
     "Cheshire leans into me, looking at the words on the mug."
 
-    voice "06-mug-4.mp3" #Cheshire (shiena)
+    voice "06-mug-4.ogg" #Cheshire (shiena)
     che "Oh! Cheshire loves this!"
 
     show che s awoo armshappy
 
-    voice "06-mug-5.mp3" #Cheshire (shiena)
+    voice "06-mug-5.ogg" #Cheshire (shiena)
     che "Awoooooooooo!"
 
     show che s default base
 
-    voice "06-mug-6.mp3" #Cheshire (shiena)
+    voice "06-mug-6.ogg" #Cheshire (shiena)
     che "Can I haves? Can I haves?"
 
     show che s sad
 
     mc "No. This isn't yours, and it won't ever be yours. Go away. Please."
 
-    voice "06-mug-7.mp3" #Cheshire (shiena)
+    voice "06-mug-7.ogg" #Cheshire (shiena)
     che "Oh, okay…"
 
     hide che

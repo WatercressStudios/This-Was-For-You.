@@ -10,15 +10,15 @@ label rw1:
     pause 1
 
     #Voicemail
-    voice "04-rw1-1.mp3" #Boss ()
+    voice "04-rw1-1.ogg" #Boss ()
     bos "Hey, it's your boss. How’ve you been lately?"
-    voice "04-rw1-2.mp3" #Boss ()
+    voice "04-rw1-2.ogg" #Boss ()
     bos "We haven't seen you at the shop for a while."
-    voice "04-rw1-3.mp3" #Boss ()
+    voice "04-rw1-3.ogg" #Boss ()
     bos "Don't worry, we've managed to cover your shifts just fine, but... it would be nice to know when you'll be coming back."
-    voice "04-rw1-4.mp3" #Boss ()
+    voice "04-rw1-4.ogg" #Boss ()
     bos "Give me a call when you can, alright?"
-    voice "04-rw1-5.mp3" #Boss ()
+    voice "04-rw1-5.ogg" #Boss ()
     bos "See you soon."
 
     pause 0.5
