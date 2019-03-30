@@ -6,6 +6,8 @@ label rw2:
     $ save_name = "Sustenance"
     scene black
 
+    pause 1
+
     #Voicemail
     voice "09-rw2-1.mp3" #Dad ()
     dad "Hey kiddo, it's your parents..."
@@ -30,7 +32,7 @@ label rw2:
     voice "09-rw2-9.mp3" #Dad ()
     dad "We'll be here when you're ready. Call us."
 
-    ################ end voicemail
+    pause 0.5
 
     scene bg ceiling ceiling empty
     show ceilingfan
@@ -167,6 +169,6 @@ label rw2:
 
     "I can't do this. Not today."
 
-    # Show into VR button
+    call screen in_game_entervr
 
     jump hub3

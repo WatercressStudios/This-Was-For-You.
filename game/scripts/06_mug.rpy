@@ -166,4 +166,7 @@ label mug:
 
     "Or should it have died with you?"
 
+    if visited < 3:
+        call screen in_game_exitvr
+
     jump itemmerge

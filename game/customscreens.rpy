@@ -230,6 +230,9 @@ screen in_game_entervr_showing():
         add "megan_ui/gui-vr-closed.png"
         at in_game_entervr_showhide
 
+        timer 1.5 action Return
+        timer 1.5 action Hide("in_game_entervr_showing")
+
 screen in_game_exitvr():
     zorder 10
     button xpos -1920:
@@ -245,6 +248,9 @@ screen in_game_exitvr_showing():
     fixed xpos -1920:
         add "megan_ui/gui-realworld-closed.png"
         at in_game_exitvr_showhide
+
+        timer 1.5 action Return
+        timer 1.5 action Hide("in_game_exitvr_showing")
 
 transform in_game_entervrbutton_showhide:
     on show:
