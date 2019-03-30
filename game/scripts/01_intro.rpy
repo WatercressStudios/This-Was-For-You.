@@ -189,12 +189,12 @@ label intro:
 
     "That's all I need."
 
-    stop ambient 
+    stop ambient
     stop music
 
-    #call screen in_game_entervr
     #Sagi remember to do a timed hide
 
     play sound "sfx/VR-on.ogg"
+    call screen in_game_entervr
     jump hub1
     #Enter VR
