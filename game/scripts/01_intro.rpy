@@ -24,6 +24,8 @@ label intro:
     pause 0.5
 
     $ visible_emails.append('funeral')
+    $ visible_emails.append('friend1')
+    $ visible_emails.append('spam1')
     show screen notify("You have unread emails.")
 
     scene bg ceiling ceiling empty

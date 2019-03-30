@@ -105,11 +105,16 @@ screen in_game_menu():
             Hide("in_game_menu_button")
         ]
 
+init python:
+    maxlen = 18
+    def shorten_email_text(intext):
+        if len(intext) > maxlen + 1:
+            return intext[:maxlen - 1] + '...'
+        else:
+            return intext
 screen in_game_email_content():
     fixed xpos 110 ypos 0 at in_game_email_bg_showhide:
         add "megan_ui/gui-email-list-background.png"
-        # fixed xpos 480 ypos 330:
-        #     add "megan_ui/gui-email-list-scroll-background.png"
 
         frame xpos 15 ypos 330:
             background None
@@ -123,7 +128,12 @@ screen in_game_email_content():
                 draggable True
                 scrollbars "vertical"
                 side_xalign 0.5
+                yinitial 1.0
                 for ekey in visible_emails:
+                    if ekey in read_emails:
+                        $ email_color = "#39488D"
+                    else:
+                        $ email_color = "#06155a"
                     window:
                         ysize 130
                         $ email = all_emails[ekey]
@@ -131,38 +141,30 @@ screen in_game_email_content():
                         imagebutton:
                             idle "megan_ui/gui-email-list-idle.png"
                             hover "megan_ui/gui-email-list-select.png"
-                            action Show("in_game_email")
+                            action Show("in_game_email", ekey=ekey)
                         fixed ypos 20:
                             text "FROM: ":
-                                offset (39, 8)
+                                offset (41, 8)
                                 font "BebasNeue-Regular.otf"
                                 size 36
-                                color "#39488D"
+                                color email_color
                                 outlines []
-                            text email['from']:
+                            text shorten_email_text(email['from']):
                                 offset (120, 14)
                                 size 28
-                                color "#39488D"
+                                color email_color
                                 outlines []
                             text "SUBJECT: ":
                                 offset (10, 42)
                                 font "BebasNeue-Regular.otf"
                                 size 36
-                                color "#39488D"
+                                color email_color
                                 outlines []
-                            text email['title']:
+                            text shorten_email_text(email['title']):
                                 offset (120, 49)
                                 size 28
-                                color "#39488D"
+                                color email_color
                                 outlines []
-        # button xpos 20 ypos 330:
-        #     add "megan_ui/gui-email-list-unclicked.png"
-        #     text "Click here to show email"
-        #     action Show("in_game_email")
-        # button xpos 20 ypos 460:
-        #     add "megan_ui/gui-email-list-unclicked.png"
-        #     text "Click here to hide email"
-        #     action Hide("in_game_email")
 
 screen in_game_email_button():
     zorder 2
@@ -191,10 +193,47 @@ transform in_game_email_bg_showhide:
         linear .2 ypos -1010
         alpha 0
 
-screen in_game_email():
+screen in_game_email(ekey):
+    if ekey not in read_emails:
+        $ read_emails.append(ekey)
+
     zorder -1
     fixed xpos 650 ypos 130 at in_game_email_showhide:
         add "megan_ui/gui-email-body-background.png"
+        $ email = all_emails[ekey]
+        fixed pos (20, 40):
+            text "FROM: ":
+                offset (41, 8)
+                font "BebasNeue-Regular.otf"
+                size 36
+                color "#39488D"
+                outlines []
+            text email['from']:
+                offset (120, 14)
+                size 28
+                color "#39488D"
+                outlines []
+            text "SUBJECT: ":
+                offset (10, 42)
+                font "BebasNeue-Regular.otf"
+                size 36
+                color "#39488D"
+                outlines []
+            text email['title']:
+                offset (120, 49)
+                size 28
+                color "#39488D"
+                outlines []
+        frame pos (20, 150):
+            background None
+            xsize 1000
+            ysize 450
+            padding (20, 20, 20, 20)
+            text email['body']:
+                size 28
+                color "#39488D"
+                outlines []
+                first_indent 0
 
 transform in_game_email_showhide:
     on show:
