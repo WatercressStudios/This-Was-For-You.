@@ -613,7 +613,7 @@ screen load():
 
 screen custom_title_main_saveload(title):
     frame align (0.5, 0.5) at fade_inout(0.2):
-        background "megan_ui/gui-save-background.png"
+        background "megan_ui/gui-settings-background.png"
         xsize 920
         ysize 1000
         fixed pos (30, 10):
