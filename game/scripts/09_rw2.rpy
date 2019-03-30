@@ -35,6 +35,8 @@ label rw2:
 
     pause 0.5
 
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
+    play music "music/RW_S2.ogg" fadein 2.0 fadeout 3.0
     scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve
@@ -58,6 +60,7 @@ label rw2:
     "...Even me."
 
     # sfx: stomach growling noise
+    play sound "sfx/Stomach_grumble.ogg"
     "..."
 
     "My stomach's been growling for awhile now."
@@ -70,11 +73,13 @@ label rw2:
     "I roll to the side in an attempt to quell my hunger."
 
     # sfx: stomach growling noise again
+    play sound "sfx/Stomach_Grumble.ogg"
     "..."
 
     "Fine, you win."
 
     # sfx bedsheet rustling
+    play sound "sfx/Bed_Rustle.ogg"
 
     show bg bedroombg open:
         linear 0.2 yalign 0.1
@@ -90,6 +95,8 @@ label rw2:
 
     "I head over to my fridge and pull it open, the glow from the fridge illuminating my dark kitchen."
 
+    play sound "sfx/Fridge_open.ogg"
+
     "Nothing left but a slice of two-day-old pizza."
 
     "Without bothering to heat it up, I start chewing on the cold, damp crust while walking to the window."
@@ -102,6 +109,8 @@ label rw2:
 
     pause 0.5
 
+    stop ambient
+    #get city sounds no rain
     show bg bedroombg nocurtains with dissolve
 
     # bg to the zoomed in window without the curtains
@@ -139,6 +148,8 @@ label rw2:
     # close curtains and zoom out. sfx of MC getting on bed
     # fan bg, and pause for a second
 
+    play sound "sfx/bed.ogg"
+
     show bg bedroombg closed with dissolve
 
     show bg ceiling ceiling empty
@@ -170,6 +181,9 @@ label rw2:
 
     "I can't do this. Not today."
 
-    call screen in_game_entervr
+    stop music
+    stop ambient
 
+    # Show into VR button
+    call screen in_game_entervr
     jump hub3

@@ -9,6 +9,9 @@ label hub4:
     pause 1
     show screen chapter_announce
 
+    play ambient "sfx/Hub_Beach.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Hub.ogg" fadein 3.0 fadeout 3.0
+
     "Here we are again."
 
     show che f at center:
@@ -143,6 +146,7 @@ label hub4:
     hide che with easeoutleft
 
     "..."
-
+    stop ambient
+    stop music
     #Imagemap
     call screen hubselect

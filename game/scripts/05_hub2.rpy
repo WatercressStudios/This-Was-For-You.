@@ -7,7 +7,8 @@ label hub2:
     scene bg hub hub
     show screen chapter_announce
 
-    pause 1
+    play ambient "sfx/Hub_Beach.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Hub.ogg" fadein 3.0 fadeout 3.0
 
     "Ah, this is more like it."
 
@@ -141,5 +142,7 @@ label hub2:
 
     "We shared some good times, huh?"
 
+    stop ambient
+    stop music
     #Imagemap
     call screen hubselect

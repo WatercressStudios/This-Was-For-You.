@@ -23,6 +23,9 @@ label rw1:
 
     pause 0.5
 
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0 fadeout 2.0
+    play music "Music/RW_S1.ogg" fadeout 3.0
+
     scene bg ceiling ceiling empty
     show ceilingfanstatic:
         rotate 17
@@ -73,6 +76,8 @@ label rw1:
     #Thunder sfx
     #Rain sfx
 
+    play sound "sfx/Thunder_3.ogg"
+
     scene bg bedroombg open rain
     call openeyes from _call_openeyes_3
 
@@ -85,6 +90,9 @@ label rw1:
     pause 0.5
 
     show bg bedroombg nocurtains with dissolve
+
+    play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 2.0
+    play sound [ "<silence 3>", "sfx/thunder_2.ogg" ]
 
     "You liked the rain."
 
@@ -100,6 +108,8 @@ label rw1:
 
     show bg bedroombg closed with dissolve
 
+    play ambient "<from 60>sfx/Ambience_1_(Rain).ogg" fadeout 2.0
+
     "Ugh. I'm done with rain."
 
     show bg ceiling ceiling empty
@@ -112,6 +122,10 @@ label rw1:
 
     "No. I'm going back home."
 
-    call screen in_game_entervr
+    stop ambient
+    stop music
 
+    play sound "sfx/VR-on.ogg"
+    #Enter VR
+    call screen in_game_entervr
     jump hub2

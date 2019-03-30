@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # callback=speaker is needed for mouth flaps
 define mc = DynamicCharacter("mc_name", callback=speaker("mc"), what_prefix="[[[mc_name]] ", what_color="#f4d6a7")
@@ -89,6 +89,11 @@ image che_pose2_md_poutlvl2 = FlapMouth("che_pose2_mc_poutlv2", "che_pose2_m_awo
 image che_pose2_md_line = FlapMouth("che_pose2_mc_line", "che_pose2_m_eck")
 image che_pose2_md_sad = FlapMouth("che_pose2_mc_sad", "che_pose2_m_awoo")
 
+# new ambient sound channel
+
+init python:
+    renpy.music.register_channel("ambient", "sound", True)
+    
 
 # override some default behaviours
 

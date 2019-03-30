@@ -9,6 +9,9 @@ label ending:
     pause 1
     show screen chapter_announce
 
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 3.0 fadeout 3.0
+    play music "music/RW_S5.ogg" fadein 3.0 fadeout 5.0
+
     scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve
@@ -47,6 +50,8 @@ label ending:
 
     "Someone, please tell me…"
 
+    stop ambient
+
     menu:
         "How do I let go?"
 
@@ -55,6 +60,8 @@ label ending:
 
         "Keep Ji-min's voicemail":
             $ jivoicemail = False
+
+    stop music
 
     #roll credits
     #end game

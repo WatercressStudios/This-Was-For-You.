@@ -5,10 +5,11 @@
 label planeticket:
     $ save_name = "What Could Have Been."
     scene bg hub hub
-
     pause 1
     show screen chapter_announce
-
+    
+    play music "Music/Plane_Ticket.ogg" fadein 3.0 fadeout 1.0
+    play ambient "sfx/Hub_Beach.ogg" fadein 3.0 fadeout 1.0
     "Well, here I am again."
 
     "With one final item, I need to find a quiet place as quickly as possible."
@@ -77,6 +78,8 @@ label planeticket:
     pause 0.5
 
     #all music/sfx/everything stops here.
+    stop music
+    stop ambient
 
     "My heart stops."
 

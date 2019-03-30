@@ -29,6 +29,9 @@ label eighttrack:
     # sfx of cassette player's play button being pushed, and the sfx of spinning cassette
     "I push the 'play' button anyway."
 
+    play sound "sfx/Button.ogg"
+    play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ]
+
     # song of that Ji-min composed plays, but it's missing the vocal tracks
     # after about 10 seconds of listening to the song
     # if subtitle is on, show: "(music with no vocals playing)"
@@ -134,6 +137,9 @@ label eighttrack:
     "But I did."
 
     "And now I can never fulfill that promise…"
+
+    play sound "sfx/Cassette_Down.ogg"
+    play sound "sfx/VR-Off.ogg"
 
     # back to VR world
 

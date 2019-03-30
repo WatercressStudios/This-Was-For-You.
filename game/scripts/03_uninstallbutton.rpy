@@ -8,6 +8,10 @@ label uninstallbutton:
     # sfx of plastic button pressed *click*!
     #sfx "vr_uninstall_click" "click!"
 
+    play music "Music/Uninstall_Button.ogg" fadein 3.0 fadeout 3.0
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
+
     "..."
 
     "Nope, still here."
@@ -19,6 +23,8 @@ label uninstallbutton:
     "So why am I {b}finally{/b} pushing it?"
 
     #sfx "vr_uninstall_click" "click!"
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
     "..."
 
     "Still nothing."
@@ -50,6 +56,8 @@ label uninstallbutton:
     "..."
 
     #sfx "vr_uninstall_click" "click!"
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
     "I push the button again."
 
     "Yeah."
@@ -62,6 +70,7 @@ label uninstallbutton:
     hide items
 
     # play comical sfx of someone turning up unexpectedly
+    play sound "sfx/run.ogg"
     voice "03-uninstallbutton-1.ogg" #Cheshire (shiena)
     che "Maybe the buttons is broken, nya~!"
 
@@ -113,12 +122,19 @@ label uninstallbutton:
     che "But Master is having trouble, so CH35H1R3 came to help, meow!"
 
     #sfx "vr_uninstall_click" "click!"
-
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
     "I try to ignore it."
 
     #sfx "vr_uninstall_click" "click!"
     #sfx "vr_uninstall_click" "click!"
     #sfx "vr_uninstall_click" "click!"
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
 
     voice "03-uninstallbutton-5.ogg" #Cheshire (shiena)
     che "Meow-be Master needs to connect the button to a function~"
@@ -172,7 +188,12 @@ label uninstallbutton:
     "For years, we kept up with that tradition, until..."
 
     #sfx "vr_uninstall_click" "click!"
+    play sound "sfx/button.ogg"
+    play sound "sfx/ping 6.ogg"
     "..."
+
+    stop ambient
+    stop music
 
     # Ding! Voicemail from work arrived. MC logs out into the real world
 

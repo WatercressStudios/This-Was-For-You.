@@ -32,6 +32,9 @@ label intro:
     show ceilingfan
     with dissolve
     #Fan whirl ambience
+    play sound "sfx/Fan.ogg" fadein 4.0 loop fadeout 3.0
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 3.0 fadeout 3.0
+    play music "music/RW_Intro.ogg" fadein 3.0 fadeout 3.0
 
     "Even now, I’m still replaying your voicemail."
 
@@ -80,8 +83,12 @@ label intro:
 
     "My thoughts are pervasive, waves of emotion constantly crashing into my subconscious."
 
+    stop sound
+
     scene bg bedroombg
     call openeyes from _call_openeyes_4
+
+    play sound "sfx/bed.ogg"
 
     "Pushing my thin blanket aside, I prop myself up to a sitting position."
 
@@ -93,7 +100,7 @@ label intro:
         linear 0.2 zoom 1.1 yalign 0.1
 
     pause 0.5
-
+    play sound "sfx/Bed_Rustle.ogg"
     show bg bedroombg with hpunch:
         linear 0.2 zoom 1.05 yalign 0.8
 
@@ -182,7 +189,12 @@ label intro:
 
     "That's all I need."
 
-    call screen in_game_entervr
+    stop ambient 
+    stop music
 
+    #call screen in_game_entervr
+    #Sagi remember to do a timed hide
+
+    play sound "sfx/VR-on.ogg"
     jump hub1
     #Enter VR

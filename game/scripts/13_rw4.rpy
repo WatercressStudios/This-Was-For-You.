@@ -11,6 +11,8 @@ label rw4:
     # play SFX of a VR headset being powered down (it'll be cool if we can have a TV blinking off visual effect to go with it)
     # also hide the menu buttons (temporarily, for a few seconds)
 
+    play sound "sfx/VR-OFF.ogg"
+
     hide screen in_game_menu
 
     pause 0.5
@@ -20,23 +22,35 @@ label rw4:
     hide vrpoweroutageeffect
     hide black with dissolve
 
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 1.0 fadeout 2.0
+    play sound "sfx/Thunder_2.ogg"
     "What? What happened?"
+
+    play music "music/RW_S4.ogg" fadein 3.0 fadeout 3.0
 
     # sfx of a thunder, followed by a BG change to the window and sfx of MC sitting up on bed. it's also super dark out there.
 
     show bg bedroombg lightning
     show bedroomstorm darkblue darkflash darklightning
 
+    play sound "sfx/Thunder_1.ogg"
+
     # flash the lightning outside the window! a second of two later, play sfx of another thunder.
+
+    play sound [ "<silence 1>", "sfx/thunder_2.ogg" ]
 
     pause 1
 
     # sfx of the VR headset powering on, and the room goes to normal brightness again
 
+    play sound "sfx/VR-On.ogg"
+
     hide bedroomstorm
     show screen in_game_menu
     show bg bedroombg normal lit open bright -lightning
     with dissolve
+
+    play music "Music/RW_S4.ogg" fadein 3.0 fadeout 2.0
 
     "...a blackout?"
 
@@ -91,6 +105,8 @@ label rw4_continue:
 
     pause 0.5
 
+    play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 1.0 fadeout 1.0
+
     scene bg bedroombg nocurtains rain:
         zoom 1.5
         xalign 0.9 yalign 0.2
@@ -108,6 +124,8 @@ label rw4_continue:
     hide bedroomstorm
 
     # fade back into the window scene, zoomed into the outside view. a lightning flashed and thundered again
+
+    play sound "sfx/Thunder_1.ogg"
 
     "...so it's come to this, huh."
 
@@ -129,6 +147,8 @@ label rw4_continue:
     # lightning flash and sfx again
     # pause a second or two
 
+    play sound "sfx/Thunder_2.ogg"
+
     "Was it a mistake to tell them about Ji-min?"
 
     "They never understood my friendship with her."
@@ -149,6 +169,8 @@ label rw4_continue:
 
     # sfx of beeping sound indicating VR is ready to be launched
 
+    play sound "sfx/Chime - DX EP.ogg"
+
     "Shaking my head, I look at the display. The VR app has finished initializing."
 
     "I start to head back, but--"
@@ -167,6 +189,9 @@ label rw4_continue:
     # sfx of someone tripping over something and falling flat, like a pizza box or something
     # slide the BG up into a black screen to indicate a fall
     # fade in the room again, window view
+
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadeout 3.0
+    play sound "sfx/box_fall.ogg"
 
     pause 0.1
 
@@ -203,6 +228,8 @@ label rw4_continue:
     show bg bedroombg lightning
     show bedroomstorm
 
+    play sound "sfx/Thunder_3.ogg"
+
     # lightning flash and sfx again
     # pause a second or two
 
@@ -215,7 +242,8 @@ label rw4_continue:
     "Just… one more time."
 
     # MC goes back to bed and opens VR scene. Have MC walk around in VR silently a few times first, revisiting all the BGs, before going into Julia's scene.
-
+    stop music
+    stop ambient
+    play sound "sfx/VR-on.ogg"
     call screen in_game_entervr
-
     jump planeticket

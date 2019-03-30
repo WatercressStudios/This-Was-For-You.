@@ -7,7 +7,8 @@ label hub1:
     scene bg hub hub
     show screen chapter_announce
 
-    pause 1
+    play ambient "sfx/Hub_Beach.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Hub.ogg" fadein 3.0 fadeout 3.0
 
     "The familiar scent of an ocean breeze hits my nose first."
 
@@ -235,5 +236,5 @@ label hub1:
     "Might as well make the most of this peace."
 
     show items uninstallbutton with dissolve
-
+    stop music
     jump uninstallbutton

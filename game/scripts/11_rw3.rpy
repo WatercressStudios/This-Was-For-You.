@@ -28,6 +28,9 @@ label rw3:
     show ceilingfan
     with dissolve
 
+    play music "music/RW_S3.ogg" fadein 3.0 fadeout 3.0
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
+
     "I can almost feel it, you know?"
 
     "The bitter aroma of coffee, the clinking of mugs, the gentle murmur of polite guests, the soothing lights warming up the place - all of it."
@@ -119,6 +122,13 @@ label rw3:
 
     "To the universe, that’s the same as crushing an ant."
 
-    call screen in_game_entervr
+    #enter VR?
+    #yes
+    #end scene
 
+    stop music
+    stop ambient
+
+    play sound "sfx/VR-on.ogg"
+    call screen in_game_entervr
     jump hub4

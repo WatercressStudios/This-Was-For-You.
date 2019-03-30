@@ -5,9 +5,10 @@
 label hub3:
     $ save_name = "Forget."
     scene bg hub hub
-
     pause 1
     show screen chapter_announce
+    play ambient "sfx/Hub_Beach_2.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Hub.ogg" fadein 3.0 fadeout 3.0
 
     # sfx of beach louder than usual, to provide contrast with the previous droning sound
     "..."
@@ -25,7 +26,7 @@ label hub3:
     "Do you like the sea?"
 
     "I wish I asked you that."
-
+    play sound "sfx/run.ogg"
     voice "10-hub3-1.ogg" #Cheshire (shiena)
     che "Meowsterrrrr!!! I missed you!"
 
@@ -88,6 +89,7 @@ label hub3:
     "Damn you."
 
     "Forcing those thoughts away, I look at the items in front of me, and all of the memories that they share."
-
+    stop ambient
+    stop music
     #Imagemap
     call screen hubselect
