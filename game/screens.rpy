@@ -1151,11 +1151,11 @@ screen confirm(message, yes_action, no_action):
     add "gui/overlay/confirm.png"
 
     frame:
-
+        padding (50,70,50,40)
         vbox:
             xalign .5
             yalign .5
-            spacing 45
+            spacing 20
 
             label _(message):
                 style "confirm_prompt"

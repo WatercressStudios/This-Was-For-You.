@@ -626,9 +626,9 @@ screen custom_title_main_saveload(title):
         frame ypos 90:
             background None
             padding (0, 0, 0, 0)
-            xsize 920
+            xsize 850
             ysize 800
-            vpgrid xoffset -50:
+            vpgrid xoffset -30:
                 cols 1
                 spacing 10
                 mousewheel True
@@ -638,7 +638,7 @@ screen custom_title_main_saveload(title):
                 for slot in range(1, 10):
                     frame:
                         background None
-                        padding (10,0,10,0)
+                        padding (30,0,20,0)
                         xsize 790
                         ysize 140
                         imagebutton:
@@ -663,9 +663,9 @@ screen custom_title_main_saveload(title):
                                 color "#36428A"
                                 outlines []
         fixed pos (650, 910):
-            imagebutton offset (-185, -5):
-                idle "megan_ui/gui-gamemenu-idle.png"
-                hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+            imagebutton offset (-40, -5):
+                idle "megan_ui/gui-back-idle.png"
+                hover "megan_ui/gui-back-select.png"
                 if in_main_menu:
                     action [ Show("custom_title_left2center"), Hide("custom_title_main") ]
                 else:
@@ -839,6 +839,7 @@ screen history():
                         ysize 120
                         text_text_align 0.5
                         text_xalign 0.5
+                        text_font "Arial Bold.ttf"
                         if h.who and "color" in h.what_args:
                             text_color h.what_args["color"]
                         substitute False
@@ -846,8 +847,8 @@ screen history():
             if not _history_list:
                 label _("The dialogue history is empty.")
     fixed pos (1560, 960):
-        imagebutton offset (-185, -5):
-            idle "megan_ui/gui-gamemenu-idle.png"
-            hover "megan_ui/gui-gamemenu-mainmenu-select.png"
+        imagebutton offset (-20, 0):
+            idle "megan_ui/gui-back-idle.png"
+            hover "megan_ui/gui-back-select.png"
             action Return()
         add "megan_ui/gui-history-back.png"
