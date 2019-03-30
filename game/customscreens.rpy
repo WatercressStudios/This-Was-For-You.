@@ -108,25 +108,61 @@ screen in_game_menu():
 screen in_game_email_content():
     fixed xpos 110 ypos 0 at in_game_email_bg_showhide:
         add "megan_ui/gui-email-list-background.png"
-        fixed xpos 480 ypos 330:
-            add "megan_ui/gui-email-list-scroll-background.png"
-        button xpos 20 ypos 330:
-            add "megan_ui/gui-email-list-unclicked.png"
-            text "Click here to show email"
-            action Show("in_game_email")
-        button xpos 20 ypos 460:
-            add "megan_ui/gui-email-list-unclicked.png"
-            text "Click here to hide email"
-            action Hide("in_game_email")
-        # imagebutton ypos 220:
-        #     idle "megan_ui/gui-gamemenu-load.png"
-        #     action Null
-        # imagebutton ypos 310:
-        #     idle "megan_ui/gui-gamemenu-settings.png"
-        #     action Null
-        # imagebutton ypos 400:
-        #     idle "megan_ui/gui-gamemenu-mainmenu.png"
-        #     action Null
+        # fixed xpos 480 ypos 330:
+        #     add "megan_ui/gui-email-list-scroll-background.png"
+
+        frame xpos 15 ypos 330:
+            background None
+            padding (0, 0, 20, 0)
+            xsize 500
+            ysize 730
+            vpgrid:
+                cols 1
+                spacing 0
+                mousewheel True
+                draggable True
+                scrollbars "vertical"
+                side_xalign 0.5
+                for ekey in visible_emails:
+                    window:
+                        ysize 130
+                        $ email = all_emails[ekey]
+                        add "megan_ui/gui-email-list-unclicked.png" ypos 20
+                        imagebutton:
+                            idle "megan_ui/gui-email-list-idle.png"
+                            hover "megan_ui/gui-email-list-select.png"
+                            action Show("in_game_email")
+                        fixed ypos 20:
+                            text "FROM: ":
+                                offset (39, 8)
+                                font "BebasNeue-Regular.otf"
+                                size 36
+                                color "#39488D"
+                                outlines []
+                            text email['from']:
+                                offset (120, 14)
+                                size 28
+                                color "#39488D"
+                                outlines []
+                            text "SUBJECT: ":
+                                offset (10, 42)
+                                font "BebasNeue-Regular.otf"
+                                size 36
+                                color "#39488D"
+                                outlines []
+                            text email['title']:
+                                offset (120, 49)
+                                size 28
+                                color "#39488D"
+                                outlines []
+        # button xpos 20 ypos 330:
+        #     add "megan_ui/gui-email-list-unclicked.png"
+        #     text "Click here to show email"
+        #     action Show("in_game_email")
+        # button xpos 20 ypos 460:
+        #     add "megan_ui/gui-email-list-unclicked.png"
+        #     text "Click here to hide email"
+        #     action Hide("in_game_email")
 
 screen in_game_email_button():
     zorder 2

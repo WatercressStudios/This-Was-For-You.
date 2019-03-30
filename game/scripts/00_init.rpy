@@ -104,6 +104,7 @@ label start:
     $ in_main_menu = False
     $ save_name = "Memories of You"
     $ _game_menu_screen = None
+    $ visible_emails = ["intro"]
     menu:
         "Start game":
             $ persistent.subtitle = False
