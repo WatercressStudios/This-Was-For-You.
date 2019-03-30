@@ -856,9 +856,9 @@ screen history():
 transform chapter_inout:
     on show:
         alpha 0
-        linear 3 alpha 1
+        linear 1 alpha 1
     on hide:
-        linear 3 alpha 0
+        linear 1 alpha 0
 
 screen chapter_announce():
     frame align (0.5, 0.4) at chapter_inout:
@@ -869,4 +869,4 @@ screen chapter_announce():
             text_align 0.5
             font "BebasNeue-Regular.otf"
             size 100
-    timer 5.0 action Hide("chapter_announce")
+    timer 1.5 action Hide("chapter_announce")
