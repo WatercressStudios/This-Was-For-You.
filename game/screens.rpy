@@ -1165,8 +1165,8 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 50
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("Yes") action [ Play("sound", uisound()), yes_action ]
+                textbutton _("No") action [ Play("sound", uisound()), no_action ]
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action

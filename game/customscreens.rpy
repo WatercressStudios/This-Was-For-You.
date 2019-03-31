@@ -53,21 +53,41 @@ image history_buttons:
         "megan_ui/gui-history-open.png" with Dissolve(0.3, alpha=True)
 
 
+init python:
+    import random
+    def uisound():
+        clips = [
+            "sfx/button_click.ogg",
+        ]
+        return random.choice(clips)
+
+    def uisoundin():
+        clips = [
+            "sfx/Ping 3.ogg",
+        ]
+        return random.choice(clips)
+
+    def uisoundout():
+        clips = [
+            "sfx/Ping 4.ogg",
+        ]
+        return random.choice(clips)
+
 screen in_game_menu():
     zorder 1
 
     button xpos 990 ypos 0:
         add "rewind_buttons"
-        action Rollback()
+        action [ Play("sound", uisound()), Rollback() ]
     button xpos 1100 ypos 0:
         add "autoplay_buttons"
-        action Preference("auto-forward", "toggle")
+        action [ Play("sound", uisound()), Preference("auto-forward", "toggle") ]
     button xpos 1210 ypos 0:
         add "skip_buttons"
         action Skip() alternate Skip(fast=True, confirm=True)
     button xpos 1320 ypos 0:
         add "history_buttons"
-        action ShowMenu('history')
+        action [ Play("sound", uisound()), ShowMenu('history') ]
 
     fixed xpos 110 ypos -1010:
         add "megan_ui/gui-email-list-background.png"
@@ -76,6 +96,7 @@ screen in_game_menu():
     mousearea:
         area (110, 0, 520, 90)
         hovered [
+            Play("sound", uisoundin()),
             Show("in_game_email_content"),
             Show("in_game_email_button"),
             Hide("notify")
@@ -83,6 +104,7 @@ screen in_game_menu():
     mousearea:
         area (110, 0, 520, 790)
         unhovered [
+            Play("sound", uisoundout()),
             Hide("in_game_email_content"),
             Hide("in_game_email"),
             Hide("in_game_email_button")
@@ -95,12 +117,14 @@ screen in_game_menu():
     mousearea:
         area (1470, 0, 340, 90)
         hovered [
+            Play("sound", uisoundin()),
             Show("in_game_menu_content"),
             Show("in_game_menu_button")
         ]
     mousearea:
         area (1470, 0, 340, 470)
         unhovered [
+            Play("sound", uisoundout()),
             Hide("in_game_menu_content"),
             Hide("in_game_menu_button")
         ]
@@ -141,7 +165,7 @@ screen in_game_email_content():
                         imagebutton:
                             idle "megan_ui/gui-email-list-idle.png"
                             hover "megan_ui/gui-email-list-select.png"
-                            action Show("in_game_email", ekey=ekey)
+                            action [ Play("sound", uisound()), Show("in_game_email", ekey=ekey) ]
                         fixed ypos 20:
                             text "FROM: ":
                                 offset (41, 8)
@@ -251,16 +275,16 @@ screen in_game_menu_content():
         add "megan_ui/gui-menu-background.png"
         imagebutton ypos 130:
             idle "megan_ui/gui-gamemenu-save.png"
-            action ShowMenu("save")
+            action [ Play("sound", uisound()), ShowMenu("save") ]
         imagebutton ypos 220:
             idle "megan_ui/gui-gamemenu-load.png"
-            action ShowMenu("load")
+            action [ Play("sound", uisound()), ShowMenu("load") ]
         imagebutton ypos 310:
             idle "megan_ui/gui-gamemenu-settings.png"
-            action Null
+            action [ Play("sound", uisound()), ShowMenu("custom_title_main_settings") ]
         imagebutton ypos 400:
             idle "megan_ui/gui-gamemenu-mainmenu.png"
-            action MainMenu()
+            action [ Play("sound", uisound()), MainMenu() ]
 
 screen in_game_menu_button():
     zorder 2
@@ -389,12 +413,14 @@ init python:
         global mc_name
 
         if mc_name != "":
+            renpy.play("sfx/Ping 5.ogg", "sound")
             renpy.hide_screen("startgame_login")
             renpy.show_screen("thumbprint_scanning")
             renpy.show_screen("thumbprint_line")
             ui.timer(2.0, LoginToLoading)
 
     def LoginToLoading():
+        renpy.play("sfx/Chime - DX EP.ogg", "sound")
         renpy.hide_screen("thumbprint_scanning")
         renpy.hide_screen("thumbprint_line")
         if relogin:
@@ -448,7 +474,7 @@ screen startgame_login():
                 hover "megan_ui/authenticate-voice-mail-subs-on.png"
                 selected_idle "megan_ui/authenticate-voice-mail-subs-on.png"
                 selected_hover "megan_ui/authenticate-voice-mail-subs-on.png"
-                action ToggleVariable("persistent.subtitle")
+                action [ Play("sound", uisound()), ToggleVariable("persistent.subtitle") ]
 
         fixed pos (540, 400):
             add "megan_ui/authenticate-name-background.png"
@@ -513,6 +539,7 @@ screen thumbprint_line():
 
 label main_menu:
     $ in_main_menu = True
+    play music "music/Main Menu.ogg" fadein 3.0 fadeout 3.0
     call screen custom_title_center with fade
 
 screen custom_mainmenu_buttons_center():
@@ -522,27 +549,27 @@ screen custom_mainmenu_buttons_center():
         imagebutton pos (20, 30): # Play
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Start()
+            action [ Play("sound", uisound()), Start() ]
 
         imagebutton pos (20, 120): # Load
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action [ Show("custom_title_center2left"), Show("load") ]
+            action [ Play("sound", uisound()), Show("custom_title_center2left"), Show("load") ]
 
         imagebutton pos (20, 210): # Settings
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action [ Show("custom_title_center2left"), Show("custom_title_main_settings") ]
+            action [ Play("sound", uisound()), Show("custom_title_center2left"), Show("custom_title_main_settings") ]
 
         imagebutton pos (20, 300): # Extras
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action [ Show("custom_title_center2right") ]
+            action [ Play("sound", uisound()), Show("custom_title_center2right") ]
 
         imagebutton pos (20, 390): # Quit
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-mainmenu-select.png"
-            action Quit()
+            action [ Play("sound", uisound()), Quit() ]
 
         add "megan_ui/gui-mainmenu-text.png"
 
@@ -553,27 +580,27 @@ screen custom_mainmenu_buttons_left():
         imagebutton pos (20, 30): # Play
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Start()
+            action [ Play("sound", uisound()), Start() ]
 
         imagebutton pos (20, 120): # Load
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Show("load")
+            action [ Play("sound", uisound()), Show("load") ]
 
         imagebutton pos (20, 210): # Settings
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Show("custom_title_main_settings")
+            action [ Play("sound", uisound()), Show("custom_title_main_settings")]
 
         imagebutton pos (20, 300): # Extras
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action [ Show("custom_title_left2right"), Hide("custom_title_main") ]
+            action [ Play("sound", uisound()), Show("custom_title_left2right"), Hide("custom_title_main") ]
 
         imagebutton pos (20, 390): # Quit
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-mainmenu-select.png"
-            action Quit()
+            action [ Play("sound", uisound()), Quit() ]
 
         add "megan_ui/gui-mainmenu-text.png"
 
@@ -584,22 +611,22 @@ screen custom_mainmenu_buttons_right():
         imagebutton pos (20, 30): # Gallery
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Show("custom_title_extras_gallery")
+            action [ Play("sound", uisound()), Show("custom_title_extras_gallery") ]
 
         imagebutton pos (20, 120): # Music box
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Show("custom_title_extras_musicbox")
+            action [ Play("sound", uisound()), Show("custom_title_extras_musicbox") ]
 
         imagebutton pos (20, 210): # Credits
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action Show("custom_title_extras_credits")
+            action [ Play("sound", uisound()), Show("custom_title_extras_credits") ]
 
         imagebutton pos (20, 300): # Back
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-extrasmenu-mainmenu-select.png"
-            action [ Show("custom_title_right2center"), Hide("custom_title_extras") ]
+            action [ Play("sound", uisound()), Show("custom_title_right2center"), Hide("custom_title_extras") ]
 
         add "megan_ui/gui-extrasmenu-text.png"
 
@@ -719,7 +746,7 @@ screen custom_title_main_saveload(title):
                         imagebutton:
                             idle Frame("megan_ui/save_slot_frame.png", Borders(30, 30, 30, 30))
                             hover Frame("megan_ui/save_slot_frame_hover.png", Borders(30, 30, 30, 30))
-                            action FileAction(slot)
+                            action [ Play("sound", uisound()), FileAction(slot) ]
                         frame:
                             background None
                             xsize 790
@@ -742,9 +769,9 @@ screen custom_title_main_saveload(title):
                 idle "megan_ui/gui-back-idle.png"
                 hover "megan_ui/gui-back-select.png"
                 if in_main_menu:
-                    action [ Show("custom_title_left2center"), Hide("custom_title_main") ]
+                    action [ Play("sound", uisound()), Show("custom_title_left2center"), Hide("custom_title_main") ]
                 else:
-                    action Return()
+                    action [ Play("sound", uisound()), Return() ]
             text "Back":
                 font "BebasNeue-Regular.otf"
                 size 60
@@ -857,9 +884,9 @@ screen custom_title_main_settings():
                         size 50
                         color "#36428A"
                         outlines []
-                    textbutton _("Window") action Preference("display", "window")
+                    textbutton _("Window") action [ Play("sound", uisound()), Preference("display", "window") ]
 
-                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                    textbutton _("Fullscreen") action [ Play("sound", uisound()), Preference("display", "fullscreen") ]
 
             vbox:
                 style_prefix "check"
@@ -868,9 +895,9 @@ screen custom_title_main_settings():
                     size 50
                     color "#36428A"
                     outlines []
-                textbutton _("Unseen Text") action Preference("skip", "toggle")
-                textbutton _("After Choices") action Preference("after choices", "toggle")
-                textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                textbutton _("Unseen Text") action [ Play("sound", uisound()), Preference("skip", "toggle") ]
+                textbutton _("After Choices") action [ Play("sound", uisound()), Preference("after choices", "toggle") ]
+                textbutton _("Transitions") action [ Play("sound", uisound()), InvertSelected(Preference("transitions", "toggle")) ]
 
 screen custom_title_extras_gallery():
     tag custom_title_extras
@@ -925,7 +952,7 @@ screen history():
         imagebutton offset (-20, 0):
             idle "megan_ui/gui-back-idle.png"
             hover "megan_ui/gui-back-select.png"
-            action Return()
+            action [ Play("sound", uisound()), Return() ]
         add "megan_ui/gui-history-back.png"
 
 transform chapter_inout:
