@@ -273,18 +273,30 @@ transform in_game_email_showhide:
 screen in_game_menu_content():
     fixed xpos 1470 ypos 0 at in_game_menu_bg_showhide:
         add "megan_ui/gui-menu-background.png"
-        imagebutton ypos 130:
-            idle "megan_ui/gui-gamemenu-save.png"
-            action [ Play("sound", uisound()), ShowMenu("save") ]
-        imagebutton ypos 220:
-            idle "megan_ui/gui-gamemenu-load.png"
-            action [ Play("sound", uisound()), ShowMenu("load") ]
-        imagebutton ypos 310:
-            idle "megan_ui/gui-gamemenu-settings.png"
-            action [ Play("sound", uisound()), ShowMenu("custom_title_main_settings") ]
-        imagebutton ypos 400:
-            idle "megan_ui/gui-gamemenu-mainmenu.png"
-            action [ Play("sound", uisound()), MainMenu() ]
+        fixed ypos 130:
+            imagebutton:
+                idle "megan_ui/gui-gamemenu-save.png"
+                hover "megan_ui/gui-gamemenu-select.png"
+                action [ Play("sound", uisound()), ShowMenu("save") ]
+            add "megan_ui/gui-gamemenu-save.png"
+        fixed ypos 220:
+            imagebutton:
+                idle "megan_ui/gui-gamemenu-load.png"
+                hover "megan_ui/gui-gamemenu-select.png"
+                action [ Play("sound", uisound()), ShowMenu("load") ]
+            add "megan_ui/gui-gamemenu-load.png"
+        fixed ypos 310:
+            imagebutton:
+                idle "megan_ui/gui-gamemenu-settings.png"
+                hover "megan_ui/gui-gamemenu-select.png"
+                action [ Play("sound", uisound()), ShowMenu("custom_title_main_settings") ]
+            add "megan_ui/gui-gamemenu-settings.png"
+        fixed ypos 400:
+            imagebutton:
+                idle "megan_ui/gui-gamemenu-mainmenu.png"
+                hover "megan_ui/gui-gamemenu-select.png"
+                action [ Play("sound", uisound()), MainMenu() ]
+            add "megan_ui/gui-gamemenu-mainmenu.png"
 
 screen in_game_menu_button():
     zorder 2
@@ -821,79 +833,94 @@ screen custom_title_main_settings():
                     style "mute_all_button"
                     xalign 0.3
 
+            if config.has_music or config.has_sound or config.has_voice:
+                null height gui.pref_spacing
+
+                textbutton _("Subtitles"):
+                    action ToggleVariable("persistent.subtitle")
+                    style "mute_all_button"
+                    xalign 0.65
+
         hbox:
             ypos 120
             xpos 30
             box_wrap True
+            style_prefix "slider"
 
-            hbox:
-                style_prefix "slider"
-                box_wrap True
+            vbox:
+                spacing -5
 
-                vbox:
+                text "Text Speed":
+                    font "BebasNeue-Regular.otf"
+                    size 40
+                    color "#36428A"
+                    outlines []
 
-                    text "Text Speed":
+                bar value Preference("text speed"):
+                    xalign 1.5 yoffset -65
+
+                text "Autoplay Speed":
+                    font "BebasNeue-Regular.otf"
+                    size 40
+                    color "#36428A"
+                    outlines []
+
+                bar value Preference("auto-forward time"):
+                    xalign 1.5 yoffset -65
+
+                if config.has_music:
+
+                    text "Music Volume":
                         font "BebasNeue-Regular.otf"
                         size 40
                         color "#36428A"
                         outlines []
 
-                    bar value Preference("text speed"):
+                    bar value Preference("music volume"):
                         xalign 1.5 yoffset -65
 
-                    text "Autoplay Speed":
+                if config.has_sound:
+                    text "Sound Volume":
                         font "BebasNeue-Regular.otf"
                         size 40
                         color "#36428A"
                         outlines []
 
-                    bar value Preference("auto-forward time"):
+                    bar value Preference("sound volume"):
                         xalign 1.5 yoffset -65
 
-                vbox:
-
-                    if config.has_music:
-
-                        text "Music Volume":
-                            font "BebasNeue-Regular.otf"
-                            size 40
-                            color "#36428A"
-                            outlines []
-
-                        bar value Preference("music volume"):
-                            xalign 1.5 yoffset -65
-
-                    if config.has_sound:
-                        text "Sound Volume":
-                            font "BebasNeue-Regular.otf"
-                            size 40
-                            color "#36428A"
-                            outlines []
-
-                        bar value Preference("sound volume"):
-                            xalign 1.5 yoffset -65
-
-                        if config.sample_sound:
-                            textbutton _("Test") action Play("sound", config.sample_sound)
+                    if config.sample_sound:
+                        textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                    if config.has_voice:
-                        text "Voice Volume":
-                            font "BebasNeue-Regular.otf"
-                            size 40
-                            color "#36428A"
-                            outlines []
+                if config.has_voice:
+                    text "Voice Volume":
+                        font "BebasNeue-Regular.otf"
+                        size 40
+                        color "#36428A"
+                        outlines []
 
-                        bar value Preference("voice volume"):
-                            xalign 1.5 yoffset -65
+                    bar value Preference("voice volume"):
+                        xalign 1.5 yoffset -65
 
-                        if config.sample_voice:
-                            textbutton _("Test") action Play("voice", config.sample_voice)
+                    if config.sample_voice:
+                        textbutton _("Test") action Play("voice", config.sample_voice)
 
         hbox:
-            ypos 670
+            ypos 640
             xpos 30
             box_wrap True
+
+            vbox:
+                style_prefix "check"
+                text "Skip":
+                    font "BebasNeue-Regular.otf"
+                    size 50
+                    color "#36428A"
+                    outlines []
+                textbutton _("Unseen Text") action [ Play("sound", uisound()), Preference("skip", "toggle") ]
+                textbutton _("After Choices") action [ Play("sound", uisound()), Preference("after choices", "toggle") ]
+                textbutton _("Transitions") action [ Play("sound", uisound()), InvertSelected(Preference("transitions", "toggle")) ]
 
             if renpy.variant("pc"):
 
@@ -908,16 +935,19 @@ screen custom_title_main_settings():
 
                     textbutton _("Fullscreen") action [ Play("sound", uisound()), Preference("display", "fullscreen") ]
 
-            vbox:
-                style_prefix "check"
-                text "Skip":
-                    font "BebasNeue-Regular.otf"
-                    size 50
-                    color "#36428A"
-                    outlines []
-                textbutton _("Unseen Text") action [ Play("sound", uisound()), Preference("skip", "toggle") ]
-                textbutton _("After Choices") action [ Play("sound", uisound()), Preference("after choices", "toggle") ]
-                textbutton _("Transitions") action [ Play("sound", uisound()), InvertSelected(Preference("transitions", "toggle")) ]
+        fixed pos (650, 910):
+            imagebutton offset (-40, -5):
+                idle "megan_ui/gui-back-idle.png"
+                hover "megan_ui/gui-back-select.png"
+                if in_main_menu:
+                    action [ Play("sound", uisound()), Show("custom_title_left2center"), Hide("custom_title_main") ]
+                else:
+                    action [ Play("sound", uisound()), Return() ]
+            text "Back":
+                font "BebasNeue-Regular.otf"
+                size 60
+                color "#36428A"
+                outlines []
 
 screen custom_title_extras_gallery():
     tag custom_title_extras
