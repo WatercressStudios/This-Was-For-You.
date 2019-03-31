@@ -31,7 +31,7 @@ label intro:
     scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve
-    #Fan whirl ambience
+
     play sound "sfx/Fan.ogg" fadein 4.0 loop
     play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 3.0 fadeout 3.0
     play music "music/RW_Intro.ogg" fadein 3.0 fadeout 3.0

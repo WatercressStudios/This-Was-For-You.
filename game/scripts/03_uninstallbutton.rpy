@@ -9,7 +9,12 @@ label uninstallbutton:
     #sfx "vr_uninstall_click" "click!"
 
     play music "Music/Uninstall_Button.ogg" fadein 3.0
-    play sound "sfx/button.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
 
     "..."
@@ -22,8 +27,11 @@ label uninstallbutton:
 
     "So why am I {b}finally{/b} pushing it?"
 
-    #sfx "vr_uninstall_click" "click!"
-    play sound "sfx/button.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
     "..."
 
@@ -55,15 +63,24 @@ label uninstallbutton:
 
     "..."
 
-    #sfx "vr_uninstall_click" "click!"
-    play sound "sfx/button.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
+
     "I push the button again."
 
     "Yeah."
 
     "Still nothing."
-    play sound "sfx/run.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/run.ogg" "*Running*"
+    else:
+        sfx "sfx/run.ogg"
+
     show che f happy:
         zoom 2 xpos 0.1
 
@@ -75,8 +92,6 @@ label uninstallbutton:
     che "Maybe the buttons is broken, nya~!"
 
     mc "Ack!"
-
-    # ches zooms back out to normal distance
 
     show che f happy:
         linear 0.2 zoom 1 xpos 0.3 ypos 0.05
@@ -121,20 +136,52 @@ label uninstallbutton:
     voice "03-uninstallbutton-4.ogg" #Cheshire (shiena)
     che "But Master is having trouble, so CH35H1R3 came to help, meow!"
 
-    #sfx "vr_uninstall_click" "click!"
-    play sound "sfx/button.ogg"
+    hide che
+    show items uninstallbutton
+    with dissolve
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
+
     "I try to ignore it."
 
-    #sfx "vr_uninstall_click" "click!"
-    #sfx "vr_uninstall_click" "click!"
-    #sfx "vr_uninstall_click" "click!"
-    play sound "sfx/button.ogg"
+    pause 0.1
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
-    play sound "sfx/button.ogg"
+
+    pause 0.5
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
-    play sound "sfx/button.ogg"
+
+    pause 0.5
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
+
+    pause 0.5
+
+    hide items uninstallbutton
+    show che s:
+        xpos 0.35 ypos 0.05
+    with dissolve
 
     voice "03-uninstallbutton-5.ogg" #Cheshire (shiena)
     che "Meow-be Master needs to connect the button to a function~"
@@ -187,9 +234,13 @@ label uninstallbutton:
 
     "For years, we kept up with that tradition, until..."
 
-    #sfx "vr_uninstall_click" "click!"
-    play sound "sfx/button.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/button.ogg" "*Click*"
+    else:
+        sfx "sfx/button.ogg"
+
     play sound "sfx/ping 6.ogg"
+
     "..."
 
     play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
