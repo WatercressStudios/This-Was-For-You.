@@ -294,7 +294,7 @@ screen in_game_menu_content():
         fixed ypos 400:
             imagebutton:
                 idle "megan_ui/gui-gamemenu-mainmenu.png"
-                hover "megan_ui/gui-gamemenu-select.png"
+                hover "megan_ui/gui-extrasmenu-mainmenu-select.png"
                 action [ Play("sound", uisound()), MainMenu() ]
             add "megan_ui/gui-gamemenu-mainmenu.png"
 
