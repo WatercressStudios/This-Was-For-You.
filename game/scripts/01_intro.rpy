@@ -88,7 +88,10 @@ label intro:
     scene bg bedroombg
     call openeyes from _call_openeyes_4
 
-    play sound "sfx/bed.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/bed.ogg" "*Rustle*"
+    else:
+        sfx "sfx/bed.ogg"
 
     "Pushing my thin blanket aside, I prop myself up to a sitting position."
 
@@ -100,7 +103,12 @@ label intro:
         linear 0.2 zoom 1.1 yalign 0.1
 
     pause 0.5
-    play sound "sfx/Bed_Rustle.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Bed_Rustle.ogg" "*Thud*"
+    else:
+        sfx "sfx/Bed_Rustle.ogg"
+
     show bg bedroombg with hpunch:
         linear 0.2 zoom 1.05 yalign 0.8
 
