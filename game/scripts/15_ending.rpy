@@ -2,6 +2,24 @@
 # Ending
 #
 
+screen custom_final_choice():
+    fixed at fade_inout:
+        fixed pos (240, 140):
+            imagebutton:
+                idle "megan_ui/gui-finalchoice-delete.png"
+                hover "megan_ui/gui-finalchoice-delete-select.png"
+                selected_idle "megan_ui/gui-finalchoice-delete-clicked.png"
+                selected_hover "megan_ui/gui-finalchoice-delete-clicked.png"
+                action [ Play("sound", uisound()), Jump("ending_delete") ]
+        fixed pos (960, 140):
+            imagebutton:
+                idle "megan_ui/gui-finalchoice-keep.png"
+                hover "megan_ui/gui-finalchoice-keep-select.png"
+                selected_idle "megan_ui/gui-finalchoice-keep-clicked.png"
+                selected_hover "megan_ui/gui-finalchoice-keep-clicked.png"
+                action [ Play("sound", uisound()), Jump("ending_keep") ]
+
+
 label ending:
     $ save_name = "I Miss You."
     scene black
@@ -52,16 +70,31 @@ label ending:
 
     stop ambient
 
-    menu:
-        "How do I let go?"
+    "How do I let go?"
+    call screen custom_final_choice
 
-        "Delete Ji-min's voicemail":
-            $ jivoicemail = True
+    # menu:
+    #     "How do I let go?"
+    #
+    #     "Delete Ji-min's voicemail":
+    #         $ jivoicemail = True
+    #
+    #     "Keep Ji-min's voicemail":
+    #         $ jivoicemail = False
 
-        "Keep Ji-min's voicemail":
-            $ jivoicemail = False
 
+label ending_delete:
+    $ jivoicemail = False
+    jump ending_merge
+
+label ending_keep:
+    $ jivoicemail = True
+    jump ending_merge
+
+label ending_merge:
     stop music
-
+    scene black with Dissolve(0.2)
+    pause 0.3
+    "Do credits. Replay voicemail: [jivoicemail]"
     #roll credits
     #end game
