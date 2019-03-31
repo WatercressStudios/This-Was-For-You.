@@ -68,7 +68,7 @@ label ending:
 
     "Someone, please tell me…"
 
-    stop ambient
+    stop ambient fadeout 1.0
 
     "How do I let go?"
     call screen custom_final_choice
@@ -92,7 +92,7 @@ label ending_keep:
     jump ending_merge
 
 label ending_merge:
-    stop music
+    stop music fadeout 5.0
     scene black with Dissolve(0.2)
     pause 0.3
     "Do credits. Replay voicemail: [jivoicemail]"

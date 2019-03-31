@@ -22,11 +22,11 @@ label rw4:
     hide vrpoweroutageeffect
     hide black with dissolve
 
-    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 1.0 fadeout 2.0
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0
     play sound "sfx/Thunder_2.ogg"
     "What? What happened?"
 
-    play music "music/RW_S4.ogg" fadein 3.0 fadeout 3.0
+    play music "music/RW_S4.ogg" fadein 3.0
 
     # sfx of a thunder, followed by a BG change to the window and sfx of MC sitting up on bed. it's also super dark out there.
 
@@ -50,7 +50,7 @@ label rw4:
     show bg bedroombg normal lit open bright -lightning
     with dissolve
 
-    play music "Music/RW_S4.ogg" fadein 3.0 fadeout 2.0
+
 
     "...a blackout?"
 
@@ -242,8 +242,12 @@ label rw4_continue:
     "Just… one more time."
 
     # MC goes back to bed and opens VR scene. Have MC walk around in VR silently a few times first, revisiting all the BGs, before going into Julia's scene.
-    stop music
-    stop ambient
-    play sound "sfx/VR-on.ogg"
+
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
+    stop ambient fadeout 1.0
     call screen in_game_entervr
+
+    stop music fadeout 3.0
+
     jump planeticket
+    play sound "sfx/VR-on.ogg"

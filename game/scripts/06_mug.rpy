@@ -10,9 +10,8 @@ label mug:
     show items awoomug
     #This scene won't totally be emotionally charged cause Instant drew the original mug no
 
-    play ambient "sfx/fire.ogg" fadein 3.0 fadeout 2.0
-    play sound "sfx/Awoo_start.ogg"
-    play music [ "<silence 3.5>", "Music/Awoo_Mug.ogg" ] fadein 1.0 fadeout 3.0
+    play ambient "sfx/fire.ogg" fadein 3.0
+    play music "Music/Awoo_Mug.ogg" fadein 3.0
 
     "Grabbing the mug, I'm brought back to the night we first gathered around the fire."
 
@@ -109,8 +108,8 @@ label mug:
 
     "I know this."
 
-    stop ambient
-    play ambient "sfx/fire.ogg" fadein 2.0 fadeout 3.0
+    stop ambient fadeout 2.0
+    play ambient "sfx/fire.ogg" fadein 2.0
 
     show kerosene with dissolve:
         alpha 0.7
@@ -174,9 +173,14 @@ label mug:
     "Is it better if it lives on through someone else?"
 
     "Or should it have died with you?"
-    play sound "sfx/VR-Off.ogg"
-    stop ambient
-    stop music
+
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
+
+
+
     if visited < 3:
         call screen in_game_exitvr
+        stop ambient fadeout 1.0
+        stop music fadeout 1.0
+        play sound "sfx/VR-Off.ogg"
     jump itemmerge

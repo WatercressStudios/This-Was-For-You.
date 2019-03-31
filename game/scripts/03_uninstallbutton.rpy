@@ -8,7 +8,7 @@ label uninstallbutton:
     # sfx of plastic button pressed *click*!
     #sfx "vr_uninstall_click" "click!"
 
-    play music "Music/Uninstall_Button.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Uninstall_Button.ogg" fadein 3.0
     play sound "sfx/button.ogg"
     play sound "sfx/ping 6.ogg"
 
@@ -63,14 +63,14 @@ label uninstallbutton:
     "Yeah."
 
     "Still nothing."
-
+    play sound "sfx/run.ogg"
     show che f happy:
         zoom 2 xpos 0.1
 
     hide items
 
     # play comical sfx of someone turning up unexpectedly
-    play sound "sfx/run.ogg"
+
     voice "03-uninstallbutton-1.ogg" #Cheshire (shiena)
     che "Maybe the buttons is broken, nya~!"
 
@@ -192,11 +192,15 @@ label uninstallbutton:
     play sound "sfx/ping 6.ogg"
     "..."
 
-    stop ambient
-    stop music
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
+
 
     # Ding! Voicemail from work arrived. MC logs out into the real world
 
     call screen in_game_exitvr
+    play sound "sfx/VR-Off.ogg"
+    stop ambient fadeout 1.0
+    stop music fadeout 1.0
+
 
     jump rw1

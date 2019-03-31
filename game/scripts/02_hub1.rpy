@@ -8,7 +8,7 @@ label hub1:
     show screen chapter_announce
 
     play ambient "sfx/Hub_Beach.ogg" fadein 3.0 fadeout 3.0
-    play music "Music/Hub.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Hub.ogg" fadein 3.0
 
     "The familiar scent of an ocean breeze hits my nose first."
 
@@ -35,7 +35,7 @@ label hub1:
     "Staring at what used to be."
 
     "Staring at-"
-
+    play sound "sfx/run.ogg"
     show che s catmouth armsnyan at center, height with easeinright
 
     #Cheshire slides onto screen with a happy expression
@@ -236,5 +236,5 @@ label hub1:
     "Might as well make the most of this peace."
 
     show items uninstallbutton with dissolve
-    stop music
+    stop music fadeout 1.0
     jump uninstallbutton

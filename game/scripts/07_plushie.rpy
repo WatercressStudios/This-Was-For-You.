@@ -9,7 +9,7 @@ label plushie:
     show catfieldbg
     show items catplushie
 
-    play music "Music/Cat.ogg" fadein 3.0 fadeout 3.0
+    play music "Music/Cat.ogg" fadein 3.0
 
     "I made this for you."
 
@@ -82,10 +82,10 @@ label plushie:
     "I wish that were the case now."
 
     hide catfieldbg with dissolve
-
+    play ambient "sfx/Hub_beach.ogg" fadein 3.0 fadeout 3.0
     voice "07-plushie-1.ogg" #Cheshire (shiena)
     che "Ooh. What's this?"
-    play ambient "sfx/Hub_beach.ogg" fadein 3.0 fadeout 3.0
+
 
     show che s at centerleft, height:
         xzoom -1
@@ -188,9 +188,11 @@ label plushie:
     "But nothing is worth your life."
 
     #MC logs out of VR
-    play sound "sfx/VR-Off.ogg"
-    stop music
-    stop ambient
+
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
     if visited < 3:
         call screen in_game_exitvr
+        stop ambient fadeout 1.0
+        stop music fadeout 1.0
+        play sound "sfx/VR-Off.ogg"
     jump itemmerge

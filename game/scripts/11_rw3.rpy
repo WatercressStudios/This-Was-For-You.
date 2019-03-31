@@ -28,8 +28,9 @@ label rw3:
     show ceilingfan
     with dissolve
 
-    play music "music/RW_S3.ogg" fadein 3.0 fadeout 3.0
-    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
+    play music "music/RW_S3.ogg" fadein 3.0
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 3.0
+    play sound "sfx/Fan.ogg" fadein 5.0 loop
 
     "I can almost feel it, you know?"
 
@@ -96,6 +97,8 @@ label rw3:
     show bg bedroombg open
     with dissolve
 
+    stop sound fadeout 2.0
+
     "I'm taken back to my room, suddenly feeling very cold and {b}very{/b} alone in the darkness."
 
     "A sliver of moonlight shines through a slit in the curtains onto my desk - or is that sunlight?"
@@ -126,9 +129,12 @@ label rw3:
     #yes
     #end scene
 
-    stop music
-    stop ambient
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
+
+    call screen in_game_entervr
+    stop music fadeout 1.0
+    stop ambient fadeout 1.0
+
+    jump hub4
 
     play sound "sfx/VR-on.ogg"
-    call screen in_game_entervr
-    jump hub4
