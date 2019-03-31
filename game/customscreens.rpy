@@ -637,6 +637,9 @@ screen custom_title_center():
     fixed:
         add "sunsettitle"
 
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
+
     fixed pos (770, 510):
         fixed at main_menu_center:
             use custom_mainmenu_buttons_center
@@ -645,6 +648,9 @@ screen custom_title_center2left():
     tag custom_title
     fixed:
         add "sunsettitle"
+
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
 
     fixed pos (770, 510):
         fixed at main_menu_center2left:
@@ -655,6 +661,9 @@ screen custom_title_center2right():
     fixed:
         add "sunsettitle"
 
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
+
     fixed pos (770, 600):
         fixed at main_menu_center2right:
             use custom_mainmenu_buttons_right
@@ -663,6 +672,9 @@ screen custom_title_right2center():
     tag custom_title
     fixed:
         add "sunsettitle"
+
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
 
     fixed pos (770, 510):
         fixed at main_menu_right2center:
@@ -673,6 +685,9 @@ screen custom_title_left2center():
     fixed:
         add "sunsettitle"
 
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
+
     fixed pos (770, 510):
         fixed at main_menu_left2center:
             use custom_mainmenu_buttons_center
@@ -681,6 +696,9 @@ screen custom_title_left2right():
     tag custom_title
     fixed:
         add "sunsettitle"
+
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
 
     fixed pos (770, 600):
         fixed at main_menu_left2right:
