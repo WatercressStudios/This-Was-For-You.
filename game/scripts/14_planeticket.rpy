@@ -78,8 +78,8 @@ label planeticket:
     pause 0.5
 
     #all music/sfx/everything stops here.
-    stop music fadeout 1.0
-    stop ambient fadeout 1.0
+    stop music fadeout 0.2
+    stop ambient fadeout 0.2
 
     "My heart stops."
 
@@ -196,6 +196,11 @@ label planeticket:
         alpha 0.1
         linear 0.6 alpha 0.95
 
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/VR_Button.ogg" "*Out Of Bounds*"
+    else:
+        sfx "sfx/VR_Button.ogg"
+
     "I step back, collapsing against my bed behind me, the VR headset angrily alerting me that I'm out of bounds."
 
     "My tears pool in the headset, and I'm forced to run my fingers underneath the padding, letting them run."
@@ -256,7 +261,9 @@ label planeticket:
 
     "We'd be enjoying ourselves in a cafe in Seoul."
 
-    "You'd have met me at the gate, and we'd enjoy a short drive home. Even with a little jetlag, I'd be itching to do something with you."
+    "You'd have met me at the gate, and we'd enjoy a short drive home."
+
+    "Even with a little jetlag, I'd be itching to do something with you."
 
     "We'd, I dunno, go to a restaurant? Maybe eat some sushi?"
 
@@ -268,7 +275,9 @@ label planeticket:
 
     "Too good for this world. You were always too good for this world."
 
-    "From there, we'd go downtown to get some shopping in. I'd buy some touristy shit, and you'd show me what I should and shouldn't buy."
+    "From there, we'd go downtown to get some shopping in."
+
+    "I'd buy some touristy shit, and you'd show me what I should and shouldn't buy."
 
     "We would enjoy the nightlife together, the busyness of the city, and go home."
 
