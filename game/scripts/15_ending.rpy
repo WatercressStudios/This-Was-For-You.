@@ -50,7 +50,7 @@ label ending:
 
     "Someone, please tell me…"
 
-    stop ambient
+    stop ambient fadeout 1.0
 
     menu:
         "How do I let go?"
@@ -61,7 +61,7 @@ label ending:
         "Keep Ji-min's voicemail":
             $ jivoicemail = False
 
-    stop music
+    stop music fadeout 5.0
 
     #roll credits
     #end game

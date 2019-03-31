@@ -36,7 +36,8 @@ label rw2:
     pause 0.5
 
     play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
-    play music "music/RW_S2.ogg" fadein 2.0 fadeout 3.0
+    play sound "sfx/Fan.ogg" fadein 2.0 loop
+    play music "music/RW_S2.ogg" fadein 2.0
     scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve
@@ -109,9 +110,12 @@ label rw2:
 
     pause 0.5
 
-    stop ambient
+    stop ambient fadeout 1.0
     #get city sounds no rain
+    play ambient "sfx/City_Noise.ogg" fadein 2.0 fadeout 3.0
     show bg bedroombg nocurtains with dissolve
+
+
 
     # bg to the zoomed in window without the curtains
     # sfx of more city sounds than fan sounds
@@ -148,7 +152,10 @@ label rw2:
     # close curtains and zoom out. sfx of MC getting on bed
     # fan bg, and pause for a second
 
+    stop ambient fadeout 1.0
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 1.0 fadeout 3.0
     play sound "sfx/bed.ogg"
+    play sound "sfx/Fan.ogg" fadein 1.0 loop fadeout 3.0
 
     show bg bedroombg closed with dissolve
 
@@ -178,12 +185,17 @@ label rw2:
     scene bg ceiling ceiling empty
     show ceilingfan
     call openeyes from _call_openeyes
-
+    stop sound fadeout 2.0
     "I can't do this. Not today."
 
-    stop music
-    stop ambient
+
 
     # Show into VR button
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
     call screen in_game_entervr
+    stop music fadeout 1.0
+    stop ambient fadeout 1.0
+
+
     jump hub3
+    play sound "sfx/VR-On.ogg"

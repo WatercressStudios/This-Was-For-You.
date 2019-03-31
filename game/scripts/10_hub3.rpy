@@ -7,8 +7,9 @@ label hub3:
     scene bg hub hub
     pause 1
     show screen chapter_announce
-    play ambient "sfx/Hub_Beach_2.ogg" fadein 3.0 fadeout 3.0
-    play music "Music/Hub.ogg" fadein 3.0 fadeout 3.0
+
+    play ambient "sfx/Hub_Beach_2.ogg" fadein 3.0
+    play music "Music/Hub.ogg" fadein 3.0
 
     # sfx of beach louder than usual, to provide contrast with the previous droning sound
     "..."
@@ -89,7 +90,7 @@ label hub3:
     "Damn you."
 
     "Forcing those thoughts away, I look at the items in front of me, and all of the memories that they share."
-    stop ambient
-    stop music
+    stop ambient fadeout 2.0
     #Imagemap
     call screen hubselect
+    stop music fadeout 1.0

@@ -23,8 +23,8 @@ label rw1:
 
     pause 0.5
 
-    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0 fadeout 2.0
-    play music "Music/RW_S1.ogg" fadeout 3.0
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0
+    play music "Music/RW_S1.ogg"
 
     scene bg ceiling ceiling empty
     show ceilingfanstatic:
@@ -88,11 +88,11 @@ label rw1:
         xalign 0.9 yalign 0.2
 
     pause 0.5
-
+    play sound [ "<silence 3>", "sfx/thunder_2.ogg" ]
     show bg bedroombg nocurtains with dissolve
 
-    play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 2.0
-    play sound [ "<silence 3>", "sfx/thunder_2.ogg" ]
+    play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 2.0 fadeout 1.0
+
 
     "You liked the rain."
 
@@ -108,7 +108,7 @@ label rw1:
 
     show bg bedroombg closed with dissolve
 
-    play ambient "<from 60>sfx/Ambience_1_(Rain).ogg" fadeout 2.0
+    play ambient "<from 60>sfx/Ambience_1_(Rain).ogg" fadein 1.0 fadeout 2.0
 
     "Ugh. I'm done with rain."
 
@@ -122,10 +122,13 @@ label rw1:
 
     "No. I'm going back home."
 
-    stop ambient
-    stop music
-
-    play sound "sfx/VR-on.ogg"
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
     #Enter VR
     call screen in_game_entervr
+
+    stop ambient fadeout 1.0
+    stop music fadeout 1.0
+
     jump hub2
+
+    play sound "sfx/VR-on.ogg"

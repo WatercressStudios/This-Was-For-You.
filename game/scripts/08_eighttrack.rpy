@@ -8,6 +8,8 @@ label eighttrack:
     show screen chapter_announce
     show woodtrail1 with dissolve
     show items 8track
+    stop music
+    play ambient "sfx/8_Track_Ambient.ogg" fadein 3.0
     #MC selects the eight track
 
     # fade the bg music out
@@ -16,6 +18,7 @@ label eighttrack:
     hide items 8track with dissolve
 
     # sound of cassette tape being inserted in cassette player
+    play sound "sfx/cassette.ogg"
     "I slide the cassette into the player and push it close with a satisfying 'click'."
 
     "However, I hesitate over the 'play' button."
@@ -30,7 +33,9 @@ label eighttrack:
     "I push the 'play' button anyway."
 
     play sound "sfx/Button.ogg"
-    play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ]
+    play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ] fadeout 3.0
+    play music [ "<silence 4>", "Music/8_Track.ogg" ] fadein 2.0
+
 
     # song of that Ji-min composed plays, but it's missing the vocal tracks
     # after about 10 seconds of listening to the song
@@ -80,6 +85,8 @@ label eighttrack:
         linear 0.6 xpos 0.5
         repeat
     hide woodtrail1 with dissolve
+    stop ambient fadeout 1.0
+    play ambient "sfx/Beach_Item_Ambient.ogg" fadein 2.0
 
     # ches is singing to the song…. ish. It's not actually in tune or even follows the beat or the song.
     voice "08-eighttrack-1.ogg" #Cheshire (shiena)
@@ -138,12 +145,12 @@ label eighttrack:
 
     "And now I can never fulfill that promise…"
 
-    play sound "sfx/Cassette_Down.ogg"
-    play sound "sfx/VR-Off.ogg"
 
+    stop ambient fadeout 2.0
     # back to VR world
-
+    play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
     if visited < 3:
         call screen in_game_exitvr
-
+        play sound "sfx/VR-Off.ogg"
+        stop music fadeout 1.0
     jump itemmerge
