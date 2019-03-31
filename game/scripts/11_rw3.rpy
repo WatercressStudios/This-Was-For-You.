@@ -136,5 +136,3 @@ label rw3:
     stop ambient fadeout 1.0
 
     jump hub4
-
-    play sound "sfx/VR-on.ogg"

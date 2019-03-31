@@ -196,7 +196,6 @@ label intro:
     play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
 
     call screen in_game_entervr
-    play sound "sfx/VR-on.ogg"
     stop ambient fadeout 1.0
     stop music fadeout 1.0
 

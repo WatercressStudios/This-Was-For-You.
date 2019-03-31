@@ -250,4 +250,3 @@ label rw4_continue:
     stop music fadeout 3.0
 
     jump planeticket
-    play sound "sfx/VR-on.ogg"

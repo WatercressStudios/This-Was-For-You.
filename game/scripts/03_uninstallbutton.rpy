@@ -198,7 +198,6 @@ label uninstallbutton:
     # Ding! Voicemail from work arrived. MC logs out into the real world
 
     call screen in_game_exitvr
-    play sound "sfx/VR-Off.ogg"
     stop ambient fadeout 1.0
     stop music fadeout 1.0
 

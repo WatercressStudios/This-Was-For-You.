@@ -182,5 +182,4 @@ label mug:
         call screen in_game_exitvr
         stop ambient fadeout 1.0
         stop music fadeout 1.0
-        play sound "sfx/VR-Off.ogg"
     jump itemmerge

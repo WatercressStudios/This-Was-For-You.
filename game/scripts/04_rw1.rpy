@@ -130,5 +130,3 @@ label rw1:
     stop music fadeout 1.0
 
     jump hub2
-
-    play sound "sfx/VR-on.ogg"

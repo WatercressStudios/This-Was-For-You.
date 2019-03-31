@@ -198,4 +198,3 @@ label rw2:
 
 
     jump hub3
-    play sound "sfx/VR-On.ogg"

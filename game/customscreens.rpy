@@ -63,13 +63,13 @@ init python:
 
     def uisoundin():
         clips = [
-            "sfx/Ping 3.ogg",
+            "sfx/Swipe_1.ogg",
         ]
         return random.choice(clips)
 
     def uisoundout():
         clips = [
-            "sfx/Ping 4.ogg",
+            "sfx/Swipe_2.ogg",
         ]
         return random.choice(clips)
 
@@ -318,6 +318,7 @@ screen in_game_entervr():
     button xpos 1790:
         add "vr_buttons"
         action [
+            Play("sound", "sfx/VR-On.ogg"),
             Hide("in_game_entervr"),
             Show("in_game_entervr_showing")
         ]
@@ -337,6 +338,7 @@ screen in_game_exitvr():
     button xpos -1930:
         add "realworld_buttons"
         action [
+            Play("sound", "sfx/VR-Off.ogg"),
             Hide("in_game_exitvr"),
             Show("in_game_exitvr_showing")
         ]
@@ -413,7 +415,7 @@ init python:
         global mc_name
 
         if mc_name != "":
-            renpy.play("sfx/Ping 5.ogg", "sound")
+            renpy.play("sfx/Scanner.ogg", "sound")
             renpy.hide_screen("startgame_login")
             renpy.show_screen("thumbprint_scanning")
             renpy.show_screen("thumbprint_line")

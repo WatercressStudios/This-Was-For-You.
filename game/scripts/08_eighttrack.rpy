@@ -151,6 +151,5 @@ label eighttrack:
     play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
     if visited < 3:
         call screen in_game_exitvr
-        play sound "sfx/VR-Off.ogg"
         stop music fadeout 1.0
     jump itemmerge

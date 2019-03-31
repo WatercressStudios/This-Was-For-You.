@@ -111,18 +111,28 @@ label start:
     $ _game_menu_screen = None
     $ visible_emails = ["intro"]
     $ read_emails = []
-    menu:
-        "Start game":
-            $ persistent.subtitle = False
-            $ visited8track = False
-            $ visitedplushie = False
-            $ visitedmug = False
-            $ visited = 0
-            $ relogin = False
-            show screen in_game_menu
-            call screen startgame_login
-        "Test":
-            jump test
+
+    $ persistent.subtitle = False
+    $ visited8track = False
+    $ visitedplushie = False
+    $ visitedmug = False
+    $ visited = 0
+    $ relogin = False
+    show screen in_game_menu
+    call screen startgame_login
+
+    # menu:
+    #     "Start game":
+    #         $ persistent.subtitle = False
+    #         $ visited8track = False
+    #         $ visitedplushie = False
+    #         $ visitedmug = False
+    #         $ visited = 0
+    #         $ relogin = False
+    #         show screen in_game_menu
+    #         call screen startgame_login
+    #     "Test":
+    #         jump test
 
 label start2:
     jump intro
