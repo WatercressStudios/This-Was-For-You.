@@ -224,7 +224,9 @@ label planeticket:
 
     "\"We're taking off, I have to turn off my phone! See you soon!!!\"" #Mirror the voicemail when inputting the last sentence here
 
-    "I waited at the gate for hours. Your flight was delayed, and I figured that was normal. Of course the flight was delayed - probably some weather issues in the Pacific, right?"
+    "I waited at the gate for hours. Your flight was delayed, and I figured that was normal."
+
+    "Of course the flight was delayed - probably some weather issues in the Pacific, right?"
 
     "But minutes turned to hours, and your plane never landed."
 
@@ -250,7 +252,9 @@ label planeticket:
 
     "It never should have been you."
 
-    "If I would have just made the commitment, if I would have been the one to fly over, we'd both be alive. We'd be enjoying ourselves in a cafe in Seoul."
+    "If I would have just made the commitment, if I would have been the one to fly over, we'd both be alive."
+
+    "We'd be enjoying ourselves in a cafe in Seoul."
 
     "You'd have met me at the gate, and we'd enjoy a short drive home. Even with a little jetlag, I'd be itching to do something with you."
 
@@ -280,7 +284,9 @@ label planeticket:
 
     "Maybe you'd ask me what I thought of your home so far, and I'd tell you how truthfully awesome it all is."
 
-    "We'd talk about the first day we met, and how we never could have imagined that this day would come. The day that we'd see each other in person."
+    "We'd talk about the first day we met, and how we never could have imagined that this day would come."
+
+    "The day that we'd see each other in person."
 
     "That's how strong our bond was. That's how strong our friendship was."
 

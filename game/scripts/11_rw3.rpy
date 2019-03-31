@@ -63,9 +63,13 @@ label rw3:
 
     "We would have sat in that booth from sunup to sundown, chatting and chatting. Like I said, about anything at all."
 
-    "It would have been wonderful to get out of that damned VR world; honestly, I used to dream of the day we'd meet in person and enjoy something ‘real’ for once."
+    "It would have been wonderful to get out of that damned VR world."
 
-    "That place - the experiences I made - I don't think I ever really appreciated them. I was a bit cynical, paying too much heed to what's real and what's not…"
+    "Honestly, I used to dream of the day we'd meet in person and enjoy something ‘real’ for once."
+
+    "That place - the experiences I made - I don't think I ever really appreciated them."
+
+    "I was a bit cynical, paying too much heed to what's real and what's not…"
 
     "But I loved it all the same."
 
@@ -73,7 +77,9 @@ label rw3:
     show ceilingfan
     call openeyes from _call_openeyes_2
 
-    "Now I can't even tell what day of the week it is. Everything's the same shade of grey, the days growing into an amorphous blob of incongruity."
+    "Now I can't even tell what day of the week it is."
+
+    "Everything's the same shade of grey, the days growing into an amorphous blob of incongruity."
 
     "Is it 5 AM or 5 PM? Dawn or dusk? Day or night? I can't tell."
 

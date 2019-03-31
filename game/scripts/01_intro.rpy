@@ -189,10 +189,6 @@ label intro:
 
     "That's all I need."
 
-
-
-    #Sagi remember to do a timed hide
-
     play sound [ "<silence .5>", "sfx/VR_Button.ogg" ]
 
     call screen in_game_entervr

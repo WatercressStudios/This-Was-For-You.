@@ -19,13 +19,17 @@ label mug:
 
     "I used to say, isn't fire hard on system resources? It was so lifelike, it must've taken ages to design, right?"
 
-    "...I remember when we first video called. You sat next to your real fireplace, drinking from this very real mug. Homemade cocoa, your own special blend."
+    "...I remember when we first video called."
+
+    "You sat next to your real fireplace, drinking from this very real mug. Homemade cocoa, your own special blend."
 
     "You talked about how you'd eventually make it for me."
 
     "\"You will absolutely loooove this recipe! I know the foofy fancy drinks you have at the cafe, this is right down your alley!\""
 
-    "I had a mug of my own as well, of course. The first one wasn't anything special, but once you bought me a matching pair, it felt like our connection was so much more real."
+    "I had a mug of my own as well, of course."
+
+    "The first one wasn't anything special, but once you bought me a matching pair, it felt like our connection was so much more real."
 
     "I felt justified. It didn't matter if you were a friend over the internet, you were still a friend."
 
@@ -146,7 +150,9 @@ label mug:
 
     "Was I doing the right thing?"
 
-    "Cynicism and idealism gave way to optimistic nihilism. Was I right to do that? Or was I destroying one of the last truly innocent, truly good things in the world?"
+    "Cynicism and idealism gave way to optimistic nihilism. Was I right to do that?"
+
+    "Or was I destroying one of the last truly innocent, truly good things in the world?"
 
     "It doesn't matter anymore. I just wish I would have told you the truth."
 
@@ -156,7 +162,9 @@ label mug:
 
     "The kind words you gave me… I will never forget them. Ever."
 
-    "You were always there for me, and I should have appreciated that more. I should have told you how much you meant - how much you mean to me."
+    "You were always there for me, and I should have appreciated that more."
+
+    "I should have told you how much you meant - how much you mean to me."
 
     "I'll never be able to do that now. All I have are a life full of regrets and this damned mug."
 
