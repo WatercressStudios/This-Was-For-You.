@@ -24,6 +24,11 @@ label rw3:
 
     pause 0.5
 
+    $ visible_emails.append('family')
+    $ visible_emails.append('friend4')
+    $ visible_emails.append('friend5')
+    show screen notify("You have unread emails.")
+
     scene bg ceiling ceiling empty
     show ceilingfan
     with dissolve

@@ -35,6 +35,11 @@ label rw2:
 
     pause 0.5
 
+    $ visible_emails.append('friend3')
+    $ visible_emails.append('spam2')
+    $ visible_emails.append('colleague')
+    show screen notify("You have unread emails.")
+
     play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
     play sound "sfx/Fan.ogg" fadein 2.0 loop
     play music "music/RW_S2.ogg" fadein 2.0

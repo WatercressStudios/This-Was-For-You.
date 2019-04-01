@@ -116,6 +116,11 @@ label rw4_continue:
 
     pause 0.5
 
+    $ visible_emails.append('spam3')
+    $ visible_emails.append('boss2')
+    $ visible_emails.append('funeral2')
+    show screen notify("You have unread emails.")
+
     play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 1.0 fadeout 1.0
 
     scene bg bedroombg nocurtains rain:
