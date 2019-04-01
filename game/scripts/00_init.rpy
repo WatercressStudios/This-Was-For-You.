@@ -163,10 +163,10 @@ label test:
     scene sunsettitle
     voice "voice/00-test-5.ogg" #Cheshire (shiena)
     che "sunsettitle"
-    call blinkonce
+    call blinkonce from _call_blinkonce
     voice "voice/00-test-6.ogg" #Cheshire (shiena)
     che "call blinkonce"
-    call blinktwice
+    call blinktwice from _call_blinktwice
     voice "voice/00-test-7.ogg" #Cheshire (shiena)
     che "call blinktwice"
     show crtvfx
