@@ -22,7 +22,7 @@ init python:
         ( "bg bedroombg", "Title of image", "Artist"),
     ]
 
-image black = "#000"
+image black = Solid("#000")
 
 transform gallery_thumbnail:
     xzoom 0.2
@@ -30,7 +30,7 @@ transform gallery_thumbnail:
 
 screen gallery_item(item):
     fixed at fade_inout:
-        add "black"
+        add "bg black"
     fixed align(0.5,0.5):
         xfit True
         yfit True
@@ -62,17 +62,23 @@ screen gallery():
 
                 for pic, title, artist in gallery_content:
                     frame:
-                        background "black"
+                        background None
                         xsize 414
-                        ysize 270
-                        padding (15,15,15,15)
-                        fixed align(0.5,0.5):
-                            xfit True
-                            yfit True
-                            add At(pic, gallery_thumbnail)
-                        label title pos (0, 110)
-                        label "by " + artist pos (0, 150)
-                        button action Show("gallery_item", item=pic)
+                        ysize 246
+                        padding (0,15,30,15)
+
+                        frame:
+                            background At("bg black", gallery_thumbnail)
+                            xsize 384
+                            ysize 216
+                            padding (0,0,0,0)
+                            fixed align(0.5,0.5):
+                                xfit True
+                                yfit True
+                                add At(pic, gallery_thumbnail)
+                            label title pos (0, 110)
+                            label "by " + artist pos (0, 150)
+                            button action Show("gallery_item", item=pic)
         fixed pos (1565,918):
             imagebutton offset (-40, -5):
                 idle "megan_ui/gui-back-idle.png"
