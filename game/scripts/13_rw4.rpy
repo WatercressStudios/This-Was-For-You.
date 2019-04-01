@@ -45,7 +45,10 @@ label rw4:
 
     # flash the lightning outside the window! a second of two later, play sfx of another thunder.
 
-    play sound [ "<silence 1>", "sfx/thunder_2.ogg" ]
+    if persistent.subtitle or config.sound == False:
+        sfx [ "<silence 3>", "sfx/thunder_2.ogg" ] "*Thunder*"
+    else:
+        sfx [ "<silence 3>", "sfx/thunder_2.ogg" ]
 
     pause 1
 

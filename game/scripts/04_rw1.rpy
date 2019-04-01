@@ -98,7 +98,11 @@ label rw1:
 
     pause 0.5
 
-    play sound [ "<silence 3>", "sfx/thunder_2.ogg" ]
+    if persistent.subtitle or config.sound == False:
+        sfx [ "<silence 3>", "sfx/thunder_2.ogg" ] "*Thunder*"
+    else:
+        sfx [ "<silence 3>", "sfx/thunder_2.ogg" ]
+
     play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 2.0 fadeout 1.0
     show bg bedroombg nocurtains with dissolve
 
