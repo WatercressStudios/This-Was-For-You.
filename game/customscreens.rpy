@@ -625,7 +625,7 @@ screen custom_mainmenu_buttons_right():
         imagebutton pos (20, 30): # Gallery
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action [ Play("sound", uisound()), Show("custom_title_extras_gallery") ]
+            action [ Play("sound", uisound()), Show("custom_title_extras_gallery"), Show("custom_title_extras_hide") ]
 
         imagebutton pos (20, 120): # Music box
             idle "megan_ui/gui-gamemenu-idle.png"
@@ -715,6 +715,14 @@ screen custom_title_left2right():
     fixed pos (770, 600):
         fixed at main_menu_left2right:
             use custom_mainmenu_buttons_right
+
+screen custom_title_extras_hide():
+    tag custom_title
+    fixed:
+        add "sunsettitle"
+
+    fixed pos (420, 50):
+        add "gui/this was for you Logo.png"
 
 transform main_menu_center:
     easein 0.2 alpha 1 xpos 0
@@ -951,17 +959,12 @@ screen custom_title_main_settings():
 
 screen custom_title_extras_gallery():
     tag custom_title_extras
-    fixed:
-        text "Gallery Screen"
+    use gallery
 
 screen custom_title_extras_musicbox():
     tag custom_title_extras
     fixed:
         text "Music box Screen"
-
-screen custom_title_extras_credits():
-    tag custom_title_extras
-    use credits
 
 screen history():
     tag custom_title_main
