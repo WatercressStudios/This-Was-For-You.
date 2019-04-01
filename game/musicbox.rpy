@@ -87,9 +87,9 @@ screen musicbox():
                 idle "megan_ui/gui-back-idle.png"
                 hover "megan_ui/gui-back-select.png"
                 if in_main_menu:
-                    action [ Play("sound", uisound()), Hide("custom_title_extras"), Show("custom_title_right2center"), SetVariable("musicbox_currently_playing", None), Play("music", "music/Main Menu.ogg") ]
+                    action [ Play("sound", uisound()), Hide("custom_title_extras"), Show("custom_title_right2center") ]
                 else:
-                    action [ Play("sound", uisound()), Return(), SetVariable("musicbox_currently_playing", None), Play("music", "music/Main Menu.ogg") ]
+                    action [ Play("sound", uisound()), Return() ]
             text "Back":
                 font "BebasNeue-Regular.otf"
                 size 60

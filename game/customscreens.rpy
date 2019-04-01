@@ -553,6 +553,7 @@ screen thumbprint_line():
 
 label main_menu:
     $ in_main_menu = True
+    $ musicbox_currently_playing = None
     play music "music/Main Menu.ogg" fadein 3.0 fadeout 3.0
     call screen custom_title_center with fade
 
