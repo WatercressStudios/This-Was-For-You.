@@ -5,7 +5,7 @@
 init python:
     gallery_content = [
         ( "bg bedroombg", "Lonely bedroom", "Draz"),
-        ( "bg bedroombg", "Title of image", "Artist"),
+        ( "che f default", "Title of image", "Artist"),
         ( "bg bedroombg", "Title of image", "Artist"),
         ( "bg bedroombg", "Title of image", "Artist"),
         ( "bg bedroombg", "Title of image", "Artist"),
@@ -22,12 +22,18 @@ init python:
         ( "bg bedroombg", "Title of image", "Artist"),
     ]
 
+image black = "#000"
+
 transform gallery_thumbnail:
     xzoom 0.2
     yzoom 0.2
 
 screen gallery_item(item):
     fixed at fade_inout:
+        add "black"
+    fixed align(0.5,0.5):
+        xfit True
+        yfit True
         add item
     key "dismiss" action Hide("gallery_item")
 
@@ -56,10 +62,14 @@ screen gallery():
 
                 for pic, title, artist in gallery_content:
                     frame:
-                        background At(pic, gallery_thumbnail)
+                        background "black"
                         xsize 414
                         ysize 270
                         padding (15,15,15,15)
+                        fixed align(0.5,0.5):
+                            xfit True
+                            yfit True
+                            add At(pic, gallery_thumbnail)
                         label title pos (0, 110)
                         label "by " + artist pos (0, 150)
                         button action Show("gallery_item", item=pic)
