@@ -963,8 +963,7 @@ screen custom_title_extras_gallery():
 
 screen custom_title_extras_musicbox():
     tag custom_title_extras
-    fixed:
-        text "Music box Screen"
+    use musicbox
 
 screen history():
     tag custom_title_main

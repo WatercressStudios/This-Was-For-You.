@@ -1,5 +1,5 @@
 #
-# Generate credits screen based on parameters below
+# Generate gallery screen based on parameters below
 #
 
 init python:
