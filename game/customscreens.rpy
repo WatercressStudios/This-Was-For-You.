@@ -635,7 +635,7 @@ screen custom_mainmenu_buttons_right():
         imagebutton pos (20, 210): # Credits
             idle "megan_ui/gui-gamemenu-idle.png"
             hover "megan_ui/gui-gamemenu-select.png"
-            action [ Play("sound", uisound()), Show("custom_title_extras_credits") ]
+            action [ Play("sound", uisound()), Show("credits") ]
 
         imagebutton pos (20, 300): # Back
             idle "megan_ui/gui-gamemenu-idle.png"
@@ -961,8 +961,7 @@ screen custom_title_extras_musicbox():
 
 screen custom_title_extras_credits():
     tag custom_title_extras
-    fixed:
-        text "Credits Screen"
+    use credits
 
 screen history():
     tag custom_title_main

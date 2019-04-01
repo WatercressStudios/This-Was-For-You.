@@ -73,15 +73,6 @@ label ending:
     "How do I let go?"
     call screen custom_final_choice
 
-    # menu:
-    #     "How do I let go?"
-    #
-    #     "Delete Ji-min's voicemail":
-    #         $ jivoicemail = True
-    #
-    #     "Keep Ji-min's voicemail":
-    #         $ jivoicemail = False
-
 
 label ending_delete:
     $ jivoicemail = False
@@ -93,8 +84,14 @@ label ending_keep:
 
 label ending_merge:
     stop music fadeout 5.0
+    hide screen in_game_menu
     scene black with Dissolve(0.2)
     pause 0.3
-    "Do credits. Replay voicemail: [jivoicemail]"
     #roll credits
+    show screen credits
+    pause credits_duration
+    hide screen credits
+    if jivoicemail:
+        # TODO Replay voicemail
+        pass
     #end game
