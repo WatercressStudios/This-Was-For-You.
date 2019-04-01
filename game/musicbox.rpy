@@ -28,7 +28,7 @@ screen musicbox():
         pos (500, 40)
         padding (0,0,0,0)
         frame:
-            pos (40, 140)
+            pos (40, 120)
             background None
             padding (0,0,0,0)
             xsize 790
