@@ -170,7 +170,7 @@ label planeticket:
 
     mc "I'm saying that I'm sorry for the way I've treated you."
 
-    voice "voice/14-planeticket-12.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-11.ogg" #Cheshire (shiena)
     che "Sorrys, CH35H1R3 doesn't knows how to responds to that!"
 
     "Hah, CH35H1R3 doesn't have a programmed response to that. Ji never expected me to say sorry to it, did she?"
