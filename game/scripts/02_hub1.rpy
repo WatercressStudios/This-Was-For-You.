@@ -45,7 +45,7 @@ label hub1:
 
     #Cheshire slides onto screen with a happy expression
 
-    voice "02-hub1-1.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-1.ogg" #Cheshire (shiena)
     che "Nya!"
 
     mc "Ahh!"
@@ -54,7 +54,7 @@ label hub1:
 
     show che f catmouthclosed armsforward
 
-    voice "02-hub1-2.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-2.ogg" #Cheshire (shiena)
     che "Welcome home, master!"
 
     "Ugh. This thing again."
@@ -77,7 +77,7 @@ label hub1:
 
     show che f sad
 
-    voice "02-hub1-3.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-3.ogg" #Cheshire (shiena)
     che "Is meowster ignoring me?"
 
     "I'm trying to at least."
@@ -98,7 +98,7 @@ label hub1:
         xzoom 1
         linear 0.6 xpos 0.5
 
-    voice "02-hub1-4.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-4.ogg" #Cheshire (shiena)
     che "Meowster, pwease wait for me!"
 
     "Pwease!?"
@@ -107,12 +107,12 @@ label hub1:
 
     mc "What do you want?"
 
-    voice "02-hub1-5.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-5.ogg" #Cheshire (shiena)
     che "To spend time with {b}you,{/b} meowster!"
 
     mc "Why?"
 
-    voice "02-hub1-6.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-6.ogg" #Cheshire (shiena)
     che "So master won't be lonely."
 
     mc "Look. I don't need your company. I came here to be alone with my thoughts. The last thing I need is-"
@@ -131,7 +131,7 @@ label hub1:
 
     show che f meh
 
-    voice "02-hub1-7.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-7.ogg" #Cheshire (shiena)
     che "Newbie?"
 
     "How did they manage to create a bot that doesn't know what ‘newbie’ means?"
@@ -148,7 +148,7 @@ label hub1:
     show che f meh:
         linear 0.6 xpos 0.5
 
-    voice "02-hub1-8.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-8.ogg" #Cheshire (shiena)
     che "Nya! You dropped something!"
 
     mc "What?"
@@ -162,7 +162,7 @@ label hub1:
 
     "Huh. I haven't seen {b}this{/b} in a while."
 
-    voice "02-hub1-9.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-9.ogg" #Cheshire (shiena)
     che "Meowster should take it!"
 
     hide cheshire with dissolve
@@ -177,7 +177,7 @@ label hub1:
 
     "I realise my mistake too late."
 
-    voice "02-hub1-10.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-10.ogg" #Cheshire (shiena)
     che "Master thanked me? Wow!"
 
     show che f catmouth
@@ -202,24 +202,24 @@ label hub1:
 
     show che f armsforward
 
-    voice "02-hub1-11.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-11.ogg" #Cheshire (shiena)
     che "What does master want CH35H1R3 to do?"
 
     mc "Could you leave me alone for about… 30 minutes?"
 
-    voice "02-hub1-12.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-12.ogg" #Cheshire (shiena)
     che "Master was mean to me earlier so, only if you say pwetty pwease!"
 
     mc "{b}Sigh.{/b}"
 
     mc "Pretty please."
 
-    voice "02-hub1-13.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-13.ogg" #Cheshire (shiena)
     che "..."
 
     mc "..."
 
-    voice "02-hub1-14.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-14.ogg" #Cheshire (shiena)
     che "..."
 
     mc "...pwetty pwease."
@@ -227,7 +227,7 @@ label hub1:
     show che s armshappy:
         linear 0.2 xpos 0.55
 
-    voice "02-hub1-15.ogg" #Cheshire (shiena)
+    voice "voice/02-hub1-15.ogg" #Cheshire (shiena)
     che "Okays!"
 
     hide che with easeoutleft

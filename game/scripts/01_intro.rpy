@@ -6,19 +6,19 @@ label intro:
     scene black
     show screen chapter_announce
     #Voicemail
-    voice "01-intro-1.ogg" #Ji-min ()
+    voice "voice/01-intro-1.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "Heyyy. It's meee."
-    voice "01-intro-2.ogg" #Ji-min ()
+    voice "voice/01-intro-2.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "I know I should be sleeping but I'm too excited, you know?"
-    voice "01-intro-3.ogg" #Ji-min ()
+    voice "voice/01-intro-3.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "Hope I didn't wake you up!"
-    voice "01-intro-4.ogg" #Ji-min ()
+    voice "voice/01-intro-4.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "Er, what time is it over there again?"
-    voice "01-intro-5.ogg" #Ji-min ()
+    voice "voice/01-intro-5.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "Whatever you're doing, I hope it's going well!"
-    voice "01-intro-6.ogg" #Ji-min ()
+    voice "voice/01-intro-6.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "I think I've talked for long enough, hehe."
-    voice "01-intro-7.ogg" #Ji-min ()
+    voice "voice/01-intro-7.ogg" #Ji-min (Ariane "Starleeter" Marchese)
     min "See you tomorrow!"
 
     pause 0.5

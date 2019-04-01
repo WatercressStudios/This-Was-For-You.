@@ -33,7 +33,7 @@ label hub3:
     else:
         sfx "sfx/run.ogg"
         
-    voice "10-hub3-1.ogg" #Cheshire (shiena)
+    voice "voice/10-hub3-1.ogg" #Cheshire (shiena)
     che "Meowsterrrrr!!! I missed you!"
 
     show che f happy at center, height with easeinbottom:
@@ -47,7 +47,7 @@ label hub3:
 
     show che f sad
 
-    voice "10-hub3-2.ogg" #Cheshire (shiena)
+    voice "voice/10-hub3-2.ogg" #Cheshire (shiena)
     che "Pweeeeeeease don't ignore mew!"
 
     show che f meh:
@@ -59,7 +59,7 @@ label hub3:
 
     mc "Don't touch me."
 
-    voice "10-hub3-3.ogg" #Cheshire (shiena)
+    voice "voice/10-hub3-3.ogg" #Cheshire (shiena)
     che "But Meeeowster--{nw}"#interrupt
 
     mc "No."
@@ -74,7 +74,7 @@ label hub3:
     show che f sad:
         linear 0.2 zoom 1 ypos 1.05
 
-    voice "10-hub3-4.ogg" #Cheshire (shiena)
+    voice "voice/10-hub3-4.ogg" #Cheshire (shiena)
     che "But I dos!"
 
     "It takes a nervous step forward, eyes widening into that puppy-dog look."

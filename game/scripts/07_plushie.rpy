@@ -83,7 +83,7 @@ label plushie:
 
     hide catfieldbg with dissolve
     play ambient "sfx/Hub_beach.ogg" fadein 3.0 fadeout 3.0
-    voice "07-plushie-1.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-1.ogg" #Cheshire (shiena)
     che "Ooh. What's this?"
 
 
@@ -99,19 +99,19 @@ label plushie:
 
     show che s catmouthclosed armsnyan
 
-    voice "07-plushie-2.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-2.ogg" #Cheshire (shiena)
     che "It's like me, nya!"
 
     mc "Don't be silly. It's a plushie, not a bot like you."
 
     show che s default base
 
-    voice "07-plushie-3.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-3.ogg" #Cheshire (shiena)
     che "But it's got a tail!"
 
     show che s catmouth
 
-    voice "07-plushie-4.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-4.ogg" #Cheshire (shiena)
     che "And we have the same mouth!"
 
     "God, why did this tutorial bot have to be a catgirl of all things?"
@@ -122,31 +122,31 @@ label plushie:
         xzoom 1
         linear 0.2 xpos 0.3
 
-    voice "07-plushie-5.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-5.ogg" #Cheshire (shiena)
     che "Meowster's so mwean!"
 
     mc "Yeah, yeah."
 
     show che f happy
 
-    voice "07-plushie-6.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-6.ogg" #Cheshire (shiena)
     che "But maybe master secretly cares about me!"
 
     mc "What gives you that impression!?"
 
-    voice "07-plushie-7.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-7.ogg" #Cheshire (shiena)
     che "The plushie of course!"
 
     show che f armsscanning
 
-    voice "07-plushie-8.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-8.ogg" #Cheshire (shiena)
     che "If you have something like that, you must like cats."
 
     show che s armsnyan:
         xzoom -1
         linear 0.2 xpos 0.35
 
-    voice "07-plushie-9.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-9.ogg" #Cheshire (shiena)
     che "And I'm a cat!"
 
     mc "That's not how it works!"
@@ -159,7 +159,7 @@ label plushie:
 
     show che s base
 
-    voice "07-plushie-10.ogg" #Cheshire (shiena)
+    voice "voice/07-plushie-10.ogg" #Cheshire (shiena)
     che "Master, I wants to know!"
 
     show catfieldbg with dissolve:

@@ -14,12 +14,12 @@ init python:
     # define VA info and parsing
     voices = {}
     voices['che'] = '#Cheshire (shiena)'
-    voices['min'] = '#Ji-min ()'
-    voices['bos'] = '#Boss ()'
-    voices['mom'] = '#Mom ()'
-    voices['dad'] = '#Dad ()'
+    voices['min'] = '#Ji-min (Ariane "Starleeter" Marchese)'
+    voices['bos'] = '#Boss (Bryce Buckley)'
+    voices['mom'] = '#Mom (Kenkoy)'
+    voices['dad'] = '#Dad (Adam Warren)'
     voices['caf'] = '#Cafe Owner ()'
-    voices['vm'] =  '#Friend ()'
+    voices['vm'] =  '#Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)'
     # To do VA parsing after filling the above:
     # 1. Run the game in Ren'Py
     # 2. Call the console with 'shift+o'
@@ -143,56 +143,56 @@ label test:
 
     mc "Subtitles is [persistent.subtitle], and my name is [mc_name]"
     sfx "sfx/curtains.wav"
-    voice "00-test-1.ogg" #Cheshire (shiena)
+    voice "voice/00-test-1.ogg" #Cheshire (shiena)
     che "SFX without any subtitles"
     sfx [ "<silence 1>", "sfx/thunder_2.ogg" ] "Clicked!"
 
     #sfx "sfx/curtains.wav" "*Click!*"
-    voice "00-test-2.ogg" #Cheshire (shiena)
+    voice "voice/00-test-2.ogg" #Cheshire (shiena)
     che "SFX with subtitles"
 
     show vrpoweroutageeffect
     pause
 
     scene black
-    voice "00-test-3.ogg" #Cheshire (shiena)
+    voice "voice/00-test-3.ogg" #Cheshire (shiena)
     che "Ready?"
     show vrpoweroutageeffect
-    voice "00-test-4.ogg" #Cheshire (shiena)
+    voice "voice/00-test-4.ogg" #Cheshire (shiena)
     che "vrpoweroutageeffect"
     scene sunsettitle
-    voice "00-test-5.ogg" #Cheshire (shiena)
+    voice "voice/00-test-5.ogg" #Cheshire (shiena)
     che "sunsettitle"
     call blinkonce
-    voice "00-test-6.ogg" #Cheshire (shiena)
+    voice "voice/00-test-6.ogg" #Cheshire (shiena)
     che "call blinkonce"
     call blinktwice
-    voice "00-test-7.ogg" #Cheshire (shiena)
+    voice "voice/00-test-7.ogg" #Cheshire (shiena)
     che "call blinktwice"
     show crtvfx
-    voice "00-test-8.ogg" #Cheshire (shiena)
+    voice "voice/00-test-8.ogg" #Cheshire (shiena)
     che "crtvfx"
     scene woodtrail1
     show che f default
     with dissolve
-    voice "00-test-9.ogg" #Cheshire (shiena)
+    voice "voice/00-test-9.ogg" #Cheshire (shiena)
     che "Bg woodtrail"
 
     scene woodtrail2
     show che f default
     with dissolve
-    voice "00-test-10.ogg" #Cheshire (shiena)
+    voice "voice/00-test-10.ogg" #Cheshire (shiena)
     che "Bg woodtrail2"
 
     scene kerosene
     with dissolve
-    voice "00-test-11.ogg" #Cheshire (shiena)
+    voice "voice/00-test-11.ogg" #Cheshire (shiena)
     che "Bg Kerosene"
 
     scene vrgrid
     show che f dance happy
     with dissolve
-    voice "00-test-12.ogg" #Cheshire (shiena)
+    voice "voice/00-test-12.ogg" #Cheshire (shiena)
     che "Test Dance/Proof of concept"
 
     scene catfieldbg
@@ -203,7 +203,7 @@ label test:
         repeat
     show vrfield:
         alpha 0.5 zoom 0.75
-    voice "00-test-13.ogg" #Cheshire (shiena)
+    voice "voice/00-test-13.ogg" #Cheshire (shiena)
     che "Test Bg Field"
 
     show vrgrid
@@ -217,86 +217,86 @@ label test:
     mc "Hover your mouse over MENU or email."
     show screen in_game_entervr
 
-    voice "00-test-14.ogg" #Cheshire (shiena)
+    voice "voice/00-test-14.ogg" #Cheshire (shiena)
     che "Click on VR."
 
     hide screen in_game_entervr
     show screen in_game_exitvr
 
-    voice "00-test-15.ogg" #Cheshire (shiena)
+    voice "voice/00-test-15.ogg" #Cheshire (shiena)
     che "Click on RW."
 
     hide screen in_game_exitvr
 
     show che s default
 
-    voice "00-test-16.ogg" #Cheshire (shiena)
+    voice "voice/00-test-16.ogg" #Cheshire (shiena)
     che "Pose2 default flap mouth."
 
     show che f catmouthsmall
 
-    voice "00-test-17.ogg" #Cheshire (shiena)
+    voice "voice/00-test-17.ogg" #Cheshire (shiena)
     che "Pose1 catmouthsmall flap mouth."
 
     show che f catmouth
 
-    voice "00-test-18.ogg" #Cheshire (shiena)
+    voice "voice/00-test-18.ogg" #Cheshire (shiena)
     che "Pose1 catmouth flap mouth."
 
     show che f meh
 
-    voice "00-test-19.ogg" #Cheshire (shiena)
+    voice "voice/00-test-19.ogg" #Cheshire (shiena)
     che "Pose1 meh flap mouth."
 
     show che f sad
 
-    voice "00-test-20.ogg" #Cheshire (shiena)
+    voice "voice/00-test-20.ogg" #Cheshire (shiena)
     che "Pose1 sad flap mouth."
 
     show che f scanning
 
-    voice "00-test-21.ogg" #Cheshire (shiena)
+    voice "voice/00-test-21.ogg" #Cheshire (shiena)
     che "Pose1 thinline flap mouth."
 
     show che f happy
 
-    voice "00-test-22.ogg" #Cheshire (shiena)
+    voice "voice/00-test-22.ogg" #Cheshire (shiena)
     che "Pose1 happy flap mouth."
 
     show che s catmouth
 
-    voice "00-test-23.ogg" #Cheshire (shiena)
+    voice "voice/00-test-23.ogg" #Cheshire (shiena)
     che "Pose2 catmouth flap mouth."
 
     show che s meh
 
-    voice "00-test-24.ogg" #Cheshire (shiena)
+    voice "voice/00-test-24.ogg" #Cheshire (shiena)
     che "Pose2 meh flap mouth."
 
     show che s pout1
 
-    voice "00-test-25.ogg" #Cheshire (shiena)
+    voice "voice/00-test-25.ogg" #Cheshire (shiena)
     che "Pose2 pout1 flap mouth."
 
     show che s pout2
 
-    voice "00-test-26.ogg" #Cheshire (shiena)
+    voice "voice/00-test-26.ogg" #Cheshire (shiena)
     che "Pose2 pout2 flap mouth."
 
     show che s thinline
 
-    voice "00-test-27.ogg" #Cheshire (shiena)
+    voice "voice/00-test-27.ogg" #Cheshire (shiena)
     che "Pose2 thinline flap mouth."
 
     show che s sad
 
-    voice "00-test-28.ogg" #Cheshire (shiena)
+    voice "voice/00-test-28.ogg" #Cheshire (shiena)
     che "Pose2 sad flap mouth."
 
     scene bg ceiling ceiling empty
     show ceilingfan
 
-    voice "00-test-29.ogg" #Cheshire (shiena)
+    voice "voice/00-test-29.ogg" #Cheshire (shiena)
     che "Ceiling fan animation."
 
     hide ceilingfan
@@ -347,12 +347,12 @@ label test:
 
     show che f default
 
-    voice "00-test-30.ogg" #Cheshire (shiena)
+    voice "voice/00-test-30.ogg" #Cheshire (shiena)
     che "Testing transition between sprite to CG."
 
     show cheshire sad hurt shocked tears ticket with dissolve
 
-    voice "00-test-31.ogg" #Cheshire (shiena)
+    voice "voice/00-test-31.ogg" #Cheshire (shiena)
     che "Oh no poor ches."
 
     hide cheshire with dissolve

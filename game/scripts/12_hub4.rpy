@@ -24,7 +24,7 @@ label hub4:
 
     show che f meh
 
-    voice "12-hub4-1.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-1.ogg" #Cheshire (shiena)
     che "Nya?"
 
     show che f catmouth:
@@ -32,7 +32,7 @@ label hub4:
 
     # ches slides in shakily and slowly from the bottom
 
-    voice "12-hub4-2.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-2.ogg" #Cheshire (shiena)
     che "Ehehehe, master found out~!"
 
     "I'm so used to it now that I'm starting to predict when this thing is about to jump scare me."
@@ -47,7 +47,7 @@ label hub4:
 
     show che f catmouthclosed
 
-    voice "12-hub4-3.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-3.ogg" #Cheshire (shiena)
     che "But I likes giving master gifts!"
 
     mc "Gifts? What gifts?"
@@ -55,7 +55,7 @@ label hub4:
     show che s catmouth armsnyan:
         linear 0.2 xpos 0.55
 
-    voice "12-hub4-4.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-4.ogg" #Cheshire (shiena)
     che "My happy surprises! Nya~! Meowster looooves surprises, right?"
 
     mc "...Happy surprises?"
@@ -65,7 +65,7 @@ label hub4:
     show che f:
         linear 0.2 xpos 0.5
 
-    voice "12-hub4-5.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-5.ogg" #Cheshire (shiena)
     che "The gift is me surprising master! Does master likes it?"
 
     show che f:
@@ -88,7 +88,7 @@ label hub4:
 
     show che f sad
 
-    voice "12-hub4-6.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-6.ogg" #Cheshire (shiena)
     che "..."
 
     mc "W-What?"
@@ -99,7 +99,7 @@ label hub4:
         xzoom -1
         linear 0.2 xpos 0.45
 
-    voice "12-hub4-7.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-7.ogg" #Cheshire (shiena)
     che "Ehehehe, meowster fell for it~!"
 
     mc "..."
@@ -119,28 +119,28 @@ label hub4:
     show che f sad at left, height with easeinleft
 
     # ches sound slightly more human-like suddenly for this line
-    voice "12-hub4-8.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-8.ogg" #Cheshire (shiena)
     che "Master...I don't understand why do you keep ignoring me like--"
 
     mc "Nice try, but I’m not falling for that again."
 
     show che f happyclosed
 
-    voice "12-hub4-9.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-9.ogg" #Cheshire (shiena)
     che "Nya~"
 
     "Someone at VirtueTech has way too much time in their hands."
 
     show che f happy
 
-    voice "12-hub4-10.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-10.ogg" #Cheshire (shiena)
     che "Does master wants to be left alone this time, too?"
 
     "I nod while waving it away impatiently."
 
     show che f happy armsscanning
 
-    voice "12-hub4-11.ogg" #Cheshire (shiena)
+    voice "voice/12-hub4-11.ogg" #Cheshire (shiena)
     che "CH3SH1R3 is on the case~!"
 
     hide che with easeoutleft

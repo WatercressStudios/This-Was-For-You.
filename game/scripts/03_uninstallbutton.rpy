@@ -88,7 +88,7 @@ label uninstallbutton:
 
     # play comical sfx of someone turning up unexpectedly
 
-    voice "03-uninstallbutton-1.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-1.ogg" #Cheshire (shiena)
     che "Maybe the buttons is broken, nya~!"
 
     mc "Ack!"
@@ -103,7 +103,7 @@ label uninstallbutton:
     show che s armsnyan:
         linear 0.2 xpos 0.35
 
-    voice "03-uninstallbutton-2.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-2.ogg" #Cheshire (shiena)
     che "Nyahaha! Maybe Master is the ones broken~"
 
     "Stop."
@@ -114,7 +114,7 @@ label uninstallbutton:
 
     show che s sad
 
-    voice "03-uninstallbutton-3.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-3.ogg" #Cheshire (shiena)
     che "Meowster? Has your code crashed?"
 
     # screenshake and whip sfx, indicating MC has snapped
@@ -133,7 +133,7 @@ label uninstallbutton:
     show che s default base:
         linear 0.2 zoom 1
 
-    voice "03-uninstallbutton-4.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-4.ogg" #Cheshire (shiena)
     che "But Master is having trouble, so CH35H1R3 came to help, meow!"
 
     hide che
@@ -183,12 +183,12 @@ label uninstallbutton:
         xpos 0.35 ypos 0.05
     with dissolve
 
-    voice "03-uninstallbutton-5.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-5.ogg" #Cheshire (shiena)
     che "Meow-be Master needs to connect the button to a function~"
 
     show che s catmouthclosed armsnyan
 
-    voice "03-uninstallbutton-6.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-6.ogg" #Cheshire (shiena)
     che "Master can make it do all sorts of useful things, nya!"
 
     mc "Can it delete you?"
@@ -196,7 +196,7 @@ label uninstallbutton:
     show che f happy:
         linear 0.2 xpos 0.3
 
-    voice "03-uninstallbutton-7.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-7.ogg" #Cheshire (shiena)
     che "Oh, CH35H1R3 has a great idea: it can {b}summon{/b} me!"
 
     "Oh hell no. Anything but that."
@@ -206,7 +206,7 @@ label uninstallbutton:
         linear 0.2 xpos 0.25
 
     # ches looks confused
-    voice "03-uninstallbutton-8.ogg" #Cheshire (shiena)
+    voice "voice/03-uninstallbutton-8.ogg" #Cheshire (shiena)
     che "Nya? Is Master trying to delete the button? Want some help?"
 
     "I cradle the button against my chest instinctively, as if the bot will snatch it out of my hands."

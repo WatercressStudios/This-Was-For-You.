@@ -32,7 +32,7 @@ label planeticket:
 
     show che s at centerright, height with easeinright
 
-    voice "14-planeticket-1.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-1.ogg" #Cheshire (shiena)
     che "There yous are! CH35H1R3's been waitings for yous!"
 
     mc "Dear God no please, PLEASE, I just want some goddamn peace and quiet!"
@@ -40,7 +40,7 @@ label planeticket:
     show che f sad:
         linear 0.2 xpos 0.5
 
-    voice "14-planeticket-2.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-2.ogg" #Cheshire (shiena)
     che "But quiets is lonely!"
 
     mc "Make it stop!"
@@ -51,28 +51,28 @@ label planeticket:
 
     show che f mehsad
 
-    voice "14-planeticket-3.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-3.ogg" #Cheshire (shiena)
     che "No, no! CH35H1R3 doesn't wants that!"
 
     mc "I don't care."
 
     show che f sadclosed
 
-    voice "14-planeticket-4.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-4.ogg" #Cheshire (shiena)
     che "Momma wouldn't wants that either!"
 
     mc "Momma?"
 
     show che f mehsad
 
-    voice "14-planeticket-5.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-5.ogg" #Cheshire (shiena)
     che "Yes! Momma would miss yous!"
 
     mc "...Who's this 'Mom' of yours?"
 
     show che f happyclosed
 
-    voice "14-planeticket-6.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-6.ogg" #Cheshire (shiena)
     che "Ji, silly!"
 
     pause 0.5
@@ -87,7 +87,7 @@ label planeticket:
 
     show che f happy
 
-    voice "14-planeticket-7.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-7.ogg" #Cheshire (shiena)
     che "Yeppers!"
 
     "I… I don't understand."
@@ -98,14 +98,14 @@ label planeticket:
 
     show che f meh
 
-    voice "14-planeticket-8.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-8.ogg" #Cheshire (shiena)
     che "Whys?"
 
     mc "She's your creator?"
 
     show che f happy
 
-    voice "14-planeticket-9.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-9.ogg" #Cheshire (shiena)
     che "Yeppers!"
 
     show che f mehsad:
@@ -122,7 +122,7 @@ label planeticket:
 
     "Why would she create something like this?"
 
-    voice "14-planeticket-10.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-10.ogg" #Cheshire (shiena)
     che "She saids that you'd enjoy my company, nya!"
 
     mc "Like hell I woul - oh."
@@ -165,12 +165,12 @@ label planeticket:
 
     show che f thinline
 
-    voice "14-planeticket-11.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-11.ogg" #Cheshire (shiena)
     che "Sorrys, CH35H1R3 doesn't knows how to responds to that!"
 
     mc "I'm saying that I'm sorry for the way I've treated you."
 
-    voice "14-planeticket-12.ogg" #Cheshire (shiena)
+    voice "voice/14-planeticket-12.ogg" #Cheshire (shiena)
     che "Sorrys, CH35H1R3 doesn't knows how to responds to that!"
 
     "Hah, CH35H1R3 doesn't have a programmed response to that. Ji never expected me to say sorry to it, did she?"
