@@ -4,7 +4,7 @@
 
 init python:
     credits_duration = 50.0
-    credits_height = 8300
+    credits_height = 8400
     credits_content = [
         ( "Dedicated to @TKia_ (Electro), InstantRiot",
             [

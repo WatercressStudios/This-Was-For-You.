@@ -74,7 +74,6 @@ screen musicbox():
                                     add "megan_ui/gui-musicbox-pause.png"
                                 else:
                                     add "megan_ui/gui-musicbox-play.png"
-                            #button action Show("gallery_item", item=pic)
 
         fixed pos (40, 40):
             text "Music Box":
