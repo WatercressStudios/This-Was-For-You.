@@ -112,7 +112,7 @@ label start:
     $ visible_emails = ["intro"]
     $ read_emails = []
 
-    $ persistent.subtitle = False
+    #$ persistent.subtitle = False
     $ visited8track = False
     $ visitedplushie = False
     $ visitedmug = False
