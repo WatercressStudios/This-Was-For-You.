@@ -17,9 +17,9 @@ label rw1:
     voice "voice/04-rw1-3.ogg" #Boss (Bryce Buckley)
     bos "Don't worry, we've managed to cover your shifts just fine, but... it would be nice to know when you'll be coming back."
     voice "voice/04-rw1-4.ogg" #Boss (Bryce Buckley)
-    bos "Give me a call when you can, alright?"
+    bos "Give me a call when you can."
     voice "voice/04-rw1-5.ogg" #Boss (Bryce Buckley)
-    bos "See you soon."
+    bos "Alright? See you soon. Bye."
 
     pause 0.5
 

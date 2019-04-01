@@ -157,7 +157,7 @@ label plushie:
 
     mc "It's… ah forget about it."
 
-    show che s base
+    show che s base pout1
 
     voice "voice/07-plushie-10.ogg" #Cheshire (shiena)
     che "Master, I wants to know!"
@@ -169,7 +169,7 @@ label plushie:
 
     "I just, looked at you with a horrified expression and told you I'd never go to somewhere like that."
 
-    show che s pout1
+    show che s pout2
 
     "Turns out I had gotten cat cafes and maid cafes all mixed up."
 

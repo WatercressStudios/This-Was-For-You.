@@ -141,7 +141,7 @@ label hub4:
     show che f happy armsscanning
 
     voice "voice/12-hub4-11.ogg" #Cheshire (shiena)
-    che "CH3SH1R3 is on the case~!"
+    che "Nyahaha. Detective CH3SH1R3 is on the case~!"
 
     hide che with easeoutleft
 
