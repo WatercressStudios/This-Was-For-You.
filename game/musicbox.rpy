@@ -4,18 +4,18 @@
 
 init python:
     musicbox_content = [
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
-        ( "Music/Hub.ogg", "Hub Song", "Artist"),
+        ( "Music/Main Menu.ogg", "Menu Theme", "Paul Robins"),
+        ( "Music/RW_Intro.ogg", "Real World Intro", "Paul Robins"),
+        ( "Music/Hub.ogg", "Hub Song", "Kierious"),
+        ( "Music/Uninstall_Button.ogg", "Uninstall Button", "Speedy"),
+        ( "Music/RW_S1.ogg","Real World Song 1", "Paul Robins"),
+        ( "Music/Awoo_Mug.ogg", "Awoo Mug", "Speedy"),
+        ( "Music/Cat.ogg", "Cat Plushie", "Kierious"),
+        ( "Music/8_Track.ogg", "8-Track", "Raymond Demers"),
+        ( "Music/RW_S2.ogg", "Real World Song 2", "Paul Robins"),
+        ( "Music/RW_S3.ogg", "Real World Song 3", "Paul Robins"),
+        ( "Music/RW_S4.ogg", "Real World Song 4", "Paul Robins"),
+        ( "Music/Plane_Ticket.ogg", "Plane Ticket", "Speedy"),
     ]
 
     musicbox_currently_playing = None
@@ -47,7 +47,7 @@ screen musicbox():
                     frame:
                         background None
                         xsize 750
-                        ysize 130
+                        ysize 135
                         padding (0,0,0,0)
                         right_margin 20
                         xalign 0
@@ -62,14 +62,22 @@ screen musicbox():
                         frame:
                             background None
                             xsize 750
-                            ysize 130
+                            ysize 135
                             padding (30,15,30,15)
                             right_margin 20
                             xalign 0
 
-                            label title pos (0, 0)
-                            label "by " + artist pos (0, 50)
-                            fixed pos (600,20):
+                            text title pos (0, 0):
+                                font "BebasNeue-Regular.otf"
+                                size 50
+                                color "#36428A"
+                                outlines []
+                            text "by " + artist pos (0, 50):
+                                font "BebasNeue-Regular.otf"
+                                size 50
+                                color "#36428A"
+                                outlines []
+                            fixed pos (600,23):
                                 if i == musicbox_currently_playing:
                                     add "megan_ui/gui-musicbox-pause.png"
                                 else:
