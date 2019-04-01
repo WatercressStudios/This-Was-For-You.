@@ -23,7 +23,11 @@ label rw1:
 
     pause 0.5
 
-    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0
+    $ visible_emails.append('work1')
+    $ visible_emails.append('friend2')
+    show screen notify("You have unread emails.")
+
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
     play music "Music/RW_S1.ogg"
 
     scene bg ceiling ceiling empty
@@ -76,7 +80,12 @@ label rw1:
     #Thunder sfx
     #Rain sfx
 
-    play sound "sfx/Thunder_3.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Thunder_3.ogg" "*Thunder*"
+    else:
+        sfx "sfx/Thunder_3.ogg"
+
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0
 
     scene bg bedroombg open rain
     call openeyes from _call_openeyes_3
@@ -88,11 +97,10 @@ label rw1:
         xalign 0.9 yalign 0.2
 
     pause 0.5
+
     play sound [ "<silence 3>", "sfx/thunder_2.ogg" ]
-    show bg bedroombg nocurtains with dissolve
-
     play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 2.0 fadeout 1.0
-
+    show bg bedroombg nocurtains with dissolve
 
     "You liked the rain."
 

@@ -35,7 +35,12 @@ label hub1:
     "Staring at what used to be."
 
     "Staring at-"
-    play sound "sfx/run.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/run.ogg" "*Running*"
+    else:
+        sfx "sfx/run.ogg"
+
     show che s catmouth armsnyan at center, height with easeinright
 
     #Cheshire slides onto screen with a happy expression

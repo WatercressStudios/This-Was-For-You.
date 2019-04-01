@@ -27,7 +27,12 @@ label hub3:
     "Do you like the sea?"
 
     "I wish I asked you that."
-    play sound "sfx/run.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/run.ogg" "*Running*"
+    else:
+        sfx "sfx/run.ogg"
+        
     voice "10-hub3-1.ogg" #Cheshire (shiena)
     che "Meowsterrrrr!!! I missed you!"
 

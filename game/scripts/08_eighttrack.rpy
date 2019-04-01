@@ -18,7 +18,11 @@ label eighttrack:
     hide items 8track with dissolve
 
     # sound of cassette tape being inserted in cassette player
-    play sound "sfx/cassette.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/cassette.ogg" "*Click*"
+    else:
+        sfx "sfx/cassette.ogg"
+
     "I slide the cassette into the player and push it close with a satisfying 'click'."
 
     "However, I hesitate over the 'play' button."
@@ -32,7 +36,11 @@ label eighttrack:
     # sfx of cassette player's play button being pushed, and the sfx of spinning cassette
     "I push the 'play' button anyway."
 
-    play sound "sfx/Button.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Button.ogg" "*Click*"
+    else:
+        sfx "sfx/Button.ogg"
+        
     play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ] fadeout 3.0
     play music [ "<silence 4>", "Music/8_Track.ogg" ] fadein 2.0
 

@@ -23,7 +23,12 @@ label rw4:
     hide black with dissolve
 
     play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0
-    play sound "sfx/Thunder_2.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/thunder_2.ogg" "*Thunder*"
+    else:
+        sfx "sfx/thunder_2.ogg"
+
     "What? What happened?"
 
     play music "music/RW_S4.ogg" fadein 3.0
@@ -33,7 +38,10 @@ label rw4:
     show bg bedroombg lightning
     show bedroomstorm darkblue darkflash darklightning
 
-    play sound "sfx/Thunder_1.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Thunder_1.ogg" "*Thunder*"
+    else:
+        sfx "sfx/Thunder_1.ogg"
 
     # flash the lightning outside the window! a second of two later, play sfx of another thunder.
 
@@ -43,7 +51,10 @@ label rw4:
 
     # sfx of the VR headset powering on, and the room goes to normal brightness again
 
-    play sound "sfx/VR-On.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/VR-On.ogg" "*Restored Power*"
+    else:
+        sfx "sfx/VR-On.ogg"
 
     hide bedroomstorm
     show screen in_game_menu
@@ -105,6 +116,11 @@ label rw4_continue:
 
     pause 0.5
 
+    $ visible_emails.append('spam3')
+    $ visible_emails.append('boss2')
+    $ visible_emails.append('funeral2')
+    show screen notify("You have unread emails.")
+
     play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 1.0 fadeout 1.0
 
     scene bg bedroombg nocurtains rain:
@@ -125,7 +141,10 @@ label rw4_continue:
 
     # fade back into the window scene, zoomed into the outside view. a lightning flashed and thundered again
 
-    play sound "sfx/Thunder_1.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Thunder_1.ogg" "*Thunder*"
+    else:
+        sfx "sfx/Thunder_1.ogg"
 
     "...so it's come to this, huh."
 
@@ -147,7 +166,10 @@ label rw4_continue:
     # lightning flash and sfx again
     # pause a second or two
 
-    play sound "sfx/Thunder_2.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/thunder_2.ogg" "*Thunder*"
+    else:
+        sfx "sfx/thunder_2.ogg"
 
     "Was it a mistake to tell them about Ji-min?"
 
@@ -169,7 +191,10 @@ label rw4_continue:
 
     # sfx of beeping sound indicating VR is ready to be launched
 
-    play sound "sfx/Chime - DX EP.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Chime - DX EP.ogg" "*Initialization Complete*"
+    else:
+        sfx "sfx/Chime - DX EP.ogg"
 
     "Shaking my head, I look at the display. The VR app has finished initializing."
 
@@ -191,7 +216,11 @@ label rw4_continue:
     # fade in the room again, window view
 
     play ambient "sfx/Ambience_1_(Rain).ogg" fadeout 3.0
-    play sound "sfx/box_fall.ogg"
+
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/box_fall.ogg" "*Trip And Fall*"
+    else:
+        sfx "sfx/box_fall.ogg"
 
     pause 0.1
 
@@ -228,7 +257,10 @@ label rw4_continue:
     show bg bedroombg lightning
     show bedroomstorm
 
-    play sound "sfx/Thunder_3.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Thunder_3.ogg" "*Thunder*"
+    else:
+        sfx "sfx/Thunder_3.ogg"
 
     # lightning flash and sfx again
     # pause a second or two

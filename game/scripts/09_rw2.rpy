@@ -35,6 +35,11 @@ label rw2:
 
     pause 0.5
 
+    $ visible_emails.append('friend3')
+    $ visible_emails.append('spam2')
+    $ visible_emails.append('colleague')
+    show screen notify("You have unread emails.")
+
     play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 2.0
     play sound "sfx/Fan.ogg" fadein 2.0 loop
     play music "music/RW_S2.ogg" fadein 2.0
@@ -60,8 +65,11 @@ label rw2:
 
     "...Even me."
 
-    # sfx: stomach growling noise
-    play sound "sfx/Stomach_grumble.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Stomach_grumble.ogg" "*Grumble*"
+    else:
+        sfx "sfx/Stomach_grumble.ogg"
+
     "..."
 
     "My stomach's been growling for awhile now."
@@ -73,14 +81,19 @@ label rw2:
 
     "I roll to the side in an attempt to quell my hunger."
 
-    # sfx: stomach growling noise again
-    play sound "sfx/Stomach_Grumble.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Stomach_grumble.ogg" "*Grumble*"
+    else:
+        sfx "sfx/Stomach_grumble.ogg"
+
     "..."
 
     "Fine, you win."
 
-    # sfx bedsheet rustling
-    play sound "sfx/Bed_Rustle.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/bed.ogg" "*Rustle*"
+    else:
+        sfx "sfx/bed.ogg"
 
     show bg bedroombg open:
         linear 0.2 yalign 0.1
@@ -96,7 +109,10 @@ label rw2:
 
     "I head over to my fridge and pull it open, the glow from the fridge illuminating my dark kitchen."
 
-    play sound "sfx/Fridge_open.ogg"
+    if persistent.subtitle or config.sound == False:
+        sfx "sfx/Fridge_open.ogg" "*Open Fridge*"
+    else:
+        sfx "sfx/Fridge_open.ogg"
 
     "Nothing left but a slice of two-day-old pizza."
 
@@ -114,8 +130,6 @@ label rw2:
     #get city sounds no rain
     play ambient "sfx/City_Noise.ogg" fadein 2.0 fadeout 3.0
     show bg bedroombg nocurtains with dissolve
-
-
 
     # bg to the zoomed in window without the curtains
     # sfx of more city sounds than fan sounds
