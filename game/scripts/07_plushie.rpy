@@ -7,7 +7,7 @@ label plushie:
     scene bg hub hub
     show screen chapter_announce
     show catfieldbg
-    show items catplushie
+    show items catplushie with dissolve
 
     play music "Music/Cat.ogg" fadein 3.0
 

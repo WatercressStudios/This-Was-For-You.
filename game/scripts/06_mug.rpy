@@ -7,7 +7,7 @@ label mug:
     scene bg hub hub
     show screen chapter_announce
     show kerosene with dissolve
-    show items awoomug
+    show items awoomug with dissolve
     #This scene won't totally be emotionally charged cause Instant drew the original mug no
 
     play ambient "sfx/fire.ogg" fadein 3.0

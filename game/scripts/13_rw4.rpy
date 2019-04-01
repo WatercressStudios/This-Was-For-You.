@@ -99,15 +99,15 @@ label rw4_continue:
     scene black
     show screen chapter_announce
 
-    #voice "voice/13-rw4_continue-1.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
+    voice "voice/13-rw4_continue-1.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
     vm "Heya! So uh, where do I start…"
-    #voice "voice/13-rw4_continue-2.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "Right! I don't wanna call you out or anything, but you kinda missed our last four hangouts."
+    voice "voice/13-rw4_continue-2.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
+    vm "Look, I don't wanna call you out or anything, but you kinda missed our last four hangouts."
     #voice "voice/13-rw4_continue-3.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
     vm "Wait that counts as calling you out, isn't it? Sorry. *laughs*"
-    #voice "voice/13-rw4_continue-4.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
+    voice "voice/13-rw4_continue-4.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
     vm "So umm… your friends wanna see your stupid face."
-    #voice "voice/13-rw4_continue-5.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
+    voice "voice/13-rw4_continue-5.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
     vm "I'm sure you'll forgive us for tomorrow, cuz you're a good person."
     #voice "voice/13-rw4_continue-6.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
     vm "Also, you owe us one."

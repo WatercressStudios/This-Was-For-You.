@@ -7,7 +7,7 @@ label eighttrack:
     scene bg hub hub
     show screen chapter_announce
     show woodtrail1 with dissolve
-    show items 8track
+    show items 8track with dissolve
     stop music
     play ambient "sfx/8_Track_Ambient.ogg" fadein 3.0
     #MC selects the eight track
@@ -40,7 +40,7 @@ label eighttrack:
         sfx "sfx/Button.ogg" "*Click*"
     else:
         sfx "sfx/Button.ogg"
-        
+
     play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ] fadeout 3.0
     play music [ "<silence 4>", "Music/8_Track.ogg" ] fadein 2.0
 
