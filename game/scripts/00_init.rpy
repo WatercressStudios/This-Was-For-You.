@@ -145,7 +145,9 @@ label test:
     sfx "sfx/curtains.wav"
     voice "00-test-1.ogg" #Cheshire (shiena)
     che "SFX without any subtitles"
-    sfx "sfx/curtains.wav" "*Click!*"
+    sfx [ "<silence 1>", "sfx/thunder_2.ogg" ] "Clicked!"
+
+    #sfx "sfx/curtains.wav" "*Click!*"
     voice "00-test-2.ogg" #Cheshire (shiena)
     che "SFX with subtitles"
 

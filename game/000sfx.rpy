@@ -29,6 +29,8 @@ python early:
 
         # Based on what the user passed in, overwrite  the default values
         clip = lex.simple_expression().strip('"').strip("'")
+        if clip.startswith('[') and clip.endswith(']'):
+            clip = eval(clip)
         if not lex.eol():
             subtitle = lex.rest().strip('"').strip("'")
 
@@ -36,13 +38,24 @@ python early:
         return clip, subtitle
 
 
+    class show_sfx_txt:
+        def __init__(self, txt):
+            self.txt = txt
+
+        def __call__(self):
+            renpy.hide_screen("sfx_screen")
+            renpy.show_screen("sfx_screen", self.txt)
+            renpy.restart_interaction()
+
     def execute_sfx(o):
         clip, subtitle = o
         renpy.play(clip, "sound")
         if subtitle != None:
-            renpy.hide_screen("sfx_screen")
-            renpy.show_screen("sfx_screen", subtitle)
-            renpy.restart_interaction()
+            if (type(clip) != unicode and '<silence ' and clip[0]):
+                duration = float(clip[0][9:-1])
+                ui.timer(duration, show_sfx_txt(subtitle))
+            else:
+                show_sfx_txt(subtitle)()
 
 
     def lint_sfx(o):
