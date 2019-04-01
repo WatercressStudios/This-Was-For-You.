@@ -6,11 +6,11 @@ init python:
     musicbox_content = [
         ( "Music/Main Menu.ogg", "Menu Theme", "Paul Robins"),
         ( "Music/RW_Intro.ogg", "Real World Intro", "Paul Robins"),
-        ( "Music/Hub.ogg", "Hub Song", "Kierious"),
+        ( "Music/Hub.ogg", "HU8 W0RLD", "Kieren 'Kierious' Eller"),
         ( "Music/Uninstall_Button.ogg", "Uninstall Button", "Speedy"),
         ( "Music/RW_S1.ogg","Real World Song 1", "Paul Robins"),
         ( "Music/Awoo_Mug.ogg", "Awoo Mug", "Speedy"),
-        ( "Music/Cat.ogg", "Cat Plushie", "Kierious"),
+        ( "Music/Cat.ogg", "C47 PLU5H13", "Kieren 'Kierious' Eller"),
         ( "Music/8_Track.ogg", "8-Track", "Raymond Demers"),
         ( "Music/RW_S2.ogg", "Real World Song 2", "Paul Robins"),
         ( "Music/RW_S3.ogg", "Real World Song 3", "Paul Robins"),
