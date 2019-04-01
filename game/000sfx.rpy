@@ -22,6 +22,8 @@ screen sfx_screen(what):
 
 python early:
 
+    from threading import Timer
+
     def parse_sfx(lex):
         # Default values
         clip = None
@@ -53,7 +55,8 @@ python early:
         if subtitle != None:
             if (type(clip) != unicode and '<silence ' and clip[0]):
                 duration = float(clip[0][9:-1])
-                ui.timer(duration, show_sfx_txt(subtitle))
+                #ui.timer(duration, show_sfx_txt(subtitle))
+                Timer(duration, show_sfx_txt(subtitle), ()).start()
             else:
                 show_sfx_txt(subtitle)()
 
