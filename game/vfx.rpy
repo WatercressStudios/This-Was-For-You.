@@ -25,9 +25,10 @@ label splashscreen:
         with Pause(0.1)
         call vreffect from _call_vreffect
         with Pause(1.5)
-        show watercresssplash 2 with Dissolve(0.2)
-        show watercresssplash 3 with Dissolve(1.0)
-        show watercresssplash 4 with Dissolve(0.3)
+        show watercresssplash 5 with dissolve
+        #show watercresssplash 2 with Dissolve(0.2)
+        #show watercresssplash 3 with Dissolve(1.0)
+        #show watercresssplash 4 with Dissolve(0.3)
         with Pause(2)
         scene white with Dissolve(0.5)
         with Pause(1)
@@ -41,6 +42,7 @@ image watercresssplash 1 = "vfx/watercresssplash1.png"
 image watercresssplash 2 = "vfx/watercresssplash2.png"
 image watercresssplash 3 = "vfx/watercresssplash3.png"
 image watercresssplash 4 = "vfx/watercresssplash4.png"
+image watercresssplash 5 = "vfx/watercresssplash5.png"
 
 ## VR Headset Frames of Animation used in Splash Screen
 init:
