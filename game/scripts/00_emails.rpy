@@ -21,7 +21,7 @@ VirtueTech Representative."""
             "title": "Ji-min's funeral",
             "body":"""Hi,
 
-I'm Ji-min's sister. I found your envelope while I was tidying up her room, and I figure you'd want to know we organised a funeral on Wednesday. I think it would mean a lot if you came. She talked about you often.
+I'm Ji-min's sister. I found your envelope while I was tidying up her room, and I figure you'd want to know we are going to have a funeral for her soon. I think it would mean a lot if you came. She talked about you often.
 
 Seo-hyeon."""
         },
@@ -53,7 +53,7 @@ HealthCorp Representative."""
             "title": "Is everything okay?",
             "body":"""Did you ever get my voicemail I sent a while back? If you're able, please let us know that you're alive at least.
 
-            Also it would be helpful to know when you're planning to return. Take care."""
+Also it would be helpful to know when you're planning to return. Take care."""
         },
 
         "friend2":
@@ -62,9 +62,9 @@ HealthCorp Representative."""
             "title": "Long time no see!",
             "body":"""Heyyy
 
-            We wanna meet up sometime. It's been ages! How's sometime this weekend sound? We really need to catch up, fam.
+We wanna meet up sometime. It's been ages! How's sometime this weekend sound? We really need to catch up, fam.
 
-            Hope to see ya soon!"""
+Hope to see ya soon!"""
         },
 
         "friend3":
@@ -80,12 +80,12 @@ HealthCorp Representative."""
             "title": "New Opportunity Just For You!",
             "body":"""Dear valued customer,
 
-            We have a deal just for you! For a limited time, buy BinCoin for just $100 a coin! We guarantee a return on investment* within the next ten years!
+We have a deal just for you! For a limited time, buy BinCoin for just $100 a coin! We guarantee a return on investment* within the next ten years!
 
-            *ROI may be negative
+*ROI may be negative
 
-            Buy BinCoin today!
-            CoinSellers United"""
+Buy BinCoin today!
+CoinSellers United"""
         },
 
         "colleague":
@@ -94,7 +94,7 @@ HealthCorp Representative."""
             "title": "Where are you?",
             "body":"""We're shortstaffed and we really could use some help. Please come in soon, works been super rough without you. We need an extra set of hands around here.
 
-            Are you doing okay?"""
+Are you doing okay?"""
         },
 
         "family":
@@ -103,8 +103,8 @@ HealthCorp Representative."""
             "title": "We Miss You!",
             "body":"""Is everything okay hon? Mom and Dad are worried about you. I know things may be tough right now, but we still want to hear from you from time to time, okay? We miss you, and we just want to hear your voice.
 
-        We love you,
-        Mom and Dad"""
+We love you,
+Mom and Dad"""
         },
 
         "friend4":
@@ -118,7 +118,7 @@ HealthCorp Representative."""
         {
             "from": "Group: Friends",
             "title": "re:Radio Silence",
-            "body":"""We called you - I hope you got the voicemail? We're gunna hop on over and visit ya. Make sure to clean your room ;) I hope you don't mind! We'll bring some food as payment, no worries."""
+            "body":"""Have you been reading your emails? We're thinkin of hopping on over to visit ya. You okay with that? We'll bring some food as payment!"""
         },
 
         "spam3":
@@ -127,9 +127,9 @@ HealthCorp Representative."""
             "title": "Some Fuel For Your Gaming!",
             "body":"""Dear gamer,
 
-            Our new SuperGamerFuel™ may be the right product for you. Have issues staying up at night? Want to get just one more turn in your game? Want to shoot some noobz? Try our SuperGamerFuel™ and we guarantee you'll rise to the occasion!
+Our new SuperGamerFuel™ may be the right product for you. Have issues staying up at night? Want to get just one more turn in your game? Want to shoot some noobz? Try our SuperGamerFuel™ and we guarantee you'll rise to the occasion!
 
-            Drink our SuperGamerFuel™!"""
+Drink our SuperGamerFuel™!"""
         },
 
 
@@ -139,7 +139,7 @@ HealthCorp Representative."""
             "title": "Absence From Work",
             "body":"""Hey, I don't like to say this, but I have to be the one that says it. We can't keep you on for much longer. We need you to come in soon. Again, I'm sorry, you've always been a hard worker, but we can't just sit and wait forever.
 
-            Please email me back."""
+Please email me back."""
         },
 
         "funeral2":
@@ -147,10 +147,10 @@ HealthCorp Representative."""
             "from": "Seo-hyeon",
             "title": "re:Ji-min's funeral",
             "body":"""Hi,
-            w
-            We're going to have the funeral two weeks from now. Please respond if you want to come. We never knew you, but she cared a lot about you. We'd love to get to meet you, and thank you for being there for her.
 
-            Seo-hyeon."""
+We're going to have the funeral two weeks from now. Please respond if you want to come. We never knew you, but she cared a lot about you. We'd love to get to meet you, and thank you for being there for her.
+
+Seo-hyeon."""
         },
 
     }
