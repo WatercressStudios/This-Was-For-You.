@@ -58,12 +58,12 @@ init python:
                 "Alison 'Draz' Huang",
             ]
         ),
-        ( "Sprite",
+        ( "Sprite Art",
             [
                 "Dean 'AnagramDaine' Lewthwaite",
             ]
         ),
-        ( "CG",
+        ( "CG Art",
             [
                 "Alison 'Draz' Huang",
             ]
@@ -84,7 +84,7 @@ init python:
                 "Dean 'AnagramDaine' Lewthwaite",
             ]
         ),
-        ( "Logo",
+        ( "Logo Art",
             [
                 "Chiba Kenta",
             ]
@@ -171,6 +171,7 @@ init python:
         ),
         ( "Marketing",
             [
+                "Caitie",
                 "Tim",
                 "TheAlchemyst",
             ]
@@ -227,7 +228,7 @@ screen credits():
                     xalign 0.5
                     font "BebasNeue-Regular.otf"
                     size 50
-                    color "#bbd"
+                    color "#7ECBDD"
                 for name in names:
                     text name:
                         text_align 0.5
