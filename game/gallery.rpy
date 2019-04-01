@@ -4,22 +4,22 @@
 
 init python:
     gallery_content = [
-        ( "bg bedroombg", "Lonely bedroom", "Draz"),
-        ( "che f default", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
-        ( "bg bedroombg", "Title of image", "Artist"),
+        ( "bg bedroombg", "Bedroom", "Alison Huang"),
+        ( "bg ceiling ceiling static", "Ceiling", "Alison Huang"),
+        ( "bg hub hub", "Hub", "Alison Huang"),
+        ( "kerosene", "Kerosene", "AnagramDaine"),
+        ( "bg bedroombg", "Catfield", "AnagramDaine"),
+        ( "woodtrail1", "Woodtrail", "AnagramDaine"),
+        ( "woodtrail2", "Woodtrail 2", "AnagramDaine"),
+        ( "sunsettitle", "Sunset", "AnagramDaine"),
+        ( "che f", "Cheshire Sprite - Forward", "AnagramDaine"),
+        ( "che s", "Cheshire Sprite - Side", "AnagramDaine"),
+        ( "cheshire", "Cheshire CG", "Alison Huang"),
+        ( "items uninstallbutton", "Uninstall Button", "Alison Huang"),
+        ( "items awoomug", "Awoo Mug", "Alison Huang"),
+        ( "items catplushie", "Cat Plushie", "Alison Huang"),
+        ( "items 8track", "8 Track", "Alison Huang"),
+        ( "items planeticket", "Plane Ticket", "Alison Huang"),
     ]
 
 image black = Solid("#000")
