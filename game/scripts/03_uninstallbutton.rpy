@@ -104,7 +104,7 @@ label uninstallbutton:
         linear 0.2 xpos 0.35
 
     voice "voice/03-uninstallbutton-2.ogg" #Cheshire (shiena)
-    che "Nyahaha! Maybe Master is the one whose broken~"
+    che "Nyahaha! Maybe Master is the one who's broken~"
 
     "Stop."
 
