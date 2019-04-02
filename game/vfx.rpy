@@ -148,7 +148,7 @@ image vfxfireflies = SnowBlossom("vfxfireembersFilmstrip", count=50, border=10, 
 
 image fsky = "vfx/fsky.png"
 
-image catfieldbg = "vfx/catlandfieldbg.png"
+image catfield = "vfx/catlandfieldbg.png"
 
 init:
     image vrfield = Animation("vfx/f1.png",0.59,
@@ -328,3 +328,20 @@ init:
                              "vfx/twfysunset_6.png",0.2,
                              "vfx/twfysunset_7.png",0.2,
                              "vfx/twfysunset_8.png",0.2,)
+
+image catfield1:
+    "catfield"
+    xalign 0.5 yalign 0.5
+
+
+image catfield2:
+    "vrfield"
+    xalign 0.5 yalign 0.5 alpha 0.5
+
+layeredimage catfieldbg:
+    always:
+        "catfield1"
+    always:
+        "catfield2"
+    always:
+        "vfxglitter"
