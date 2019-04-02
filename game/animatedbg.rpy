@@ -203,7 +203,7 @@ image woodtrailstarsdraz1:                             ##DRAZ WAS HERE##########
 
 image woodtrailbgdraz1:                                ## Thanks to Draz, Anagram is now able to code a bunch a stuff~! Draz is the best Space Future Aunt ever~!
     "vfx/bg_woodtrail_base2.png"
-    alpha 1.0 xalign 0.5 yalign 0.5
+    alpha 1.0
     linear 5.0 alpha 0.1
     linear 5.0 alpha 0.1
     linear 5.0 alpha 1.0
@@ -216,7 +216,7 @@ image woodtrailbgdraz1:                                ## Thanks to Draz, Anagra
 
 image woodtrailforegrounddraz1:
     "vfx/bg_woodtrail_foreground.png"
-    xalign 0.5 yalign 0.5 alpha 1.0
+    alpha 1.0
     linear 2.0 alpha 1.0
     linear 2.0 alpha 0.8
     linear 2.0 alpha 1.0
@@ -226,7 +226,7 @@ image woodtrailforegrounddraz1:
 
 image crtwoods1:
     "crtvfx"
-    xalign 0.5 yalign 0.5 alpha 0.1
+    alpha 0.1
 
 layeredimage woodtrail1:
     always:
@@ -256,7 +256,7 @@ image woodtrailstarsdraz2:                             ##Feel free to thank Draz
 
 image woodtrailbgdraz2:
     "vfx/bg_woodtrail2_base2.png"
-    alpha 1.0 xalign 0.5 yalign 0.5
+    alpha 1.0
     linear 2.0 alpha 0.0
     linear 2.0 alpha 0.0
     linear 3.0 alpha 1.0
@@ -269,7 +269,7 @@ image woodtrailbgdraz2:
 
 image woodtrailforegrounddraz2:
     "vfx/bg_woodtrail2_foreground.png"
-    xalign 0.5 yalign 0.5 alpha 1.0
+    alpha 1.0
     linear 2.0 alpha 0.9
     linear 2.0 alpha 0.7
     linear 2.0 alpha 0.9
@@ -306,7 +306,7 @@ image campfire2:
 
 image campfire1:
     "vfx/kerosene_base1.png"
-    alpha 1.0 xalign 0.5 yalign 0.5
+    alpha 1.0
     linear 1.5 alpha 0.5
     linear 0.5 alpha 1.0
     linear 0.5 alpha 0.5
@@ -324,19 +324,20 @@ image campfire1:
 
 image keroseneforeground:
     "vfx/kerosene_foreground.png"
-    xalign 0.5 yalign 0.5 alpha 1.0
+    alpha 1.0
 
 
 image campfire:
     "firevfx"
-    xalign 0.5 yalign 0.6 alpha 1.0 zoom 0.75
-    linear 1.0 xalign 0.5 yalign 0.58 alpha 0.9
-    linear 1.0 xalign 0.5 yalign 0.6 alpha 1.0
-    linear 1.0 xalign 0.5 yalign 0.58 alpha 0.9
-    linear 1.0 xalign 0.5 yalign 0.6 alpha 1.0
-    linear 1.0 xalign 0.5 yalign 0.58 alpha 0.7
-    linear 1.0 xalign 0.5 yalign 0.6 alpha 1.0
-    repeat
+    xpos 692 ypos 108 zoom 0.75 alpha 1.0
+    block:
+        linear 1.0 ypos 86 alpha 0.9
+        linear 1.0 ypos 108 alpha 1.0
+        linear 1.0 ypos 86 alpha 0.9
+        linear 1.0 ypos 108 alpha 1.0
+        linear 1.0 ypos 86 alpha 0.7
+        linear 1.0 ypos 108 alpha 1.0
+        repeat
 
 layeredimage kerosene:
     always:
@@ -356,9 +357,9 @@ layeredimage kerosene:
 
 image sunsettitlescreen:
     "sunset"
-    xalign 0.5 yalign 0.5 zoom 1.0
-    linear 120.0 xalign 0.5 yalign 0.5 zoom 1.02
-    linear 120.0 xalign 0.5 yalign 0.5 zoom 1.0
+    zoom 1.0
+    linear 120.0 zoom 1.02
+    linear 120.0 zoom 1.0
     repeat
 
 image sun:

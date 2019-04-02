@@ -331,12 +331,10 @@ init:
 
 image catfield1:
     "catfield"
-    xalign 0.5 yalign 0.5
-
 
 image catfield2:
     "vrfield"
-    xalign 0.5 yalign 0.5 alpha 0.5
+    alpha 0.5
 
 layeredimage catfieldbg:
     always:
