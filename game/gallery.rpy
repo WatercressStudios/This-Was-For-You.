@@ -8,7 +8,7 @@ init python:
         ( "bg ceiling ceiling static", "Ceiling", "Alison Huang"),
         ( "bg hub hub", "Hub", "Alison Huang"),
         ( "kerosene", "Kerosene", "AnagramDaine"),
-        ( "bg bedroombg", "Catfield", "AnagramDaine"),
+        ( "catfieldbg", "Catfield", "AnagramDaine"),
         ( "woodtrail1", "Woodtrail", "AnagramDaine"),
         ( "woodtrail2", "Woodtrail 2", "AnagramDaine"),
         ( "sunsettitle", "Sunset", "AnagramDaine"),
