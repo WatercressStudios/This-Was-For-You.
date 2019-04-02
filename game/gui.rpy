@@ -23,7 +23,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#e1e1e1'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#888888'
@@ -48,26 +48,28 @@ define gui.muted_color = '#003d51'
 define gui.hover_muted_color = '#005b7a'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
+define gui.text_color = '#e1e1e1'
 define gui.interface_text_color = '#ffffff'
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "Arial Bold.ttf"
+define gui.text_outlines = [ (absolute(6), "#000", absolute(0), absolute(0)) ]
+define gui.text_line_spacing = 8
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "BebasNeue-Regular.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "BebasNeue-Regular.otf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 40
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 60
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33
@@ -180,9 +182,23 @@ define gui.button_text_xalign = 0.0
 
 define gui.radio_button_borders = Borders(27, 6, 6, 6)
 
-define gui.check_button_borders = Borders(27, 6, 6, 6)
+define gui.check_button_borders = Borders(70, 12, 6, 6)
 
 define gui.confirm_button_text_xalign = 0.5
+
+define gui.prompt_text_color = '#374388'
+define gui.prompt_text_outlines = [(0, "000", 0, 0)]
+define gui.prompt_text_size = 60
+
+define gui.confirm_button_text_idle_color = "#374388"
+define gui.confirm_button_text_hover_color = "#354aad"
+define gui.confirm_button_text_outlines = [(0, "000", 0, 0)]
+define gui.confirm_button_text_size = 60
+
+define gui.check_button_text_idle_color = "#374388"
+define gui.check_button_text_hover_color = "#354aad"
+define gui.check_button_text_outlines = [(0, "000", 0, 0)]
+define gui.check_button_text_size = 40
 
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
@@ -249,7 +265,10 @@ define gui.file_slot_rows = 2
 define gui.navigation_xpos = 60
 
 ## The vertical position of the skip indicator.
-define gui.skip_ypos = 15
+define gui.skip_ypos = 0
+
+## The horizontal position of the skip indicator.
+define gui.skip_xpos = 0
 
 ## The vertical position of the notify screen.
 define gui.notify_ypos = 68
@@ -285,10 +304,13 @@ define gui.main_menu_text_xalign = 1.0
 define gui.frame_borders = Borders(6, 6, 6, 6)
 
 ## The frame that is used as part of the confirm screen.
-define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
+define gui.confirm_frame_borders = Borders(60, 30, 60, 30)
+
+## The frame that is used as part of the confirm screen.
+define gui.confirm_button_frame_borders = Borders(100, 20, 100, 5)
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(24, 8, 75, 8)
+define gui.skip_frame_borders = Borders(0, 0, 0, 0)
 
 ## The frame that is used as part of the notify screen.
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)
@@ -307,8 +329,8 @@ define gui.frame_tile = False
 ## The height of horizontal bars, scrollbars, and sliders. The width of vertical
 ## bars, scrollbars, and sliders.
 define gui.bar_size = 38
-define gui.scrollbar_size = 18
-define gui.slider_size = 38
+define gui.scrollbar_size = 20
+define gui.slider_size = 60
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
@@ -317,12 +339,12 @@ define gui.slider_tile = False
 
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
-define gui.scrollbar_borders = Borders(6, 6, 6, 6)
+define gui.scrollbar_borders = Borders(0, 0, 0, 0)
 define gui.slider_borders = Borders(6, 6, 6, 6)
 
 ## Vertical borders.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
-define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
+define gui.vscrollbar_borders = Borders(0, 0, 0, 0)
 define gui.vslider_borders = Borders(6, 6, 6, 6)
 
 ## What to do with unscrollable scrollbars in the gui. "hide" hides them, while

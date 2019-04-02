@@ -101,14 +101,16 @@ screen say(who, what):
     window:
         id "window"
 
-        if who is not None:
+        # if who is not None:
+        #
+        #     # window:
+        #     #     id "namebox"
+        #     #     style "namebox"
+        #     #     text who id "who"
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
-
-        text what id "what"
+        text what id "what":
+            text_align 0.5
+            xalign 0.5
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -136,7 +138,8 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    #background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background None
 
 style namebox:
     xpos gui.name_xpos
@@ -145,7 +148,8 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    #background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background None
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -241,26 +245,26 @@ style choice_button_text is default:
 ## menus.
 
 screen quick_menu():
-
-    ## Ensure this appears on top of other screens.
-    zorder 100
-
-    if quick_menu:
-
-        hbox:
-            style_prefix "quick"
-
-            xalign 0.5
-            yalign 1.0
-
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+    pass
+    # ## Ensure this appears on top of other screens.
+    # zorder 100
+    #
+    # if quick_menu:
+    #
+    #     hbox:
+    #         style_prefix "quick"
+    #
+    #         xalign 0.5
+    #         yalign 1.0
+    #
+    #         textbutton _("Back") action Rollback()
+    #         textbutton _("History") action ShowMenu('history')
+    #         textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+    #         textbutton _("Auto") action Preference("auto-forward", "toggle")
+    #         textbutton _("Save") action ShowMenu('save')
+    #         textbutton _("Q.Save") action QuickSave()
+    #         textbutton _("Q.Load") action QuickLoad()
+    #         textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -584,14 +588,14 @@ style about_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#save https://
 ## www.renpy.org/doc/html/screen_special.html#load
 
-screen save():
+screen _save():
 
     tag menu
 
     use file_slots(_("Save"))
 
 
-screen load():
+screen _load():
 
     tag menu
 
@@ -880,7 +884,7 @@ style slider_vbox:
 ##
 ## https://www.renpy.org/doc/html/history.html
 
-screen history():
+screen _history():
 
     tag menu
 
@@ -1147,11 +1151,11 @@ screen confirm(message, yes_action, no_action):
     add "gui/overlay/confirm.png"
 
     frame:
-
+        padding (50,70,50,40)
         vbox:
             xalign .5
             yalign .5
-            spacing 45
+            spacing 20
 
             label _(message):
                 style "confirm_prompt"
@@ -1159,10 +1163,10 @@ screen confirm(message, yes_action, no_action):
 
             hbox:
                 xalign 0.5
-                spacing 150
+                spacing 50
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("Yes") action [ Play("sound", uisound()), yes_action ]
+                textbutton _("No") action [ Play("sound", uisound()), no_action ]
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -1187,6 +1191,9 @@ style confirm_prompt_text:
 style confirm_button:
     properties gui.button_properties("confirm_button")
 
+    #background Frame(["megan_ui/gui-textbox-select.png"],gui.confirm_button_frame_borders)
+    padding gui.confirm_button_frame_borders.padding
+
 style confirm_button_text:
     properties gui.button_text_properties("confirm_button")
 
@@ -1208,11 +1215,10 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Skipping")
+            xalign 0.5
+            yalign 0.5
 
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+            add "megan_ui/gui-skipping.png"
 
 
 ## This transform is used to blink the arrows one after another.
@@ -1234,8 +1240,11 @@ style skip_text is gui_text
 style skip_triangle is skip_text
 
 style skip_frame:
+    xfill True
+    yfill True
     ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
+    xpos gui.skip_xpos
+    background "gui/skip.png"
     padding gui.skip_frame_borders.padding
 
 style skip_text:
@@ -1259,18 +1268,26 @@ screen notify(message):
     zorder 100
     style_prefix "notify"
 
-    frame at notify_appear:
-        text "[message!tq]"
+    frame ypos 100 at notify_appear:
+        background None
+        hbox:
+            add "megan_ui/gui-email-notice.png"
+            text "[message!tq]" ypos 10:
+                size 50
 
     timer 3.25 action Hide('notify')
 
 
 transform notify_appear:
     on show:
-        alpha 0
-        linear .25 alpha 1.0
+        alpha 0 xoffset -200
+        parallel:
+            linear .25 alpha 1.0
+        parallel:
+            linear 0.2 xoffset 20
+            linear 0.1 xoffset 0
     on hide:
-        linear .5 alpha 0.0
+        easeout .5 alpha 0.0 xoffset -200
 
 
 style notify_frame is empty

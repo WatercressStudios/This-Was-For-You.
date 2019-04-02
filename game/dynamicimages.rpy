@@ -40,6 +40,9 @@ init:
         xanchor 0.5
         yalign 1.0
 
+    transform height:
+        ypos 1.05
+
 
 init -100 python:
     import os
