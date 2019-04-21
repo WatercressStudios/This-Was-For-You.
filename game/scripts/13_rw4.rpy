@@ -10,7 +10,7 @@ label rw4:
 
     # play SFX of a VR headset being powered down (it'll be cool if we can have a TV blinking off visual effect to go with it)
     # also hide the menu buttons (temporarily, for a few seconds)
-
+    stop music fadeout 0.5
     play sound "sfx/VR-OFF.ogg"
 
     hide screen in_game_menu
@@ -35,13 +35,14 @@ label rw4:
 
     # sfx of a thunder, followed by a BG change to the window and sfx of MC sitting up on bed. it's also super dark out there.
 
-    show bg bedroombg lightning
-    show bedroomstorm darkblue darkflash darklightning
-
     if persistent.subtitle or config.sound == False:
         sfx "sfx/Thunder_1.ogg" "*Thunder*"
     else:
         sfx "sfx/Thunder_1.ogg"
+
+    show bg bedroombg lightning
+    show bedroomstorm darkblue darkflash darklightning
+
 
     # flash the lightning outside the window! a second of two later, play sfx of another thunder.
 

@@ -7,7 +7,7 @@ label hub1:
     scene bg hub hub
     show screen chapter_announce
 
-    play ambient "sfx/Hub_Beach.ogg" fadein 3.0 fadeout 3.0
+    play ambient "sfx/Hub_Beach.ogg" fadein 3.0
     play music "Music/Hub.ogg" fadein 3.0
 
     "The familiar scent of an ocean breeze hits my nose first."
@@ -40,7 +40,7 @@ label hub1:
         sfx "sfx/run.ogg" "*Running*"
     else:
         sfx "sfx/run.ogg"
-
+    pause 0.5
     show che s catmouth armsnyan at center, height with easeinright
 
     #Cheshire slides onto screen with a happy expression

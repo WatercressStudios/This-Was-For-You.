@@ -78,8 +78,8 @@ label planeticket:
     pause 0.5
 
     #all music/sfx/everything stops here.
-    stop music fadeout 0.2
-    stop ambient fadeout 0.2
+    stop music fadeout 0.5
+    stop ambient fadeout 0.5
 
     "My heart stops."
 

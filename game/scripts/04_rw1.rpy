@@ -100,7 +100,7 @@ label rw1:
     else:
         sfx "sfx/Thunder_3.ogg"
 
-    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 2.0
+    play ambient "sfx/Ambience_1_(Rain).ogg" fadein 0.5
 
     scene bg bedroombg open rain
     call openeyes from _call_openeyes_3
@@ -118,7 +118,7 @@ label rw1:
     else:
         sfx [ "<silence 3>", "sfx/thunder_2.ogg" ]
 
-    play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 2.0 fadeout 1.0
+    play ambient "sfx/Ambience_2_Window_Open.ogg" fadein 1.0
     show bg bedroombg nocurtains with dissolve
 
     "You liked the rain."
@@ -135,7 +135,7 @@ label rw1:
 
     show bg bedroombg closed with dissolve
 
-    play ambient "<from 60>sfx/Ambience_1_(Rain).ogg" fadein 1.0 fadeout 2.0
+    play ambient "<from 60>sfx/Ambience_1_(Rain).ogg" fadein 0.5 
 
     "Ugh. I'm done with rain."
 
