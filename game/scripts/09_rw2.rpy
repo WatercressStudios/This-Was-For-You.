@@ -11,28 +11,54 @@ label rw2:
 
     #Voicemail
     voice "voice/09-rw2-1.ogg" #Dad (Adam Warren)
-    dad "Hey kiddo, it's your parents..."
+    if persistent.subtitle or config.sound == False:
+        dad "Hey kiddo, it's your parents..."
+    else:
+        "{nw}"
     voice "voice/09-rw2-2.ogg" #Mom (Kenkoy)
-    mom "How are you feeling? Have you been eating well?"
+    if persistent.subtitle or config.sound == False:
+        mom "How are you feeling? Have you been eating well?"
+    else:
+        "{nw}"
     voice "voice/09-rw2-3.ogg" #Dad (Adam Warren)
-    dad "You should pick up the phone sometimes. Your mom is worried about you."
+    if persistent.subtitle or config.sound == False:
+        dad "You should pick up the phone sometimes. Your mom is worried about you."
+    else:
+        "{nw}"
     # mom is addressing dad here, not MC, so stern voice?
     voice "voice/09-rw2-4.ogg" #Mom (Kenkoy)
-    mom "Honey, you promised not to lecture."
+    if persistent.subtitle or config.sound == False:
+        mom "Honey, you promised not to lecture."
+    else:
+        "{nw}"
     voice "voice/09-rw2-5.ogg" #Dad (Adam Warren)
-    dad "Sorry."
+    if persistent.subtitle or config.sound == False:
+        dad "Sorry."
+    else:
+        "{nw}"
     # gentle voice again, addressing MC
     voice "voice/09-rw2-6.ogg" #Mom (Kenkoy)
-    mom "We're thinking about you, sweetie. Make sure you hydrate yourself properly, okay?"
+    if persistent.subtitle or config.sound == False:
+        mom "We're thinking about you, sweetie. Make sure you hydrate yourself properly, okay?"
+    else:
+        "{nw}"
     voice "voice/09-rw2-7.ogg" #Dad (Adam Warren)
-    dad "Call us any time, kiddo. You don't have to bottle it up. It's terrible what happened to your internet friend…"
+    if persistent.subtitle or config.sound == False:
+        dad "Call us any time, kiddo. You don't have to bottle it up. It's terrible what happened to your internet friend…"
+    else:
+        "{nw}"
     # Silence for a few seconds as as both parents aren't sure what to say next
     # Said with some hesitation and worry
     voice "voice/09-rw2-8.ogg" #Mom (Kenkoy)
-    mom "We love you, sweetie. Take care of yourself, you hear me?"
+    if persistent.subtitle or config.sound == False:
+        mom "We love you, sweetie. Take care of yourself, you hear me?"
+    else:
+        "{nw}"
     voice "voice/09-rw2-9.ogg" #Dad (Adam Warren)
-    dad "We'll be here when you're ready. Give us a call, okay?"
-
+    if persistent.subtitle or config.sound == False:
+        dad "We'll be here when you're ready. Give us a call, okay?"
+    else:
+        "{nw}"
     pause 0.5
 
     $ visible_emails.append('friend3')

@@ -7,19 +7,40 @@ label intro:
     show screen chapter_announce
     #Voicemail
     voice "voice/01-intro-1.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "Heyyy. It's meee."
+    if persistent.subtitle or config.sound == False:
+        min "Heyyy. It's meee."
+    else:
+        "{nw}"
     voice "voice/01-intro-2.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "I know I should be sleeping but I'm too excited, you know?"
+    if persistent.subtitle or config.sound == False:
+        min "I know I should be sleeping but I'm too excited, you know?"
+    else:
+        "{nw}"
     voice "voice/01-intro-3.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "Hope I didn't wake you up!"
+    if persistent.subtitle or config.sound == False:
+        min "Hope I didn't wake you up!"
+    else:
+        "{nw}"
     voice "voice/01-intro-4.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "Er, what time is it over there again?"
+    if persistent.subtitle or config.sound == False:
+        min "Er, what time is it over there again?"
+    else:
+        "{nw}"
     voice "voice/01-intro-5.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "Whatever you're doing, I hope it's going well!"
+    if persistent.subtitle or config.sound == False:
+        min "Whatever you're doing, I hope it's going well!"
+    else:
+        "{nw}"
     voice "voice/01-intro-6.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "I think I've talked for long enough, hehe."
+    if persistent.subtitle or config.sound == False:
+        min "I think I've talked for long enough, hehe."
+    else:
+        "{nw}"
     voice "voice/01-intro-7.ogg" #Ji-min (Ariane "Starleeter" Marchese)
-    min "See you tomorrow!"
+    if persistent.subtitle or config.sound == False:
+        min "See you tomorrow!"
+    else:
+        "{nw}"
 
     pause 0.5
 

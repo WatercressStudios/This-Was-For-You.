@@ -11,15 +11,30 @@ label rw1:
 
     #Voicemail
     voice "voice/04-rw1-1.ogg" #Boss (Bryce Buckley)
-    bos "Hey, it's your boss. How’ve you been lately?"
+    if persistent.subtitle or config.sound == False:
+        bos "Hey, it's your boss. How’ve you been lately?"
+    else:
+        "{nw}"
     voice "voice/04-rw1-2.ogg" #Boss (Bryce Buckley)
-    bos "Yeah... we haven't seen you at the shop for a while."
+    if persistent.subtitle or config.sound == False:
+        bos "Yeah... we haven't seen you at the shop for a while."
+    else:
+        "{nw}"
     voice "voice/04-rw1-3.ogg" #Boss (Bryce Buckley)
-    bos "Don't worry, we've managed to cover your shifts just fine, but... it would be nice to know when you'll be coming back."
+    if persistent.subtitle or config.sound == False:
+        bos "Don't worry, we've managed to cover your shifts just fine, but... it would be nice to know when you'll be coming back."
+    else:
+        "{nw}"
     voice "voice/04-rw1-4.ogg" #Boss (Bryce Buckley)
-    bos "Give me a call when you can."
+    if persistent.subtitle or config.sound == False:
+        bos "Give me a call when you can."
+    else:
+        "{nw}"
     voice "voice/04-rw1-5.ogg" #Boss (Bryce Buckley)
-    bos "See you soon."
+    if persistent.subtitle or config.sound == False:
+        bos "See you soon."
+    else:
+        "{nw}"
 
     pause 0.5
 

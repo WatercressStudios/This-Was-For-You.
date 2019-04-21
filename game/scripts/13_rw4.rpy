@@ -99,22 +99,51 @@ label rw4_continue:
     scene black
     show screen chapter_announce
 
-    voice "voice/13-rw4_continue-1.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "Heya! So uh, where do I start…"
-    voice "voice/13-rw4_continue-2.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "Look, I don't wanna call you out or anything, but you kinda missed our last four hangouts."
-    voice "voice/13-rw4_continue-3.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "I don't wanna call you out, but I'm calling you out. *laughs*"
-    voice "voice/13-rw4_continue-4.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "So umm… your friends wanna see your stupid face."
-    voice "voice/13-rw4_continue-5.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "I'm sure you'll forgive us for tomorrow, cuz you're a good person."
-    voice "voice/13-rw4_continue-6.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "Also, you owe us one."
-    voice "voice/13-rw4_continue-7.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "Did we say we're coming over yet?"
-    voice "voice/13-rw4_continue-8.ogg" #Friend (1_ Kenneth Faircloth 2_ Siddharta Villanueva)
-    vm "Just the four of us, don't worry. Take care!"
+    voice "voice/13-rw4_continue-1.ogg" #Friend 1 (Kenneth Faircloth)
+    if persistent.subtitle or config.sound == False:
+        vm1 "Heya! So uh, where do I start…"
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-2.ogg" #Friend 2 (Siddharta Villanueva)
+    if persistent.subtitle or config.sound == False:
+        vm2 "Look, I don't wanna call you out or anything, but you kinda missed our last four hangouts."
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-3.ogg" #Friend 3 (DJ Horn)
+    if persistent.subtitle or config.sound == False:
+        vm3 "I don't wanna call you out, but I'm calling you out. *laughs*"
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-4.ogg" #Friend 1 (Kenneth Faircloth)
+    if persistent.subtitle or config.sound == False:
+        vm1 "So umm… your friends wanna see your stupid face."
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-5.ogg" #Friend 2 (Siddharta Villanueva)
+    if persistent.subtitle or config.sound == False:
+        vm2 "I'm sure you'll forgive us for tomorrow, cuz you're a good person."
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-6.ogg" #Friend 3 (DJ Horn)
+    if persistent.subtitle or config.sound == False:
+        vm3 "Also, you owe us one."
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-7.ogg" #Friend 2 (Siddharta Villanueva)
+    if persistent.subtitle or config.sound == False:
+        vm2 "Did you say we're coming over yet?"
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-8.ogg" #Friend 1 (Kenneth Faircloth)
+    if persistent.subtitle or config.sound == False:
+        vm1 "I was getting to that! We're coming over tomorrow."
+    else:
+        "{nw}"
+    voice "voice/13-rw4_continue-9.ogg" #Friend 3 (DJ Horn)
+    if persistent.subtitle or config.sound == False:
+        vm3 "Just the four of us, don't worry. Take care!"
+    else:
+        "{nw}"
     # abruptly hangs up, as if the caller was afraid the MC would say "no" even though it's a freaking voicemail
 
     pause 0.5

@@ -8,7 +8,9 @@ define bos = Character("Boss", callback=speaker("bos"), what_prefix="[[Boss] ", 
 define mom = Character("Mom", callback=speaker("mom"), what_prefix="[[Mom] ", what_color="#e1e1e1")
 define dad = Character("Dad", callback=speaker("dad"), what_prefix="[[Dad] ", what_color="#e1e1e1")
 define caf = Character("Cafe Owner", callback=speaker("caf"), what_prefix="[[Cafe Owner] ", what_color="#e1e1e1")
-define vm = Character("Friend", callback=speaker("vm"), what_prefix="[[Friend] ", what_color="#e1e1e1")
+define vm1 = Character("Friend 1", callback=speaker("vm1"), what_prefix="[[Friend 1] ", what_color="#e1e1e1")
+define vm2 = Character("Friend 2", callback=speaker("vm2"), what_prefix="[[Friend 2] ", what_color="#e1e1e1")
+define vm3 = Character("Friend 3", callback=speaker("vm3"), what_prefix="[[Friend 3] ", what_color="#e1e1e1")
 
 init python:
     # define VA info and parsing
