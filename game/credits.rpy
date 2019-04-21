@@ -151,7 +151,7 @@ init python:
         ),
         ( "Cafe owner VA",
             [
-                "--",
+                "Amanda Hufford",
             ]
         ),
         ( "Friend 1 VA",
@@ -166,7 +166,7 @@ init python:
         ),
         ( "Friend 3 VA",
             [
-                "--",
+                "DJ Horn",
             ]
         ),
         ( "Marketing",
