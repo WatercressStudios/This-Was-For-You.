@@ -149,7 +149,7 @@ label rw3:
 
     "And all good people die eventually."
 
-    "To the universe, that’s the same as crushing an ant."
+#    "To the universe, that’s the same as crushing an ant."
 
     #enter VR?
     #yes

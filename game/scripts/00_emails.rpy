@@ -92,7 +92,7 @@ CoinSellers United"""
         {
             "from": "Group: Work",
             "title": "Where are you?",
-            "body":"""We're shortstaffed and we really could use some help. Please come in soon, works been super rough without you. We need an extra set of hands around here.
+            "body":"""We're shortstaffed and we really could use some help. Please come in soon, work's been super rough without you. We need an extra set of hands around here.
 
 Are you doing okay?"""
         },

@@ -18,7 +18,7 @@ label hub4:
         ypos 2
         linear 2.8 ypos 1.6
 
-    "The waves lapping against the shore calm me, as they alwa--{nw}" #interrupt function I forget how
+    "The waves lapping against the shore calm me, as they alwa--" #interrupt function I forget how
 
     mc "Stop right there."
 
@@ -112,7 +112,7 @@ label hub4:
 
     "Soon, I'm filled with a sense of calm."
 
-    "My gaze slowly shifts to one of the things we've made. Do you remember about this, Ji?"
+    "My gaze slowly shifts to one of the things we've made. Do you remember this, Ji?"
 
     "As I reach out for it, I hear a sniff behind me."
 
@@ -136,12 +136,12 @@ label hub4:
     voice "voice/12-hub4-10.ogg" #Cheshire (shiena)
     che "Does master wants to be left alone this time, too?"
 
-    "I nod while waving it away impatiently."
+    "Instead of answering, I point at a seagull on the other end of the beach. Cats like \"playing\" with birds, right?"
 
     show che f happy armsscanning
 
     voice "voice/12-hub4-11.ogg" #Cheshire (shiena)
-    che "Nyahaha! Detective CH3SH1R3 is on the case~!"
+    che "Detective CH3SH1R3 is on the case~!"
 
     hide che with easeoutleft
 
