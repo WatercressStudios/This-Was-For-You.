@@ -132,11 +132,16 @@ init -50 python:
                     path_list = path_list[0:-1] + path_list[-1].split()
                 path_list[-1] = os.path.splitext(path_list[-1])[0]
                 path_list = tuple(prepend + path_list[excludeFirstXFolders:])
+                lowerpath_list = tuple([ x.lower() for x in path_list ])
 
                 if composite:
                     renpy.image(('_'.join(path_list),), path)
+                    if lowerpath_list != path_list:
+                        renpy.image(('_'.join(lowerpath_list),), path)
                 else:
                     renpy.image(path_list, path)
+                    if lowerpath_list != path_list:
+                        renpy.image(lowerpath_list, path)
 
                 if composite:
                     # keep ordered list of all images, and also the corresponding paths
