@@ -102,7 +102,7 @@ screen in_game_menu():
             Hide("notify")
         ]
     mousearea:
-        area (110, 0, 520, 790)
+        area (110, 0, 520, 880)
         unhovered [
             Play("sound", uisoundout()),
             Hide("in_game_email_content"),
