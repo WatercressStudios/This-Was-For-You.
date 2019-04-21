@@ -4,7 +4,7 @@
 
 init python:
     credits_duration = 50.0
-    credits_height = 8400
+    credits_height = 6800
     credits_content = [
         ( "Dedicated to @TKia_ (Electro), InstantRiot",
             [
@@ -14,12 +14,80 @@ init python:
             [
             ]
         ),
-        ( "Writing",
+        ( "Story Outline",
             [
                 "Tristan 'Wolf' Barber",
                 "Sagittaeri",
                 "Alison 'Draz' Huang",
                 "Happiness+",
+            ]
+        ),
+        ( "Writing",
+            [
+                (
+                    "Memories of You",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "Imitation",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "Uninstall Button",
+                    "Sagittaeri",
+                ),
+                (
+                    "The World Keeps Turning",
+                    "Alison 'Draz' Huang",
+                    "Happiness+",
+                ),
+                (
+                    "Preservation",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "You Were so Strong.",
+                    "Tristan 'Wolf' Barber",
+                ),
+                (
+                    "Apologies",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "Our Song",
+                    "Sagittaeri",
+                    "Happiness+",
+                ),
+                (
+                    "Sustenance",
+                    "Sagittaeri",
+                ),
+                (
+                    "Forget",
+                    "Tristan 'Wolf' Barber",
+                    "Sagittaeri",
+                ),
+                (
+                    "Only The Good Die Young.",
+                    "Tristan 'Wolf' Barber",
+                ),
+                (
+                    "The Gift",
+                    "Sagittaeri",
+                    "Tristan 'Wolf' Barber",
+                ),
+                (
+                    "Friendships",
+                    "Sagittaeri",
+                ),
+                (
+                    "What Could Have Been.",
+                    "Tristan 'Wolf' Barber",
+                ),
+                (
+                    "I Miss You.",
+                    "Tristan 'Wolf' Barber",
+                ),
             ]
         ),
         ( "Editing",
@@ -32,143 +100,144 @@ init python:
                 "Tristan 'Wolf' Barber",
             ]
         ),
-        ( "Music",
+
+        ( "Audio",
             [
-                "Kierious",
-                "Paul Robins",
-                "Speedy",
-                "Raymond 'raydee99' Demers",
+                (
+                    "Music",
+                    "Kierious",
+                    "Paul Robins",
+                    "Speedy",
+                    "Raymond 'raydee99' Demers",
+                ),
+                (
+                    "Sound Design",
+                    "Paul Robins",
+                    "Speedy",
+                ),
+                (
+                    "VA Line Splicing",
+                    "Alison 'Draz' Huang",
+                    "Happiness+",
+                    "Speedy",
+                ),
             ]
         ),
-        ( "Sound Design",
+
+        ( "Art",
             [
-                "Paul Robins",
-                "Speedy",
+                (
+                    "Sprite",
+                    "Dean 'AnagramDaine' Lewthwaite",
+                ),
+                (
+                    "CG",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "UI",
+                    "Megan Uosiu",
+                ),
+                (
+                    "Background",
+                    "Dean 'AnagramDaine' Lewthwaite",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "VFX",
+                    "Dean 'AnagramDaine' Lewthwaite",
+                ),
+                (
+                    "Logo",
+                    "Chiba Kenta",
+                ),
             ]
         ),
-        ( "VA Line Splicing",
+
+        ( "Code",
             [
-                "Alison 'Draz' Huang",
-                "Happiness+",
-                "Speedy",
+                (
+                    "UI",
+                    "Sagittaeri",
+                    "Alison 'Draz' Huang",
+                    "Happiness+",
+                ),
+                (
+                    "Tools",
+                    "Sagittaeri",
+                ),
             ]
         ),
-        ( "Art Lead",
+
+        ( "Ren'py Scripting",
             [
-                "Alison 'Draz' Huang",
+                (
+                    "Logic",
+                    "Sagittaeri",
+                ),
+                (
+                    "Visual",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "Audio",
+                    "Paul Robins",
+                ),
+                (
+                    "Effects",
+                    "Alison 'Draz' Huang",
+                    "Dean 'AnagramDaine' Lewthwaite",
+                    "Sagittaeri",
+                ),
             ]
         ),
-        ( "Sprite Art",
-            [
-                "Dean 'AnagramDaine' Lewthwaite",
-            ]
-        ),
-        ( "CG Art",
-            [
-                "Alison 'Draz' Huang",
-            ]
-        ),
-        ( "UI Art+Design",
-            [
-                "Megan Uosiu",
-            ]
-        ),
-        ( "Background Art",
-            [
-                "Dean 'AnagramDaine' Lewthwaite",
-                "Alison 'Draz' Huang",
-            ]
-        ),
-        ( "VFX",
-            [
-                "Dean 'AnagramDaine' Lewthwaite",
-            ]
-        ),
-        ( "Logo Art",
-            [
-                "Chiba Kenta",
-            ]
-        ),
-        ( "Code Lead",
-            [
-                "Sagittaeri",
-            ]
-        ),
-        ( "UI Code",
-            [
-                "Sagittaeri",
-                "Alison 'Draz' Huang",
-                "Happiness+",
-            ]
-        ),
-        ( "Tools Code",
-            [
-                "Sagittaeri",
-            ]
-        ),
-        ( "Technical Art",
-            [
-                "Alison 'Draz' Huang",
-                "Dean 'AnagramDaine' Lewthwaite",
-            ]
-        ),
-        ( "Scripters",
-            [
-                "Alison 'Draz' Huang",
-                "Sagittaeri",
-                "Paul Robins",
-            ]
-        ),
+
         ( "Voice Direction",
             [
                 "Sandra 'SandraMJ' Molina",
             ]
         ),
-        ( "CH35H1R3 VA",
+        ( "Voice Overs",
             [
-                "Shiena",
+                (
+                    "CH35H1R3",
+                    "Shiena",
+                ),
+                (
+                    "Ji-min",
+                    "Ariane 'Starleeter' Marchese",
+                ),
+                (
+                    "Boss",
+                    "Bryce Buckley",
+                ),
+                (
+                    "Mom",
+                    "Kenkoy",
+                ),
+                (
+                    "Dad",
+                    "Adam Warren",
+                ),
+                (
+                    "Cafe owner",
+                    "Amanda Hufford",
+                ),
+                (
+                    "Friend 1",
+                    "Kenneth Faircloth",
+                ),
+                (
+                    "Friend 2",
+                    "Siddharta Villanueva",
+                ),
+                (
+                    "Friend 3",
+                    "DJ Horn",
+                ),
             ]
         ),
-        ( "Ji-min VA",
-            [
-                "Ariane 'Starleeter' Marchese",
-            ]
-        ),
-        ( "Boss VA",
-            [
-                "Bryce Buckley",
-            ]
-        ),
-        ( "Mom VA",
-            [
-                "Kenkoy",
-            ]
-        ),
-        ( "Dad VA",
-            [
-                "Adam Warren",
-            ]
-        ),
-        ( "Cafe owner VA",
-            [
-                "Amanda Hufford",
-            ]
-        ),
-        ( "Friend 1 VA",
-            [
-                "Kenneth Faircloth",
-            ]
-        ),
-        ( "Friend 2 VA",
-            [
-                "Siddharta Villanueva  ",
-            ]
-        ),
-        ( "Friend 3 VA",
-            [
-                "DJ Horn",
-            ]
-        ),
+
         ( "Marketing",
             [
                 "Caitie",
@@ -178,14 +247,17 @@ init python:
         ),
         ( "Trailer",
             [
-                "TheAlchemyst",
+                (
+                    "Video Editing",
+                    "TheAlchemyst",
+                ),
+                (
+                    "Soundtrack",
+                    "Speedy",
+                ),
             ]
         ),
-        ( "Trailer Soundtrack",
-            [
-                "Speedy",
-            ]
-        ),
+
         ( "Special thanks to",
             [
                 "Ren'py Tom",
@@ -230,10 +302,39 @@ screen credits():
                     size 50
                     color "#7ECBDD"
                 for name in names:
-                    text name:
-                        text_align 0.5
-                        xalign 0.5
-                        font "Arial Bold.ttf"
-                        size 30
-                        color "#fff"
+                    if type(name) == type(()):
+                        hbox:
+                            xalign 0.5
+                            frame:
+                                background None
+                                padding (0,0,0,0)
+                                margin (0,0,0,0)
+                                xsize 900
+                                text name[0]:
+                                    text_align 1.0
+                                    xalign 1.0
+                                    font "Arial Bold.ttf"
+                                    size 30
+                                    color "#fff"
+                            null width 50
+                            frame:
+                                background None
+                                padding (0,0,0,0)
+                                margin (0,0,0,0)
+                                xsize 900
+                                vbox:
+                                    for n in name[1:]:
+                                        text n:
+                                            text_align 0.0
+                                            xalign 0.0
+                                            font "Arial Bold.ttf"
+                                            size 30
+                                            color "#fff"
+                    else:
+                        text name:
+                            text_align 0.5
+                            xalign 0.5
+                            font "Arial Bold.ttf"
+                            size 30
+                            color "#fff"
             null height 5000
