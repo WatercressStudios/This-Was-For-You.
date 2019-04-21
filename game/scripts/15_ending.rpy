@@ -93,5 +93,41 @@ label ending_merge:
     hide screen credits
     if jivoicemail:
         # TODO Replay voicemail
-        pass
+        voice "voice/01-intro-1.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "Heyyy. It's meee."
+        else:
+            "{nw}"
+        voice "voice/01-intro-2.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "I know I should be sleeping but I'm too excited, you know?"
+        else:
+            "{nw}"
+        voice "voice/01-intro-3.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "Hope I didn't wake you up!"
+        else:
+            "{nw}"
+        voice "voice/01-intro-4.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "Er, what time is it over there again?"
+        else:
+            "{nw}"
+        voice "voice/01-intro-5.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "Whatever you're doing, I hope it's going well!"
+        else:
+            "{nw}"
+        voice "voice/01-intro-6.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "I think I've talked for long enough, hehe."
+        else:
+            "{nw}"
+        voice "voice/01-intro-7.ogg" #Ji-min (Ariane "Starleeter" Marchese)
+        if persistent.subtitle or config.sound == False:
+            min "See you tomorrow!"
+        else:
+            "{nw}"
+
+        pause 0.5
     #end game

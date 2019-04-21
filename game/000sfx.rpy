@@ -18,6 +18,7 @@ screen sfx_screen(what):
             font "BebasNeue-Regular.otf"
             color "#ffffff"
             size 50
+        timer 2 action Hide("sfx_screen")
 
 
 python early:
