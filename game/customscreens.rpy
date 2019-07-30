@@ -153,7 +153,7 @@ screen in_game_email_content():
                 scrollbars "vertical"
                 side_xalign 0.5
                 yinitial 1.0
-                for ekey in visible_emails:
+                for ekey in reversed(visible_emails):
                     if ekey in read_emails:
                         $ email_color = "#39488D"
                     else:
