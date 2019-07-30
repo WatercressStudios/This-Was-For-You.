@@ -109,7 +109,7 @@ image che_pose1_dance = Animation("sprites/che/pose1/base.png",0.59,
 label start:
     $ in_main_menu = False
     $ save_name = "Memories of You"
-    $ _game_menu_screen = None
+    $ _game_menu_screen = "save"
     $ visible_emails = ["intro"]
     $ read_emails = []
 

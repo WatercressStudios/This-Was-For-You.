@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ############### NANO 2019 CODE ##############
 image vr_buttons:
     "megan_ui/gui-vr-closed.png"
@@ -140,11 +139,12 @@ screen in_game_email_content():
     fixed xpos 110 ypos 0 at in_game_email_bg_showhide:
         add "megan_ui/gui-email-list-background.png"
 
-        frame xpos 15 ypos 330:
+        button xpos 15 ypos 330:
             background None
             padding (0, 0, 20, 0)
             xsize 500
             ysize 730
+            action NullAction()
             vpgrid:
                 cols 1
                 spacing 0
@@ -192,8 +192,9 @@ screen in_game_email_content():
 
 screen in_game_email_button():
     zorder 2
-    fixed xpos 110 ypos 0 at in_game_email_button_showhide:
+    button xpos 110 ypos 0 at in_game_email_button_showhide:
         add "megan_ui/gui-email-list-clicked.png"
+        action NullAction()
 
 transform in_game_email_button_showhide:
     on show:
@@ -231,6 +232,8 @@ screen in_game_email(ekey):
             Hide("in_game_email_button")
         ]
     button xpos 650 ypos 130 at in_game_email_showhide:
+        xsize 1080
+        ysize 660
         action NullAction()
         add "megan_ui/gui-email-body-background.png"
         $ email = all_emails[ekey]
@@ -309,8 +312,9 @@ screen in_game_menu_content():
 
 screen in_game_menu_button():
     zorder 2
-    fixed xpos 1470 ypos 0 at in_game_menu_button_showhide:
+    button xpos 1470 ypos 0 at in_game_menu_button_showhide:
         add "megan_ui/gui-menu-clicked.png"
+        action NullAction()
 
 transform in_game_menu_button_showhide:
     on show:
