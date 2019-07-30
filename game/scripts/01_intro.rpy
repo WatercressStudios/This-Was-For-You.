@@ -222,7 +222,7 @@ label intro:
 
     call screen in_game_entervr
     stop ambient fadeout 1.0
-    stop music fadeout 1.0
+    stop music fadeout 2.0
 
     jump hub1
 

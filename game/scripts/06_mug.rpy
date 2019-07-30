@@ -10,8 +10,8 @@ label mug:
     show items awoomug with dissolve
     #This scene won't totally be emotionally charged cause Instant drew the original mug no
 
-    play ambient "sfx/fire.ogg" fadein 3.0
-    play music "Music/Awoo_Mug.ogg" fadein 3.0
+    play ambient "sfx/fire.ogg" fadein 2.0
+    play music "Music/Awoo_Mug.ogg" fadein 2.0
 
     "Grabbing the mug, I'm brought back to the night we first gathered around the fire."
 

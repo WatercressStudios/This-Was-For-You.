@@ -146,5 +146,5 @@ label hub2:
     #Imagemap
     call screen hubselect
 
-    stop ambient fadeout 1.0
-    stop music fadeout 1.0
+    stop ambient fadeout 2.0
+    stop music fadeout 2.0

@@ -63,13 +63,13 @@ init python:
 
     def uisoundin():
         clips = [
-            "sfx/Swipe_1.ogg",
+            "sfx/UI_Sound_1.ogg",
         ]
         return random.choice(clips)
 
     def uisoundout():
         clips = [
-            "sfx/Swipe_2.ogg",
+            "sfx/UI_Sound_2.ogg",
         ]
         return random.choice(clips)
 

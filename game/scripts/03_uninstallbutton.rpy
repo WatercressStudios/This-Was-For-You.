@@ -8,7 +8,7 @@ label uninstallbutton:
     # sfx of plastic button pressed *click*!
     #sfx "vr_uninstall_click" "click!"
 
-    play music "Music/Uninstall_Button.ogg" fadein 3.0
+    play music "Music/Uninstall_Button.ogg"
 
     if persistent.subtitle or config.sound == False:
         sfx "sfx/button.ogg" "*Click*"
@@ -80,7 +80,7 @@ label uninstallbutton:
         sfx "sfx/run.ogg" "*Running*"
     else:
         sfx "sfx/run.ogg"
-
+    pause 1.0
     show che f happy:
         zoom 2 xpos 0.1
 

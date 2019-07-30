@@ -41,8 +41,8 @@ label eighttrack:
     else:
         sfx "sfx/Button.ogg"
 
-    play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ] fadeout 3.0
-    play music [ "<silence 4>", "Music/8_Track.ogg" ] fadein 2.0
+    play sound [ "<silence 1>", "sfx/Cassette_up.ogg" ]
+    play music [ "<silence 4>", "Music/8_Track.ogg" ] fadein 1.0
 
 
     # song of that Ji-min composed plays, but it's missing the vocal tracks

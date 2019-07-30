@@ -92,9 +92,9 @@ label rw2:
     "...Even me."
 
     if persistent.subtitle or config.sound == False:
-        sfx "sfx/Stomach_grumble.ogg" "*Grumble*"
+        sfx "sfx/Stomach_1.ogg" "*Grumble*"
     else:
-        sfx "sfx/Stomach_grumble.ogg"
+        sfx "sfx/Stomach_1.ogg"
 
     "..."
 
@@ -108,9 +108,9 @@ label rw2:
     "I roll to the side in an attempt to quell my hunger."
 
     if persistent.subtitle or config.sound == False:
-        sfx "sfx/Stomach_grumble.ogg" "*Grumble*"
+        sfx "sfx/Stomach_2.ogg" "*Grumble*"
     else:
-        sfx "sfx/Stomach_grumble.ogg"
+        sfx "sfx/Stomach_2.ogg"
 
     "..."
 
@@ -145,6 +145,7 @@ label rw2:
     "Without bothering to heat it up, I start chewing on the cold, damp crust while walking to the window."
 
     hide ceilingfan
+    stop ambient fadeout 1.0
     show bg bedroombg open:
         zoom 1.5
         xalign 0.9 yalign 0.2
@@ -152,9 +153,9 @@ label rw2:
 
     pause 0.5
 
-    stop ambient fadeout 1.0
+
     #get city sounds no rain
-    play ambient "sfx/City_Noise.ogg" fadein 2.0 fadeout 3.0
+    play ambient "sfx/City_Noise.ogg" fadein 2.0
     show bg bedroombg nocurtains with dissolve
 
     # bg to the zoomed in window without the curtains
@@ -193,9 +194,9 @@ label rw2:
     # fan bg, and pause for a second
 
     stop ambient fadeout 1.0
-    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 1.0 fadeout 3.0
+    play ambient "sfx/Ambience_1_(No_Rain).ogg" fadein 1.0 
     play sound "sfx/bed.ogg"
-    play sound "sfx/Fan.ogg" fadein 1.0 loop fadeout 3.0
+    play sound "sfx/Fan.ogg" fadein 1.0 loop
 
     show bg bedroombg closed with dissolve
 

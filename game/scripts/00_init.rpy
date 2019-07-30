@@ -96,7 +96,6 @@ image che_pose2_md_sad = FlapMouth("che_pose2_mc_sad", "che_pose2_m_awoo")
 init python:
     renpy.music.register_channel("ambient", "music", True)
 
-
 # override some default behaviours
 
 image che_ed_relaxed = blinkeyes("che_e_default", "che_ec_relaxed")
