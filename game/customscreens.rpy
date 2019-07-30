@@ -663,7 +663,7 @@ screen custom_title_center():
     fixed:
         add "sunsettitle"
 
-    fixed pos (420, 50):
+    fixed pos (435, 90):
         add "gui/this was for you Logo.png"
 
     fixed pos (770, 510):
