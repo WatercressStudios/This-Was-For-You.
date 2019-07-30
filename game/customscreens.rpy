@@ -106,7 +106,7 @@ screen in_game_menu():
         unhovered [
             Play("sound", uisoundout()),
             Hide("in_game_email_content"),
-            Hide("in_game_email"),
+            #Hide("in_game_email"),
             Hide("in_game_email_button")
         ]
 
@@ -222,7 +222,16 @@ screen in_game_email(ekey):
         $ read_emails.append(ekey)
 
     zorder -1
-    fixed xpos 650 ypos 130 at in_game_email_showhide:
+    button xpos 0 ypos 0:
+        xysize (1.0, 1.0)
+        action [
+            Play("sound", uisoundout()),
+            Hide("in_game_email_content"),
+            Hide("in_game_email"),
+            Hide("in_game_email_button")
+        ]
+    button xpos 650 ypos 130 at in_game_email_showhide:
+        action NullAction()
         add "megan_ui/gui-email-body-background.png"
         $ email = all_emails[ekey]
         fixed pos (20, 40):
