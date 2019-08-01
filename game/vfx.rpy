@@ -320,14 +320,14 @@ init:
 ## which is what the world used to look like until the 90s hit.
 
 init:
-    image sunset = Animation("vfx/twfysunset_1.png",0.2,
-                             "vfx/twfysunset_2.png",0.2,
-                             "vfx/twfysunset_3.png",0.2,
-                             "vfx/twfysunset_4.png",0.2,
-                             "vfx/twfysunset_5.png",0.2,
-                             "vfx/twfysunset_6.png",0.2,
-                             "vfx/twfysunset_7.png",0.2,
-                             "vfx/twfysunset_8.png",0.2,)
+    image sunset = Animation("vfx/twfysunset_1.png",1.5,
+                             "vfx/twfysunset_2.png",1.5,
+                             "vfx/twfysunset_3.png",1.5,
+                             "vfx/twfysunset_4.png",1.5,
+                             "vfx/twfysunset_5.png",1.5,
+                             "vfx/twfysunset_6.png",1.5,
+                             "vfx/twfysunset_7.png",1.5,
+                             "vfx/twfysunset_8.png",1.5,)
 
 image catfield1:
     "catfield"
