@@ -4,9 +4,9 @@
 
 init python:
     gallery_content = [
-        ( "bg bedroombg", "Bedroom", "Alison Huang"),
-        ( "bg ceiling ceiling static", "Ceiling", "Alison Huang"),
-        ( "bg hub hub", "Hub", "Alison Huang"),
+        ( "thumbnails/bedroom.png", "Bedroom", "Alison Huang"),
+        ( "thumbnails/ceiling.png", "Ceiling", "Alison Huang"),
+        ( "thumbnails/hub.png", "Hub", "Alison Huang"),
         ( "thumbnails/kerosene.png", "Kerosene", "AnagramDaine"),
         ( "thumbnails/catfield.png", "Catfield", "AnagramDaine"),
         ( "thumbnails/woodtrail1.png", "Woodtrail", "AnagramDaine"),
@@ -14,12 +14,12 @@ init python:
         ( "thumbnails/sunset.png", "Sunset", "AnagramDaine"),
         ( "thumbnails/cheforward.png", "Cheshire Sprite - Forward", "AnagramDaine"),
         ( "thumbnails/cheside.png", "Cheshire Sprite - Side", "AnagramDaine"),
-        ( "cheshire", "Cheshire CG", "Alison Huang"),
-        ( "items uninstallbutton", "Uninstall Button", "Alison Huang"),
-        ( "items awoomug", "Awoo Mug", "Alison Huang"),
-        ( "items catplushie", "Cat Plushie", "Alison Huang"),
-        ( "items 8track", "8 Track", "Alison Huang"),
-        ( "items planeticket", "Plane Ticket", "Alison Huang"),
+        ( "thumbnails/cheshire.png", "Cheshire CG", "Alison Huang"),
+        ( "thumbnails/uninstallbutton.png", "Uninstall Button", "Alison Huang"),
+        ( "thumbnails/awoomug.png", "Awoo Mug", "Alison Huang"),
+        ( "thumbnails/catplushie.png", "Cat Plushie", "Alison Huang"),
+        ( "thumbnails/8track.png", "8 Track", "Alison Huang"),
+        ( "thumbnails/planeticket.png", "Plane Ticket", "Alison Huang"),
     ]
 
 image black = Solid("#000")
