@@ -4,22 +4,22 @@
 
 init python:
     gallery_content = [
-        ( "thumbnails/bedroom.png", "Bedroom", "Alison Huang"),
-        ( "thumbnails/ceiling.png", "Ceiling", "Alison Huang"),
-        ( "thumbnails/hub.png", "Hub", "Alison Huang"),
-        ( "thumbnails/kerosene.png", "Kerosene", "AnagramDaine"),
-        ( "thumbnails/catfield.png", "Catfield", "AnagramDaine"),
-        ( "thumbnails/woodtrail1.png", "Woodtrail", "AnagramDaine"),
-        ( "thumbnails/woodtrail2.png", "Woodtrail 2", "AnagramDaine"),
-        ( "thumbnails/sunset.png", "Sunset", "AnagramDaine"),
-        ( "thumbnails/cheforward.png", "Cheshire Sprite - Forward", "AnagramDaine"),
-        ( "thumbnails/cheside.png", "Cheshire Sprite - Side", "AnagramDaine"),
-        ( "thumbnails/cheshire.png", "Cheshire CG", "Alison Huang"),
-        ( "thumbnails/uninstallbutton.png", "Uninstall Button", "Alison Huang"),
-        ( "thumbnails/awoomug.png", "Awoo Mug", "Alison Huang"),
-        ( "thumbnails/catplushie.png", "Cat Plushie", "Alison Huang"),
-        ( "thumbnails/8track.png", "8 Track", "Alison Huang"),
-        ( "thumbnails/planeticket.png", "Plane Ticket", "Alison Huang"),
+        ( "thumbnails/bedroom.png", "bg bedroombg", "Bedroom", "Alison Huang"),
+        ( "thumbnails/ceiling.png", "bg ceiling ceiling static", "Ceiling", "Alison Huang"),
+        ( "thumbnails/hub.png", "bg hub hub", "Hub", "Alison Huang"),
+        ( "thumbnails/kerosene.png", "kerosene", "Kerosene", "AnagramDaine"),
+        ( "thumbnails/catfield.png", "catfieldbg", "Catfield", "AnagramDaine"),
+        ( "thumbnails/woodtrail1.png", "woodtrail1", "Woodtrail", "AnagramDaine"),
+        ( "thumbnails/woodtrail2.png", "woodtrail2", "Woodtrail 2", "AnagramDaine"),
+        ( "thumbnails/sunset.png", "sunsettitle", "Sunset", "AnagramDaine"),
+        ( "thumbnails/cheforward.png", "che f", "Cheshire Sprite - Forward", "AnagramDaine"),
+        ( "thumbnails/cheside.png", "che s", "Cheshire Sprite - Side", "AnagramDaine"),
+        ( "thumbnails/cheshire.png", "cheshire", "Cheshire CG", "Alison Huang"),
+        ( "thumbnails/uninstallbutton.png", "items uninstallbutton", "Uninstall Button", "Alison Huang"),
+        ( "thumbnails/awoomug.png", "items awoomug", "Awoo Mug", "Alison Huang"),
+        ( "thumbnails/catplushie.png", "items catplushie", "Cat Plushie", "Alison Huang"),
+        ( "thumbnails/8track.png", "items 8track", "8 Track", "Alison Huang"),
+        ( "thumbnails/planeticket.png", "items planeticket", "Plane Ticket", "Alison Huang"),
     ]
 
 image black = Solid("#000")
@@ -60,7 +60,7 @@ screen gallery():
                 xspacing 0
                 yspacing 0
 
-                for pic, title, artist in gallery_content:
+                for thumbnail, pic, title, artist in gallery_content:
                     frame:
                         background None
                         xsize 414
@@ -75,7 +75,7 @@ screen gallery():
                             fixed align(0.5,0.5):
                                 xfit True
                                 yfit True
-                                add At(pic, gallery_thumbnail)
+                                add At(thumbnail, gallery_thumbnail)
                             label title pos (0, 110)
                             label "by " + artist pos (0, 150)
                             button action Show("gallery_item", item=pic)
