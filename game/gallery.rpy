@@ -75,7 +75,7 @@ screen gallery():
                             fixed align(0.5,0.5):
                                 xfit True
                                 yfit True
-                                add At(thumbnail, gallery_thumbnail)
+                                add At(thumbnail)
                             label title pos (0, 110)
                             label "by " + artist pos (0, 150)
                             button action Show("gallery_item", item=pic)
