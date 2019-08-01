@@ -150,4 +150,3 @@ label hub4:
 
     #Imagemap
     call screen hubselect
-    stop music fadeout 1.0

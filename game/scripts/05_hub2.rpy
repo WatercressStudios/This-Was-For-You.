@@ -142,9 +142,7 @@ label hub2:
 
     "We shared some good times, huh?"
 
+    stop ambient fadeout 2.0
 
     #Imagemap
     call screen hubselect
-
-    stop ambient fadeout 2.0
-    stop music fadeout 2.0

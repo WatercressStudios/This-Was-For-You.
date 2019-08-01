@@ -33,16 +33,19 @@ screen hubselect:
 label eighttrack_internal:
     $ visited8track = True
     $ visited += 1
+    stop music fadeout 2.0
     jump eighttrack
 
 label plushie_internal:
     $ visitedplushie = True
     $ visited += 1
+    stop music fadeout 2.0
     jump plushie
 
 label mug_internal:
     $ visitedmug = True
     $ visited += 1
+    stop music fadeout 2.0
     jump mug
 
 label itemmerge:

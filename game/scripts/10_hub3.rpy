@@ -32,7 +32,7 @@ label hub3:
         sfx "sfx/run.ogg" "*Running*"
     else:
         sfx "sfx/run.ogg"
-        
+
     voice "voice/10-hub3-1.ogg" #Cheshire (shiena)
     che "Meowsterrrrr!!! I missed you!"
 
@@ -95,7 +95,8 @@ label hub3:
     "Damn you."
 
     "Forcing those thoughts away, I look at the items in front of me, and all of the memories that they share."
+
     stop ambient fadeout 2.0
+    
     #Imagemap
     call screen hubselect
-    stop music fadeout 1.0

@@ -8,7 +8,6 @@ label eighttrack:
     show screen chapter_announce
     show woodtrail1 with dissolve
     show items 8track with dissolve
-    stop music
     play ambient "sfx/8_Track_Ambient.ogg" fadein 3.0
     #MC selects the eight track
 
