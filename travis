@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+# command to install dependencies
+install:
+  - cd ..
+  - wget https://www.renpy.org/dl/7.3.5/renpy-7.3.5-sdk.tar.bz2
+  - tar xf renpy-7.3.5-sdk.tar.bz2
+  - rm renpy-7.3.5-sdk.tar.bz2
+  - mv renpy-7.3.5-sdk.tar.bz2
+  - cd renpy
+# command to run tests
+script: ./renpy.sh "../This-Was-For-You./" lint && ./renpy.sh launcher distribute "../This-Was-For-You./"
